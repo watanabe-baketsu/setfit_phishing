@@ -1,0 +1,1232 @@
+<html><!--<![endif]--><head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script type="text/javascript" async="" src="https://www.google.com/pagead/conversion_async.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-CHZ05615V7&amp;l=dataLayer&amp;cx=c"></script><script type="text/javascript" async="" src="https://stats.g.doubleclick.net/dc.js"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-CHZ05615V7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CHZ05615V7');
+</script>
+<!-- Global site tag (gtag.js) - Google Ads: 706631566 -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-706631566"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-706631566');
+</script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta charset="utf-8">
+    <meta name="description" content="Print your own offline tamper resistant paper wallets to store bitcoins in 'cold storage'. Uses secure BitAddress open-source JavaScript key generator. Supports Litecoin and Dogecoin as well.">
+    <meta name="author" content="bitpaperwallet@gmail.com">
+
+    <title>Bitcoin Paper Wallet Generator: Print Offline Tamper-Resistant Addresses</title>
+    
+    <!-- Start Richard Hogan code -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+    $(document).ready(function() {
+    	$("#mobileTrigger").click(function(){
+    		$("#myMenuNav").toggle();
+    	});
+    });
+
+    </script>
+
+    <!-- imported jQuery + added jQuery script to toggle mobile menu nav -->
+
+    <!-- start responsive css -->
+    <style>
+    #mobileMenu{
+    	display:none;
+    }
+    @media (max-width:990px) {
+    	*{
+    	}
+    	body{
+    		width:95% !important;
+    	}
+    	header, #header, #header-wrap{
+    		float:none !important;
+			width:100% !important;
+			margin-left: auto !important;
+			margin-right: auto !important;
+			padding:0 !important;
+    	}
+    	nav{
+    		
+    	}
+    	#myMenuNav {
+		    display:none;
+		}
+		header nav ul{
+			margin-top:42px;
+		}
+		header nav ul li, header nav ul li a{
+			float: none !important;
+			display: block !important;
+			background:black;
+			color:white !important;
+			text-indent: 4px;
+			padding-top: 5px;
+		}
+		#mobileMenu{
+			display:inline-block !important;
+			position: absolute;
+			top:20px;
+			right:15px;
+		}
+		#mobileMenu button{
+			background:none;
+			color:white;
+			border: 2px solid white;
+			font-size:20px;
+		}
+		#mobileMenu button:hover{
+			color:black;
+			background:white;
+		}
+		.intro-box{
+				float:none !important;
+				width:90% !important;
+				margin-left: auto !important;
+				margin-right: auto !important;
+		}
+		p.intro{
+		}
+		.badge460{
+			display: none !important;
+		}
+		.feature-area{
+				float:none !important;
+				width:90% !important;
+				margin-left: auto !important;
+				margin-right: auto !important;
+				text-align: center !important;
+		}
+		#wallet-lang{
+			display:none !important;
+		}
+		.col{
+			float:none !important;
+			width:90% !important;
+				margin-left: auto !important;
+				margin-right: auto !important;
+		}
+		.col mid{
+			float:none !important;
+			margin:0 !important;
+			width:90% !important;
+				margin-left: auto !important;
+				margin-right: auto !important;
+		}
+		.content-wrap section .row .mid{
+			margin-left:0 !important;
+			margin-right: 0 !important;
+			width:90% !important;
+				margin-left: auto !important;
+				margin-right: auto !important;
+		}
+		.primary{
+			float:none !important;
+			margin:0 !important;
+			width:90% !important;
+			margin-left: auto !important;
+			margin-right: auto !important;
+
+		}
+		#purchaseForm, #contactform{
+			float:none !important;
+			margin:0 !important;
+			width:90% !important;
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+		section#contact .primary form{
+			width:90% !important;
+		}
+		aside{
+			float:none !important;
+			margin:0 !important;
+			width:90% !important;
+			margin-left: auto !important;
+			margin-right: auto !important;
+			text-align: center !important;
+		}
+		aside img{
+			margin-top: 15px !important;
+			margin-bottom: 15px !important;
+		}
+		h1, h2, h3, h4, h5{
+			float:none !important;
+			margin:0 !important;
+			width:90% !important;
+			margin-left: auto !important;
+			margin-right: auto !important;
+			text-align: center !important;
+			margin-top: 15px !important;
+			margin-bottom: 15px !important;
+		}
+		#generateButton, span{
+			text-align:center !important;
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+		#security{
+			width:90% !important;
+			float:none !important;
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+		#convertTo{
+			float:none !important;
+			width:90% !important;
+			margin-bottom: 50px !important;
+		}
+		.content-wrap, #main, #purchase, #donate, #contact{
+			width:90% !important;
+			float:none !important;
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+		#donateLeft, #donateRight{
+			width:90% !important;
+			float:none !important;
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+		footer,.footer-content{
+			width:90% !important;
+			float:none !important;
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+		textarea, select{
+			width:90% !important;
+		}
+		img{
+    		max-width:100% !important;
+    		height:auto;
+		}
+		input, #name, #email, #message, #subject, #websit, #captcha{
+			width:90% !important;
+		}
+		iframe{
+			max-width: 95% !important;
+		}
+		.feature-area span{
+			width: 90% !important;
+		}
+		section#purchase form span{
+			position: relative !important;
+			float:none !important;
+		}
+		section#purchase p.payWith:before {
+			content: " ";
+			display:block;
+		}
+		section#purchase p.payWith, #exchangerateBitcoin{
+			display: inline-block !important;
+			margin: 0 !important;
+
+		}
+		#ppButton{
+			width:170px !important;
+		}
+		section#purchase #bitpaywaiting{
+
+		}
+		section#purchase #bitpayform, section#purchase #bitpaywaiting, section#purchase #paypalSubmitter{
+			float:none !important;
+			width:100% !important;
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+		
+	}
+	</style>
+
+	<!-- 
+		End responsive css
+		End Richard Hogan Code
+	-->
+
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/nivo-slider.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery.fancybox-1.3.4.css" type="text/css">
+
+    <!--[if lt IE 9]>
+	    <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.6.1.min.js"><\/script>')</script>
+
+    <script src="js/jquery.smoothscroll.js"></script>
+    <script src="js/jquery.nivo.slider.pack.js"></script>
+    <script src="js/jquery.easing-1.3.pack.js"></script>
+    <script src="js/jquery.fancybox-1.3.4.pack.js"></script>
+    <script src="js/init.js"></script>
+
+    <script src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/706631566/?random=1648091802074&amp;cv=9&amp;fst=1648091802074&amp;num=1&amp;bg=ffffff&amp;guid=ON&amp;resp=GooglemKTybQhCsO&amp;eid=376635470&amp;u_h=1600&amp;u_w=3840&amp;u_ah=1560&amp;u_aw=3840&amp;u_cd=24&amp;u_his=50&amp;u_tz=-300&amp;u_java=false&amp;u_nplug=0&amp;u_nmime=0&amp;gtm=2oa3e0&amp;sendb=1&amp;ig=0&amp;data=event%3Dgtag.config&amp;frm=0&amp;url=https%3A%2F%2Fbitcoinpaperwallet.com%2F&amp;tiba=Bitcoin%20Paper%20Wallet%20Generator%3A%20Print%20Offline%20Tamper-Resistant%20Addresses&amp;hn=www.google.com&amp;async=1&amp;rfmt=3&amp;fmt=4"></script></head><body onload="updateOrder();"><pre>42884.27</pre>
+	<script language="javascript">
+		var payPalDest = '';
+		var usd24 = 42885;
+		var usd24paypal = 44171.55;
+		// var usd24paypal = usd24; // add 3% paypal fee to paypal totals
+		function updateOrder(myoption) {
+						
+			if (document.getElementById('completekit').checked) { // pre-select complete kit
+				document.getElementById('stickers').selectedIndex = 5;
+				document.getElementById('bags').selectedIndex = 3;
+				document.getElementById('ubuntu').selectedIndex = 1;
+				document.getElementById('circle').selectedIndex = 0;
+			}
+			
+			// show/hide discount
+			if (10) {
+				$("#discountArea").fadeIn(100);
+			} else {
+				$("#discountArea").fadeOut(100);
+			}
+			
+			var payUsing = document.querySelector('input[name="payUsing"]:checked').value
+			// hide shipping if using paypal
+			if (payUsing == 'paypal') {
+				$("#paymentMailingInfo").fadeOut(100);
+				$("#paypalSubmitter").fadeIn(100);
+				$("#bitpaySubmitter").fadeOut(100);
+				$("#exchangerateBitcoin").fadeOut(100);
+				$("#exchangeratePaypal").fadeIn(100);
+				myExchangeRate = usd24paypal;
+			} else {
+				$("#paymentMailingInfo").fadeIn(100);
+				$("#paypalSubmitter").fadeOut(100);
+				$("#bitpaySubmitter").fadeIn(100);
+				$("#exchangerateBitcoin").fadeIn(100);
+				$("#exchangeratePaypal").fadeOut(100);
+				myExchangeRate = usd24;
+
+			}
+
+			// setup targets
+			var orderTotal = document.getElementById("totalcost");
+			var orderDiscount = document.getElementById("discountcost");
+			var orderStickers = document.getElementById("stickers");
+			var orderBags = document.getElementById("bags");
+			var orderUbuntu = document.getElementById("ubuntu");
+			var orderCircle = document.getElementById("circle");
+			var donationcost = document.getElementById("donationcost");
+
+			// first figure out price updates
+		
+			// parse out the price from the sticker selection -- the value should be after the @ sign
+			stickerSelection = orderStickers.value;
+			stickerSelectionParts = stickerSelection.split("@");
+			stickerSelectionDesc = stickerSelectionParts[0];
+			stickerSelectionPrice = stickerSelectionParts[1];
+
+			// parse out the price from the bag selection -- the value should be after the @ sign
+			bagSelection = orderBags.value;
+			bagSelectionParts = bagSelection.split("@");
+			bagSelectionDesc = bagSelectionParts[0];
+			bagSelectionPrice = bagSelectionParts[1];
+
+			// parse out the price from the ubuntu selection -- the value should be after the @ sign
+			ubuntuSelection = orderUbuntu.value;
+			ubuntuSelectionParts = ubuntuSelection.split("@");
+			ubuntuSelectionDesc = ubuntuSelectionParts[0];
+			ubuntuSelectionPrice = ubuntuSelectionParts[1];
+
+			// parse out the price from the circle sticker selection -- the value should be after the @ sign
+			circleSelection = orderCircle.value;
+			circleSelectionParts = circleSelection.split("@");
+			circleSelectionDesc = circleSelectionParts[0];
+			circleSelectionPrice = circleSelectionParts[1];
+			
+			// see if we have an added donation, or fix it
+			extraDonation = parseFloat(donationcost.value);
+			if (extraDonation) {
+				if (extraDonation < 0) { // negative donations! herp de derp
+					extraDonation = extraDonation * -1;
+					window.open('https://www.youtube.com/watch?v=cgEuUzHYvOY'); 
+				}
+				donationcost.value = extraDonation.toFixed(4);
+				$("#thankyou").fadeIn(100);
+			} else {
+				donationcost.value = '0.00';
+				$("#thankyou").fadeOut(100);
+			}	
+						
+			myDiscount = ((stickerSelectionPrice * 1) + (bagSelectionPrice * 1) + (ubuntuSelectionPrice * 1) + (circleSelectionPrice * 1)) * ( 10 * -.01);
+			orderDiscount.value = myDiscount.toFixed(4);
+
+			myOrderTotal = (stickerSelectionPrice * 1) + (bagSelectionPrice * 1) + (ubuntuSelectionPrice * 1) + (circleSelectionPrice * 1) + (donationcost.value * 1) + (myDiscount * 1);		
+			orderTotal.value = myOrderTotal.toFixed(4); // pad with zeros
+
+			myOrderTotalUSD = myOrderTotal * myExchangeRate;
+
+			$("#usdtotal").html("BTC or $<b style=\"font-size: 125%;\">" + myOrderTotalUSD.toFixed(2) + "</b> USD");	
+		
+			if (myoption == 'flashprice') $("#totalcost").fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+			
+			if (myoption == 'flashkit') {
+				$("#stickers").fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);	
+				$("#bags").fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);	
+				$("#ubuntu").fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);	
+				$("#circle").fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);	
+			}
+			// now update bitpay fields
+		
+			var bitPayDescription = 'Hologram Stickers: ' + stickerSelectionDesc + ', ' + bagSelectionDesc + ', ' + ubuntuSelectionDesc  + ', ' + circleSelectionDesc  +', with free shipping ';
+			if (myDiscount) bitPayDescription = bitPayDescription + ' -10% discount ';
+			if (extraDonation) bitPayDescription = bitPayDescription + ' *** THANK YOU for your  ' + extraDonation.toFixed(4) + ' BTC donation !!! *** ';
+		
+			document.getElementById("bitprice").value = document.getElementById("totalcost").value;
+			document.getElementById("bitdesc").value = bitPayDescription;
+			document.getElementById("bitname").value = document.getElementById("fullname").value;
+			document.getElementById("bitaddr1").value = document.getElementById("addr1").value;
+			document.getElementById("bitaddr2").value = document.getElementById("addr2").value;
+			document.getElementById("bitaddr3").value = document.getElementById("addr3").value;
+			document.getElementById("bitaddr4").value = document.getElementById("addr4").value;
+			document.getElementById("bitaddr5").value = document.getElementById("addr5").value;
+			document.getElementById("bitcountry").value = document.getElementById("country").value;
+
+			var buyerEmail = document.getElementById("emailpurchase").value;
+			if (!buyerEmail) buyerEmail = '(No email address given)'
+			document.getElementById("bitemail").value = buyerEmail;
+
+			// set paypal form destination
+			
+			if (extraDonation) { descDonation = '%20%2B' + extraDonation.toFixed(4) + 'BTC%20donation'; } else { descDonation = ''; }
+			if (myDiscount) { descDiscount = '%20-10%25 DISCOUNT'; } else { descDiscount = ''; }
+
+			
+			payPalDest = 'https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=9GGBDYGKTGGEW&lc=US&item_name=' + encodeURIComponent(stickerSelectionDesc) + '%20%2B' 
+			+ encodeURIComponent(bagSelectionDesc) + '%20%2B' 
+			+ encodeURIComponent(ubuntuSelectionDesc) + '%20%2B' 
+			+ encodeURIComponent(circleSelectionDesc) + '%20%2B' 
+			+ descDonation + descDiscount
+			+ '&amount=' + (usd24paypal * (orderTotal.value)).toFixed(2) + '&currency_code=USD&button_subtype=services&no_note=0&cn=Anything+else+to+say:&no_shipping=2'
+			+ '&shipping=0&cancel_return=https%3A%2F%2Fbitcoinpaperwallet.com%2Fthanks.html';
+			
+			// alert (payPalDest);
+			// now enable / disable bitpay (form validation)
+			
+			if (	document.getElementById("fullname").value &&
+					document.getElementById("addr1").value &&
+					document.getElementById("addr3").value &&
+					document.getElementById("addr4").value &&
+					document.getElementById("addr5").value &&
+					document.getElementById("totalcost").value > 0) 
+			  {
+				  $("#bitpaywaiting").fadeOut(100);
+				  $("#bitpayform").fadeIn(100);
+			  } else {
+				  $("#bitpayform").fadeOut(100);
+				  $("#bitpaywaiting").fadeIn(100);
+			  }
+
+						
+
+			return (false);
+		}
+	
+	var donationBumper = 1;
+
+	function addDonation() { // in $5 increments
+		var donationIncrement = 5/42885; 
+		var donationcost = document.getElementById("donationcost");
+		newDonation =+donationcost.value + +donationIncrement;
+		donationcost.value = newDonation.toFixed(4);
+		updateOrder();
+		var bumperTexts = new Array ("Bump it up a little more","Even more you say?","\"I said More.\"","\"No, MOAR!!!\"","\"Moar, moar!\"","\"Moar, moar, moar!\"","\"Moar, moar, moar, moar!\"");
+		if (bumperTexts[window.donationBumper] !== undefined) document.getElementById("donationText").innerHTML = bumperTexts[window.donationBumper];
+		window.donationBumper = window.donationBumper + 1; // for bumping up donations		
+		return (false);
+	}
+
+	function submitPayPal() {
+		if (document.getElementById("totalcost").value > 0) {
+			window.location=payPalDest;
+			// alert (decodeURIComponent(payPalDest));
+		} else {
+			alert ('Please use the form above to add some stickers / bags / etc. to your order before checking out.');	
+		}
+		return (false);
+	}
+
+</script>
+
+
+
+
+
+<!-- header-wrap -->
+<div id="header-wrap">
+    <header>
+
+        <hgroup>
+            <h1><a href="#main">bitcoinpaperwallet.com</a></h1>
+            <h3>Store bitcoins on your own tamper-resistant paper wallet</h3>
+        </hgroup>
+
+        <nav id="myMenuNav">
+            <ul>
+                <li><a href="#main" onclick="$('#generateButton').fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);">Print Wallet</a></li>
+                <li><a href="#purchase">Stickers &amp; Supplies</a></li>
+                <li><a href="#security">Security &amp; FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="/solidus-bitcoin-wallet.html">Solidus Bitcoin Wallet</a></li>
+                <li><input class="buttonmain" onclick="window.location='bitcoinpaperwallet/generate-wallet.html';" value="Generate New Address" id="generateButton2" style="margin-top: -7px; height:35px; font-size:12px;" type="submit"></li>
+            </ul>
+        </nav>
+
+        <div id="mobileMenu">
+        	<button id="mobileTrigger">☰</button>
+        </div>
+	</header></div>
+
+	<div>
+
+
+<!-- content-wrap -->
+<div class="content-wrap">
+
+    <!-- main -->
+    <section id="main">
+
+		
+        <div class="intro-box">
+       
+            
+          <h1>Make Paper Wallets to Keep Your Bitcoin Addresses Safe.</h1>
+
+          <p class="intro">For long-term storage of bitcoins (or giving as gifts) it's not safe to store your bitcoins in an exchange or online wallet. These types of sites are regularly <a href="https://www.google.com/search?q=bitcoin+exchange+hacked" target="_blank">hacked</a>. Even keeping a live wallet on your own computer can be risky.</p>
+          
+           <h2>Your Keys, Your Bitcoin.</h2>
+           
+           <p class="intro">By printing out your own tamper-resistant bitcoin wallets and generating your own addresses, you can minimize your exposure to hackers as well as untrustworthy people in your home or office. Just transfer your bitcoins into your new wallets, and use common sense to keep your wallets safe the way you would jewels and ordinary cash. Or give them away!</p>
+
+           <h2>"Bitcoin Cash" Paper Wallets</h2>
+            
+           <p class="intro">
+           In August 2017, the Bitcoin blockchain "forked" creating a new digital currency called Bitcoin Cash (BCH). Paper wallets generated on this site are fully compatible with Bitcoin Cash. <a class="inlinePop" href="#popupBCH">A special design</a> is available to make it easy to identify Bitcoin Cash paper wallets.</p>
+
+
+
+             <!-- begin popup --><div style="display:none">
+               <div id="popupBCH"><img src="images/bitcoincash-silver-and-gold.jpg" alt="Bitcoin Cash Paper Wallets" width="750" height="530">
+               <p><a href="https://bitcoinpaperwallet.com/bitcoinpaperwallet/generate-wallet.html?design=bitcoincash"><strong>Click here</strong></a> to try out the Bitcoin Cash paper wallet generator.</p></div></div><!-- end popup -->
+           
+
+           <h4>What's special about this design?</h4>
+	    	<a class="inlinePop" href="#popupSample"><img src="images/front-back-sample-sm.png" alt="Front and Back (Click to Zoom)" width="461" height="70" border="0"></a>
+             <!-- begin popup --><div style="display:none"><div id="popupSample"><img src="images/front-back-sample-big.jpg" alt="Front and Back (Large View)" width="880" height="591"></div></div><!-- end popup -->
+        	               <div class="badge460" style="padding-top: 80px;">
+                      <p style="line-height: 21px;">
+                 Tamper-evident stickers and the bootable CD are now <strong>10% off.</strong> Plus, every order includes <strong>FREE SHIPPING to anywhere in the world</strong>, and a free <a class="inlinePop" href="#popupKit" style="font-weight: normal;">limited edition sticker</a>.<br><a href="#purchase">Order here »</a></p>
+               </div>          
+                    </div>
+
+        <div class="feature-area"> 
+                
+    <input type="submit" id="generateButton" value="Generate Keys &amp; Print Paper Wallets »" class="button" onclick="window.location='bitcoinpaperwallet/generate-wallet.html';">
+            <p><span>But first read everything on this page since you should take <a href="#security">some precautions</a> to make sure your new wallets are secure.</span></p>
+            
+            <p><strong>NEW: <a href="litecoin-paper-wallet-generator/index.php">Litecoin</a> &amp; <a href="dogecoin-paper-wallet-generator/index.php">Dogecoin</a></strong> paper wallets, too!</p>
+            
+
+			<div style="background-color: #FFFFFF; padding: 15px 8px 1px 8px;">
+            <img src="images/badge.png" alt="BitAddress Open Source" style="float: right; margin: 0 0 5px 5px;" width="186" height="146">
+            <h3>Why trust this site?</h3>
+            <p style="margin-top:0; padding-top:0; font-size: 13px; line-height: 18px; text-align: left; margin-bottom: 10px;"><strong style="font-size: 15px; color: #1A802B;">This generator is based on BitAddress</strong>, the  well established and most trustworthy open-source engine for generating addresses using your own browser's JavaScript engine. No crypto-code is run on this web server, and no addresses are transmitted over the Internet. <strong>BIP-38 encryption is fully supported as well.</strong> If you don't trust this service (or pseudorandom number generators in general) this wallet service lets you roll dice, shuffle cards, or supply your own "vanity keys". To be more secure, you should download this wallet generator from GitHub and run it offline, or even <a href="/ubuntu-linux-live-bootable-cd/">boot from this Ubuntu CD</a>.</p>
+            <p style="margin-top:0; padding-top:0; font-size: 13px; line-height: 18px; text-align: left;">
+            <a href="#contact">We</a>—started this service in 2013—easily reached for questions, Bitcoin business consultation, or custom designs at:<br>
+            <br>
+            <br>
+            Email: <a href="#contactform">bitpaperwallet@gmail.com</a><br>
+            <br>
+            We invite you to read this <a class="inlinePop" href="#popupSafepaperwallet">endorsement by Andreas Antonopoulos</a>.</p>                        
+          </div>
+
+             <!-- begin popup --><div style="display:none;">
+               <div id="popupSafepaperwallet" style="font-size: 11px; text-align: center;"><img src="images/safepaperwallet-endorsement.png" alt="" width="713" height="442"><br>Cached from safepaperwallet.com on 6/19/2014</div></div><!-- end popup -->
+
+        <div style="margin-top: 50px;" id="wallet-lang">
+        
+        <p style="font-size: 14px; margin: 0; padding: 0; line-height: 18px; text-align: left;">
+        <img src="images/flags.png" alt="Flags" style="float: left; margin: 3px 10px 2px 0;" width="65" height="25">
+		<a href="holiday-design/index.php"><img src="holiday-design/christmas-bitcoin.png" alt="Christmas Bitcoin" style="float: right;" width="104" height="106"></a>        
+        Wallets come in 12 different languages, as well as special <a href="holiday-design/index.php">Christmas</a> and <a href="https://bitcoinpaperwallet.com/bitcoinpaperwallet/generate-wallet.html?design=chinese-new-year">"red envelope" / Chinese New Year</a> designs.
+        Here's a <a href="images/bitcoin-holiday-sealer.pdf">PDF template for making an envelope</a> for giving away Bitcoin for the holidays.</p>
+        
+        </div>
+
+            
+      </div>
+
+        <div class="row no-bottom-margin">
+
+            <section class="col">
+                <h2>1. Tri-Fold Template</h2>
+
+                <p>This <a href="bitcoinpaperwallet/generate-wallet.html">bitcoin key generator</a> guides you to print both a front side and a back side for your paper wallet. 
+                All sensitive details on the front side (the private key and QR code) are folded up and securely taped shut so as to stay hidden. 
+                For additional security, you can seal your wallets with the tamper-evident serialized <a href="#purchase">hologram stickers</a> available for purchase on this site—though any sufficiently opaque (light-blocking) tape will work fine.</p>
+            </section>
+            <section class="col mid">
+                <h2>2. Tamper Resistant</h2>
+
+                <p>One risk with a paper wallet is that someone with physical access to your wallet may "sneak a peek" at the private key and withdraw your funds without your knowledge. This wallet's folding design and obfuscating security patterns resist "<a href="https://bitcointalk.org/index.php?PHPSESSID=pvk3efqi9hgipdoa7ocej0lvp5&amp;topic=169836.msg2026791#msg2026791" target="_blank">candling</a>" -- the process of shining a bright light through the paper to reveal what's printed inside. <a class="inlinePop" href="#popupSerials">Serialized</a> tamper-evident hologram stickers destory themselves when removed, preventing stickers from being replaced with new ones.</p>             
+            </section>
+
+            <section class="col">
+                <h2>3. Perfect for Giving</h2>
+
+                <p>Want to give bitcoins to someone who isn't tech-savvy? Need to send bitcoins by mail? Use a pre-loaded paper wallet. The sealed-shut folded design helps to ensure that the recipient won't accidentally reveal the private key. For recipients unfamiliar with bitcoin, the reverse side of the wallet has printed instructions for checking the wallet balance and withdrawing funds.</p>
+            </section>
+        </div>
+
+        <a class="back-to-top" href="#main">Back to Top</a>
+
+      </section>
+
+
+      <!-- PURCHASE -->
+      <section id="purchase" class="clearfix">
+
+            <h1>Order Paper Wallet Supplies</h1>
+
+            <div class="primary">
+
+                <p class="intro">Use this form to purchase tamper-evident holographic stickers with serial numbers, zip-sealing bags made specifically for this folding wallet design, or a bootable CD for making paper wallets offline.</p>
+                 
+                <p class="intro">Once shipped, USA orders take about 4 business days to arrive. Orders to the EU &amp; Australia usually take 10 business days. Mailing to certain countries (e.g. Russia, Estonia, Brazil) can take significantly longer.
+				</p>
+
+
+            <p><strong>All orders include a <a class="inlinePop" href="#popupExtraStickers">free large vinyl 'bitcoin' sticker</a> for your car, laptop, or crypto-evangelism activities.</strong></p>
+
+                  <div style="display:none">
+                    <div id="popupHoliday">
+			        <img src="images/letterpress-tags.jpg" alt="Tags" width="800" height="523"><br>
+			        <img src="images/stickers.jpg" alt="Stickers" width="800" height="748"><br>
+                    <p></p>
+                    
+                    
+                  </div></div><!-- end popup -->
+
+
+				<form id="purchaseForm">
+
+					<div style="float: right;">
+                    <input type="radio" name="orderkit" value="0" style="margin:0; padding: 0" id="customkit" checked="" onchange="updateOrder('flashkit');">
+                    <strong style="font-size: 11px;">Custom Order</strong>
+                    &nbsp; | &nbsp;
+                    <input type="radio" name="orderkit" value="1" style="margin:0; padding: 0" id="completekit" onchange="updateOrder('flashkit');">
+                    <strong style="font-size: 11px;">Complete Kit <a class="inlinePop" href="#popupKit">(Picture)</a></strong>
+                    </div>
+
+                    <div>
+                    <p class="orderHeader">Your Order</p>
+                    </div>
+
+					<div>
+                    	<p style="color: #333; margin-bottom: 0;">How many hologram stickers do you want?</p>
+                        <p class="orderHint">Stickers are sold in serialized pairs, because you'll need 2 stickers for each wallet.<br><strong>'Plain' stickers</strong> are for Litecoin, Dogecoin, etc.</p>
+						
+                                                
+                    	<select name="stickers" id="stickers" onchange="document.getElementById('customkit').checked = true; updateOrder('flashprice');">
+
+						<option value="(No stickers) @ 0.0000">(No stickers) ................................0.0000 BTC</option>
+<option value="12 silver (6 wallets) @ 0.0010">12 silver (6 wallets) ........................0.0010 BTC</option>
+<option value="12 gold (6 wallets) @ 0.0010">12 gold (6 wallets) ..........................0.0010 BTC</option>
+<option value="24 silver (12 wallets) @ 0.0011">24 silver (12 wallets) .......................0.0011 BTC</option>
+<option value="24 gold (12 wallets) @ 0.0011">24 gold (12 wallets) .........................0.0011 BTC</option>
+<option value="24 mixed (6 silver, 6 gold wallets) @ 0.0011" selected="selected">24 mixed (6 silver, 6 gold wallets) ..........0.0011 BTC</option>
+<option value="48 silver (24 wallets) @ 0.0020">48 silver (24 wallets) .......................0.0020 BTC</option>
+<option value="48 gold (24 wallets) @ 0.0020">48 gold (24 wallets) .........................0.0020 BTC</option>
+<option value="48 mixed (12 silver, 12 gold wallets) @ 0.0020">48 mixed (12 silver, 12 gold wallets) ........0.0020 BTC</option>
+<option value="96 silver (48 wallets) @ 0.0028">96 silver (48 wallets) .......................0.0028 BTC</option>
+<option value="96 gold (48 wallets) @ 0.0028">96 gold (48 wallets) .........................0.0028 BTC</option>
+<option value="96 mixed (24 silver, 24 gold wallets) @ 0.0028">96 mixed (24 silver, 24 gold wallets) ........0.0028 BTC</option>
+<option value="192 mixed (48 silver, 48 gold wallets) @ 0.0049">192 mixed (48 silver, 48 gold wallets) .......0.0049 BTC</option>
+<option value="~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ @ 0.0000">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ...0.0000 BTC</option>
+<option value="12 plain silver (Litecoin/Dogecoin, etc.) @ 0.0010">12 plain silver (Litecoin/Dogecoin, etc.) ....0.0010 BTC</option>
+<option value="24 plain silver (Litecoin/Dogecoin, etc.) @ 0.0011">24 plain silver (Litecoin/Dogecoin, etc.) ....0.0011 BTC</option>
+<option value="48 plain silver (Litecoin/Dogecoin, etc.) @ 0.0020">48 plain silver (Litecoin/Dogecoin, etc.) ....0.0020 BTC</option>
+<option value="96 plain silver (Litecoin/Dogecoin, etc.) @ 0.0028">96 plain silver (Litecoin/Dogecoin, etc.) ....0.0028 BTC</option>
+<option value="192 plain silver (Litecoin/Dogecoin, etc.) @ 0.0049">192 plain silver (Litecoin/Dogecoin, etc.) ...0.0049 BTC</option>
+
+                        </select>
+					</div>
+
+					<div>
+                    	<p style="color: #333; margin-bottom: 0;">Add some waterproof <a class="inlinePop" href="#popupBag">zip-sealing bags?</a></p>
+                        <p class="orderHint">Crystal-clear and specially sized for this design.</p>
+                    	<select name="bags" id="bags" onchange="document.getElementById('customkit').checked = true;  updateOrder('flashprice');">
+
+						<option value="1 bag (Free with your order!) @ 0.0000">1 bag (Free with your order!) .....0.0000 BTC</option>
+<option value="3 bags @ 0.0001">3 bags ............................0.0001 BTC</option>
+<option value="6 bags @ 0.0002">6 bags ............................0.0002 BTC</option>
+<option value="12 bags @ 0.0003">12 bags ...........................0.0003 BTC</option>
+<option value="24 bags @ 0.0006">24 bags ...........................0.0006 BTC</option>
+<option value="48 bags @ 0.0010">48 bags ...........................0.0010 BTC</option>
+<option value="96 bags @ 0.0017">96 bags ...........................0.0017 BTC</option>
+
+                        </select>
+					</div>
+
+					<div>
+                    	<p style="color: #333; margin-bottom: 0;">Add a customized <a class="inlinePop" href="#popupKit">Ubuntu 14.04 LiveCD?</a></p>
+                        <p class="orderHint" style="line-height: 15px;">The wallet generator software is pre-installed on this fully bootable operating system. Just run this CD on any Mac or PC and print wallets without going online.</p>
+                    	<select name="ubuntu" id="ubuntu" onchange="document.getElementById('customkit').checked = true; updateOrder('flashprice');">
+
+						<option value="(No LiveCD) @ 0.0000">(No LiveCD) ..................0.0000 BTC</option>
+<option value="Customized Ubuntu LiveCD @ 0.0017">Customized Ubuntu LiveCD .....0.0017 BTC</option>
+
+                        </select>
+
+					</div>
+
+					<div>
+                    	<p style="color: #333; margin-bottom: 0;">Add some extra <a class="inlinePop" href="#popupExtraStickers">Bitcoin circle stickers?</a></p>
+                        <p class="orderHint">High quality vinyl stickers that will last for years, even outdoors.</p>
+                    	<select name="circle" id="circle" onchange="updateOrder('flashprice');">
+						<option value="1 circle sticker (Free with your order!) @ 0.0000">1 circle sticker (Free with your order!) .....0.0000 BTC</option>
+<option value="2 circle stickers @ 0.0001">2 circle stickers ............................0.0001 BTC</option>
+<option value="3 circle stickers @ 0.0002">3 circle stickers ............................0.0002 BTC</option>
+<option value="4 circle stickers @ 0.0003">4 circle stickers ............................0.0003 BTC</option>
+<option value="5 circle stickers @ 0.0004">5 circle stickers ............................0.0004 BTC</option>
+<option value="6 circle stickers @ 0.0005">6 circle stickers ............................0.0005 BTC</option>
+<option value="7 circle stickers @ 0.0006">7 circle stickers ............................0.0006 BTC</option>
+<option value="8 circle stickers @ 0.0007">8 circle stickers ............................0.0007 BTC</option>
+<option value="9 circle stickers @ 0.0008">9 circle stickers ............................0.0008 BTC</option>
+<option value="10 circle stickers @ 0.0009">10 circle stickers ...........................0.0009 BTC</option>
+<option value="11 circle stickers @ 0.0010">11 circle stickers ...........................0.0010 BTC</option>
+<option value="12 circle stickers @ 0.0012">12 circle stickers ...........................0.0012 BTC</option>
+
+                        </select>
+					</div>
+
+
+             <!-- begin popup --><div style="display:none">
+               <div id="popupBag">
+               <p style="width: 600px;">Keep your paper wallets safe and dry! If you plan on using an Inkjet printer, this is especially important since even a <a class="inlinePop" href="#popupWater">tiny amount</a> of moisture can make your wallet unreadable. These ultra-clear ziplock bags fit this folding design exactly.</p>
+               <img src="images/wallet-in-ziplock-bag.jpg" alt="Zip-Sealing Bag" width="600" height="338">
+				</div></div><!-- end popup -->
+
+                  <div style="display:none">
+                    <div id="popupExtraStickers" style="-&quot;width:" 750px;"="">
+			        <img src="images/bitcoin-many-stickers.jpg" alt="Vinyl Stickers" width="750" height="535">
+                  </div></div><!-- end popup -->
+
+
+
+					<div>
+                    	<label class="informational">First-Class Shipping</label>
+                    	<input name="shippingcost" type="text" id="shippingcost" value="0.00" readonly=""> <span>FREE SHIPPING!</span>
+					</div>
+
+					<div>
+                    	<label>Add a Donation?<br>&nbsp; <a href="#" onclick="addDonation(); return(false);" style="font-size: 11px;"><div id="donationText">YES! I like this.</div> »</a></label>
+                    	<input name="donationcost" type="text" id="donationcost" value="0.00" onchange="updateOrder('flashprice');">
+                        <span>BTC</span>
+                        <div id="thankyou" style="display: none;">THANK YOU!</div>
+                        
+					</div>
+
+					<div style="" id="discountArea">
+                    	<label class="informational" style="color: #090;">10% Discount</label>
+                    	<input name="discountcost" type="text" id="discountcost" value="0.00" style="color: #090; font-weight: bold;" readonly=""> <span>BTC</span>
+					</div>
+
+					<div>
+                    	<label class="informational">TOTAL</label>
+                    	<input name="totalcost" type="text" id="totalcost" value="0.00" readonly="">
+                        <span id="usdtotal">BTC or $<b style="font-size: 125%;">43.73</b> USD</span><br>
+					</div>
+				<div>
+                
+                <label>Payment Currency</label> 
+                
+                <p class="payWith"><input class="payRadio" name="payUsing" type="radio" value="paypal" onclick="updateOrder();" checked=""> Pay with $USD <strong>(via PayPal)</strong></p>
+
+					                <p class="payWith"><input class="payRadio" name="payUsing" type="radio" value="bitpay" onclick="updateOrder();"> Pay with ฿ Bitcoin <strong>(via BitPay) </strong>
+					<br>
+
+	        </p><p class="orderHint" style="margin-left: 200px; margin-bottom: 25px; line-height: 16px; display: none;" id="exchangerateBitcoin">Bitcoin BTC pricing:  $42,885 USD/BTC<br>You save 3% by paying with Bitcoin.</p>
+	        <p class="orderHint" style="margin-left: 200px;" id="exchangeratePaypal">PayPal BTC pricing:  $44,172 USD/BTC</p>
+                
+                </div>
+                    
+				<div id="paymentMailingInfo" style="display: none;">
+
+                    <div>
+                    <p class="orderHeader">Your Mailing Address</p>
+
+                    </div>
+
+<div>
+                    	<label>Country</label>
+<select id="country" name="country" onchange="updateOrder('flashprice');">
+
+<option value="Afghanistan">Afghanistan</option>	<option value="Åland Islands">Åland Islands</option>	<option value="Albania">Albania</option>	<option value="Algeria">Algeria</option>	<option value="American Samoa">American Samoa</option>	<option value="Andorra">Andorra</option>	<option value="Angola">Angola</option>	<option value="Anguilla">Anguilla</option>	<option value="Antarctica">Antarctica</option>	<option value="Antigua and Barbuda">Antigua and Barbuda</option>	<option value="Argentina">Argentina</option>	<option value="Armenia">Armenia</option>	<option value="Aruba">Aruba</option>	<option value="Australia">Australia</option>	<option value="Austria">Austria</option>	<option value="Azerbaijan">Azerbaijan</option>	<option value="Bahamas">Bahamas</option>	<option value="Bahrain">Bahrain</option>	<option value="Bangladesh">Bangladesh</option>	<option value="Barbados">Barbados</option>	<option value="Belarus">Belarus</option>	<option value="Belgium">Belgium</option>	<option value="Belize">Belize</option>	<option value="Benin">Benin</option>	<option value="Bermuda">Bermuda</option>	<option value="Bhutan">Bhutan</option>	<option value="Bolivia">Bolivia</option>	<option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>	<option value="Botswana">Botswana</option>	<option value="Bouvet Island">Bouvet Island</option>	<option value="Brazil">Brazil</option>	<option value="British Indian Ocean Territory">British Indian Ocean Territory</option>	<option value="Brunei Darussalam">Brunei Darussalam</option>	<option value="Bulgaria">Bulgaria</option>	<option value="Burkina Faso">Burkina Faso</option>	<option value="Burundi">Burundi</option>	<option value="Cambodia">Cambodia</option>	<option value="Cameroon">Cameroon</option>	<option value="Canada">Canada</option>	<option value="Cape Verde">Cape Verde</option>	<option value="Cayman Islands">Cayman Islands</option>	<option value="Central African Republic">Central African Republic</option>	<option value="Chad">Chad</option>	<option value="Chile">Chile</option>	<option value="China">China</option>	<option value="Christmas Island">Christmas Island</option>	<option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>	<option value="Colombia">Colombia</option>	<option value="Comoros">Comoros</option>	<option value="Congo">Congo</option>	<option value="Congo, The Democratic Republic of The">Congo, The Democratic Republic of The</option>	<option value="Cook Islands">Cook Islands</option>	<option value="Costa Rica">Costa Rica</option>	<option value="Cote D'ivoire">Cote D'ivoire</option>	<option value="Croatia">Croatia</option>		<option value="Cyprus">Cyprus</option>	<option value="Czech Republic">Czech Republic</option>	<option value="Denmark">Denmark</option>	<option value="Djibouti">Djibouti</option>	<option value="Dominica">Dominica</option>	<option value="Dominican Republic">Dominican Republic</option>	<option value="Ecuador">Ecuador</option>	<option value="Egypt">Egypt</option>	<option value="El Salvador">El Salvador</option>	<option value="Equatorial Guinea">Equatorial Guinea</option>	<option value="Eritrea">Eritrea</option>	<option value="Estonia">Estonia</option>	<option value="Ethiopia">Ethiopia</option>	<option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>	<option value="Faroe Islands">Faroe Islands</option>	<option value="Fiji">Fiji</option>	<option value="Finland">Finland</option>	<option value="France">France</option>	<option value="French Guiana">French Guiana</option>	<option value="French Polynesia">French Polynesia</option>	<option value="French Southern Territories">French Southern Territories</option>	<option value="Gabon">Gabon</option>	<option value="Gambia">Gambia</option>	<option value="Georgia">Georgia</option>	<option value="Germany">Germany</option>	<option value="Ghana">Ghana</option>	<option value="Gibraltar">Gibraltar</option>	<option value="Greece">Greece</option>	<option value="Greenland">Greenland</option>	<option value="Grenada">Grenada</option>	<option value="Guadeloupe">Guadeloupe</option>	<option value="Guam">Guam</option>	<option value="Guatemala">Guatemala</option>	<option value="Guernsey">Guernsey</option>	<option value="Guinea">Guinea</option>	<option value="Guinea-bissau">Guinea-bissau</option>	<option value="Guyana">Guyana</option>	<option value="Haiti">Haiti</option>	<option value="Heard Island and Mcdonald Islands">Heard Island and Mcdonald Islands</option>	<option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option>	<option value="Honduras">Honduras</option>	<option value="Hong Kong">Hong Kong</option>	<option value="Hungary">Hungary</option>	<option value="Iceland">Iceland</option>	<option value="India">India</option>	<option value="Indonesia">Indonesia</option>		<option value="Iraq">Iraq</option>	<option value="Ireland">Ireland</option>	<option value="Isle of Man">Isle of Man</option>	<option value="Israel">Israel</option>	<option value="Italy">Italy</option>	<option value="Jamaica">Jamaica</option>	<option value="Japan">Japan</option>	<option value="Jersey">Jersey</option>	<option value="Jordan">Jordan</option>	<option value="Kazakhstan">Kazakhstan</option>	<option value="Kenya">Kenya</option>	<option value="Kiribati">Kiribati</option>	<option value="Korea, Democratic People's Republic of">Korea, Democratic People's Republic of</option>	<option value="Korea, Republic of">Korea, Republic of</option>	<option value="Kuwait">Kuwait</option>	<option value="Kyrgyzstan">Kyrgyzstan</option>	<option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option>	<option value="Latvia">Latvia</option>	<option value="Lebanon">Lebanon</option>	<option value="Lesotho">Lesotho</option>	<option value="Liberia">Liberia</option>	<option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>	<option value="Liechtenstein">Liechtenstein</option>	<option value="Lithuania">Lithuania</option>	<option value="Luxembourg">Luxembourg</option>	<option value="Macao">Macao</option>	<option value="Macedonia, The Former Yugoslav Republic of">Macedonia, The Former Yugoslav Republic of</option>	<option value="Madagascar">Madagascar</option>	<option value="Malawi">Malawi</option>	<option value="Malaysia">Malaysia</option>	<option value="Maldives">Maldives</option>	<option value="Mali">Mali</option>	<option value="Malta">Malta</option>	<option value="Marshall Islands">Marshall Islands</option>	<option value="Martinique">Martinique</option>	<option value="Mauritania">Mauritania</option>	<option value="Mauritius">Mauritius</option>	<option value="Mayotte">Mayotte</option>	<option value="Mexico">Mexico</option>	<option value="Micronesia, Federated States of">Micronesia, Federated States of</option>	<option value="Moldova, Republic of">Moldova, Republic of</option>	<option value="Monaco">Monaco</option>	<option value="Mongolia">Mongolia</option>	<option value="Montenegro">Montenegro</option>	<option value="Montserrat">Montserrat</option>	<option value="Morocco">Morocco</option>	<option value="Mozambique">Mozambique</option>	<option value="Myanmar">Myanmar</option>	<option value="Namibia">Namibia</option>	<option value="Nauru">Nauru</option>	<option value="Nepal">Nepal</option>	<option value="Netherlands">Netherlands</option>	<option value="Netherlands Antilles">Netherlands Antilles</option>	<option value="New Caledonia">New Caledonia</option>	<option value="New Zealand">New Zealand</option>	<option value="Nicaragua">Nicaragua</option>	<option value="Niger">Niger</option>	<option value="Nigeria">Nigeria</option>	<option value="Niue">Niue</option>	<option value="Norfolk Island">Norfolk Island</option>	<option value="Northern Mariana Islands">Northern Mariana Islands</option>	<option value="Norway">Norway</option>	<option value="Oman">Oman</option>	<option value="Pakistan">Pakistan</option>	<option value="Palau">Palau</option>	<option value="Palestinian Territory, Occupied">Palestinian Territory, Occupied</option>	<option value="Panama">Panama</option>	<option value="Papua New Guinea">Papua New Guinea</option>	<option value="Paraguay">Paraguay</option>	<option value="Peru">Peru</option>	<option value="Philippines">Philippines</option>	<option value="Pitcairn">Pitcairn</option>	<option value="Poland">Poland</option>	<option value="Portugal">Portugal</option>	<option value="Puerto Rico">Puerto Rico</option>	<option value="Qatar">Qatar</option>	<option value="Reunion">Reunion</option>	<option value="Romania">Romania</option>	<option value="Russian Federation">Russian Federation</option>	<option value="Rwanda">Rwanda</option>	<option value="Saint Helena">Saint Helena</option>	<option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>	<option value="Saint Lucia">Saint Lucia</option>	<option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>	<option value="Saint Vincent and The Grenadines">Saint Vincent and The Grenadines</option>	<option value="Samoa">Samoa</option>	<option value="San Marino">San Marino</option>	<option value="Sao Tome and Principe">Sao Tome and Principe</option>	<option value="Saudi Arabia">Saudi Arabia</option>	<option value="Senegal">Senegal</option>	<option value="Serbia">Serbia</option>	<option value="Seychelles">Seychelles</option>	<option value="Sierra Leone">Sierra Leone</option>	<option value="Singapore">Singapore</option>	<option value="Slovakia">Slovakia</option>	<option value="Slovenia">Slovenia</option>	<option value="Solomon Islands">Solomon Islands</option>	<option value="Somalia">Somalia</option>	<option value="South Africa">South Africa</option>	<option value="South Georgia and The South Sandwich Islands">South Georgia and The South Sandwich Islands</option>	<option value="Spain">Spain</option>	<option value="Sri Lanka">Sri Lanka</option>	<option value="Suriname">Suriname</option>	<option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>	<option value="Swaziland">Swaziland</option>	<option value="Sweden">Sweden</option>	<option value="Switzerland">Switzerland</option>	<option value="Taiwan">Taiwan</option>	<option value="Tajikistan">Tajikistan</option>	<option value="Tanzania, United Republic of">Tanzania, United Republic of</option>	<option value="Thailand">Thailand</option>	<option value="Timor-leste">Timor-leste</option>	<option value="Togo">Togo</option>	<option value="Tokelau">Tokelau</option>	<option value="Tonga">Tonga</option>	<option value="Trinidad and Tobago">Trinidad and Tobago</option>	<option value="Tunisia">Tunisia</option>	<option value="Turkey">Turkey</option>	<option value="Turkmenistan">Turkmenistan</option>	<option value="Turks and Caicos Islands">Turks and Caicos Islands</option>	<option value="Tuvalu">Tuvalu</option>	<option value="Uganda">Uganda</option>	<option value="Ukraine">Ukraine</option>	<option value="United Arab Emirates">United Arab Emirates</option>	<option value="United Kingdom">United Kingdom</option>	<option value="United States" selected="">United States</option>	<option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>	<option value="Uruguay">Uruguay</option>	<option value="Uzbekistan">Uzbekistan</option>	<option value="Vanuatu">Vanuatu</option>	<option value="Venezuela">Venezuela</option>	<option value="Viet Nam">Viet Nam</option>	<option value="Virgin Islands, British">Virgin Islands, British</option>	<option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option>	<option value="Wallis and Futuna">Wallis and Futuna</option>	<option value="Western Sahara">Western Sahara</option>	<option value="Yemen">Yemen</option>	<option value="Zambia">Zambia</option>	<option value="Zimbabwe">Zimbabwe</option>
+
+</select><span class="required">*</span>
+                    </div>
+                    
+                    <div>
+                    	<label>Name</label>
+                    	<input name="fullname" type="text" id="fullname" value="" onchange="updateOrder();"><span class="required">*</span>
+                    </div>
+
+                    <div>
+                    	<label>Address Line 1</label>
+                    	<input name="addr1" type="text" id="addr1" value="" onchange="updateOrder();"><span class="required">*</span>
+                    </div>
+                    <div>
+                    	<label>Address Line 2</label>
+                    	<input name="addr2" type="text" id="addr2" value="" onchange="updateOrder();">
+                    </div>
+                    <div>
+                    	<label>City</label>
+                    	<input name="addr3" type="text" id="addr3" value="" onchange="updateOrder();"><span class="required">*</span>
+                    </div>
+                    <div>
+                    	<label>State or Province</label>
+                    	<input name="addr4" type="text" id="addr4" value="" onchange="updateOrder();"><span class="required">*</span>
+                    </div>
+                    <div>
+                    	<label>ZIP  or Postal Code</label>
+                    	<input name="addr5" type="text" id="addr5" value="" onchange="updateOrder();"><span class="required">*</span>
+                    </div>
+
+                    <div>
+						<p class="orderHint" style="margin-left: 200px;">Email is for shipping notices. No spam.</p>
+                    	<label>Email</label>
+                    	<input name="emailpurchase" type="text" id="emailpurchase" value="" onchange="updateOrder();">
+
+                    </div>
+
+				</div><!-- end paymentMailingInfo -->
+
+
+                </form>
+                
+                	<div id="bitpaySubmitter" style="display: none;">
+
+                      <form action="https://bitpay.com/checkout" method="post" id="bitpayform" style="display:none; ">
+                        <input type="hidden" name="action" value="checkout">
+                        
+                        <input type="hidden" name="currency" value="BTC">
+                        <input type="hidden" name="orderID" value="1648091803">
+                        <input type="hidden" name="physical" value="true">
+  						<input type="hidden" name="fullNotifications" value="false">
+                        <input type="hidden" name="price" id="bitprice" value="0.0010">
+                        <input type="hidden" name="itemDesc" id="bitdesc" value="Hologram Stickers: 24 mixed (6 silver, 6 gold wallets) , 1 bag (Free with your order!) , (No LiveCD) , 1 circle sticker (Free with your order!) , with free shipping  -10% discount ">
+                        <input type="hidden" name="buyerName" id="bitname" value="">
+                        <input type="hidden" name="buyerEmail" id="bitemail" value="(No email address given)">
+                        <input type="hidden" name="buyerAddress1" id="bitaddr1" value="">
+                        <input type="hidden" name="buyerAddress2" id="bitaddr2" value="">
+                        <input type="hidden" name="buyerCity" id="bitaddr3" value="">
+                        <input type="hidden" name="buyerState" id="bitaddr4" value="">
+                        <input type="hidden" name="buyerZip" id="bitaddr5" value="">
+                        <input type="hidden" name="buyerCountry" id="bitcountry" value="United States">
+                        
+                        <input type="hidden" name="redirectURL" id="bitRedirect" value="https://bitcoinpaperwallet.com/thanks.html">
+  
+                        <input type="hidden" name="posData" value="">
+                        <input type="hidden" name="data" value="k8w4snIakK6hIN7VDq+wOiXeR9/1dPZqcn+gAlcaSYtAWZvOpRr3D3fbimAa6mTE2V5YLIoJJrS4P9UVXLdZsDvQvypH1UruwPNSw43MP0/huDfn2ljJciFPCXR7NUcgNuppwGHDsqE+BMdG53PO9uAHNAEoFnWl8YG58xD6y4WSEeTc8kOZpR5vTJTigYXCf7aLi5ioSPntW/C4IeELtm2ty6L05yw2Ubqmk2jp/AJJIuAy2pH6zJWZ23n2ag4hzsCcLjb/do2n5BoAbW9yMIO7SDs3UVlsD7qXmeYggAyrjNk2gweGUXzy/30eJ4qf">
+                        <input type="image" src="https://bitpay.com/img/button5.png" name="submit" alt="BitPay, the easy way to pay with bitcoins." border="0">
+                      </form>
+                      
+                      <div id="bitpaywaiting" style="">
+                          <p id="bitpaywaitingtext">Please complete all <span class="required">*Required</span> fields above.</p>
+                          <input type="button" style="color: #666; font-size: 125%;" value="Pay with Bitcoin (via BitPay)" onclick="$(&quot;#bitpaywaitingtext&quot;).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);">
+                      </div>
+                    
+                    </div><!-- end bitpaySubmitter -->
+                    
+                    <div id="paypalSubmitter" style="">
+                    	<input type="button" value="Checkout with PayPal »" onclick="submitPayPal();" style="font-size: 125%;">
+                    </div>
+
+
+            </div>
+
+            <aside>
+            
+            	  <h2>What can I get?</h2>
+            	  <a class="inlinePop" href="#popupKit"><img src="images/complete-kit-with-CD-sticker-285.jpg" alt="Complete Kit" width="285" height="171" border="0"></a>
+
+                  <div style="display:none">
+                    <div id="popupKit">
+			        <img src="images/complete-kit-with-CD-sticker-750.jpg" alt="Complete Kit" width="750" height="450"><br>
+                    <div style="float: right; padding: 0 0 10px 10px;"><a href="#purchase">Order Form »</a></div>
+                    <p style="width: 750px; text-align: left"><strong>1) Tamper-evident serialized hologram stickers</strong>, silver and gold.<br>
+                    <strong>2) Ubuntu LiveCD</strong> with the wallet generator pre-installed. It will boot on almost any computer with an optical drive, whether you're using a Mac or PC.<br>
+                    <strong>3) A limited edition high-quality vinyl Bitcoin sticker</strong> for your laptop or car -- free with every order.<br>
+                    <strong>4) Zip-sealing bags</strong>, perfectly sized for this design.
+                    </p>
+                  
+                  </div></div><!-- end popup -->
+
+
+				    <p style="color: #666; font-size: 12px; line-height: 14px; margin-bottom: 5px;"><a class="inlinePop" href="#popupKit">Take a closer look</a></p>
+
+                    <p>Hologram stickers come in silver and gold tints, and feature <a class="inlinePop" href="#popupSerials">unique serial numbers</a> printed in pairs. 
+                    You can also order a <a href="/ubuntu-linux-live-bootable-cd/">customized Ubuntu "LiveCD"</a> with the generator pre-installed -- by far the easiest and safest way to print out secure wallets.
+                    All orders include free first-class shipping, plus one free zip-sealing bag and a high quality 3.5 inch vinyl 'bitcoin' sticker for your car or laptop.
+                    </p>
+
+                  <div style="display:none">
+                    <div id="popupSerials">
+                    <p style="width: 375px;">Serial numbers (e.g. 002505) are laser-eteched in pairs directly onto the stickers.</p>
+				    <img src="images/gold-serials.jpg" alt="Gold Serial Numbers" width="372" height="450"></div></div><!-- end popup -->
+
+
+<h2>Oooooh, rainbows!</h2>
+
+				  <a class="inlinePop" href="#popupStickers"><img src="images/sticker-rolls-new-285.jpg" alt="Silver and Gold Stickers" width="285" height="164" border="0"></a>
+                  
+                  <div style="display:none"><div id="popupStickers">
+                  <iframe src="https://www.youtube-nocookie.com/embed/gZBXhFT_GKo?rel=0" allowfullscreen="" width="640" height="360" frameborder="0"></iframe>
+                  
+                  </div></div><!-- end popup -->
+
+
+
+
+<p>The shiny hologram tape used to seal up the paper wallets you see on this site isn't just for good looks. It's "tamper-evident" tape that provides a deterrent to a significant group of would-be﻿ thieves: someone in your trusted environment (home, work) who might be motivated to steal your coins if you were unlikely to notice the withdrawal until checking your balance online.</p>
+
+                <ul>
+                	<li>The holographic design on this tape is irreversibly  damaged as soon as the tape is lifted from the paper, no matter how carefully it is replaced.</li>
+                	<li>Unique serial numbers (printed in pairs) guard against merely replacing old stickers with brand new stickers</li>
+                    <li>The reflective quality of the tape protects against "candling" -- using a super-bright light source (like a laser) to see the private key through the folds.</li>
+                </ul>
+
+
+            </aside>
+
+
+
+            <a class="back-to-top" href="#main">Back to Top</a>
+
+      </section>
+
+
+      <!-- security -->
+ <section id="security">
+
+             <h1 style="margin-bottom: 0; padding-bottom: 0;">Secure Wallet Generation &amp; Safekeeping</h1>
+             <h5>Helpful tips organized in ascending degrees of paranoia</h5>
+
+             <div class="row no-bottom-margin">
+                <section class="col">
+                    <h2>Keeping it Safe</h2>
+
+                    <p><img class="align-left" alt="Water" src="images/security/water.png">
+                    The biggest threat to your wallet isn't an evil WiFi packet-sniffing robot. Your worst enemy is <a class="inlinePop" href="#popupWater"><strong>water.</strong></a> 
+                    If you have access to a laser printer, use it—because laser printers melt waterproof plastic (toner) onto paper instead of using ink.
+            When using an inkjet printer, consider storing your wallet in a zip-sealing plastic bag (like those <a href="#purchase">sold on this site</a>) or printing <a href="https://www.amazon.com/dp/B004PX7ZTC/ref=as_li_ss_til?tag=moviforbabi-20&amp;camp=0&amp;creative=0&amp;linkCode=as4&amp;creativeASIN=B004PX7ZTC&amp;adid=02ZA7R117Z83509NKYFJ&amp;" target="_new">on waterproof paper</a>, or treating the paper with a clear coat spray like <a href="https://www.amazon.com/gp/product/B0013L5TE2/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B0013L5TE2&amp;linkCode=as2&amp;tag=moviforbabi-20" target="_blank">Krylon "Preserve It"</a>.</p>
+                    
+                    <p class="tldr"><span>tldr:</span> Treat a paper wallet like cash. If you lose it or if it becomes illegible, the coins are gone forever.</p>
+
+                  <div style="display:none"><div id="popupWater">
+                    <p>Even the condensation from the outside of a glass set on top of an inkjet print can destroy it.<br>
+                    Here's what a tiny bit of water will do to an inkjet-printed wallet:</p>
+					<img src="images/water-damage.jpg" alt="Water Damage" width="800" height="537">
+                    </div></div><!-- end popup -->
+
+
+                </section>
+                <section class="col mid">
+                    <h2>Withdrawing Funds</h2>
+
+                    <p><img class="align-left" alt="Piggy Bank" src="images/security/piggy.png">
+                    The private key on this wallet is recorded in typical "Wallet Import Format" (WIF). 
+                    Many  online services (e.g. <a href="https://blockchain.info" target="_blank">blockchain.info</a>, <a href="https://coinbase.com" target="_blank">coinbase.com</a>) will let you import or "sweep" your paper wallet using this key.
+                    Plan on importing your <strong>entire balance</strong>. 
+                    Afterwards, discontinue using the paper wallet—as if you were breaking open a piggy bank. 
+                  If you try to spend or withdraw only a portion of your funds, <a href="https://www.reddit.com/r/Bitcoin/comments/1c9xr7/psa_using_paper_wallets_understanding_change/" target="_blank">you risk losing the remaining balance forever</a>.<br>
+                  <a target="_blank" href="faq-how-do-i-access-bitcoin-paper-wallet.pdf"><strong>How to import paper wallets »</strong></a></p>
+                    
+                    <p class="tldr"><span>tldr:</span>Add funds to your wallet as often as you like, but withdraw them all at once—otherwise your balance may disappear forever.</p>
+                </section>
+
+                <section class="col">
+                    <h2>Going Offline</h2>
+
+                    Your wallet may be vulnerable to prying eyes when you are generating the keys and printing them out.
+                    Although the wallet generator on this website is SSL-encrypted, it's still possible for someone to be snooping on you. 
+                    (For example, your computer might have malware that broadcasts your screen to a remote location.) 
+                    The most important safety measure is to <strong>go offline</strong> and run the javascript wallet generator on your own computer instead of this website.<br>
+                    <a class="inlinePop" href="#popupZip"><strong>Here's how »</strong></a>
+                    <p></p>
+
+                    <p class="tldr"><span>tldr:</span><a class="inlinePop" href="#popupZip">Download the ZIP file</a> or <a href="#purchase">get the Ubuntu LiveCD</a> and run the wallet generator with your Internet connection turned off.</p>
+                  
+                  <div style="display:none"><div id="popupZip">
+                    <h4>How to run this wallet generator offline</h4>
+                    <p>You can <a href="#purchase">order the Ubuntu LiveCD from this site</a> (which comes with the wallet generator securely pre-installed)</p>
+                    <p>OR:</p>
+                    <ol>
+                    	<li>Download the wallet generator from GitHub as a ZIP file to your computer.</li>
+                        <li>Turn off your Internet connection. (Power off the modem!)</li>
+                        <li>Extract the ZIP file and drag the HTML file inside of it onto Safari, Firefox, or Chrome (not Intenet Explorer.)</li>
+                        <li>Print out your wallet(s).</li>
+                        <li>Reboot your computer and power cycle your printer before going back online.</li>
+                    </ol>
+            		             
+                  
+                  </div></div><!-- end popup -->
+
+
+                </section>
+            </div>
+
+        <div class="row">
+
+                <section class="col">
+                    <h2>Destroying Cache Files</h2>
+
+                    <p><img class="align-left" alt="Trash" src="images/security/trash.png">
+                    The problem with printing out secure documents—even if your computer is 100% virus/trojan free—is 
+                    that your printer driver and/or operating system may be keeping copies of the documents you print in
+                    some sort of "spool" or print queue. If a hacker or virus gets into your computer and knows to look for
+                    these cache files, then they can get your private keys and "sweep" your wallets. Here are some tips on <a class="inlinePop" href="#popupDelete"><strong>how to
+                    securely delete your printer "spool" files</strong></a>.</p>
+
+                    <p class="tldr"><span>tldr:</span> Learn how to <a class="inlinePop" href="#popupDelete">delete your printer cache files</a> after printing secure documents.</p>
+
+                  <div style="display:none"><div id="popupDelete">
+                    <h4>How to delete pesky printer cache files</h4>
+                    
+                    <h2>Macintosh:</h2>
+                    <ol>
+                    	<li>Enable 'FileVault' to encrypt your filesystem so that cache files cannot be 'undeleted'.</li>
+                        <li>Set up a symbolic link from /private/var/spool/cups/cache/ to a removable media volume (e.g. a SD card) and disconnect it when not in use.</li>
+                    </ol>
+
+                    <h2>Windows:</h2>
+                    
+                    <ol>
+                    	<li>Use an encrypted filesystem so that your cache files cannot be 'undeleted'.</li>
+                        <li>Read <a href="faq-secure-windows-bitcoin-printing.pdf">this FAQ</a> on how to change the destination of your cache (spool) files to removable media.</li>
+                    </ol>
+
+                    <h2>Linux:</h2>
+                    
+                    <ol>
+                    	<li>Use a live-boot CD instead of a regular hard drive OS install. This way when you reboot your computer, all cache files are deleted from memory and no jobs are ever written to disk.</li>
+                    </ol>
+
+					<p><mark>Hey, do you know much about printer spools on your operating system? I need your help for this section! <a href="mailto:bitpaperwallet@gmail.com">bitpaperwallet@gmail.com</a></mark></p>
+            			                  
+                  </div></div><!-- end popup -->
+
+
+                </section>
+
+                <section class="col mid">
+                    <h2>Using a Clean OS</h2>
+
+                    <p><img class="align-left" alt="Clean CD" src="images/security/cd.png">
+                    If you've got loads of applications on your computer, or if you use your computer for "risky behavior"
+                    (like installing freeware or visiting java / flash websites) 
+                    <strong>consider dedicating a computer</strong> (or at least a bootable partition / thumbdrive / "live CD") for paper wallet
+                    printing. Never take that install online. Transfer the wallet generator <a class="inlinePop" href="#popupZip">ZIP file</a> from GitHub to your clean OS using
+                    a thumbdrive or other non-networked method.</p>
+
+                    <p class="tldr"><span>tldr:</span> Run the wallet generator on a dedicated offline computer / OS.</p>
+
+                </section>
+                <section class="col">
+                    <h2>Using a Dumb Printer</h2>
+
+                    <p><img class="align-left" alt="Dumb Printer" src="images/security/printer.png">
+                    Some advanced printers have internal storage (even hard drives) that preserve copies of printouts. This is a risk if someone gets access to your printer,
+                    or if you dispose of your printer. There is also the possibility that <strong>a smart enough printer can be hacked</strong>.
+                    This isn't quite tinfoil-hat level paranoia, as we've seen examples <a href="https://en.wikipedia.org/wiki/Stuxnet" target="_blank">in the wild</a> of viruses
+                    that rewrite the firmware of non-computer devices indirectly connected to the Internet. If this concerns you,
+                    don't use a fancy printer, and never let your printer have access to the Internet or to an Internet-connected computer.</p>
+
+                    <p class="tldr"><span>tldr:</span> Smart printers save copies of what they print and may be vulnerable to super-smart viruses. Use a dumb offline printer whose firmware can't be reprogrammed.</p>
+
+                </section>
+
+            </div>
+            
+				<img src="images/dont-panic.png" alt="Don't Panic" style="float: right; margin-left: 20px;" width="143" height="131">
+<h2>Overwhelmed? Scared silly?</h2>
+                <p>There's no need to follow <strong>all</strong> of these precautions. If you're just generating some give-away wallets for fun or to store small amounts of bitcoin, relax. Just use the <a href="bitcoinpaperwallet/generate-wallet.html">online wallet generator</a> on a trusted computer over a secure Internet connection. For storing larger amounts, follow as many of these security precautions as you can.</p>
+
+    	            <h4>Frequently Asked Questions</h4>
+
+            <ul>
+            	<li><a href="/printing-and-paper-tips/">What kind of printer and paper should I use?</a></li>
+            	<li><a href="/wallet-tutorial-add-withdraw-funds/">How do I add bitcoins to a paper wallet? How do I withdraw/spend them?</a></li>
+            	<li><a href="/bip38-password-encrypted-wallets/">How does BIP38 wallet encryption work, and should I use it?</a></li>
+            	<li><a href="/ubuntu-linux-live-bootable-cd/">What is the Ubuntu LiveCD for? How does it work?</a></li>
+            	<li><a href="/how-to-scan-qr-codes-with-camera/">How do I scan QR codes with my camera?</a></li>
+            </ul>
+                        <input type="submit" id="generateButton" value="« Back to the main website" class="button" onclick="window.location='../';">
+			
+        <a class="back-to-top" href="#main">Back to Top</a>
+
+      </section>
+
+
+      <!-- contact -->
+<section id="contact" class="clearfix">
+			<div id="convertTo" style="float: right; width: 270px; background-color: #FFFFFF; padding: 8px; border: 1px solid #CCC;">If you have feedback on your wallet printing experience,
+            <a href="/feedback/">please use this feedback form</a>.</div>
+            <h1>Why Did You Make This?</h1>
+
+            <div class="primary">
+
+                <p class="intro">
+                I love Bitcoin. I love how it's elegant, functional, philosophical, and radical.</p>
+                
+                <p class="intro">Unfortunately, for folks not steeped in cypherpunk ideology and network security, bitcoins are hard to understand, hard to purchase, and hard to keep safe.
+                The primary purpose of this site is to make it easier to keep your coins safe once you've gone through the hard work of acquiring some.</p>
+                
+                <p class="intro">The secondary purpose of this site is to encourage you to expand the understanding and acceptance of Bitcoin by loading up and giving away these beautiful and fairly idiot-proof paper wallets.</p>
+                
+                <blockquote>Hey, here's a couple bitcoins. Keep this paper somewhere safe for now, because some day it might be worth a whole lot and you can buy yourself something nice. Enjoy!</blockquote>
+
+				<a name="contactformanchor"></a>
+
+                <form method="post" action="/index.html" id="contactform">
+                    <div>
+                    <p>Questions, concerns, ideas? Hit me up.</p>
+                    </div>
+
+                    <div>
+                    <label>Your Email</label>
+                    <input name="email" type="text" id="email" value="">
+                    </div>
+
+                    <div>
+                    <label>Message</label>
+                    <textarea name="message" rows="10" cols="50" id="message"></textarea><br><br>
+                    </div>
+
+					<div>
+					<img id="simpleCaptcha" src="/captcha/simple-php-captcha.php?_CAPTCHA&amp;t=0.08299800+1648091803">                    
+                    <input name="captcha" type="text" id="captcha" value="" placeholder="Are you a robot? Type in this code." size="40">
+					</div>
+                    <div>
+					<input type="submit" value="Submit" class="button">
+					</div>
+                </form>
+                
+            </div>
+
+            <aside>
+
+                    <p style="padding: 15px 0;">
+                    <br>
+                    <a href="mailto:bitpaperwallet@gmail.com">bitpaperwallet@gmail.com</a> / 
+                 
+                    <br>
+                    </p>
+
+					<a name="thanks"></a>
+					<h2 style="font-size: 15px;">Thank you!</h2>
+        <p>This site benefits from "standing on the shoulders of giants"—in this case the superb work of bitaddress, whose code does the key generation and QR code rendering at the heart of this wallet generator.</p>
+        
+        <p>Also, thanks to Artiom Chilaru of <a href="http://flexlabs.org" target="_blank">flexlabs.org</a> for the excellent BIP38 implementation, and to <a href="http://martin.ankerl.com" target="_blank">Martin Ankerl</a> &lt;martin.ankerl@gmail.com&gt; for the algorithmic 'guilloche' background pattern generator. </p>
+    </aside>
+
+            <a class="back-to-top" href="#main">Back to Top</a>
+
+     </section>
+
+      <section id="donate">
+      
+      <h4 style="padding-top: 20px;">Donations to encourage this project are warmly welcomed. Thank you!</h4>
+
+	  <div id="donateLeft">
+      <img src="1KJFgSXpPvUthy3a7NxyM66szTkqHabpYB.png" alt="1KJFgSXpPvUthy3a7NxyM66szTkqHabpYB" style="float: left; margin-right: 20px;" width="140" height="140">
+      <p><strong>Donate bitcoin</strong>, because you have some.<br><strong style="color: #F60;">1KJFgSXpPvUthy3a7NxyM66szTkqHabpYB</strong><br>
+      
+      <span style="font-size: 90%;">&nbsp;<br><strong>Litecoin</strong>: LiHbcN5372Gmt5HsEQ58P432n4qeSnnmzj<br>
+      <strong>Dogecoin</strong>: D5zFZhHBxcQKdim1mK3QLak4Q5dFayYHT6</span>
+	  </p>
+      
+      <p>You can also add a donation when you order <a href="#purchase">hologram stickers</a>.</p>
+      </div>
+      
+      <div id="donateRight">
+      <p><strong>Donate using PayPal / USD / Euro</strong>, because you're oldschool.</p>
+        <center>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+            <input type="hidden" name="cmd" value="_donations">
+            <input type="hidden" name="business" value="orders@paperwalletshop.com">
+            <input type="hidden" name="item_name" value="Bitcoin Paper Wallet Donation">
+            <input type="hidden" name="item_number" value="paperwallet">
+            <input type="hidden" name="no_shipping" value="0">
+            <input type="hidden" name="no_note" value="1">
+            <input type="hidden" name="currency_code" value="USD">
+            <input type="hidden" name="tax" value="0">
+            <input type="hidden" name="lc" value="US">
+            <input type="hidden" name="bn" value="PP-DonationsBF">
+            <input id="ppButton" type="image" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" name="submit" alt="PayPal - The old stinky way to pay online!" border="0">
+            <img alt="" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" border="0">
+        </form>
+        </center>
+      
+      </div>
+      
+      
+      
+      <br clear="all">
+      
+      </section>
+
+
+</div>
+
+<!-- footer -->
+<footer>
+    <div class="footer-content">
+        <ul class="footer-menu">
+                <li><a href="#main">Print a Wallet</a></li>
+                <li><a href="#purchase">Get Hologram Stickers &amp; Supplies</a></li>
+                <li><a href="#security">Security &amp; FAQ</a></li>
+                <li><a href="#contact">About &amp; Contact</a></li>
+        </ul>
+
+
+        <p class="footer-text">
+
+		<a rel="license" href="https://creativecommons.org/licenses/by/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0; float: right; margin-left: 30px;" src="images/cc-88x31.png"></a>
+
+        © <strong>Copyright 2014</strong>. The text on this page is released and licensed under Creative Commons Attribution 3.0, which means that you are free to distribute, use and modify it for any personal or commercial purpose provided that you include an obvious link back to bitcoinpaperwallet.com. The Bitcoin Paper Wallet software (HTML and Javascript) may be modified and redistributed according to the MIT and GPL licenses described in the source code. The bitcoinpaperwallet.com logo, hologram sticker design, and folding wallet design are copyrighted and may not be replicated or used without permission except for personal use.</p>
+
+
+    </div>
+
+</footer>
+
+<script type="text/javascript"><!-- google analytics -->
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-39868860-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+</div><div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div></body></html>

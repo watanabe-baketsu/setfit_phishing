@@ -1,0 +1,365 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+<!-- NO DATALAYER -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Type" content="text/javascript; charset=utf-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="“X-UA-Compatible”" content="“ie=edge”">
+
+<title>Billetterie | Train de l'Ardèche</title>
+<meta name="description" content="Train de l'Ardèche">
+<link rel="stylesheet" href="https://billetterie.trainardeche.fr/clients/train_ardeche/themes/defaut/fichiers/style.css">
+<link rel="stylesheet" href="https://billetterie.trainardeche.fr/clients/train_ardeche/themes/defaut/fichiers/normalize.css">
+<link href="https://billetterie.trainardeche.fr/clients/train_ardeche/themes/defaut/fichiers/all.css" rel="stylesheet">
+<link href="https://billetterie.trainardeche.fr/clients/train_ardeche/themes/defaut/fichiers/css2_002.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com/">
+<link href="https://billetterie.trainardeche.fr/clients/train_ardeche/themes/defaut/fichiers/css2.css" rel="stylesheet">
+		        
+<link rel="stylesheet" href="https://billetterie.trainardeche.fr/libs/font-awesome-5.11.2/css/all.css">
+
+<link rel="stylesheet" type="text/css" href="https://billetterie.trainardeche.fr/clients/train_ardeche/themes/defaut/datepicker.css">
+<link rel="stylesheet" type="text/css" href="https://billetterie.trainardeche.fr/clients/train_ardeche/themes/defaut/style.css.php">
+<link rel="stylesheet" type="text/css" href="https://billetterie.trainardeche.fr/clients/train_ardeche/themes/defaut/style_nav.css.php">
+<link rel="stylesheet" type="text/css" href="https://billetterie.trainardeche.fr/clients/train_ardeche/themes/defaut/style_modal.css.php">
+<link rel="stylesheet" type="text/css" href="https://billetterie.trainardeche.fr/clients/train_ardeche/themes/defaut/lightwindow.css">
+<link href="https://billetterie.trainardeche.fr/clients/train_ardeche/themes/defaut/default.css" rel="stylesheet" type="text/css">
+<link href="https://billetterie.trainardeche.fr/clients/train_ardeche/themes/defaut/alert.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://billetterie.trainardeche.fr/clients/train_ardeche/themes/defaut/kalendae.css" type="text/css" charset="utf-8">
+
+<script type="text/javascript" src="https://billetterie.trainardeche.fr/libs/js/general7.js"></script>
+<script type="text/javascript" src="https://billetterie.trainardeche.fr/libs/js/fr.js"></script>
+<script type="text/javascript" src="https://billetterie.trainardeche.fr/libs/js/datepicker.js"></script>
+
+<script src="https://billetterie.trainardeche.fr/libs/js/kalendae.standalone.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="https://billetterie.trainardeche.fr/libs/js/jquery-3.5.1.min.js"></script>
+<script src="https://billetterie.trainardeche.fr/clients/train_ardeche/themes/defaut/fichiers/script.js"></script>
+
+<script>
+	// Traductions
+	var erreur_qteinvalide		="The quantity is not valid";
+	var erreur_plusdedispo		="There is no availability";
+	var erreur_plusdedisporeste	="There is no availability for this quantity, remaining:";
+	var erreur_selectunbillet	="You must select at least 1 ticket to be printed.";
+	var erreur_dejaimprime		="Caution tickets have already been printed";
+	var erreur_renseignomprenom	="You must fill in the first and last names to prepare your tickets.";
+	var erreur_renseiginfosupp	="You must fill in the full names, additional information (date of birth, photo) to prepare your tickets (right icon of the line).";
+	var txt_a	=" at ";
+	var erreur_saisie_nom="Please enter your name";
+	var erreur_saisie_prenom="Please enter your first name";
+	var erreur_saisie_email="Please enter a valid email address";
+	var register_invalid_email="Your email address is not valid!";
+	var erreur_saisie_datenaiss="Please enter a valid date of birth (DD / MM / YYYY)";
+	var erreur_saisie_photo="Please choose a photo";
+	var erreur_format_photo="Please choose a JPG or JPEG photo";
+	var erreur_saisie_addr="Please enter your address";
+	var erreur_saisie_cpl="Please enter a valid postal code";
+	var erreur_saisie_ville="Please enter the city";
+	var erreur_saisie_tel="Please enter a valid phone number";
+    var sigle_monnaie = "€";
+    var erreur_condsslots = "Please check conditions.";
+
+	
+	// Champs obligatoires popup participant
+	var popup_part_nom = true;
+	var popup_part_prenom = true;
+	var popup_part_email = true;
+	var popup_part_datnai = true;
+	var popup_part_photo = false;
+	var popup_part_add1 = true;
+	var popup_part_add2 = false;
+	var popup_part_add3 = false;
+	var popup_part_cpl = true;
+	var popup_part_ville = true;
+	var popup_part_tel = true;
+
+	//jQuery.noConflict();
+	var widId = "";
+	var onloadCallback = function() {
+        widId = grecaptcha.render('html_element', {
+          'sitekey' : '6LfiTz8UAAAAAAlf8JiE4nt-pWugn3U-ysRx2pA2'
+        });
+      };
+</script>
+
+</head>
+<body>
+<div class="container top-header">
+    <div class="infos">
+        <a href="#"><i aria-hidden="true" class="fas fa-phone"></i>04 75 06 07 00</a>
+        <a href="https://www.trainardeche.fr/infos-pratiques/contact/"><i aria-hidden="true" class="far fa-envelope"></i>Contact</a>
+    </div>
+    <div class="social-media">
+        <a href="https://www.facebook.com/trainardeche07/"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/traindelardeche/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tripadvisor.fr/Attraction_Review-g665005-d4302934-Reviews-Train_de_l_Ardeche-Tournon_sur_Rhone_Ardeche_Auvergne_Rhone_Alpes.html"><i class="fab fa-tripadvisor"></i></a>
+    </div>
+</div>
+
+<div class="nav-background">
+    <div class="container primary-nav">
+        <span class="logo"><img src="https://billetterie.trainardeche.fr/clients/train_ardeche/themes/defaut/fichiers/Logo-train-de-l-ardeche.png" alt="Logo Trainardeche" width="165" height="165"></span>
+        <ul class="nav">
+            <li><a href="https://www.trainardeche.fr" class="active">Accueil</a></li>
+            <li><a href="https://www.trainardeche.fr/les-voyages/">Les voyages</a></li>
+            <li><a href="https://billetterie.trainardeche.fr/index.php?tc=3">Groupes</a></li>
+            <li><a href="https://billetterie.trainardeche.fr/index.php?tc=4">CE</a></li>
+            <li><a href="https://billetterie.trainardeche.fr/index.php?tc=6">Partenaires</a></li>
+            <li><i class="fas fa-map-signs"></i><a href="https://www.velorailardeche.com">Nos vélorails</a></li>
+            <li class="lang-fr"><a href="https://billetterie.trainardeche.fr/bin/index.php?code_langue=fr"><img src="https://billetterie.trainardeche.fr/clients/train_ardeche/themes/defaut/fichiers/flag-fr.jpg" alt="FR" width="18"> Français</a><i class="fas fa-chevron-down"></i></li>
+            <div class="sub-lang"><a href="https://billetterie.trainardeche.fr/bin/index.php?code_langue=en"><img src="https://billetterie.trainardeche.fr/clients/train_ardeche/themes/defaut/fichiers/flag-en.jpg" alt="EN" width="18"> Anglais</a></div>
+        </ul>
+        <div class="menu-burger"><i class="fas fa-bars"></i></div>
+    </div>
+</div>
+
+<div class="mobile-nav-wrap">
+    <ul class="mobile-nav">
+        <li><a href="https://www.trainardeche.fr" class="active" target="_blank">Accueil</a></li>
+        <li><a href="https://www.trainardeche.fr/les-voyages/" target="_blank">Les voyages</a></li>
+        <li><a href="https://billetterie.trainardeche.fr/index.php?tc=3">Groupes</a></li>
+        <li><a href="https://billetterie.trainardeche.fr/index.php?tc=4">CE</a></li>
+        <li><a href="https://billetterie.trainardeche.fr/index.php?tc=6">Partenaires</a></li>
+        <li><i class="fas fa-map-signs"></i><a href="https://www.velorailardeche.com/les-descentes/" target="_blank">Nos vélorails</a></li>
+        <li class="mobile-lang-fr"><a href="index.php?code_langue=fr"><img src="https://billetterie.trainardeche.fr/clients/train_ardeche/themes/defaut/fichiers/flag-fr.jpg" alt="FR" width="18"> Français</a></li>
+        <li class="mobile-lang-fr">
+            <a href="index.php?code_langue=en"><img src="https://billetterie.trainardeche.fr/clients/train_ardeche/themes/defaut/fichiers/flag-en.jpg" alt="En" width="18"> Anglais</a>
+        </li>
+    </ul>
+</div>
+
+<div id="Omniris">
+    <div class="content">
+        <div id="omn_modal">
+            <div id="omn_modalContent"><!--contenuInfoSupp-->
+            </div>
+        </div>
+        <nav id="nav">
+            <div class="titre_billetterie">
+			<a href="index.php?nocache=2022-03-25_03:34:05"><i class="fa fa-home fa-2x faPanier" aria-hidden="true"></i>
+BILLETTERIE </a></div>
+            <div class="moncompte">
+            <div id="accesCompte">
+              <a class="titreMenuCompte" href="index.php?page=identification&amp;action=page_login">
+                <i class="fa fa-user fa-3x faCompte" aria-hidden="true"></i><span class="txtMenu">My account</span>
+              </a>
+            </div><div id="accesPanier">
+              <a class="titreMenuPanier" href="index.php?page=vente&amp;action=validerPanier&amp;nocache=2022-03-25_03:34:05">
+              <i class="fa fa-shopping-bag fa-3x faPanier" aria-hidden="true"></i>
+              <span class="txtMenu">Cart<!--NBARTICLES--></span>
+              </a>
+            </div>
+            <div class="clear"></div></div>
+</nav><div class="clear"></div>
+        <div class="cheminfer">
+            <span class="etape etape_active"><a class="breadHome" href="index.php?nocache=2022-03-25_03:34:05">Ticket selection</a></span>
+            <i class="fa fa-chevron-right etape_icone etape_non_active" aria-hidden="true"></i>	<span class="etape etape_non_active">Identification</span>
+            <i class="fa fa-chevron-right etape_icone etape_non_active" aria-hidden="true"></i>	<span class="etape etape_non_active">Payment</span>
+            <i class="fa fa-chevron-right etape_icone etape_non_active" aria-hidden="true"></i>
+            <span class="etape etape_non_active">Confirmation</span><i class="fa fa-chevron-right etape_icone etape_non_active" aria-hidden="true"></i>
+                <span class="etape etape_non_active">Your tickets</span>
+            <div class="clear"></div></div><div class="error" id="msg_error"></div><div class="clear"></div><div class="liste_produits">
+		<script type="text/javascript" src="https://billetterie.trainardeche.fr/libs/js/vente_produits22.js"></script>
+		<script type="text/javascript">
+		function ajoutPanier() {
+            
+            document.getElementById("form_billets").submit();
+        }
+        </script>
+		<form method="post" action="index.php?page=vente&amp;action=ajouterProduit&amp;date=25/03/2022" name="form_billets" id="form_billets">
+		<input id="token" name="token" type="hidden" value="2576243542b0ab96828f3ec10cc92f444a691b16cd8e9256a7e360100902935e">
+		<table class="tab_produits sous_table_pkg"><tbody><tr>
+                                <td class="titre_bloc" colspan="5">
+                                    PACKAGES
+                                </td>
+                             </tr>
+                            <tr class="row1 ligneProduit clePro_4108 cleTar_4112">
+                            <td class="colLib">
+                                <p class="libProduit">Train des Gorges - Adult - €17.00</p><p class="valable" style="display:none"><span id="valable_1" class="textChoixDate"></span></p></td><td class="colDate"><p class="voirCalendrier"><span class="lienCal" onclick="ouvrirCal(1);" title="Select date and amount"><img class="icoCalendrier" src="https://billetterie.trainardeche.fr/clients/train_ardeche/themes/defaut/images/cal.png" alt="Calendrier"><br>Select date and amount</span></p></td><td class="colPrix"><span id="prix_1"></span></td><td class="colQte"><input type="text" readonly="" id="qte_1" name="qte_1" value="" style="display: none;" size="2" maxlength="3"></td>
+			<script>
+				function choixpkg1()
+				{
+					$("#qte_1").val($("#pkgqte_1").val());
+					$("#qte_1").show();
+					
+					if(dateSelection == '')
+					{
+						//Event#stop;
+						alert("Veuillez selectionner une date");
+						return;
+					}
+					calculerTotal(1,"4112");
+					afficherPopupSlot('https://billetterie.trainardeche.fr/bin/choixpackage.php?id=1&cle_pro=4108&cle_tar=4112&dateAchat=25/03/2022&cle_pkg_cop=0', 1);
+					dateSelection ='';
+				}
+				dateDes[1] = []; 
+				var hrefSlot = "https://billetterie.trainardeche.fr/bin/choixpackage.php?id=1&cle_pro=4108&cle_tar=4112&dateAchat=25/03/2022&cle_pkg_cop=0";
+				creerControlDatePkg("date_1","4112","4108","FR070011","6","106","19","0", dateDes, "25/03/2022","25/03/2022", hrefSlot,true, false, false);
+				$('#qte_1').on('change', function() {
+					calculerTotal(1,"4112");
+					afficherPopupSlot("https://billetterie.trainardeche.fr/bin/choixpackage.php?id=1&cle_pro=4108&cle_tar=4112&dateAchat=25/03/2022&cle_pkg_cop=0", 1);
+				});
+			</script>
+			
+            </tr>
+                            <tr class="row0 ligneProduit clePro_4109 cleTar_4113">
+                            <td class="colLib">
+                                <p class="libProduit">Train des Gorges - Young (10-13) - €9.00</p><p class="valable" style="display:none"><span id="valable_2" class="textChoixDate"></span></p></td><td class="colDate"><p class="voirCalendrier"><span class="lienCal" onclick="ouvrirCal(2);" title="Select date and amount"><img class="icoCalendrier" src="https://billetterie.trainardeche.fr/clients/train_ardeche/themes/defaut/images/cal.png" alt="Calendrier"><br>Select date and amount</span></p></td><td class="colPrix"><span id="prix_2"></span></td><td class="colQte"><input type="text" readonly="" id="qte_2" name="qte_2" value="" style="display: none;" size="2" maxlength="3"></td>
+			<script>
+				function choixpkg2()
+				{
+					$("#qte_2").val($("#pkgqte_2").val());
+					$("#qte_2").show();
+					
+					if(dateSelection == '')
+					{
+						//Event#stop;
+						alert("Veuillez selectionner une date");
+						return;
+					}
+					calculerTotal(2,"4113");
+					afficherPopupSlot('https://billetterie.trainardeche.fr/bin/choixpackage.php?id=2&cle_pro=4109&cle_tar=4113&dateAchat=25/03/2022&cle_pkg_cop=0', 2);
+					dateSelection ='';
+				}
+				dateDes[2] = []; 
+				var hrefSlot = "https://billetterie.trainardeche.fr/bin/choixpackage.php?id=2&cle_pro=4109&cle_tar=4113&dateAchat=25/03/2022&cle_pkg_cop=0";
+				creerControlDatePkg("date_2","4113","4109","FR070011","6","106","19","0", dateDes, "25/03/2022","25/03/2022", hrefSlot,true, false, false);
+				$('#qte_2').on('change', function() {
+					calculerTotal(2,"4113");
+					afficherPopupSlot("https://billetterie.trainardeche.fr/bin/choixpackage.php?id=2&cle_pro=4109&cle_tar=4113&dateAchat=25/03/2022&cle_pkg_cop=0", 2);
+				});
+			</script>
+			
+            </tr>
+                            <tr class="row1 ligneProduit clePro_4110 cleTar_4114">
+                            <td class="colLib">
+                                <p class="libProduit">Train des Gorges - Children (0-9) - Free</p><span class="descService">* Every children must have a valid ticket</span><p class="valable" style="display:none"><span id="valable_3" class="textChoixDate"></span></p></td><td class="colDate"><p class="voirCalendrier"><span class="lienCal" onclick="ouvrirCal(3);" title="Select date and amount"><img class="icoCalendrier" src="https://billetterie.trainardeche.fr/clients/train_ardeche/themes/defaut/images/cal.png" alt="Calendrier"><br>Select date and amount</span></p></td><td class="colPrix"><span id="prix_3"></span></td><td class="colQte"><input type="text" readonly="" id="qte_3" name="qte_3" value="" style="display: none;" size="2" maxlength="3"></td>
+			<script>
+				function choixpkg3()
+				{
+					$("#qte_3").val($("#pkgqte_3").val());
+					$("#qte_3").show();
+					
+					if(dateSelection == '')
+					{
+						//Event#stop;
+						alert("Veuillez selectionner une date");
+						return;
+					}
+					calculerTotal(3,"4114");
+					afficherPopupSlot('https://billetterie.trainardeche.fr/bin/choixpackage.php?id=3&cle_pro=4110&cle_tar=4114&dateAchat=25/03/2022&cle_pkg_cop=0', 3);
+					dateSelection ='';
+				}
+				dateDes[3] = []; 
+				var hrefSlot = "https://billetterie.trainardeche.fr/bin/choixpackage.php?id=3&cle_pro=4110&cle_tar=4114&dateAchat=25/03/2022&cle_pkg_cop=0";
+				creerControlDatePkg("date_3","4114","4110","FR070011","6","106","19","0", dateDes, "25/03/2022","25/03/2022", hrefSlot,true, false, false);
+				$('#qte_3').on('change', function() {
+					calculerTotal(3,"4114");
+					afficherPopupSlot("https://billetterie.trainardeche.fr/bin/choixpackage.php?id=3&cle_pro=4110&cle_tar=4114&dateAchat=25/03/2022&cle_pkg_cop=0", 3);
+				});
+			</script>
+			
+            </tr>
+                            <tr class="row0 ligneProduit clePro_4111 cleTar_4115">
+                            <td class="colLib">
+                                <p class="libProduit">Train des Gorges - Disabled person* - €16.00</p><span class="descService">* Special rate available for holders of a disability card to show at the ticket office. However, please note there are three steps to climb to board the train</span><p class="valable" style="display:none"><span id="valable_4" class="textChoixDate"></span></p></td><td class="colDate"><p class="voirCalendrier"><span class="lienCal" onclick="ouvrirCal(4);" title="Select date and amount"><img class="icoCalendrier" src="https://billetterie.trainardeche.fr/clients/train_ardeche/themes/defaut/images/cal.png" alt="Calendrier"><br>Select date and amount</span></p></td><td class="colPrix"><span id="prix_4"></span></td><td class="colQte"><input type="text" readonly="" id="qte_4" name="qte_4" value="" style="display: none;" size="2" maxlength="3"></td>
+			<script>
+				function choixpkg4()
+				{
+					$("#qte_4").val($("#pkgqte_4").val());
+					$("#qte_4").show();
+					
+					if(dateSelection == '')
+					{
+						//Event#stop;
+						alert("Veuillez selectionner une date");
+						return;
+					}
+					calculerTotal(4,"4115");
+					afficherPopupSlot('https://billetterie.trainardeche.fr/bin/choixpackage.php?id=4&cle_pro=4111&cle_tar=4115&dateAchat=25/03/2022&cle_pkg_cop=0', 4);
+					dateSelection ='';
+				}
+				dateDes[4] = []; 
+				var hrefSlot = "https://billetterie.trainardeche.fr/bin/choixpackage.php?id=4&cle_pro=4111&cle_tar=4115&dateAchat=25/03/2022&cle_pkg_cop=0";
+				creerControlDatePkg("date_4","4115","4111","FR070011","6","106","19","0", dateDes, "25/03/2022","25/03/2022", hrefSlot,true, false, false);
+				$('#qte_4').on('change', function() {
+					calculerTotal(4,"4115");
+					afficherPopupSlot("https://billetterie.trainardeche.fr/bin/choixpackage.php?id=4&cle_pro=4111&cle_tar=4115&dateAchat=25/03/2022&cle_pkg_cop=0", 4);
+				});
+			</script>
+			
+            </tr>
+                            <tr class="row1 ligneProduit clePro_4122 cleTar_4126">
+                            <td class="colLib">
+                                <p class="libProduit">Train des Gorges - Ardeche Pass holder*</p><span class="descService">* on presentation of the Ardeche Pass</span><p class="valable" style="display:none"><span id="valable_5" class="textChoixDate"></span></p></td><td class="colDate"><p class="voirCalendrier"><span class="lienCal" onclick="ouvrirCal(5);" title="Select date and amount"><img class="icoCalendrier" src="https://billetterie.trainardeche.fr/clients/train_ardeche/themes/defaut/images/cal.png" alt="Calendrier"><br>Select date and amount</span></p></td><td class="colPrix"><span id="prix_5"></span></td><td class="colQte"><input type="text" readonly="" id="qte_5" name="qte_5" value="" style="display: none;" size="2" maxlength="3"></td>
+			<script>
+				function choixpkg5()
+				{
+					$("#qte_5").val($("#pkgqte_5").val());
+					$("#qte_5").show();
+					
+					if(dateSelection == '')
+					{
+						//Event#stop;
+						alert("Veuillez selectionner une date");
+						return;
+					}
+					calculerTotal(5,"4126");
+					afficherPopupSlot('https://billetterie.trainardeche.fr/bin/choixpackage.php?id=5&cle_pro=4122&cle_tar=4126&dateAchat=25/03/2022&cle_pkg_cop=0', 5);
+					dateSelection ='';
+				}
+				dateDes[5] = []; 
+				var hrefSlot = "https://billetterie.trainardeche.fr/bin/choixpackage.php?id=5&cle_pro=4122&cle_tar=4126&dateAchat=25/03/2022&cle_pkg_cop=0";
+				creerControlDatePkg("date_5","4126","4122","FR070011","6","106","19","0", dateDes, "25/03/2022","25/03/2022", hrefSlot,true, false, false);
+				$('#qte_5').on('change', function() {
+					calculerTotal(5,"4126");
+					afficherPopupSlot("https://billetterie.trainardeche.fr/bin/choixpackage.php?id=5&cle_pro=4122&cle_tar=4126&dateAchat=25/03/2022&cle_pkg_cop=0", 5);
+				});
+			</script>
+			
+            </tr>
+                            <tr class="row0 ligneProduit clePro_4112 cleTar_4116">
+                            <td class="colLib">
+                                <p class="libProduit">First Class option - €5.00</p><span class="descService">You will need to present a valid Train des Gorges trip ticket with the First Class option / Dogs are not allowed in First Class</span><p class="valable" style="display:none"><span id="valable_6" class="textChoixDate"></span></p></td><td class="colDate"><p class="voirCalendrier"><span class="lienCal" onclick="ouvrirCal(6);" title="Select date and amount"><img class="icoCalendrier" src="https://billetterie.trainardeche.fr/clients/train_ardeche/themes/defaut/images/cal.png" alt="Calendrier"><br>Select date and amount</span></p></td><td class="colPrix"><span id="prix_6"></span></td><td class="colQte"><input type="text" readonly="" id="qte_6" name="qte_6" value="" style="display: none;" size="2" maxlength="3"></td>
+			<script>
+				function choixpkg6()
+				{
+					$("#qte_6").val($("#pkgqte_6").val());
+					$("#qte_6").show();
+					
+					if(dateSelection == '')
+					{
+						//Event#stop;
+						alert("Veuillez selectionner une date");
+						return;
+					}
+					calculerTotal(6,"4116");
+					afficherPopupSlot('https://billetterie.trainardeche.fr/bin/choixpackage.php?id=6&cle_pro=4112&cle_tar=4116&dateAchat=25/03/2022&cle_pkg_cop=0', 6);
+					dateSelection ='';
+				}
+				dateDes[6] = []; 
+				var hrefSlot = "https://billetterie.trainardeche.fr/bin/choixpackage.php?id=6&cle_pro=4112&cle_tar=4116&dateAchat=25/03/2022&cle_pkg_cop=0";
+				creerControlDatePkg("date_6","4116","4112","FR070011","6","106","19","0", dateDes, "25/03/2022","25/03/2022", hrefSlot,true, false, false);
+				$('#qte_6').on('change', function() {
+					calculerTotal(6,"4116");
+					afficherPopupSlot("https://billetterie.trainardeche.fr/bin/choixpackage.php?id=6&cle_pro=4112&cle_tar=4116&dateAchat=25/03/2022&cle_pkg_cop=0", 6);
+				});
+			</script>
+			
+            </tr></tbody></table><div id="btnRetour" class="margeTop15"></div></form>
+     </div><div id="popup_date" style="display:none;"></div><div class="panier colPanier dos_0"><div id="codeOffre" class="monpanier">
+                            <div class="titre_panier">Private offer code</div>
+                                <form method="post" action="index.php?page=vente&amp;action=setCodePromo" name="frm_code_promo" id="frm_code_promo"> 
+                                    <input type="text" name="code_offre" id="code_offre">
+                                    <input class="btnMedium margeTop15" type="submit" value="SUBMIT">
+                                </form>
+                            </div><div id="panier" class="monpanier">
+                            <div class="titre_panier"><i class="fa fa-shopping-bag monpanier_icone" aria-hidden="true"></i>My cart</div>
+	                        <div class="contenupanier">
+	                            <div class="cnt_padding"><br>
+                            </div> <!-- cnt_padding -->
+                         <p class="panier_vide">The cart is empty</p>&nbsp;</div> <!-- .contenupanier -->
+                    </div> <!-- #panier --></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+  
+</body></html>

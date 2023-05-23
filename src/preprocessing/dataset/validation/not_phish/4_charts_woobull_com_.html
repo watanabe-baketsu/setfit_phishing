@@ -1,0 +1,238 @@
+<html><head>
+
+    <title>Investor Bitcoin and Altcoin Charts : Woobull Charts</title>
+
+    <link rel="stylesheet" type="text/css" href="https://charts.woobull.com/css/charts.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300" rel="stylesheet">
+    <link rel="icon" href="https://woobull.com/favicon.png">
+
+
+
+
+    <script async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" src="https://cdn.plot.ly/plotly-latest.min.js"></script><style id="plotly.js-style-global"></style>
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-83613423-2', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.6/lib/darkmode-js.min.js"></script>
+    <script>
+      function addDarkmodeWidget() {
+        new Darkmode().showWidget();
+      }
+      window.addEventListener('load', addDarkmodeWidget);
+    </script>
+
+
+<link rel="stylesheet" type="text/css" href="data:text/css;charset=UTF-8,%0A%20%20%20%20%20%20.darkmode-layer%20%7B%0A%20%20%20%20%20%20%20%20position%3A%20fixed%3B%0A%20%20%20%20%20%20%20%20pointer-events%3A%20none%3B%0A%20%20%20%20%20%20%20%20background%3A%20%23fff%3B%0A%20%20%20%20%20%20%20%20transition%3A%20all%200.3s%20ease%3B%0A%20%20%20%20%20%20%20%20mix-blend-mode%3A%20difference%3B%0A%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20.darkmode-layer--button%20%7B%0A%20%20%20%20%20%20%20%20width%3A%202.9rem%3B%0A%20%20%20%20%20%20%20%20height%3A%202.9rem%3B%0A%20%20%20%20%20%20%20%20border-radius%3A%2050%25%3B%0A%20%20%20%20%20%20%20%20right%3A%2032px%3B%0A%20%20%20%20%20%20%20%20bottom%3A%2032px%3B%0A%20%20%20%20%20%20%20%20left%3A%20unset%3B%0A%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20.darkmode-layer--simple%20%7B%0A%20%20%20%20%20%20%20%20width%3A%20100%25%3B%0A%20%20%20%20%20%20%20%20height%3A%20100%25%3B%0A%20%20%20%20%20%20%20%20top%3A%200%3B%0A%20%20%20%20%20%20%20%20left%3A%200%3B%0A%20%20%20%20%20%20%20%20transform%3A%20scale(1)%20!important%3B%0A%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20.darkmode-layer--expanded%20%7B%0A%20%20%20%20%20%20%20%20transform%3A%20scale(100)%3B%0A%20%20%20%20%20%20%20%20border-radius%3A%200%3B%0A%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20.darkmode-layer--no-transition%20%7B%0A%20%20%20%20%20%20%20%20transition%3A%20none%3B%0A%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20.darkmode-toggle%20%7B%0A%20%20%20%20%20%20%20%20background%3A%20%23100f2c%3B%0A%20%20%20%20%20%20%20%20width%3A%203rem%3B%0A%20%20%20%20%20%20%20%20height%3A%203rem%3B%0A%20%20%20%20%20%20%20%20position%3A%20fixed%3B%0A%20%20%20%20%20%20%20%20border-radius%3A%2050%25%3B%0A%20%20%20%20%20%20%20%20border%3Anone%3B%0A%20%20%20%20%20%20%20%20right%3A%2032px%3B%0A%20%20%20%20%20%20%20%20bottom%3A%2032px%3B%0A%20%20%20%20%20%20%20%20left%3A%20unset%3B%0A%20%20%20%20%20%20%20%20cursor%3A%20pointer%3B%0A%20%20%20%20%20%20%20%20transition%3A%20all%200.5s%20ease%3B%0A%20%20%20%20%20%20%20%20display%3A%20flex%3B%0A%20%20%20%20%20%20%20%20justify-content%3A%20center%3B%0A%20%20%20%20%20%20%20%20align-items%3A%20center%3B%0A%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20.darkmode-toggle--white%20%7B%0A%20%20%20%20%20%20%20%20background%3A%20%23fff%3B%0A%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20.darkmode-toggle--inactive%20%7B%0A%20%20%20%20%20%20%20%20display%3A%20none%3B%0A%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20.darkmode-background%20%7B%0A%20%20%20%20%20%20%20%20background%3A%20%23fff%3B%0A%20%20%20%20%20%20%20%20position%3A%20fixed%3B%0A%20%20%20%20%20%20%20%20pointer-events%3A%20none%3B%0A%20%20%20%20%20%20%20%20z-index%3A%20-10%3B%0A%20%20%20%20%20%20%20%20width%3A%20100%25%3B%0A%20%20%20%20%20%20%20%20height%3A%20100%25%3B%0A%20%20%20%20%20%20%20%20top%3A%200%3B%0A%20%20%20%20%20%20%20%20left%3A%200%3B%0A%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20img%2C%20.darkmode-ignore%20%7B%0A%20%20%20%20%20%20%20%20isolation%3A%20isolate%3B%0A%20%20%20%20%20%20%20%20display%3A%20inline-block%3B%0A%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%40media%20screen%20and%20(-ms-high-contrast%3A%20active)%2C%20(-ms-high-contrast%3A%20none)%20%7B%0A%20%20%20%20%20%20%20%20.darkmode-toggle%20%7Bdisplay%3A%20none%20!important%7D%0A%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%40supports%20(-ms-ime-align%3Aauto)%2C%20(-ms-accelerator%3Atrue)%20%7B%0A%20%20%20%20%20%20%20%20.darkmode-toggle%20%7Bdisplay%3A%20none%20!important%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%20"></head>
+<body><div class="darkmode-background"></div><div class="darkmode-layer darkmode-layer--button"></div><button class="darkmode-toggle" aria-label="Activate dark mode" aria-checked="false"></button>
+
+    <div id="navbar">
+        <div id="navheader">
+            <a href="https://charts.woobull.com/">Woobull Charts</a>
+        </div>
+        <div>
+            <a href="http://woobull.com">← woobull.com</a>
+        </div>
+    </div>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-1 col-lg-2"></div>
+				<div class="col-xs-12 col-sm-12 col-md-10 col-lg-8">
+					<br><br>
+
+					
+
+					<a href="https://ftx.com/#a=1474126" target="_blank"><img src="promo-ftx-sign-10.png" id="homeimage"></a>
+					
+
+
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-1 col-lg-2"></div>
+			</div>
+		</div>
+
+
+
+
+	
+		<hr>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+					<h4>Signalling</h4>
+
+					<strong><a href="https://charts.woobull.com/bitcoin-price-models/">Bitcoin Price Models</a></strong><br>
+						Various price models for Bitcoin.<br>
+					<br>
+
+					<strong><a href="https://charts.woobull.com/bitcoin-nvt-ratio/">Bitcoin NVT Ratio</a></strong><br>
+						Bitcoin's PE ratio. Detects when Bitcoin is overvalued or undervalued.<br>
+					<br>
+
+					<strong><a href="https://charts.woobull.com/bitcoin-nvt-price/">Bitcoin NVT Price</a></strong><br>
+						Bitcoin's NVT price, useful to see the price supported by organic investment.<br>
+					<br>
+						
+					<strong><a href="https://charts.woobull.com/bitcoin-nvt-signal/">Bitcoin NVT Signal</a></strong><br>
+					NVT Ratio optimised to be more responsive, useful as a long-range trading indicator.<br>
+					<br>
+
+					<strong><a href="https://charts.woobull.com/bitcoin-vwap-ratio/">Bitcoin VWAP Ratio</a></strong><br>
+					A useful signal for local and global market tops and bottoms using volume weighted average price.<br>
+					<br>
+
+					<strong><a href="https://charts.woobull.com/bitcoin-rvt-ratio/">Bitcoin RVT Ratio</a></strong><br>
+					A variation of MVRV Ratio using on-chain volume as a key metric to find the market tops and bottoms.<br>
+					<br>
+
+					<strong><a href="https://charts.woobull.com/bitcoin-mvrv-ratio/">Bitcoin MVRV Ratio</a></strong><br>
+					A Bitcoin under/overvaluation indicator based on Realised Cap.<br>
+					<br>
+
+					<strong><a href="https://charts.woobull.com/bitcoin-rvt-ratio/">Bitcoin RVT Ratio</a></strong><br>
+					A volume-based variation of MVRV used to determine market tops and bottoms.<br>
+					<br>
+					
+					<strong><a href="https://charts.woobull.com/bitcoin-mayer-multiple/">Bitcoin Mayer Multiple</a></strong><br>
+					Trace Mayer's ratio to measure Bitcoin price in relation to its historical movement.<br>
+					<br>
+					
+					<strong><a href="https://charts.woobull.com/bitcoin-difficulty-ribbon/">Bitcoin Difficulty Ribbon</a></strong><br>
+					A view into miner capitulation, typically signals times when buying is sensible.<br>
+					<br>
+					
+				</div>
+
+
+
+				<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+					<h4>Investment Related</h4>
+
+					<strong><a href="https://charts.woobull.com/bitcoin-risk-adjusted-return/">Bitcoin Risk-Adjusted Returns</a></strong><br>
+					Compares Bitcoin ROI, adjusted for its risk, to other assets.<br>
+					<br>
+
+					<strong><a href="https://charts.woobull.com/bitcoin-volatility-vs-other-assets/">Bitcoin Volatility vs Other Asset Classes</a></strong><br>
+					Compares Bitcoin volatility to other asset classes.<br>
+					<br>
+					
+					<strong><a href="https://charts.woobull.com/bitcoin-growth-vs-other-assets/">Bitcoin Growth vs Other Asset Classes</a></strong><br>
+					Compares Bitcoin growth to other asset classes.<br>
+					<br>
+					
+					<strong><a href="https://charts.woobull.com/bitcoin-etf-corporate-holdings/">Bitcoin held in ETFs and Corporate Treasuries</a></strong><br>
+					Tracks bitcoins held in publicly accessible entities via shareholding.<br>
+					<br>
+					
+
+
+					<strong><a href="https://charts.woobull.com/bitcoin-valuations/">Bitcoin Valuations</a></strong><br>
+						A collection of useful valuation metrics on Bitcoin.<br>
+					<br>
+
+					<strong><a href="https://charts.woobull.com/bitcoin-gains-per-dollar-invested/">Bitcoin Valuation Gain per Dollar Invested</a></strong><br>
+						Dollar for dollar, how much Bitcoin's price increases per dollar invested.<br>
+					<br>
+
+
+					<strong><a href="https://charts.woobull.com/bitcoin-network-volume/">Bitcoin Network Volume</a></strong><br>
+					The monthly volume of bitcoins moving between different investors on the network.<br>
+					<br>
+
+					<strong><a href="https://charts.woobull.com/bitcoin-vs-gold/">Bitcoin vs Gold</a></strong><br>
+					Compare the investment performance of Bitcoin vs Gold.<br>
+					<br>
+
+					
+				</div>
+
+
+				<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+					<h4>Monetary Properties</h4>
+					<strong><a href="https://charts.woobull.com/bitcoin-volatility/">Bitcoin Volatility</a></strong><br>
+					Bitcoin volatility trend, compares to FOREX, also traded volume.<br>
+					<br>
+					<br>
+
+					<strong><a href="https://charts.woobull.com/bitcoin-money-supply/">Bitcoin Money Supply vs USD</a></strong><br>
+					Is Bitcoin trending towards a world reserve currency?<br>
+					<br>
+
+					<strong><a href="https://charts.woobull.com/bitcoin-inflation/">Bitcoin Inflation Rate</a></strong><br>
+					Track the historic inflation annual rate of Bitcoin's money supply.<br>
+					<br>
+					<strong><a href="https://charts.woobull.com/bitcoin-velocity/">Bitcoin Monetary Velocity</a></strong><br>
+					Is Bitcoin trending towards payments or savings/investments?<br>
+					<br>
+
+					<strong><a href="https://charts.woobull.com/bitcoin-volume-vs-network-value/">Bitcoin Volume vs Network Value</a></strong><br>
+					Volume transmitted by Bitcoin's blockchain tracks very closely to its Network Value.<br>
+					<br>
+						
+
+				</div>
+
+				<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+					<h4>Network Properties</h4>
+
+					<strong><a href="https://charts.woobull.com/bitcoin-segwit-adoption/">Bitcoin Segwit Adoption</a></strong><br>
+					Track the adoption of Segwit.<br>
+					<br>
+
+					<strong><a href="https://charts.woobull.com/bitcoin-network-throughput/">Bitcoin Network Throughput</a></strong><br>
+					Bitcoin's throughput in transactions, payments, and USD value per second.<br>
+					<br>
+
+					<strong><a href="https://charts.woobull.com/bitcoin-congestion/">Bitcoin Congestion</a></strong><br>
+					User-centric metrics tracking network congestion, e.g. payment fees, confirm times.<br>
+					<br>
+
+					<strong><a href="https://charts.woobull.com/bitcoin-lightning-network/">Bitcoin Lightning Network</a></strong><br>
+					Key metrics tracking Bitcoin`s Lightning Network growth.<br>
+					<br>
+
+					<strong><a href="https://charts.woobull.com/bitcoin-hash-price/">Bitcoin Hash Price</a></strong><br>
+					Price per hash tracks the Bitcoin's mining hardware capabilities over time.<br>
+					<br>
+					
+					<strong><a href="https://charts.woobull.com/bitcoin-outputs-per-transaction/">Bitcoin Outputs per Tx</a></strong><br>
+					Tracks how many outputs are packed into each Bitcoin Transaction.<br>
+					<br>
+				</div>
+			</div>
+		</div>
+		
+
+
+		<hr>
+
+
+
+
+
+
+		<div class="center">
+			<h3>Woobull Charts</h3>
+			<i class="fa fa-twitter fa-lg"></i> : Author : <a href="https://twitter.com/woonomic">@woonomic</a><br>
+
+			<br>
+
+
+
+		</div>
+	
+
+
+
+
+
+</body></html>

@@ -1,0 +1,1652 @@
+<html dir="ltr" class=" js" style="--scrollbar-width: 17px; --viewport-width: 1267px;" lang="en"><head>
+    <meta charset="utf-8"><script type="text/javascript" src="https://bam.nr-data.net/1/NRJS-8db5a0bf14514376fe6?a=952265645&amp;v=1215.1253ab8&amp;to=MldRbEpTDUAEWxFbCwsdcltMWwxdSkgEVQE6UVJbUFc%3D&amp;rst=1255&amp;ck=1&amp;ref=https://www.aa.org/&amp;ap=50&amp;be=409&amp;fe=1102&amp;dc=659&amp;perf=%7B%22timing%22:%7B%22of%22:1648202927064,%22n%22:0,%22f%22:10,%22dn%22:15,%22dne%22:101,%22c%22:102,%22s%22:126,%22ce%22:163,%22rq%22:163,%22rp%22:368,%22rpe%22:368,%22dl%22:371,%22di%22:653,%22ds%22:659,%22de%22:671,%22dc%22:1101,%22l%22:1101,%22le%22:1102%7D,%22navigation%22:%7B%7D%7D&amp;fcp=629&amp;at=HhBSGgJJHk4%3D&amp;jsonp=NREUM.setToken"></script><script src="https://js-agent.newrelic.com/nr-1215.min.js"></script><script src="https://www.googletagmanager.com/gtm.js?id=GTM-NNH5PKB" async=""></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-8db5a0bf14514376fe6",applicationID:"952265645"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(10),c=t(11),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(12);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],7:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(9),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],8:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],9:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],10:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],11:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],12:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(10),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!P++){var t=M.info=NREUM.info,e=g.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(O,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+M.offset],null,"api"),c("timing",["load",n]);var r=g.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=v+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===g.readyState&&o()}function o(){c("mark",["domContent",a()+M.offset],null,"api")}var a=t(5),c=t("handle"),f=t(10),u=t("ee"),s=t(8),d=t(6),p=t(2),l=t(3),v=p.getConfiguration("ssl")===!1?"http":"https",m=window,g=m.document,y="addEventListener",h="attachEvent",w=m.XMLHttpRequest,b=w&&w.prototype,E=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:w,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,O={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1215.min.js"},T=w&&b&&b[y]&&!/CriOS/.test(navigator.userAgent),M=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:T,userAgent:s,disabled:E};if(!E){t(1),t(7),g[y]?(g[y]("DOMContentLoaded",o,l(!1)),m[y]("load",r,l(!1))):(g[h]("onreadystatechange",i),m[h]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var P=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(11),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-196397459-1", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<link rel="canonical" href="https://www.aa.org/">
+<link rel="shortlink" href="https://www.aa.org/">
+<meta name="Generator" content="Drupal 9 (https://www.drupal.org)">
+<meta name="MobileOptimized" content="width">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-withdraw-tab {background: #0779bf} div#sliding-popup.eu-cookie-withdraw-wrapper { background: transparent; } #sliding-popup h1, #sliding-popup h2, #sliding-popup h3, #sliding-popup p, #sliding-popup label, #sliding-popup div, .eu-cookie-compliance-more-button, .eu-cookie-compliance-secondary-button, .eu-cookie-withdraw-tab { color: #ffffff;} .eu-cookie-withdraw-tab { border-color: #ffffff;}</style>
+<link rel="alternate" hreflang="en" href="https://www.aa.org/">
+<link rel="alternate" hreflang="es" href="https://www.aa.org/es">
+<link rel="alternate" hreflang="fr" href="https://www.aa.org/fr">
+<link rel="icon" href="/themes/custom/aa/favicon.ico" type="image/vnd.microsoft.icon">
+<script src="/sites/default/files/google_tag/default/google_tag.script.js?r8v1pk" defer=""></script>
+
+    <title>Have a problem with alcohol? There is a solution. | Alcoholics Anonymous</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_BF-S3EnwaK4TpiglgN0B0HpE7e7JTB2e7bXiTLAy84E.css">
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_4UjWIEDW71dsZ4BfId0CrwWzPaOjKriNs98kiTzRS64.css">
+
+    
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/themes/custom/aa/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/themes/custom/aa/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/themes/custom/aa/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/themes/custom/aa/assets/favicon/site.webmanifest" crossorigin="use-credentials">
+    <link rel="mask-icon" href="/themes/custom/aa/assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/themes/custom/aa/assets/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="/themes/custom/aa/assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <!-- /favicon -->
+  </head>
+  <body class="frontpage node--type-home-page eu-cookie-compliance-status-null eu-cookie-compliance-popup-open">
+    <a href="#main-content" class="visually-hidden focusable">
+      Skip to main content
+    </a>
+    <noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NNH5PKB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas="">
+    
+<div class="page-wrapper">
+  
+<section class="header-search">
+  <div class="container">
+    <form action="/search" type="get">
+      <div class="form-input">
+        <label for="global-search">
+          Search 
+        </label>
+        <input type="search" name="search" id="global-search" placeholder="Search by keyword">
+        <a href="javascript:void(0)" class="clear-global-search">x</a>
+      </div>
+      <div class="form-submit">
+        <button type="submit">Submit </button>
+      </div>
+    </form>
+    <div class="common-search-terms"> <div class="block block-block-content block-block-content70c092dd-ebcb-44cb-b940-6877284bce4d">
+  
+    
+      
+  <div class="field field--name-field-search-term field--type-link field--label-inline clearfix">
+    <div class="field__label">Common Searches </div>
+          <div class="field__items">
+              <div class="field__item"><a href="/information-about-meetings">Meetings</a></div>
+          <div class="field__item"><a href="/aa-and-anonymity">Anonymity</a></div>
+          <div class="field__item"><a href="/the-twelve-steps">Steps</a></div>
+          <div class="field__item"><a href="/the-twelve-traditions">Traditions</a></div>
+          <div class="field__item"><a href="/twelve-concepts-world-service-long-form">Concepts</a></div>
+          <div class="field__item"><a href="/service-committees">Committees</a></div>
+              </div>
+      </div>
+
+  </div>
+ </div>
+  </div>
+</section>
+<header class="header-section">
+	<div class="wrapper">
+		  <div class="region region-header-left">
+    <div id="block-multilanglogo-2" class="block block-aa-base block-aa-logo">
+  
+    
+      <div class="logo">
+	<a href="https://www.aa.org/">
+		<img src="/sites/default/files/logos/AA_English_3.svg" alt="Alcoholics Anonymous">
+	</a>
+</div>
+
+  </div>
+
+  </div>
+
+		<div class="nav">
+			  <div class="region region-super-nav">
+    <nav role="navigation" aria-labelledby="block-supernavigation-menu" id="block-supernavigation" class="block block-menu navigation menu--super-navigation">
+            
+  <h2 class="visually-hidden" id="block-supernavigation-menu">Super Navigation</h2>
+  
+
+        
+              <ul class="menu">
+                    <li class="menu-item">
+        <a href="/find-aa" class="locations" data-drupal-link-system-path="node/32">Find A.A. Near You</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://contribution.aa.org/sca-dev-2020-1/checkout.ssp?is=checkout&amp;lang=en_US#login-register" class="external-link" target="_blank">Make a Contribution</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://onlineliterature.aa.org" class="external-link" target="_blank">Online Bookstore</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+<div id="block-languagedropdownswitcher--2" class="block block-lang-dropdown block-language-dropdown-blocklanguage-interface">
+  
+    
+      <form class="lang-dropdown-form lang_dropdown_form clearfix language_interface" id="lang_dropdown_form_lang-dropdown-form" data-drupal-selector="lang-dropdown-form-2" action="/" method="post" accept-charset="UTF-8">
+  <div class="js-form-item form-item js-form-type-select form-type-select js-form-item-lang-dropdown-select form-item-lang-dropdown-select form-no-label">
+      <label for="edit-lang-dropdown-select--2" class="visually-hidden">Select your language</label>
+        <select style="width:165px" class="lang-dropdown-select-element form-select" data-lang-dropdown-id="lang-dropdown-form" data-drupal-selector="edit-lang-dropdown-select" id="edit-lang-dropdown-select--2" name="lang_dropdown_select"><option value="en" selected="selected">English</option><option value="es">Español</option><option value="fr">Français</option></select>
+        </div>
+<input data-drupal-selector="edit-en" type="hidden" name="en" value="/">
+<input data-drupal-selector="edit-es" type="hidden" name="es" value="/es">
+<input data-drupal-selector="edit-fr" type="hidden" name="fr" value="/fr">
+<noscript><div><div class="input-submit-wrapper">
+  <input data-drupal-selector="edit-submit" type="submit" id="edit-submit--2" name="op" value="Go" class="button js-form-submit form-submit" />
+  
+</div></div></noscript><input autocomplete="off" data-drupal-selector="form-owg-u4weyhiriq-mi2w-vmuhtwhyuhhusykgitzrb08" type="hidden" name="form_build_id" value="form-OwG_U4WeYHirIq-Mi2w_VMUhTWhYUhHUSyKgItZrb08">
+<input data-drupal-selector="edit-lang-dropdown-form-2" type="hidden" name="form_id" value="lang_dropdown_form">
+
+</form>
+
+  </div>
+
+  </div>
+
+			  <div class="region region-nav">
+    <nav role="navigation" aria-labelledby="block-megamenu-menu" id="block-megamenu" class="block block-menu navigation menu--main">
+            
+  <h2 class="visually-hidden" id="block-megamenu-menu">Mega Menu</h2>
+  
+
+        
+
+  <ul class="menu menu-level-0">
+      
+    <li class="menu-item menu-item--expanded">
+      <a href="/" data-drupal-link-system-path="<front>" class="is-active">I am...</a>
+                    
+  
+  <div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-0 menu-type-default">
+              
+  <ul class="menu menu-level-1">
+      
+    <li class="left menu-item menu-item--expanded">
+      <span>Left</span>
+                    
+  
+  <div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+              
+  <ul class="menu menu-level-2">
+      
+    <li class="menu-item">
+      <a href="/new-to-aa" data-drupal-link-system-path="node/3">Looking for help with a drinking problem</a>
+                    
+  
+  <div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+              
+      </div>
+
+
+
+          </li>
+      
+    <li class="menu-item">
+      <a href="/aa-member" data-drupal-link-system-path="node/13">An A.A. member</a>
+                    
+  
+  <div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+              
+      </div>
+
+
+
+          </li>
+      
+    <li class="menu-item">
+      <a href="/aa-family-friend" data-drupal-link-system-path="node/14">Trying to help a family member or friend</a>
+                    
+  
+  <div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+              
+      </div>
+
+
+
+          </li>
+      
+    <li class="menu-item">
+      <a href="/aa-professionals" data-drupal-link-system-path="node/15">A professional working with alcoholics</a>
+                    
+  
+  <div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+              
+      </div>
+
+
+
+          </li>
+    </ul>
+
+
+
+      </div>
+
+
+
+          </li>
+      
+    <li class="right menu-item menu-item--expanded">
+      <span>Right</span>
+                    
+  
+  <div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+              
+  <ul class="menu menu-level-2">
+      
+    <li class="menu-item">
+      <a href="/self-assessment" data-drupal-link-system-path="node/345">Take a Self-Assessment</a>
+                    
+  
+  <div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+              
+      </div>
+
+
+
+          </li>
+    </ul>
+
+
+
+      </div>
+
+
+
+          </li>
+    </ul>
+
+
+
+      </div>
+
+
+
+          </li>
+      
+    <li class="menu-item menu-item--expanded">
+      <a href="/" data-drupal-link-system-path="<front>" class="is-active">About A.A.</a>
+                    
+  
+  <div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-0 menu-type-default">
+              
+  <ul class="menu menu-level-1">
+      
+    <li class="menu-item menu-item--expanded">
+      <span>Left</span>
+                    
+  
+  <div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+              
+  <ul class="menu menu-level-2">
+      
+    <li class="menu-item">
+      <a href="/what-is-aa" title="What is A.A.?" data-drupal-link-system-path="node/16">What is A.A.?</a>
+                    
+  
+  <div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+              
+      </div>
+
+
+
+          </li>
+      
+    <li class="menu-item">
+      <a href="/aa-and-anonymity" data-drupal-link-system-path="node/81">A.A. and Anonymity</a>
+                    
+  
+  <div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+              
+      </div>
+
+
+
+          </li>
+      
+    <li class="menu-item">
+      <a href="/the-big-book" title="The Big Book of Alcoholics Anonymous" data-drupal-link-system-path="node/347">The Big Book</a>
+                    
+  
+  <div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+              
+      </div>
+
+
+
+          </li>
+      
+    <li class="menu-item">
+      <a href="/twelve-steps-twelve-traditions" data-drupal-link-system-path="node/1976">12 Steps and 12 Traditions Book</a>
+                    
+  
+  <div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+              
+      </div>
+
+
+
+          </li>
+      
+    <li class="menu-item">
+      <a href="/aa-around-the-world" data-drupal-link-system-path="node/4">A.A. Around the World</a>
+                    
+  
+  <div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+              
+      </div>
+
+
+
+          </li>
+    </ul>
+
+
+
+      </div>
+
+
+
+          </li>
+      
+    <li class="right menu-item menu-item--expanded">
+      <span>Right</span>
+                    
+  
+  <div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+              
+  <ul class="menu menu-level-2">
+      
+    <li class="menu-item">
+      <a href="/information-about-meetings" data-drupal-link-system-path="node/46">Learn more about meetings</a>
+                    
+  
+  <div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+              
+      </div>
+
+
+
+          </li>
+      
+    <li class="menu-item">
+      <a href="/the-twelve-steps" data-drupal-link-system-path="node/71">The Twelve Steps</a>
+                    
+  
+  <div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+              
+      </div>
+
+
+
+          </li>
+      
+    <li class="menu-item">
+      <a href="/the-twelve-traditions" data-drupal-link-system-path="node/50">The Twelve Traditions</a>
+                    
+  
+  <div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+              
+      </div>
+
+
+
+          </li>
+      
+    <li class="menu-item">
+      <a href="/aa-history" data-drupal-link-system-path="node/8">History of A.A.</a>
+                    
+  
+  <div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+              
+      </div>
+
+
+
+          </li>
+      
+    <li class="menu-item">
+      <a href="/aa-archives-exhibits" data-drupal-link-system-path="node/17">Online Archives Exhibits</a>
+                    
+  
+  <div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+              
+      </div>
+
+
+
+          </li>
+    </ul>
+
+
+
+      </div>
+
+
+
+          </li>
+    </ul>
+
+
+
+      </div>
+
+
+
+          </li>
+      
+    <li class="menu-item menu-item--expanded">
+      <a href="/" data-drupal-link-system-path="<front>" class="is-active">Inside A.A.</a>
+                    
+  
+  <div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-0 menu-type-default">
+              
+  <ul class="menu menu-level-1">
+      
+    <li class="menu-item menu-item--expanded">
+      <span>Left</span>
+                    
+  
+  <div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+              
+  <ul class="menu menu-level-2">
+      
+    <li class="menu-item">
+      <a href="/participating-in-aa" data-drupal-link-system-path="node/5">Participating in A.A.</a>
+                    
+  
+  <div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+              
+      </div>
+
+
+
+          </li>
+      
+    <li class="menu-item">
+      <a href="/the-aa-group" data-drupal-link-system-path="node/6">The A.A. Group</a>
+                    
+  
+  <div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+              
+      </div>
+
+
+
+          </li>
+      
+    <li class="menu-item">
+      <a href="/service-committees" data-drupal-link-system-path="node/340">Service Committees</a>
+                    
+  
+  <div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+              
+      </div>
+
+
+
+          </li>
+      
+    <li class="menu-item">
+      <a href="/aa-contributions-self-support" data-drupal-link-system-path="node/19">Contributions and Self-Support</a>
+                    
+  
+  <div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+              
+      </div>
+
+
+
+          </li>
+      
+    <li class="menu-item">
+      <a href="/aa-gso" data-drupal-link-system-path="node/18">The General Service Office</a>
+                    
+  
+  <div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+              
+      </div>
+
+
+
+          </li>
+      
+    <li class="menu-item">
+      <a href="/gso-archives" data-drupal-link-system-path="node/73">G.S.O. Archives</a>
+                    
+  
+  <div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+              
+      </div>
+
+
+
+          </li>
+    </ul>
+
+
+
+      </div>
+
+
+
+          </li>
+      
+    <li class="right menu-item menu-item--expanded">
+      <span>Right</span>
+                    
+  
+  <div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+              
+  <ul class="menu menu-level-2">
+      
+    <li class="menu-item">
+      <a href="/news-and-announcements" data-drupal-link-system-path="node/91">What's New</a>
+                    
+  
+  <div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+              
+      </div>
+
+
+
+          </li>
+      
+    <li class="menu-item">
+      <a href="/information-for-new-trusted-servants" data-drupal-link-system-path="node/45">Information for new trusted servants</a>
+                    
+  
+  <div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+              
+      </div>
+
+
+
+          </li>
+      
+    <li class="menu-item">
+      <a href="/regional-and-local-forums" data-drupal-link-system-path="node/69">Regional and Local Forums</a>
+                    
+  
+  <div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+              
+      </div>
+
+
+
+          </li>
+      
+    <li class="menu-item">
+      <a href="/international-convention" title="international convention" data-drupal-link-system-path="node/70">International Convention</a>
+                    
+  
+  <div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+              
+      </div>
+
+
+
+          </li>
+    </ul>
+
+
+
+      </div>
+
+
+
+          </li>
+    </ul>
+
+
+
+      </div>
+
+
+
+          </li>
+      
+    <li class="menu-item menu-item--expanded">
+      <a href="/" data-drupal-link-system-path="<front>" class="is-active">Resources</a>
+                    
+  
+  <div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-0 menu-type-default">
+              
+  <ul class="menu menu-level-1">
+      
+    <li class="menu-item menu-item--expanded">
+      <span>Left</span>
+                    
+  
+  <div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+              
+  <ul class="menu menu-level-2">
+      
+    <li class="menu-item">
+      <a href="/resources/literature" data-drupal-link-system-path="node/339">Literature</a>
+                    
+  
+  <div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+              
+      </div>
+
+
+
+          </li>
+      
+    <li class="menu-item">
+      <a href="/resources/media" data-drupal-link-system-path="node/341">Media Library</a>
+                    
+  
+  <div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+              
+      </div>
+
+
+
+          </li>
+      
+    <li class="menu-item">
+      <a href="/meeting-guide-app" data-drupal-link-system-path="node/77">Meeting Guide app</a>
+                    
+  
+  <div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+              
+      </div>
+
+
+
+          </li>
+      
+    <li class="menu-item">
+      <a href="/aa-grapevine-la-vina" data-drupal-link-system-path="node/20">AA Grapevine and La Viña</a>
+                    
+  
+  <div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+              
+      </div>
+
+
+
+          </li>
+      
+    <li class="menu-item">
+      <a href="/aa-board-calendars" data-drupal-link-system-path="node/53">A.A. Board Calendars</a>
+                    
+  
+  <div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+              
+      </div>
+
+
+
+          </li>
+    </ul>
+
+
+
+      </div>
+
+
+
+          </li>
+      
+    <li class="right menu-item menu-item--expanded">
+      <span>Right</span>
+                    
+  
+  <div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+              
+  <ul class="menu menu-level-2">
+      
+    <li class="menu-item">
+      <a href="/audio-public-service-announcement-downloads" data-drupal-link-system-path="node/2226">Audio PSA Downloads</a>
+                    
+  
+  <div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+              
+      </div>
+
+
+
+          </li>
+      
+    <li class="menu-item">
+      <a href="/downloadable-videos" data-drupal-link-system-path="node/2116">Downloadable Videos</a>
+                    
+  
+  <div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+              
+      </div>
+
+
+
+          </li>
+      
+    <li class="menu-item">
+      <a href="/newsletters" data-drupal-link-system-path="node/79">Newsletters</a>
+                    
+  
+  <div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+              
+      </div>
+
+
+
+          </li>
+      
+    <li class="menu-item">
+      <a href="/press-media" data-drupal-link-system-path="node/88">Press and Media</a>
+                    
+  
+  <div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+              
+      </div>
+
+
+
+          </li>
+      
+    <li class="menu-item">
+      <a href="/contact-gso" data-drupal-link-system-path="node/616">Contact us</a>
+                    
+  
+  <div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+              
+      </div>
+
+
+
+          </li>
+    </ul>
+
+
+
+      </div>
+
+
+
+          </li>
+    </ul>
+
+
+
+      </div>
+
+
+
+          </li>
+      
+    <li class="menu-item">
+      <a href="/daily-reflections" data-drupal-link-system-path="node/342">Daily Reflections</a>
+                    
+  
+  <div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-0 menu-type-default">
+              
+      </div>
+
+
+
+          </li>
+      
+    <li class="search menu-item">
+      <a href="">Search</a>
+                    
+  
+  <div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-0 menu-type-default">
+              
+      </div>
+
+
+
+          </li>
+    </ul>
+
+
+  </nav>
+
+  </div>
+
+		</div>
+    <div class="nav-mobile">
+      <ul>
+        <li>
+          <button class="burger" type="button">
+            <span>Menu</span>
+          </button>
+        </li>
+        <li class="search">
+          <a href="#">Search</a>
+        </li>
+      </ul>
+    </div>
+	</div>
+</header>
+  <main role="main" class="main-section" id="main-content">
+    <section class="layout-main-section">
+        <div class="region region-top-content">
+    <div data-drupal-messages-fallback="" class="hidden"></div>
+
+  </div>
+
+        <div class="region region-content">
+    <div id="block-aa-content" class="block block-system block-system-main-block">
+  
+    
+      
+<article role="article" class="node node--type-home-page node--view-mode-full">
+
+  
+    
+
+  
+  <div class="node__content">
+    
+            <div class="field field--name-field-banner field--type-entity-reference-revisions field--label-hidden field__item">	<section class="paragraph paragraph--type--hp-banner paragraph--view-mode--default hero" style="background-image:url(/sites/default/files/styles/wide/public/2021-06/Doors_Levels_100%25%20opacity.png?itok=5dLTjvuO)">
+    <div class="wrapper">
+      <div class="content">
+                  <h1>Have a problem with alcohol? There is a solution.</h1>
+          
+            <div class="clearfix text-formatted field field--name-field-wysiwyg field--type-text-with-summary field--label-hidden field__item"><p>A.A. has a simple program that works. It’s based on one alcoholic helping another.</p></div>
+      
+            <div class="field field--name-field-cta-link field--type-link field--label-hidden field__item"><a href="/what-is-aa">Learn More</a></div>
+      
+                <div class="field--name-field-cta find-aa-cta">
+          
+        </div>
+      </div>
+      <div class="locator" id="block-findanaa">
+		    <h2>Find A.A. Near You</h2>
+<div class="views-element-container"><div class="view view-find-aa-na view-id-find_aa_na view-display-id-block js-view-dom-id-568220543e2c85bb212350b76c93afc53a724d2ca865d2643fbb0873a6254f6a" data-once="ajax-pager">
+  
+    
+        <div class="view-filters">
+      <form class="views-exposed-form" data-drupal-selector="views-exposed-form-find-aa-na-block" action="/aa-home" method="get" id="views-exposed-form-find-aa-na-block" accept-charset="UTF-8" data-once="exposed-form">
+  <div class="form--inline clearfix">
+  <div class="js-form-item form-item js-form-type-select form-type-select js-form-item-dist form-item-dist">
+      <label for="edit-dist">Distance</label>
+        <select data-drupal-selector="edit-dist" id="edit-dist" name="dist" class="form-select"><option value="1">10 Miles</option><option value="2">50 Miles</option><option value="3" selected="selected">100 Miles</option><option value="4">300 Miles</option></select>
+        </div>
+<fieldset class="geocoder623d853ae253f location-input-geocoder js-form-item form-item js-form-wrapper form-wrapper" data-drupal-selector="edit-coordinates" id="edit-coordinates">
+      <legend>
+    <span class="fieldset-legend">Coordinates</span>
+  </legend>
+  <div class="fieldset-wrapper">
+                <div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-lat form-item-lat">
+      <label for="edit-lat">Latitude</label>
+        <input class="geolocation-input-latitude form-text" data-drupal-selector="edit-lat" type="text" id="edit-lat" name="lat" value="" size="60" maxlength="128">
+
+        </div>
+<div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-lng form-item-lng">
+      <label for="edit-lng">Longitude</label>
+        <input class="geolocation-input-longitude form-text" data-drupal-selector="edit-lng" type="text" id="edit-lng" name="lng" value="" size="60" maxlength="128">
+
+        </div>
+
+          </div>
+</fieldset>
+<div data-drupal-selector="edit-geocoder" id="edit-geocoder" class="js-form-wrapper form-wrapper"><div class="js-form-item form-item js-form-type-search form-type-search js-form-item-geolocation-geocoder-address form-item-geolocation-geocoder-address">
+      <label for="edit-geolocation-geocoder-address">State or Province, Town or Zip Code</label>
+        <input class="geolocation-geocoder-address form-autocomplete form-search geocoder-attached ui-autocomplete-input" data-source-identifier="geocoder623d853ae253f" data-drupal-selector="edit-geolocation-geocoder-address" aria-describedby="edit-geolocation-geocoder-address--description" type="search" id="edit-geolocation-geocoder-address" name="geolocation_geocoder_address" value="" size="25" maxlength="256" placeholder="State or Province, Town or Zip Code" autocomplete="off">
+
+            <div id="edit-geolocation-geocoder-address--description" class="description">
+       
+    </div>
+  </div>
+</div>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><div class="input-submit-wrapper">
+  <input data-drupal-selector="edit-submit-find-aa-na" type="submit" id="edit-submit-find-aa-na" value="Search Now" class="button js-form-submit form-submit">
+  
+</div></div>
+
+</div>
+
+</form>
+
+    </div>
+    
+  
+          </div>
+</div>
+
+
+      </div>
+    </div>
+	</section>
+</div>
+      
+      <div class="field field--name-field-components field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">	<section class="paragraph paragraph--type--i-am-groups paragraph--view-mode--default">
+    <div class="wrapper">
+              <div class="header">
+          <div class="options">
+            <label for="i-am-what">I Am...</label>
+            <select id="i-am-what" tabindex="-1" class="select2-hidden-accessible" aria-hidden="true" data-select2-id="i-am-what">
+                              <option value="31" data-select2-id="7">Looking for help with a drinking problem</option>
+                              <option value="99">An A.A member</option>
+                              <option value="104">Trying to help a family member or friend</option>
+                              <option value="222">A professional working with alcoholics</option>
+                          </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="6" style="width: 520.767px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-i-am-what-container"><span class="select2-selection__rendered" id="select2-i-am-what-container" role="textbox" aria-readonly="true" title="Looking for help with a drinking problem">Looking for help with a drinking problem</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+          </div>
+        </div>
+      
+      <div class="content">
+                          
+      <div class="field field--name-field-i-am-group field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item active">  <div class="paragraph paragraph--type--i-am-group paragraph--view-mode--default">
+          
+      <div class="field field--name-field-items field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">  <section class="paragraph paragraph--type--video paragraph--view-mode--default">
+          
+            <div class="field field--name-field-video field--type-entity-reference field--label-hidden field__item"><article class="media media--type-vimeovideo media--view-mode-default" style="background-image: url(/sites/default/files/oembed_thumbnails/yO6W3iMV_1dsrtQnNYwPOodnFMgcdKQCbhiOyNLeY34.jpg">
+	
+	    <div class="picture">
+      <img src="/sites/default/files/oembed_thumbnails/yO6W3iMV_1dsrtQnNYwPOodnFMgcdKQCbhiOyNLeY34.jpg" alt="Sobriety in A.A.: When Drinking is no longer a Party" data-video="https://vimeo.com/681037586">
+    </div>
+		<h2 data-video="https://vimeo.com/681037586">
+            <div class="field field--name-name field--type-string field--label-hidden field__item">Sobriety in A.A.: When Drinking is no longer a Party</div>
+      </h2>
+    <button class="play" data-video="https://vimeo.com/681037586">Play</button>
+		
+	</article>
+</div>
+      
+      </section>
+</div>
+              <div class="field__item">
+	<section class="callout has-buttons blue">
+    <div class="callout-wrapper">
+              
+            <div class="field field--name-field-title field--type-string field--label-hidden field__item"><h2>Need help with a drinking problem?</h2>
+</div>
+      
+            <div class="clearfix text-formatted field field--name-field-wysiwyg field--type-text-with-summary field--label-hidden field__item"><p>A.A. has a solution.&nbsp; That isn't an empty promise.&nbsp; A.A. has been helping alcoholics recover for more than 80 years.&nbsp; A.A.'s program of recovery is built on the simple foundation of one alcoholic sharing with another.&nbsp; If your drinking is out of control, A.A. can help.</p></div>
+      
+      <div class="field field--name-field-double field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">
+	<div class="cta orange">
+						<a href="/new-to-aa">Learn More</a>
+
+			</div>
+</div>
+          </div>
+  
+          </div>
+	</section>
+</div>
+              <div class="field__item">
+	<section class="callout has-buttons white">
+    <div class="callout-wrapper">
+              
+            <div class="field field--name-field-title field--type-string field--label-hidden field__item"><h2>Not sure you have a problem?</h2>
+</div>
+      
+      <div class="field field--name-field-double field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">
+	<div class="cta darkblue">
+						<a href="/self-assessment">Take a Self-Assessment</a>
+
+			</div>
+</div>
+          </div>
+  
+          </div>
+	</section>
+</div>
+              <div class="field__item">  <section class="paragraph paragraph--type--link-list-group paragraph--view-mode--default">
+          
+      <div class="field field--name-field-list field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">  <div class="paragraph paragraph--type--link-list paragraph--view-mode--default">
+          
+            <div class="field field--name-field-title field--type-string field--label-hidden field__item"><h2>Learn More About A.A.</h2>
+</div>
+      
+      <div class="field field--name-field-link-list-ctas field--type-link field--label-hidden field__items">
+              <div class="field__item"><a href="/what-is-aa">What is A.A.</a></div>
+              <div class="field__item"><a href="/the-big-book">The Big Book</a></div>
+              <div class="field__item"><a href="/twelve-steps-and-twelve-traditions">12 Steps &amp; 12 Traditions</a></div>
+              <div class="field__item"><a href="/frequently-asked-questions-about-aa-formerly-44-questions">Frequently Asked Questions</a></div>
+          </div>
+  
+      </div>
+</div>
+              <div class="field__item">  <div class="paragraph paragraph--type--link-list paragraph--view-mode--default">
+          
+            <div class="field field--name-field-title field--type-string field--label-hidden field__item"><h2>Recommended Resources</h2>
+</div>
+      
+      <div class="field field--name-field-link-list-ctas field--type-link field--label-hidden field__items">
+              <div class="field__item"><a href="https://www.youtube.com/channel/UCI9uFLJ__aXT3-At0PlPWUQ" class="external-link" target="_blank">hear members share about recovery</a></div>
+              <div class="field__item"><a href="/living-sober">living sober</a></div>
+              <div class="field__item"><a href="/aa-introduction-aa-recovery-program">this is A.A.</a></div>
+              <div class="field__item"><a href="/resources/literature?terms=&amp;subject%5B0%5D=1&amp;subject%5B1%5D=1&amp;format=All&amp;items_per_page=24&amp;sort_bef_combine=title_ASC">more newcomer resources</a></div>
+          </div>
+  
+      </div>
+</div>
+          </div>
+  
+      </section>
+</div>
+          </div>
+  
+      </div>
+</div>
+              <div class="field__item">  <div class="paragraph paragraph--type--i-am-group paragraph--view-mode--default">
+          
+      <div class="field field--name-field-items field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">  <section class="paragraph paragraph--type--video paragraph--view-mode--default">
+          
+            <div class="field field--name-field-video field--type-entity-reference field--label-hidden field__item"><article class="media media--type-vimeovideo media--view-mode-default" style="background-image: url(/sites/default/files/oembed_thumbnails/AsUk6BsoBkdlNBPGa119C8Gx9Zue8bsEKH1VPqslDDs.jpg">
+	
+	    <div class="picture">
+      <img src="/sites/default/files/oembed_thumbnails/AsUk6BsoBkdlNBPGa119C8Gx9Zue8bsEKH1VPqslDDs.jpg" alt="Your General Service Office (G.S.O.), the Grapevine and the General Service Structure" data-video="https://vimeo.com/454405579">
+    </div>
+		<h2 data-video="https://vimeo.com/454405579">
+            <div class="field field--name-name field--type-string field--label-hidden field__item">Your General Service Office (G.S.O.), the Grapevine and the General Service Structure</div>
+      </h2>
+    <button class="play" data-video="https://vimeo.com/454405579">Play</button>
+		
+            <div class="field field--name-field-description field--type-string-long field--label-hidden field__item">Copyright © 2020 by Alcoholics Anonymous World Services, Inc. All rights reserved.</div>
+      
+	</article>
+</div>
+      
+      </section>
+</div>
+              <div class="field__item">
+	<section class="callout has-buttons blue">
+    <div class="callout-wrapper">
+              
+            <div class="field field--name-field-title field--type-string field--label-hidden field__item"><h2>Ready to get involved in A.A.?</h2>
+</div>
+      
+            <div class="clearfix text-formatted field field--name-field-wysiwyg field--type-text-with-summary field--label-hidden field__item"><p>A.A. members work together to help the alcoholic who still suffers.&nbsp; Helping each other is a key to staying sober.&nbsp; There are many opportunities to participate in a variety of ways.&nbsp; The best place to start getting involved is through an A.A. group.&nbsp; Participating in a group helps ensure that when a person reaches out for help, A.A. will be available.&nbsp;</p></div>
+      
+      <div class="field field--name-field-double field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">
+	<div class="cta orange">
+						<a href="/participating-in-aa">Learn More</a>
+
+			</div>
+</div>
+          </div>
+  
+          </div>
+	</section>
+</div>
+              <div class="field__item">
+	<section class="callout has-buttons white">
+    <div class="callout-wrapper">
+              
+            <div class="field field--name-field-title field--type-string field--label-hidden field__item"><h2>Dive into information on service in A.A.</h2>
+</div>
+      
+      <div class="field field--name-field-double field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">
+	<div class="cta inherit">
+						<a href="/service-committees">A.A. SERVICE COMMITTEES &gt;</a>
+
+			</div>
+</div>
+          </div>
+  
+          </div>
+	</section>
+</div>
+              <div class="field__item">  <section class="paragraph paragraph--type--link-list-group paragraph--view-mode--default">
+          
+      <div class="field field--name-field-list field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">  <div class="paragraph paragraph--type--link-list paragraph--view-mode--default">
+          
+            <div class="field field--name-field-title field--type-string field--label-hidden field__item"><h2>Learn More About A.A. Service</h2>
+</div>
+      
+      <div class="field field--name-field-link-list-ctas field--type-link field--label-hidden field__items">
+              <div class="field__item"><a href="/the-aa-group">about a.a. groups</a></div>
+              <div class="field__item"><a href="/service-committees">service committees</a></div>
+              <div class="field__item"><a href="/aa-and-anonymity">anonymity in a.a.</a></div>
+              <div class="field__item"><a href="/aa-contributions-self-support">/contributions and self-support</a></div>
+          </div>
+  
+      </div>
+</div>
+              <div class="field__item">  <div class="paragraph paragraph--type--link-list paragraph--view-mode--default">
+          
+            <div class="field field--name-field-title field--type-string field--label-hidden field__item"><h2>Recommended Resources</h2>
+</div>
+      
+      <div class="field field--name-field-link-list-ctas field--type-link field--label-hidden field__items">
+              <div class="field__item"><a href="/questions-and-answers-sponsorship">questions &amp; answers on sponsorship</a></div>
+              <div class="field__item"><a href="/circles-love-and-service">circles of love and service</a></div>
+              <div class="field__item"><a href="/aa-service-manualtwelve-concepts-world-services">a.a. service manual</a></div>
+              <div class="field__item"><a href="/resources/literature?terms=&amp;subject%5B0%5D=2&amp;subject%5B1%5D=2&amp;format=All&amp;items_per_page=24&amp;sort_bef_combine=title_ASC">member resources</a></div>
+          </div>
+  
+      </div>
+</div>
+          </div>
+  
+      </section>
+</div>
+          </div>
+  
+      </div>
+</div>
+              <div class="field__item">  <div class="paragraph paragraph--type--i-am-group paragraph--view-mode--default">
+          
+      <div class="field field--name-field-items field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">  <section class="paragraph paragraph--type--video paragraph--view-mode--default">
+          
+            <div class="field field--name-field-video field--type-entity-reference field--label-hidden field__item"><article class="media media--type-vimeovideo media--view-mode-default" style="background-image: url(/sites/default/files/oembed_thumbnails/ZqAVGcdHo-ysp68sRlArCUqaBdSa51wuXPMIIBGcmy0.jpg">
+	
+	    <div class="picture">
+      <img src="/sites/default/files/oembed_thumbnails/ZqAVGcdHo-ysp68sRlArCUqaBdSa51wuXPMIIBGcmy0.jpg" alt="Sobriety in A.A.: Since getting sober, I have hope" data-video="https://vimeo.com/477576361">
+    </div>
+		<h2 data-video="https://vimeo.com/477576361">
+            <div class="field field--name-name field--type-string field--label-hidden field__item">Sobriety in A.A.: Since getting sober, I have hope</div>
+      </h2>
+    <button class="play" data-video="https://vimeo.com/477576361">Play</button>
+		
+	</article>
+</div>
+      
+      </section>
+</div>
+              <div class="field__item">
+	<section class="callout has-buttons blue">
+    <div class="callout-wrapper">
+              
+            <div class="field field--name-field-title field--type-string field--label-hidden field__item"><h2>Is there an alcoholic in your life?</h2>
+</div>
+      
+            <div class="clearfix text-formatted field field--name-field-wysiwyg field--type-text-with-summary field--label-hidden field__item"><p>If someone you care about has a drinking problem, A.A. might have a solution for them.&nbsp; A.A. has helped more than two million alcoholics stop drinking.&nbsp; Recovery works through one alcoholic sharing their experience with another.</p></div>
+      
+      <div class="field field--name-field-double field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">
+	<div class="cta orange">
+						<a href="/aa-family-friend">Learn More</a>
+
+			</div>
+</div>
+          </div>
+  
+          </div>
+	</section>
+</div>
+              <div class="field__item">
+	<section class="callout has-buttons white">
+    <div class="callout-wrapper">
+              
+            <div class="field field--name-field-title field--type-string field--label-hidden field__item"><h2>Want to talk to someone about A.A.?</h2>
+</div>
+      
+      <div class="field field--name-field-double field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">
+	<div class="cta green">
+						<a href="/find-aa/north-america">CONTACT A.A. NEAR YOU</a>
+
+			</div>
+</div>
+          </div>
+  
+          </div>
+	</section>
+</div>
+              <div class="field__item">  <section class="paragraph paragraph--type--link-list-group paragraph--view-mode--default">
+          
+      <div class="field field--name-field-list field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">  <div class="paragraph paragraph--type--link-list paragraph--view-mode--default">
+          
+            <div class="field field--name-field-title field--type-string field--label-hidden field__item"><h2>Learn More About A.A.</h2>
+</div>
+      
+      <div class="field field--name-field-link-list-ctas field--type-link field--label-hidden field__items">
+              <div class="field__item"><a href="/what-is-aa">what is a.a.?</a></div>
+              <div class="field__item"><a href="/the-big-book">the big book</a></div>
+              <div class="field__item"><a href="/the-twelve-steps">12 steps</a></div>
+          </div>
+  
+      </div>
+</div>
+              <div class="field__item">  <div class="paragraph paragraph--type--link-list paragraph--view-mode--default">
+          
+            <div class="field field--name-field-title field--type-string field--label-hidden field__item"><h2>Recommended Resources</h2>
+</div>
+      
+      <div class="field field--name-field-link-list-ctas field--type-link field--label-hidden field__items">
+              <div class="field__item"><a href="/aa-family-friend">is there an alcoholic in your life?</a></div>
+              <div class="field__item"><a href="/aa-history">a brief guide to a.a.</a></div>
+              <div class="field__item"><a href="/aa-frequently-asked-questions">frequently asked questions about a.a.</a></div>
+          </div>
+  
+      </div>
+</div>
+          </div>
+  
+      </section>
+</div>
+          </div>
+  
+      </div>
+</div>
+              <div class="field__item">  <div class="paragraph paragraph--type--i-am-group paragraph--view-mode--default">
+          
+      <div class="field field--name-field-items field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">  <section class="paragraph paragraph--type--video paragraph--view-mode--default">
+          
+            <div class="field field--name-field-video field--type-entity-reference field--label-hidden field__item"><article class="media media--type-vimeovideo media--view-mode-default" style="background-image: url(/sites/default/files/oembed_thumbnails/PjnG3-Y5E0oUgq3QGxVhcci7E-9GMySutqtrYwdv9wc.jpg">
+	
+	    <div class="picture">
+      <img src="/sites/default/files/oembed_thumbnails/PjnG3-Y5E0oUgq3QGxVhcci7E-9GMySutqtrYwdv9wc.jpg" alt="A.A. Video for Legal and Corrections Professionals" data-video="https://vimeo.com/478019543">
+    </div>
+		<h2 data-video="https://vimeo.com/478019543">
+            <div class="field field--name-name field--type-string field--label-hidden field__item">A.A. Video for Legal and Corrections Professionals</div>
+      </h2>
+    <button class="play" data-video="https://vimeo.com/478019543">Play</button>
+		
+	</article>
+</div>
+      
+      </section>
+</div>
+              <div class="field__item">
+	<section class="callout has-buttons blue">
+    <div class="callout-wrapper">
+              
+            <div class="field field--name-field-title field--type-string field--label-hidden field__item"><h2>A.A. Can Support Professionals</h2>
+</div>
+      
+            <div class="clearfix text-formatted field field--name-field-wysiwyg field--type-text-with-summary field--label-hidden field__item"><p>Professionals who work with alcoholics share a common purpose with A.A.: to help the alcoholic stop drinking.&nbsp; A.A. members are available to provide A.A. meetings or information about A.A. upon request.</p></div>
+      
+      <div class="field field--name-field-double field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">
+	<div class="cta orange">
+						<a href="/aa-professionals">Learn More</a>
+
+			</div>
+</div>
+          </div>
+  
+          </div>
+	</section>
+</div>
+              <div class="field__item">
+	<section class="callout has-buttons white">
+    <div class="callout-wrapper">
+              
+            <div class="field field--name-field-title field--type-string field--label-hidden field__item"><h2>Connect with local A.A.s</h2>
+</div>
+      
+      <div class="field field--name-field-double field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">
+	<div class="cta inherit">
+						<a href="/find-aa/north-america">CONTACT A.A. NEAR YOU</a>
+
+			</div>
+</div>
+          </div>
+  
+          </div>
+	</section>
+</div>
+              <div class="field__item">  <section class="paragraph paragraph--type--link-list-group paragraph--view-mode--default">
+          
+      <div class="field field--name-field-list field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">  <div class="paragraph paragraph--type--link-list paragraph--view-mode--default">
+          
+            <div class="field field--name-field-title field--type-string field--label-hidden field__item"><h2>Learn More About A.A.</h2>
+</div>
+      
+      <div class="field field--name-field-link-list-ctas field--type-link field--label-hidden field__items">
+              <div class="field__item"><a href="https://www.aa.org/assets/en_US/p-1_thisisaa1.pdf" class="external-link" target="_blank">what is a.a.?</a></div>
+              <div class="field__item"><a href="/the-big-book">the big book</a></div>
+              <div class="field__item"><a href="/twelve-steps-and-twelve-traditions">12 steps</a></div>
+              <div class="field__item"><a href="https://onlineliterature.aa.org/professional-community?page=1" class="external-link" target="_blank">see all professional resources</a></div>
+          </div>
+  
+      </div>
+</div>
+              <div class="field__item">  <div class="paragraph paragraph--type--link-list paragraph--view-mode--default">
+          
+            <div class="field field--name-field-title field--type-string field--label-hidden field__item"><h2>Recommended Resources</h2>
+</div>
+      
+      <div class="field field--name-field-link-list-ctas field--type-link field--label-hidden field__items">
+              <div class="field__item"><a href="https://www.aa.org/assets/en_US/p-23_aaasaresourceforhcp1.pdf" class="external-link" target="_blank">for the health care professional</a></div>
+              <div class="field__item"><a href="https://www.aa.org/assets/en_US/smf-177_en.pdf" class="external-link" target="_blank">for alcohol &amp; drug court professionals</a></div>
+              <div class="field__item"><a href="https://www.aa.org/assets/en_US/p-47_understandinganonymity.pdf" class="external-link" target="_blank">understanding anonymity</a></div>
+          </div>
+  
+      </div>
+</div>
+          </div>
+  
+      </section>
+</div>
+          </div>
+  
+      </div>
+</div>
+          </div>
+  
+          		</div>
+		</div>
+	</section>
+</div>
+              <div class="field__item">	<section class="paragraph paragraph--type--hp-daily-reflections paragraph--view-mode--default">
+		<div class="wrapper">
+			<div class="container">
+				<div class="header">
+						<div class="title-wrapper">
+    <h2>Daily Reflections</h2>
+
+    <span class="calendar-toggle">Calendar</span>
+  </div>
+
+				</div>
+				<div class="content">
+					<div class="reflection">
+													<div class="reflection-placeholder">
+								
+
+
+  
+<article role="article" class="node node--type-daily-reflection node--view-mode-teaser" data-date="03-25">
+	<input type="hidden" name="day" value="25">
+	<input type="hidden" name="month" value="03">
+	<input type="hidden" name="month-name" value="March">
+
+  
+      <h3>
+      <span class="field field--name-title field--type-string field--label-hidden">A FULL AND THANKFUL HEART</span>
+
+    </h3>
+    
+
+  <div>March 25</div>
+
+  
+            <div class="clearfix text-formatted field field--name-field-teaser field--type-text-long field--label-hidden field__item"><p><strong>I try hard to hold fast to the truth that a full and thankful heart cannot entertain great conceits. When brimming with gratitude, one’s heartbeat must surely result in outgoing love, the finest emotion that we can ever know.</strong></p>
+
+<p><strong>AS BILL SEES IT, p. 37</strong></p></div>
+      
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p><strong>I try hard to hold fast to the truth that a full and thankful heart cannot entertain great conceits. When brimming with gratitude, one’s heartbeat must surely result in outgoing love, the finest emotion that we can ever know.</strong></p>
+
+<p><strong>AS BILL SEES IT, p. 37</strong></p>
+
+<p>I believe that we in Alcoholics Anonymous are fortunate in that we are constantly reminded of the need to be grateful and of how important gratitude is to our sobriety. I am truly grateful for the sobriety God has given me through the A.A. program and am glad I can give back what was given to me freely. I am grateful not only for sobriety, but for the quality of life my sobriety has brought. God has been gracious enough to give me sober days and a life blessed with peace and contentment, as well as the ability to give and receive love, and the opportunity to serve others—in our Fellowship, my family and my community. For all of this, I have “a full and thankful heart.”</p>
+
+<p>&nbsp;</p></div>
+      
+            <div class="field field--name-field-copyright field--type-entity-reference field--label-hidden field__item"><div id="taxonomy-term-76" class="taxonomy-term vocabulary-daily-reflection-copyright">
+  
+      <h2><a href="/taxonomy/term/76">
+            <div class="field field--name-name field--type-string field--label-hidden field__item">Daily Reflections.</div>
+      </a></h2>
+    
+  <div class="content">
+    
+            <div class="clearfix text-formatted field field--name-description field--type-text-long field--label-hidden field__item"><p>From the book <em>Daily Reflections.</em><br>
+Copyright © 1990 by Alcoholics Anonymous World Services, Inc. All rights reserved.</p></div>
+      
+  </div>
+</div>
+</div>
+      
+
+  <ul class="actions">
+    <li>
+      <button class="read-more" data-more="Read More" data-less="Read Less">Read More</button>
+    </li>
+    <li class="share-block">
+                  
+      
+      <a class="share" target="_blank" href="mailto:?subject=A FULL AND THANKFUL HEART
+&amp;body=March 25  I%20try%20hard%20to%20hold%20fast%20to%20the%20truth%20that%20a%20full%20and%20thankful%20heart%20cannot%20entertain%20great%20conceits.%20When%20brimming%20with%20gratitude%2C%20one%E2%80%99s%20heartbeat%20must%20surely%20result%20in%20outgoing%20love%2C%20the%20finest%20emotion%20that%20we%20can%20ever%20know.%0A%0AAS%20BILL%20SEES%20IT%2C%20p.%2037%0A%0AI%20believe%20that%20we%20in%20Alcoholics%20Anonymous%20are%20fortunate%20in%20that%20we%20are%20constantly%20reminded%20of%20the%20need%20to%20be%20grateful%20and%20of%20how%20important%20gratitude%20is%20to%20our%20sobriety.%20I%20am%20truly%20grateful%20for%20the%20sobriety%20God%20has%20given%20me%20through%20the%20A.A.%20program%20and%20am%20glad%20I%20can%20give%20back%20what%20was%20given%20to%20me%20freely.%20I%20am%20grateful%20not%20only%20for%20sobriety%2C%20but%20for%20the%20quality%20of%20life%20my%20sobriety%20has%20brought.%20God%20has%20been%20gracious%20enough%20to%20give%20me%20sober%20days%20and%20a%20life%20blessed%20with%20peace%20and%20contentment%2C%20as%20well%20as%20the%20ability%20to%20give%20and%20receive%20love%2C%20and%20the%20opportunity%20to%20serve%20others%E2%80%94in%20our%20Fellowship%2C%20my%20family%20and%20my%20community.%20For%20all%20of%20this%2C%20I%20have%20%E2%80%9Ca%20full%20and%20thankful%20heart.%E2%80%9D%0A%0A%C2%A0Read Today's Daily Reflection at https://www.aa.org//daily-reflections From%20the%20book%20Daily%20Reflections.%0D%0ACopyright%20%C2%A9%201990%20by%20Alcoholics%20Anonymous%20World%20Services%2C%20Inc.%20All%20rights%20reserved.%0D%0A">
+        Share
+      </a>
+      <button class="close">Close</button>
+    </li>
+  </ul>
+  <div class="copyright-block"> <p>From the book <em>Daily Reflections.</em><br>
+Copyright © 1990 by Alcoholics Anonymous World Services, Inc. All rights reserved.</p>
+ </div></article>
+
+							</div>
+												<div class="none">
+							No Reflection on this day.
+						</div>
+					</div>
+
+					<div class="calendar">
+						<div class="calendar-placeholder hello-week"><div class="navigation"><div class="prev">◀</div><div class="period">March 2022</div><div class="next">▶</div></div><div class="week"><span class="day">Su</span><span class="day">Mo</span><span class="day">Tu</span><span class="day">We</span><span class="day">Th</span><span class="day">Fr</span><span class="day">Sa</span></div><div class="month"><div class="day" style="margin-left: 28.5714%;">1</div><div class="day">2</div><div class="day">3</div><div class="day">4</div><div class="day is-weekend">5</div><div class="day is-weekend">6</div><div class="day">7</div><div class="day">8</div><div class="day">9</div><div class="day">10</div><div class="day">11</div><div class="day is-weekend">12</div><div class="day is-weekend">13</div><div class="day">14</div><div class="day">15</div><div class="day">16</div><div class="day">17</div><div class="day">18</div><div class="day is-weekend">19</div><div class="day is-weekend">20</div><div class="day">21</div><div class="day">22</div><div class="day">23</div><div class="day">24</div><div class="day is-today">25</div><div class="day is-weekend">26</div><div class="day is-weekend">27</div><div class="day">28</div><div class="day">29</div><div class="day">30</div><div class="day">31</div></div></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+              <div class="field__item">	<section class="paragraph paragraph--type--ready-template paragraph--view-mode--default">
+      <div class="header">
+        <div class="wrapper">
+          
+            <div class="field field--name-field-title field--type-string field--label-hidden field__item"><h2>Ready for your first Meeting?</h2>
+</div>
+      
+          
+            <div class="field field--name-field-subtitle field--type-string field--label-hidden field__item">Here's what to expect.</div>
+      
+        </div>
+      </div>
+      <div class="content">
+        <div class="wrapper">
+          
+            <div class="field field--name-field-image field--type-entity-reference field--label-hidden field__item">  <img src="/sites/default/files/2021-05/Sequence%2001.00_00_45_21.Still015.jpg" alt="Doors_PSA_Still_Image_Ready for your first meeting" loading="lazy" width="1920" height="1080">
+
+</div>
+      
+          
+            <div class="clearfix text-formatted field field--name-field-text field--type-text-long field--label-hidden field__item"><p>Anyone with a desire to stop drinking is welcome, regardless of race, gender, sexual orientation, religion, income or profession. And it’s free.</p>
+
+<p>You can just sit and listen and learn more about recovery, or you can share about your situation. It’s completely up to you.</p></div>
+      
+        </div>
+      </div>
+      <div class="footer">
+                  
+            <div class="field field--name-field-callout field--type-entity-reference-revisions field--label-hidden field__item">
+	<section class="callout has-buttons blue">
+    <div class="callout-wrapper">
+              
+            <div class="field field--name-field-title field--type-string field--label-hidden field__item"><h2>Join others on the road to recovery</h2>
+</div>
+      
+      <div class="field field--name-field-double field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">
+	<div class="cta orange">
+						<a href="/find-aa/north-america">Find A.A. Near You</a>
+
+			</div>
+</div>
+              <div class="field__item">
+	<div class="cta inherit">
+						<a href="/information-about-meetings">Learn more about meetings</a>
+
+			</div>
+</div>
+          </div>
+  
+          </div>
+	</section>
+</div>
+      
+              </div>
+	</section>
+</div>
+          </div>
+  
+  </div>
+
+</article>
+
+  </div>
+
+  </div>
+
+      
+    </section>
+  </main>
+  <footer class="footer-section">
+  <div class="footer-top">
+      <div class="region region-top-footer">
+    <div id="block-subscribetoournewsletter" class="block block-block-content block-block-content5eecf86e-8229-4977-9889-acfc25fbacb6">
+  
+      <h2>Subscribe to our Newsletters</h2>
+    
+      
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>These newsletters include information about A.A. history and current activities; sharing from groups, service committees, and individual A.A. members; and notices of upcoming events.</p></div>
+      
+            <div class="field field--name-field-cta-link field--type-link field--label-hidden field__item"><a href="/newsletters">Learn More</a></div>
+      
+  </div>
+
+  </div>
+
+  </div>
+  <div class="footer-middle">
+      <div class="region region-footer">
+    <div id="block-multilanglogo" class="block block-aa-base block-aa-logo">
+  
+    
+      <div class="logo">
+	<a href="https://www.aa.org/">
+		<img src="/sites/default/files/logos/AA_English_4.svg" alt="Alcoholics Anonymous">
+	</a>
+</div>
+
+  </div>
+<nav role="navigation" aria-labelledby="block-footertopmenu-menu" id="block-footertopmenu" class="block block-menu navigation menu--footer-top-menu">
+            
+  <h2 class="visually-hidden" id="block-footertopmenu-menu">Footer Top Menu</h2>
+  
+
+        
+              <ul class="menu">
+                    <li class="menu-item">
+        <a href="/the-big-book" data-drupal-link-system-path="node/347">The Big Book</a>
+              </li>
+                <li class="menu-item">
+        <a href="/twelve-steps-twelve-traditions" data-drupal-link-system-path="node/1976">12 Steps and 12 Traditions</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://www.aagrapevine.org/" class="external-link" target="_blank">AAGrapevine.org</a>
+              </li>
+                <li class="menu-item">
+        <a href="/meeting-guide-app" data-drupal-link-system-path="node/77">Meeting Guide App</a>
+              </li>
+                <li class="menu-item">
+        <a href="/news-and-announcements" title="News and Announcements" data-drupal-link-system-path="node/91">What's New</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-footercentermenu-menu" id="block-footercentermenu" class="block block-menu navigation menu--footer">
+            
+  <h2 class="visually-hidden" id="block-footercentermenu-menu">Footer Center Menu</h2>
+  
+
+        
+              <ul class="menu">
+                    <li class="menu-item">
+        <a href="/new-to-aa" data-drupal-link-system-path="node/3">Need help with a drinking problem?</a>
+              </li>
+                <li class="menu-item">
+        <a href="/aa-gso" title="The General Service Office" data-drupal-link-system-path="node/18">About G.S.O.</a>
+              </li>
+                <li class="menu-item">
+        <a href="/newsletters" title="newsletters" data-drupal-link-system-path="node/79">Newsletters</a>
+              </li>
+                <li class="menu-item">
+        <a href="/aa-board-calendars" data-drupal-link-system-path="node/53">Board Calendar</a>
+              </li>
+                <li class="menu-item">
+        <a href="/contact-gso" data-drupal-link-system-path="node/616">Contact Us</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+<div id="block-allrightsreserved" class="block block-block-content block-block-content8148b5f1-849e-44e9-8136-68329bcb41e7">
+  
+    
+      
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>This is the official Website of the General Service Office (G.S.O.) of Alcoholics Anonymous. Videos or graphic images may not be downloaded, copied or duplicated without the express written permission of Alcoholics Anonymous World Services, Inc. “Alcoholics Anonymous” and the “Blue People” graphic are registered trademarks of Alcoholics Anonymous World Services, Inc. All rights reserved.</p></div>
+      
+  </div>
+
+  </div>
+
+  </div>
+  <div class="footer-bottom">
+      <div class="region region-bottom-footer">
+    <div id="block-footercopyright" class="block block-aa-base block-aa-footer-copyright">
+  
+    
+      Copyright © 2022 by Alcoholics Anonymous World Services, Inc. All rights reserved
+  </div>
+<nav role="navigation" aria-labelledby="block-footerbottommenu-menu" id="block-footerbottommenu" class="block block-menu navigation menu--footer-bottom-menu">
+            
+  <h2 class="visually-hidden" id="block-footerbottommenu-menu">Footer Bottom Menu</h2>
+  
+
+        
+              <ul class="menu">
+                    <li class="menu-item">
+        <a href="/website-feedback" data-drupal-link-system-path="node/636">Website Feedback</a>
+              </li>
+                <li class="menu-item">
+        <a href="/press-media" data-drupal-link-system-path="node/88">Press &amp; Media</a>
+              </li>
+                <li class="menu-item">
+        <a href="/privacy-policy" data-drupal-link-system-path="node/1546">Privacy Policy</a>
+              </li>
+                <li class="menu-item">
+        <a href="/terms-of-use" data-drupal-link-system-path="node/1551">Terms of Use</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+  </div>
+
+  </div>
+</footer>
+</div>
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/1","currentPathIsAdmin":false,"isFront":true,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"jquery":{"ui":{"datepicker":{"isRTL":false,"firstDay":0}}},"ajaxPageState":{"libraries":"aa\/global-scripts,aa\/global-styling,aa_locations\/find-aa-block,classy\/base,classy\/messages,classy\/node,core\/normalize,eu_cookie_compliance\/eu_cookie_compliance_default,external_link_popup\/dialog,geolocation\/location_input.geocoder,geolocation_google_maps\/geocoder.googlegeocodingapi,geolocation_google_maps\/google,google_analytics\/google_analytics,lang_dropdown\/lang-dropdown-form,paragraphs\/drupal.paragraphs.unpublished,system\/base,views\/views.ajax,views\/views.module","theme":"aa","theme_token":null},"ajaxTrustedUrl":{"\/aa-home":true,"form_action_p_pvdeGsVG5zNF_XLGPTvYSKCf43t8qZYSwcfZl2uzM":true},"external_link_popup":{"whitelist":"onlineliterature.aa.org\r\ncontribution.aa.org\r\naa.org","width":"85%","popups":[{"id":"aa_grapevine_and_la_vina","name":"AA GRAPEVINE AND LA VI\u00d1A","status":true,"weight":-10,"close":false,"title":"Thank you for visiting our website.","body":"\u003Cp\u003ESelecting Ok will redirect you outside the AA.org; selecting cancel will allow you to remain our site.\u003C\/p\u003E\n\n\u003Cp\u003E\u003Cstrong\u003ENOTICE ABOUT LINKS\u00a0\u003C\/strong\u003E\u003C\/p\u003E\n\n\u003Cp\u003EThis website provides links to other websites, including those affiliated with other organizations inside the Alcoholics Anonymous (A.A.) service structure. Such links are provided as a convenience only.\u00a0 Alcoholics Anonymous World Services, Inc. does not manage or control these websites.\u003C\/p\u003E","labelyes":"Ok","labelno":"Cancel","domains":"www.aagrapevine.org\r\nwww.aalavina.org","target":"_self"},{"id":"default","name":"Default","status":true,"weight":10,"close":true,"title":"Thank you for visiting our website.","body":"\u003Cp\u003ESelecting Ok will redirect you outside the AA.org; selecting cancel will allow you to remain our site.\u003C\/p\u003E\n\n\u003Cp\u003E\u003Cstrong\u003ENOTICE ABOUT EXTERNAL LINKS\u003C\/strong\u003E\u003Cstrong\u003E\u00a0\u003C\/strong\u003E\u003C\/p\u003E\n\n\u003Cp\u003EThis website provides links to other websites, including websites affiliated with other organizations. Linking to any other website, including but not limited to websites affiliated with other organizations inside the Alcoholics Anonymous (A.A.) service structure, does not constitute the endorsement, sponsorship, or approval of such other website by Alcoholics Anonymous World Services, Inc. (A.A.W.S.), or any products, services, or content displayed, provided, promoted, or offered by such other website. Please be aware that A.A.W.S. is not responsible for the content, practices, policies, or methods of any other website, including, without limitation, any other website\u0027s collection, dissemination, use, and protection of personal information, its use of tracking technology, or its level of computer security. Additionally, A.A.W.S. cannot attest to the accuracy, relevancy, timeliness, legality, or completeness of information provided by any other website\u003C\/p\u003E","labelyes":"OK","labelno":"Cancel","domains":"*","target":"_self"}]},"google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"eu_cookie_compliance":{"cookie_policy_version":"1.0.0","popup_enabled":true,"popup_agreed_enabled":false,"popup_hide_agreed":false,"popup_clicking_confirmation":false,"popup_scrolling_confirmation":false,"popup_html_info":"\u003Cdiv role=\u0022alertdialog\u0022 aria-labelledby=\u0022popup-text\u0022  class=\u0022eu-cookie-compliance-banner eu-cookie-compliance-banner-info eu-cookie-compliance-banner--opt-in\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info eu-cookie-compliance-content\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message\u0022\u003E\n      \u003Cp\u003EWe use cookies on this site to enhance your user experience. By clicking the Accept button, you agree to us doing so.\u003C\/p\u003E\u003Cp\u003E\u00a0\u003C\/p\u003E\u003Cp\u003E\u00a0\u003C\/p\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022find-more-button eu-cookie-compliance-more-button\u0022\u003EClick here for more information about our Privacy Policy.\u003C\/button\u003E\n          \u003C\/div\u003E\n\n    \n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button eu-cookie-compliance-secondary-button\u0022\u003EAccept\u003C\/button\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022decline-button eu-cookie-compliance-default-button\u0022\u003ENo, thanks\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","use_mobile_message":false,"mobile_popup_html_info":"\u003Cdiv role=\u0022alertdialog\u0022 aria-labelledby=\u0022popup-text\u0022  class=\u0022eu-cookie-compliance-banner eu-cookie-compliance-banner-info eu-cookie-compliance-banner--opt-in\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info eu-cookie-compliance-content\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message\u0022\u003E\n      \n              \u003Cbutton type=\u0022button\u0022 class=\u0022find-more-button eu-cookie-compliance-more-button\u0022\u003EClick here for more information about our Privacy Policy.\u003C\/button\u003E\n          \u003C\/div\u003E\n\n    \n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button eu-cookie-compliance-secondary-button\u0022\u003EAccept\u003C\/button\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022decline-button eu-cookie-compliance-default-button\u0022\u003ENo, thanks\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","mobile_breakpoint":768,"popup_html_agreed":false,"popup_use_bare_css":false,"popup_height":"auto","popup_width":"100%","popup_delay":1000,"popup_link":"\/privacy-policy","popup_link_new_window":true,"popup_position":false,"fixed_top_position":true,"popup_language":"en","store_consent":false,"better_support_for_screen_readers":false,"cookie_name":"","reload_page":false,"domain":"","domain_all_sites":false,"popup_eu_only_js":false,"cookie_lifetime":100,"cookie_session":0,"set_cookie_session_zero_on_disagree":0,"disagree_do_not_show_popup":false,"method":"opt_in","automatic_cookies_removal":true,"allowed_cookies":"","withdraw_markup":"\u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-tab\u0022\u003EPrivacy settings\u003C\/button\u003E\n\u003Cdiv role=\u0022alertdialog\u0022 aria-labelledby=\u0022popup-text\u0022 class=\u0022eu-cookie-withdraw-banner\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info eu-cookie-compliance-content\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message\u0022\u003E\n      \u003Cp\u003EWe use cookies on this site to enhance your user experience.\u003C\/p\u003E\u003Cp\u003EYou have given your consent for us to set cookies.\u003C\/p\u003E\n    \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-button\u0022\u003EWithdraw consent\u003C\/button\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","withdraw_enabled":false,"reload_options":0,"reload_routes_list":"","withdraw_button_on_info_popup":false,"cookie_categories":[],"cookie_categories_details":[],"enable_save_preferences_button":true,"cookie_value_disagreed":"0","cookie_value_agreed_show_thank_you":"1","cookie_value_agreed":"2","containing_element":"body","settings_tab_enabled":false,"open_by_default":true},"reflections_api_url":"\/api\/reflections\/","views":{"ajax_path":"\/views\/ajax","ajaxViews":{"views_dom_id:568220543e2c85bb212350b76c93afc53a724d2ca865d2643fbb0873a6254f6a":{"view_name":"find_aa_na","view_display_id":"block","view_args":"","view_path":"\/node\/1","view_base_path":null,"view_dom_id":"568220543e2c85bb212350b76c93afc53a724d2ca865d2643fbb0873a6254f6a","pager_element":0}}},"geolocation":{"locationInput":{"geocoder":[{"identifier":"geocoder623d853ae253f","autoSubmit":false,"hideForm":false}]},"geocoder":{"google_geocoding_api":{"autocompleteMinLength":3,"inputIds":{"geocoder623d853ae253f":"geocoder623d853ae253f"}}}},"lang_dropdown":{"lang-dropdown-form":{"key":"lang-dropdown-form"}},"user":{"uid":0,"permissionsHash":"36bdca9dd53c33b3ea8a5c89a57e9c9dc5cc5d5291c6abcbd6003278f1ca2fec"}}</script>
+<script src="/sites/default/files/js/js_szEuwo8GRCz6vbqpTFjgHfLMyNsSxorSFuQovuNk6KM.js"></script>
+<script src="/modules/contrib/eu_cookie_compliance/js/eu_cookie_compliance.js?v=1.19" defer=""></script>
+<script src="/sites/default/files/js/js_gVPm272WI3C6zTigp7G7SlTQHtKlXR_vCJ69-mdQYjo.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?libraries=&amp;key=AIzaSyC4cKM3rawSNiOIgJY_ZWxnt_9-fE6z0tY&amp;callback=Drupal.geolocation.google.load" defer="defer" async="async"></script>
+<script src="/sites/default/files/js/js_N6KgU4w4m1tRexCZyu6ezkQ-uGbJQLAj0AnVpnumef4.js"></script>
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-8db5a0bf14514376fe6","applicationID":"952265645","transactionName":"MldRbEpTDUAEWxFbCwsdcltMWwxdSkgEVQE6UVJbUFc=","queueTime":0,"applicationTime":50,"atts":"HhBSGgJJHk4=","errorBeacon":"bam.nr-data.net","agent":""}</script><script async="" type="text/javascript" src="/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&amp;ns=1&amp;cb=699597170"></script>
+
+
+<div id="sliding-popup" role="banner" aria-describedby="popup-text" style="height: auto; width: 100%; bottom: 0px;" class="sliding-popup-bottom"><div role="alertdialog" aria-labelledby="popup-text" class="eu-cookie-compliance-banner eu-cookie-compliance-banner-info eu-cookie-compliance-banner--opt-in">
+  <div class="popup-content info eu-cookie-compliance-content">
+    <div id="popup-text" class="eu-cookie-compliance-message">
+      <p>We use cookies on this site to enhance your user experience. By clicking the Accept button, you agree to us doing so.</p><p>&nbsp;</p><p>&nbsp;</p>
+              <button type="button" class="find-more-button eu-cookie-compliance-more-button find-more-button-processed">Click here for more information about our Privacy Policy.</button>
+          </div>
+
+    
+    <div id="popup-buttons" class="eu-cookie-compliance-buttons">
+      <button type="button" class="agree-button eu-cookie-compliance-secondary-button">Accept</button>
+              <button type="button" class="decline-button eu-cookie-compliance-default-button">No, thanks</button>
+          </div>
+  </div>
+</div></div><ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div></body></html>

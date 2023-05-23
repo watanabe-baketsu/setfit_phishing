@@ -1,0 +1,507 @@
+<html><head>
+    <title>Feedbooks</title>
+    <meta charset="utf-8">
+    <meta content="initial-scale=1, shrink-to-fit=no, width=device-width" name="viewport">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="Fifqede3cus40NM5omYrDTTH6l8OJdCnXQpnyTj3zw8O2dH8QU3sdBoCS/AcXAyTDQcLMron8Rt14qPBgrlJ0A==">
+    
+
+    <link rel="stylesheet" media="all" href="/assets/application-915743184aecf96817def514bae17380cdbd279c98766f0624ff66ed6dd40259.css">
+    <script src="/assets/application-3e8ca697ef862c0ec1add6f73a9e2fb35b19215f60974fa23ef097c06050853b.js"></script>
+    <script src="/packs/js/application-f442885edec27f27baf9.js"></script>
+    <link rel="stylesheet" media="screen" href="/packs/css/application-b7d6deaa.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body class="feedbooks">
+    <div class="mrkt-container">
+      <nav class="nav-top full-screen">
+
+  <a class="nav-logo" href="/"></a>
+
+  <div class="nav-top__actions">
+
+    <div class="nav-top__links">
+
+
+      
+      <div class="mdc-menu-surface--anchor language-select">
+  <a id="language-button" class="link__regular">English<svg xmlns="http://www.w3.org/2000/svg" height="8" viewBox="11 8.3 2 8" width="20"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path></svg>
+</a>
+  <div class="mdc-menu mdc-menu-surface" id="language-menu">
+    <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical" tabindex="-1">
+
+        <li class="mdc-list-item" role="option" tabindex="-1">
+          <a href="/?locale=fr" tabindex="-1">Français</a>
+        </li>
+        <li class="mdc-list-item" role="option" tabindex="-1">
+          <a href="/?locale=es" tabindex="-1">Español</a>
+        </li>
+        <li class="mdc-list-item" role="option" tabindex="-1">
+          <a href="/?locale=it" tabindex="-1">Italiano</a>
+        </li>
+    </ul>
+  </div>
+</div>
+
+      
+        <a target="blank" class="link__regular" href="https://confluence.demarque.com/confluence/cantook-station/en/?contentKey=cantook-market">Help</a>
+      
+        <a class="link__icon" href="/user/login">
+          <i class="material-icons ">account_circle</i> <span>Log in</span>
+</a>    </div>
+
+    <div class="nav-top__bottom-actions">
+      <div class="nav-top__action">
+      </div>
+    </div>
+  </div>
+</nav>
+
+<nav id="nav-below" class="nav-below full-screen">
+  <div class="nav-below__featured-links">
+    <a class="featured-link nav-overlay" id="overlay-button" href="#">
+  Catalog<svg xmlns="http://www.w3.org/2000/svg" height="8" viewBox="11 8.3 2 8" width="20"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path></svg>
+
+</a><a class="featured-link" href="/featured/lists">Selections</a>
+  <a class="featured-link" href="/promotions">Promotions</a>
+
+  </div>
+  <div class="nav-below__actions"></div>
+  <div class="nav-search-container">
+    <div class="nav-search">
+        <form autocomplete="off" action="/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
+          <label class="nav-search__label" for="search">
+            <i class="material-icons nav-search__icon">search</i>
+          </label>
+          <input id="search" name="query" class="nav-search__input" type="text" placeholder="Search...">
+          <a class="nav-search__advanced" href="/advanced_search">Advanced</a>
+</form>    </div>
+  </div>
+</nav>
+
+<div id="overlay" class="nav-overlay"></div>
+<div id="filters-overlay"></div>
+<div id="mobile-menu-overlay"></div>
+
+<nav class="nav-sub-menu full-screen" id="sub-menu">
+  <div class="sub-menu__container">
+    <div class="sub-menu__section">
+  <a class="classification-chip classification-chip--large" href="/recent">New releases</a>
+  <a class="classification-chip classification-chip--large" href="/top">Best selling</a>
+  <a class="classification-chip classification-chip--large" href="/picks">Featured picks</a>
+  <a class="classification-chip classification-chip--large" href="/awards">Awards</a>
+    <a class="classification-chip classification-chip--large" href="/drm_free">DRM free books</a>
+  <a class="classification-chip classification-chip--large" href="/catalog/public_domain">Public domain</a>
+</div>
+<div class="sub-menu__header">Categories</div>
+<div class="sub-menu__section">
+    <a class="classification-chip classification-chip--large" href="/category/FBFIC019000">Literary</a>
+    <a class="classification-chip classification-chip--large" href="/category/FBFIC027000">Romance</a>
+    <a class="classification-chip classification-chip--large" href="/category/FBJUV000000">Juvenile &amp; young adult</a>
+    <a class="classification-chip classification-chip--large" href="/category/FBFIC022000">Mystery &amp; detective</a>
+    <a class="classification-chip classification-chip--large" href="/category/FBFIC031000">Thrillers</a>
+    <a class="classification-chip classification-chip--large" href="/category/FBFIC028000">Science fiction</a>
+    <a class="classification-chip classification-chip--large" href="/category/FBFIC009000">Fantasy</a>
+    <a class="classification-chip classification-chip--large" href="/category/FBFIC014000">Historical</a>
+    <a class="classification-chip classification-chip--large" href="/category/FBHEA000000">Health &amp; fitness</a>
+    <a class="classification-chip classification-chip--large" href="/category/FBHIS000000">History</a>
+    <a class="classification-chip classification-chip--large" href="/category/FBBIO000000">Biography &amp; autobiography</a>
+    <a class="classification-chip classification-chip--large" href="/category/FBBUS000000">Business &amp; economics</a>
+</div>
+
+  </div>
+
+</nav>
+
+<nav class="nav-mobile full-screen">
+
+  <a class="nav-logo mobile-logo" href="/"></a>
+
+  <div class="nav-search mobile-search">
+      <form autocomplete="off" action="/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
+        <label class="nav-search__label" for="search">
+          <i class="material-icons nav-search__icon">search</i>
+        </label>
+        <input id="mobile-search" name="query" class="nav-search__input" type="text" placeholder="Search...">
+</form>  </div>
+
+  <div class="mobile-actions">
+      <a href="/user/login">
+        <i class="material-icons">account_circle</i>
+</a>    <a role="button" class="mobile-menu-toggle">
+      <i class="material-icons">menu</i>
+    </a>
+  </div>
+</nav>
+
+<div class="mobile-side-menu">
+  <div class="msm__actions">
+    <button type="button" class="msm__close">✕</button>
+  </div>
+  <div class="msm__vertical-scroll msm__full-height">
+    <div class="msm__items">
+      <a class="msm__expand-categories" href="#">
+  Categories<svg xmlns="http://www.w3.org/2000/svg" height="8" viewBox="11 8.3 2 8" width="20"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path></svg>
+
+</a><a class="msm__expand-catalog" id="overlay-button" href="#">
+  Catalog<svg xmlns="http://www.w3.org/2000/svg" height="8" viewBox="11 8.3 2 8" width="20"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path></svg>
+
+</a><a class="" href="/featured/lists">Selections</a>
+<a class="" href="/promotions">Promotions</a>
+
+    </div>
+
+    <div class="msm__bottom">
+        <a class="msm__login" href="/user/login">
+          <i class="material-icons ">account_circle</i> <span>Log in</span>
+</a>      <!-- <a href="#">Help</a> -->
+      
+      <div class="mobile-languages">
+        <a class="mobile-languages__toggle mobile-menu-language-toggle msm__expand" role="button">
+          Language<svg xmlns="http://www.w3.org/2000/svg" height="8" viewBox="11 8.3 2 8" width="20"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path></svg>
+
+        </a>
+        <div class="mobile-language__options">
+          <a href="/?locale=fr">Français</a>
+        
+          <a href="/?locale=es">Español</a>
+        
+          <a href="/?locale=it">Italiano</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="msm__catalog">
+    <div class="msm__actions">
+      <button type="button" class="msm__close">✕</button>
+      <button role="button" class="msm__close-catalog"><i class="material-icons">arrow_back</i></button>
+    </div>
+    <div class="msm__vertical-scroll">
+      <a href="/recent">New releases</a>
+      <a href="/top">Best selling</a>
+      <a href="/picks">Featured picks</a>
+      <a href="/awards">Awards</a>
+        <a href="/drm_free">DRM free books</a>
+      <a href="/catalog/public_domain">Public domain</a>
+    </div>
+  </div>
+
+  <div class="msm__categories">
+    <div class="msm__actions">
+      <button type="button" class="msm__close">✕</button>
+      <button role="button" class="msm__close-categories"><i class="material-icons">arrow_back</i></button>
+    </div>
+    <div class="msm__vertical-scroll">
+        <a href="/category/FBFIC019000">Literary</a>
+        <a href="/category/FBFIC027000">Romance</a>
+        <a href="/category/FBJUV000000">Juvenile &amp; young adult</a>
+        <a href="/category/FBFIC022000">Mystery &amp; detective</a>
+        <a href="/category/FBFIC031000">Thrillers</a>
+        <a href="/category/FBFIC028000">Science fiction</a>
+        <a href="/category/FBFIC009000">Fantasy</a>
+        <a href="/category/FBFIC014000">Historical</a>
+        <a href="/category/FBHEA000000">Health &amp; fitness</a>
+        <a href="/category/FBHIS000000">History</a>
+        <a href="/category/FBBIO000000">Biography &amp; autobiography</a>
+        <a href="/category/FBBUS000000">Business &amp; economics</a>
+    </div>
+  </div>
+
+  <div class="msm__filler"></div>
+</div>
+
+      
+
+        <div class="aldiko-banner full-screen">
+  <a href="https://www.aldiko.com/" class="aldiko-banner__dude">
+    <img class="aldiko-banner__dude" src="/assets/banner__lazy-boy-de80ca0034f9fc568494738da93a5108fbc35b69910f029d32404c4aaa8858f3.png">
+  </a>
+  <a href="https://www.aldiko.com/" class="aldiko-banner__text-a">
+      <img class="aldiko-banner__text" src="/assets/banner__aldiko-EN-08dcec20d26d0e067bc18f74a886c8565e9a87418dd65f64bb1503ba1e623133.png">
+  </a>
+  <a href="https://www.aldiko.com/" class="aldiko-banner__phones">
+    <img class="aldiko-banner__phones" src="/assets/banner__phones-c5ce7c48bc86ac6c936ebbec9c53be58c0670bdb6e4cebef0435c9c39cc95391.png">
+  </a>
+  <div class="aldiko-banner__available">
+      <img class="aldiko-banner__available-text" src="/assets/banner__available-EN-346c239508aad5623533c807a837fe035ec992b6f8785143cc6f5a62b8b9504b.png">
+    <a href="https://play.google.com/store/apps/details?id=com.aldiko.android">
+        <img class="aldiko-banner__play" src="/assets/google-play-badge--EN-f7a6c573418276f9ce668a728127d4393f5e960c539e04fb3457e0f5b4651788.png">
+</a>    <a href="https://apps.apple.com/us/app/aldiko-next/id1476410111">
+        <img class="aldiko-banner__app-store" src="/assets/app-store--EN-c4ede052973cf584fdd47f78ae83bb14f56e51e2c47a0735ee7c110ba9c6f0db.png">
+</a>  </div>
+</div>
+
+
+  
+  <div class="full-width">
+      <hr class="block__hr">
+    <div class="block__container">
+
+  <div class="block__header">
+    <div class="block__text">
+      <a href="/store/browse/selection" class="block__title line-clamp clamp-1">Featured picks</a>
+
+    </div>
+
+    <div class="block__info-action">
+      <a type="button" name="button" class="block__action button button--plain-white" href="/store/browse/selection">
+        Show all
+      </a>
+    </div>
+  </div>
+
+  <div class="block__items full-screen hide-scrollbar">
+      <div class="block__item">
+        <a class="block__cover" href="/item/4369101/time-on-rock">
+          <img src="https://covers.feedbooks.net/item/4369101.jpg?size=large&amp;t=1648195254" alt="Time on Rock">
+        </a>
+        <a href="/item/4369101/time-on-rock" class="block__item-title line-clamp clamp-2 ">Time on Rock</a>
+        <a href="/recent?author_id=1506020&amp;lang=en" class="block__item-author line-clamp clamp-1">Anna Fleming</a>
+            <a class="block__item-price" href="/item/4369101/buy">$22.46</a>
+      </div>
+      <div class="block__item">
+        <a class="block__cover" href="/item/4203591/the-western-contingent">
+          <img src="https://covers.feedbooks.net/item/4203591.jpg?size=large&amp;t=1648185906" alt="The Western Contingent">
+        </a>
+        <a href="/item/4203591/the-western-contingent" class="block__item-title line-clamp clamp-2 ">The Western Contingent</a>
+        <a href="/recent?author_id=1470018&amp;lang=en" class="block__item-author line-clamp clamp-1">Jesse L. Anderson</a>
+            <a class="block__item-price" href="/item/4203591/buy">$9.95</a>
+      </div>
+      <div class="block__item">
+        <a class="block__cover" href="/item/4077668/magma">
+          <img src="https://covers.feedbooks.net/item/4077668.jpg?size=large&amp;t=1640047206" alt="Magma">
+        </a>
+        <a href="/item/4077668/magma" class="block__item-title line-clamp clamp-2 ">Magma</a>
+        <a href="/recent?author_id=1409678&amp;lang=en" class="block__item-author line-clamp clamp-1">Thora Hjorleifsdottir</a>
+            <a class="block__item-price" href="/item/4077668/buy">$16.00</a>
+      </div>
+      <div class="block__item">
+        <a class="block__cover" href="/item/4106685/slipping">
+          <img src="https://covers.feedbooks.net/item/4106685.jpg?size=large&amp;t=1643261977" alt="Slipping">
+        </a>
+        <a href="/item/4106685/slipping" class="block__item-title line-clamp clamp-2 ">Slipping</a>
+        <a href="/recent?author_id=1421561&amp;lang=en" class="block__item-author line-clamp clamp-1">Mohamed Kheir</a>
+            <a class="block__item-price" href="/item/4106685/buy">$9.99</a>
+      </div>
+      <div class="block__item">
+        <a class="block__cover" href="/item/4065919/the-wrong-end-of-the-telescope">
+          <img src="https://covers.feedbooks.net/item/4065919.jpg?size=large&amp;t=1642724044" alt="The Wrong End of the Telescope">
+        </a>
+        <a href="/item/4065919/the-wrong-end-of-the-telescope" class="block__item-title line-clamp clamp-2 ">The Wrong End of the Telescope</a>
+        <a href="/recent?author_id=20527&amp;lang=en" class="block__item-author line-clamp clamp-1">Rabih Alameddine</a>
+            <a class="block__item-price" href="/item/4065919/buy">$27.00</a>
+      </div>
+      <div class="block__item">
+        <a class="block__cover" href="/item/4065436/gordo">
+          <img src="https://covers.feedbooks.net/item/4065436.jpg?size=large&amp;t=1638494514" alt="Gordo">
+        </a>
+        <a href="/item/4065436/gordo" class="block__item-title line-clamp clamp-2 ">Gordo</a>
+        <a href="/recent?author_id=1400801&amp;lang=en" class="block__item-author line-clamp clamp-1">Jaime Cortez</a>
+            <a class="block__item-price" href="/item/4065436/buy">$16.00</a>
+      </div>
+      <div class="block__item">
+        <a class="block__cover" href="/item/4050923/the-night-will-be-long">
+          <img src="https://covers.feedbooks.net/item/4050923.jpg?size=large&amp;t=1636417499" alt="The Night Will Be Long">
+        </a>
+        <a href="/item/4050923/the-night-will-be-long" class="block__item-title line-clamp clamp-2 ">The Night Will Be Long</a>
+        <a href="/recent?author_id=157040&amp;lang=en" class="block__item-author line-clamp clamp-1">Santiago Gamboa</a>
+            <a class="block__item-price" href="/item/4050923/buy">$12.99</a>
+      </div>
+      <div class="block__item">
+        <a class="block__cover" href="/item/4386800/xstabeth">
+          <img src="https://covers.feedbooks.net/item/4386800.jpg?size=large&amp;t=1647981430" alt="Xstabeth">
+        </a>
+        <a href="/item/4386800/xstabeth" class="block__item-title line-clamp clamp-2 ">Xstabeth</a>
+        <a href="/recent?author_id=752204&amp;lang=en" class="block__item-author line-clamp clamp-1">David Keenan</a>
+            <a class="block__item-price" href="/item/4386800/buy">$14.99</a>
+      </div>
+      <div class="block__item">
+        <a class="block__cover" href="/item/4417552/in-the-margins">
+          <img src="https://covers.feedbooks.net/item/4417552.jpg?size=large&amp;t=1648147242" alt="In the Margins">
+        </a>
+        <a href="/item/4417552/in-the-margins" class="block__item-title line-clamp clamp-2 ">In the Margins</a>
+        <a href="/recent?author_id=34276&amp;lang=en" class="block__item-author line-clamp clamp-1">Elena Ferrante</a>
+            <a class="block__item-price" href="/item/4417552/buy">$14.99</a>
+      </div>
+      <div class="block__item">
+        <a class="block__cover" href="/item/4079472/love-if-that-s-what-it-is">
+          <img src="https://covers.feedbooks.net/item/4079472.jpg?size=large&amp;t=1640105940" alt="Love, If That's What It Is">
+        </a>
+        <a href="/item/4079472/love-if-that-s-what-it-is" class="block__item-title line-clamp clamp-2 ">Love, If That's What It Is</a>
+        <a href="/recent?author_id=1116483&amp;lang=en" class="block__item-author line-clamp clamp-1">Marijke Schermer</a>
+            <a class="block__item-price" href="/item/4079472/buy">$14.99</a>
+      </div>
+      <div class="block__item">
+        <a class="block__cover" href="/item/4106287/music-late-and-soon">
+          <img src="https://covers.feedbooks.net/item/4106287.jpg?size=large&amp;t=1643229556" alt="Music, Late and Soon">
+        </a>
+        <a href="/item/4106287/music-late-and-soon" class="block__item-title line-clamp clamp-2 ">Music, Late and Soon</a>
+        <a href="/recent?author_id=88425&amp;lang=en" class="block__item-author line-clamp clamp-1">Robyn Sarah</a>
+            <a class="block__item-price" href="/item/4106287/buy">$13.99</a>
+      </div>
+      <div class="block__item">
+        <a class="block__cover" href="/item/4380035/tides">
+          <img src="https://covers.feedbooks.net/item/4380035.jpg?size=large&amp;t=1648181462" alt="Tides">
+        </a>
+        <a href="/item/4380035/tides" class="block__item-title line-clamp clamp-2 ">Tides</a>
+        <a href="/recent?author_id=1510855&amp;lang=en" class="block__item-author line-clamp clamp-1">Sara Freeman</a>
+            <a class="block__item-price" href="/item/4380035/buy">$26.00</a>
+      </div>
+      <div class="block__item">
+        <a class="block__cover" href="/item/4232916/the-annual-migration-of-clouds">
+          <img src="https://covers.feedbooks.net/item/4232916.jpg?size=large&amp;t=1648116080" alt="The Annual Migration of Clouds">
+        </a>
+        <a href="/item/4232916/the-annual-migration-of-clouds" class="block__item-title line-clamp clamp-2 ">The Annual Migration of Clouds</a>
+        <a href="/recent?author_id=956128&amp;lang=en" class="block__item-author line-clamp clamp-1">Premee Mohamed</a>
+            <a class="block__item-price" href="/item/4232916/buy">$12.99</a>
+      </div>
+      <div class="block__item">
+        <a class="block__cover" href="/item/4196836/tofu-tasty">
+          <img src="https://covers.feedbooks.net/item/4196836.jpg?size=large&amp;t=1648152098" alt="Tofu Tasty">
+        </a>
+        <a href="/item/4196836/tofu-tasty" class="block__item-title line-clamp clamp-2 ">Tofu Tasty</a>
+        <a href="/recent?author_id=710595&amp;lang=en" class="block__item-author line-clamp clamp-1">Bonnie Chung</a>
+            <a class="block__item-price" href="/item/4196836/buy">$13.99</a>
+      </div>
+      <div class="block__item">
+        <a class="block__cover" href="/item/4067146/hard-like-water">
+          <img src="https://covers.feedbooks.net/item/4067146.jpg?size=large&amp;t=1638901591" alt="Hard Like Water">
+        </a>
+        <a href="/item/4067146/hard-like-water" class="block__item-title line-clamp clamp-2 ">Hard Like Water</a>
+        <a href="/recent?author_id=117734&amp;lang=en" class="block__item-author line-clamp clamp-1">Yan Lianke</a>
+            <a class="block__item-price" href="/item/4067146/buy">$27.00</a>
+      </div>
+      <div class="block__item">
+        <a class="block__cover" href="/item/4416639/the-music-game">
+          <img src="https://covers.feedbooks.net/item/4416639.jpg?size=large&amp;t=1648181469" alt="The Music Game">
+        </a>
+        <a href="/item/4416639/the-music-game" class="block__item-title line-clamp clamp-2 ">The Music Game</a>
+        <a href="/recent?author_id=890541&amp;lang=en" class="block__item-author line-clamp clamp-1">Stéfanie Clermont</a>
+            <a class="block__item-price" href="/item/4416639/buy">$13.99</a>
+      </div>
+      <div class="block__item">
+        <a class="block__cover" href="/item/4162560/a-mouthful-of-air">
+          <img src="https://covers.feedbooks.net/item/4162560.jpg?size=large&amp;t=1648181371" alt="A Mouthful of Air">
+        </a>
+        <a href="/item/4162560/a-mouthful-of-air" class="block__item-title line-clamp clamp-2 ">A Mouthful of Air</a>
+        <a href="/recent?author_id=13702&amp;lang=en" class="block__item-author line-clamp clamp-1">Amy Koppelman</a>
+            <a class="block__item-price" href="/item/4162560/buy">$9.99</a>
+      </div>
+      <div class="block__item">
+        <a class="block__cover" href="/item/4202387/byobu">
+          <img src="https://covers.feedbooks.net/item/4202387.jpg?size=large&amp;t=1648091802" alt="Byobu">
+        </a>
+        <a href="/item/4202387/byobu" class="block__item-title line-clamp clamp-2 ">Byobu</a>
+        <a href="/recent?author_id=674215&amp;lang=en" class="block__item-author line-clamp clamp-1">Ida Vitale</a>
+            <a class="block__item-price" href="/item/4202387/buy">$15.95</a>
+      </div>
+      <div class="block__item">
+        <a class="block__cover" href="/item/4415803/the-instant">
+          <img src="https://covers.feedbooks.net/item/4415803.jpg?size=large&amp;t=1648145797" alt="The Instant">
+        </a>
+        <a href="/item/4415803/the-instant" class="block__item-title line-clamp clamp-2 ">The Instant</a>
+        <a href="/recent?author_id=635843&amp;lang=en" class="block__item-author line-clamp clamp-1">Amy Liptrot</a>
+            <a class="block__item-price" href="/item/4415803/buy">$19.13</a>
+      </div>
+      <div class="block__item">
+        <a class="block__cover" href="/item/4232922/12-bytes">
+          <img src="https://covers.feedbooks.net/item/4232922.jpg?size=large&amp;t=1648037804" alt="12 Bytes">
+        </a>
+        <a href="/item/4232922/12-bytes" class="block__item-title line-clamp clamp-2 ">12 Bytes</a>
+        <a href="/recent?author_id=17561&amp;lang=en" class="block__item-author line-clamp clamp-1">Jeanette Winterson</a>
+            <a class="block__item-price" href="/item/4232922/buy">$27.00</a>
+      </div>
+  </div>
+</div>
+
+  </div>
+
+  <div class="full-width">
+      <hr class="block__hr">
+    <div class="block__container">
+
+  <div class="block__header">
+    <div class="block__text">
+      <a href="/lists/31544/women-s-history-month" class="block__title line-clamp clamp-1">Women's History Month</a>
+
+        <div class="block__description line-clamp clamp-3">A selection of titles written by or about women who have marked history for the better!</div>
+    </div>
+
+    <div class="block__info-action">
+      <a type="button" name="button" class="block__action button button--plain-white" href="/lists/31544/women-s-history-month">
+        Show all
+      </a>
+    </div>
+  </div>
+
+  <div class="block__items full-screen hide-scrollbar">
+      <div class="block__item">
+        <a class="block__cover" href="/item/2450478/indigenous-women-work-and-history">
+          <img src="https://covers.feedbooks.net/item/2450478.jpg?size=large&amp;t=1541296440" alt="Indigenous Women, Work, and History">
+        </a>
+        <a href="/item/2450478/indigenous-women-work-and-history" class="block__item-title line-clamp clamp-2 ">Indigenous Women, Work, and History</a>
+        <a href="/recent?author_id=877871&amp;lang=en" class="block__item-author line-clamp clamp-1">Mary Jane Logan McCallum</a>
+            <a class="block__item-price" href="/item/2450478/buy">$24.99</a>
+      </div>
+      <div class="block__item">
+        <a class="block__cover" href="/item/2472307/minority-women-and-austerity">
+          <img src="https://covers.feedbooks.net/item/2472307.jpg?size=large&amp;t=1568222714" alt="Minority Women and Austerity">
+        </a>
+        <a href="/item/2472307/minority-women-and-austerity" class="block__item-title line-clamp clamp-2 ">Minority Women and Austerity</a>
+        <a href="/recent?author_id=147995&amp;lang=en" class="block__item-author line-clamp clamp-1">Leah Bassel</a>
+            <a class="block__item-price" href="/item/2472307/buy">$38.99</a>
+      </div>
+  </div>
+</div>
+
+  </div>
+
+
+    </div>
+
+    <div class="feed-foot">
+  <div class="feed-foot__box">
+    <img class="feed-foot__logo" src="/assets/logo--feedbooks-7c730bdfd1c69f001de33511cbb61f8091343335b514291b652fa91c7ca9a764.png">
+    <div class="feed-foot__social">
+      <p>Follow us for more news and content:</p>
+      <div class="feed-foot__icons">
+        <a href="https://twitter.com/feedbooks"><i class="fa fa-twitter-square"></i></a>
+        <a href="https://www.facebook.com/feedbooks/"><i class="fa fa-facebook-square"></i></a>
+      </div>
+    </div>
+    <p class="feed-foot__subscribe-pls">Subscribe to the Feedbooks newsletter!</p>
+    <a class="button button--plain-white" href="/user/edit#subscribed">subscribe</a>
+  </div>
+  <div class="feed-foot__aldiko">
+    <a href="https://www.demarque.com/en-aldiko">
+      <img class="feed-foot__aldiko-logo" src="/assets/logo--aldiko-black-6c4c2ae61467020d8926245c3fd0d2412227291be0c048fe016d23a4d5154fd8.png">
+    </a>
+    <a href="https://play.google.com/store/apps/details?id=com.aldiko.android">
+      <img class="feed-foot__play" src="/assets/google-play-badge--EN-f7a6c573418276f9ce668a728127d4393f5e960c539e04fb3457e0f5b4651788.png">
+</a>    <a href="https://apps.apple.com/us/app/aldiko-next/id1476410111">
+      <img class="feed-foot__app-store" src="/assets/app-store--EN-c4ede052973cf584fdd47f78ae83bb14f56e51e2c47a0735ee7c110ba9c6f0db.png">
+</a>  </div>
+
+  <div class="feed-foot__right-block">
+    <h2>About Us</h2>
+    <a href="https://www.demarque.com/en/about-de-marque/">About De Marque</a>
+    <a href="https://www.demarque.com/en/emplois/">Work @ De Marque</a>
+    <a href="mailto:help@demarque.com">Contact Us</a>
+    <a href="/termsofuse">Terms of Use</a>
+    <a href="/termsofuse#t2-privacy">Privacy Policy</a>
+  </div>
+</div>
+
+  
+
+</body></html>

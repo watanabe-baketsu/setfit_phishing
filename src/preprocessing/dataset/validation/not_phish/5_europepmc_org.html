@@ -1,0 +1,582 @@
+<html prefix="dc: http://purl.org/dc/elements/1.1/#; dcterms: http://purl.org/dc/terms/#" lang="en"><head><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><script type="text/javascript" src="./wicket/resource/org.apache.wicket.resource.JQueryResourceReference/jquery/jquery-1.11.1.min-ver-8101D596B2B8FA35FE3A634EA342D7C3.js"></script>
+<link rel="stylesheet" type="text/css" href="/css_min/min/orcid-min.css?v=12077">
+<script type="text/javascript" src="./wicket/resource/org.europepmc.account.AccountSigninPanel/AccoutSigninPanel-ver-23536C62407C81CFCDCB80EBF689D4C9.js"></script>
+
+<title>Home - Europe PMC</title>
+<link rel="stylesheet" href="/template/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/template/EPMC-iconfont/style.css?v=12077">
+<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="Europe PMC: Popular articles" href="/Funders/RSS/MostViewedArticles.xml">
+<link rel="alternate" type="application/rss+xml" title="Europe PMC: Recent articles" href="/Funders/RSS/AllFunders.xml">
+<link rel="alternate" type="application/rss+xml" title="Europe PMC: Latest journals" href="/Funders/rss/NewJournals.xml">
+<link rel="alternate" type="application/rss+xml" title="Europe PMC: Content Holdings" href="/contentrss">
+<meta name="theme-color" content="#666">
+<meta name="author" content="Europe PMC">
+<meta name="owner" content="Europe PMC">
+<meta name="keywords" content="Europe PMC, Europe PubMed Central, open access, research articles, journal articles, abstracts, full text, literature search, clinical guidelines, biological patents, life sciences, bioinformatics, biomedical research, citation search, biomedical journals, ORCIDs, text mining, citation networks, REST APIs ">
+<meta name="description" content="Europe PMC is an archive of life sciences journal literature.">
+<meta http-equiv="X-UA-Compatible" content="IE=11">
+
+<link rel="search" type="application/opensearchdescription+xml" title="Search Europe PMC" href="/tools_epmc/opensearch_epmc.xml">
+<link rel="stylesheet" type="text/css" media="print, screen" href="/template/jquery_ui.css?v=12077">
+<link rel="stylesheet" type="text/css" media="screen" href="/template/jquery_menu.css?v=12077">
+<script type="text/javascript" src="/template/yahoo-min.js?v=12077"></script>
+<script type="text/javascript" src="/template/dom-min.js?v=12077"></script>
+<script type="text/javascript" src="/template/enrichment.js?v=12077"></script>
+<link rel="stylesheet" type="text/css" media="print, screen" href="/template/enrichment.css?v=12077">
+<script type="text/javascript" src="/template/hoverIntent.js?v=12077"></script>
+<script type="text/javascript" src="/template/jquery.js?v=12077"></script>
+<link rel="stylesheet" type="text/css" href="/template/ncbi/epmc.ncbi.css?v=12077">
+<script type="text/javascript" src="/template/epmc.js?v=12077"></script>
+<link rel="stylesheet" type="text/css" href="/template/epmc_new.css?v=12077">
+<link href="/css/compromise.css" rel="stylesheet" type="text/css">
+
+
+
+
+<script type="text/javascript">
+/*<![CDATA[*/
+
+$(document).ready(function () {
+if (window.location.pathname === '/') {
+$(".page_proper").first().addClass('epmc-home-page');
+}
+$("#Highlight_head").click(function (event) {
+event.preventDefault();
+$("#Highlight_body").slideToggle();
+});
+$("#Highlight_body a").click(function (event) {
+event.preventDefault();
+$("#Highlight_body").slideUp();
+});
+var locationHost = $.cookie('location_host');
+if (typeof locationHost === 'undefined' || locationHost == null || locationHost == "") {
+$.cookie("location_host", window.location.host);
+}
+});
+
+/*]]>*/
+</script>
+
+
+<script type="text/javascript">
+/*<![CDATA[*/
+
+Wicket.Event.subscribe('/ajax/call/complete', function (jqEvent, attributes, jqXHR, errorThrown, textStatus) {
+if (jqXHR != null && jqXHR.responseText != null &&
+(jqXHR.responseText.match("ShowCitationDetails]]></redirect></ajax-response>")
+|| jqXHR.responseText.match("articles]]></redirect></ajax-response>"))) {
+var ua = window.navigator.userAgent;
+var msie = ua.indexOf("MSIE ");
+var trident = ua.indexOf("Trident/");
+if (msie > 0 || trident > 0) {
+window.document.execCommand("Stop");
+} else {
+window.stop();
+}
+}
+});
+
+/*]]>*/
+</script>
+<title>Home - Europe PMC</title><script src="https://cdn.jsdelivr.net/npm/get-root-node-polyfill@1.0.0/index.min.js"></script><link href="/css/chunk-127a90ca.d1e4a8ef.css" rel="prefetch"><link href="/css/chunk-1f499cfa.29000f1f.css" rel="prefetch"><link href="/css/chunk-20473e7f.14d41f29.css" rel="prefetch"><link href="/css/chunk-20f8ae2e.b56f6d25.css" rel="prefetch"><link href="/css/chunk-251a3588.8ba9f881.css" rel="prefetch"><link href="/css/chunk-2fa91b63.c0a1a93b.css" rel="prefetch"><link href="/css/chunk-300d60b2.3a49d763.css" rel="prefetch"><link href="/css/chunk-31502028.948e5887.css" rel="prefetch"><link href="/css/chunk-3172bede.8fcb656d.css" rel="prefetch"><link href="/css/chunk-3b1cf8ad.bd1c46e7.css" rel="prefetch"><link href="/css/chunk-3fc361ac.438d9229.css" rel="prefetch"><link href="/css/chunk-404c9d84.5e477df1.css" rel="prefetch"><link href="/css/chunk-5292f8de.5cfd467f.css" rel="prefetch"><link href="/css/chunk-55ca4821.afec911c.css" rel="prefetch"><link href="/css/chunk-560f68ff.124b7e7e.css" rel="prefetch"><link href="/css/chunk-569e10ed.2433757a.css" rel="prefetch"><link href="/css/chunk-580064c8.adb98d4d.css" rel="prefetch"><link href="/css/chunk-60dd4bc0.9a4fbe84.css" rel="prefetch"><link href="/css/chunk-67eab368.ee3fa69b.css" rel="prefetch"><link href="/css/chunk-6da4ed1c.e1509d88.css" rel="prefetch"><link href="/css/chunk-750b37ab.fb9b3b65.css" rel="prefetch"><link href="/css/chunk-ba775960.9ccc086d.css" rel="prefetch"><link href="/css/chunk-e066859e.c795efbe.css" rel="prefetch"><link href="/css/chunk-eb9a4cca.21d5f662.css" rel="prefetch"><link href="/css/chunk-f37939b2.f1a0015a.css" rel="prefetch"><link href="/css/chunk-fd127c24.41da9820.css" rel="prefetch"><link href="/css/chunk-fd6f2e9c.c7a2f397.css" rel="prefetch"><link href="/css/chunk-ff6e1166.a8744ce3.css" rel="prefetch"><link href="/js/chunk-127a90ca.9e956d07.js" rel="prefetch"><link href="/js/chunk-1f499cfa.81096be3.js" rel="prefetch"><link href="/js/chunk-20473e7f.0eab29d1.js" rel="prefetch"><link href="/js/chunk-20f8ae2e.4ee51d03.js" rel="prefetch"><link href="/js/chunk-251a3588.de1c5330.js" rel="prefetch"><link href="/js/chunk-2d0b33fc.36063146.js" rel="prefetch"><link href="/js/chunk-2d0c95e3.e24522db.js" rel="prefetch"><link href="/js/chunk-2d0de79d.0c4e87f4.js" rel="prefetch"><link href="/js/chunk-2d0f07fe.882d7ced.js" rel="prefetch"><link href="/js/chunk-2d213782.a128b8cc.js" rel="prefetch"><link href="/js/chunk-2fa91b63.86819cc9.js" rel="prefetch"><link href="/js/chunk-300d60b2.c548fbc8.js" rel="prefetch"><link href="/js/chunk-31502028.8b3773ad.js" rel="prefetch"><link href="/js/chunk-3172bede.69a074bd.js" rel="prefetch"><link href="/js/chunk-3b1cf8ad.65d42b4f.js" rel="prefetch"><link href="/js/chunk-3fc361ac.5b73b561.js" rel="prefetch"><link href="/js/chunk-404c9d84.81d53e4f.js" rel="prefetch"><link href="/js/chunk-5292f8de.6a4e6331.js" rel="prefetch"><link href="/js/chunk-55ca4821.43cfd7e7.js" rel="prefetch"><link href="/js/chunk-560f68ff.307b793a.js" rel="prefetch"><link href="/js/chunk-569e10ed.db480022.js" rel="prefetch"><link href="/js/chunk-580064c8.2848b68e.js" rel="prefetch"><link href="/js/chunk-60dd4bc0.d6d5beb7.js" rel="prefetch"><link href="/js/chunk-67eab368.607adaf6.js" rel="prefetch"><link href="/js/chunk-6da4ed1c.731f7a2b.js" rel="prefetch"><link href="/js/chunk-750b37ab.a914ea54.js" rel="prefetch"><link href="/js/chunk-ba775960.a29a31f1.js" rel="prefetch"><link href="/js/chunk-e066859e.52fdae69.js" rel="prefetch"><link href="/js/chunk-eb9a4cca.b75708a8.js" rel="prefetch"><link href="/js/chunk-f37939b2.f74dae7f.js" rel="prefetch"><link href="/js/chunk-fd127c24.a25def7f.js" rel="prefetch"><link href="/js/chunk-fd6f2e9c.52862fcd.js" rel="prefetch"><link href="/js/chunk-ff6e1166.a6b9ec9a.js" rel="prefetch"><link href="/css/app.5b8edb2f.css" rel="preload" as="style"><link href="/css/chunk-vendors.a2fcebda.css" rel="preload" as="style"><link href="/js/app.a280f4f7.js" rel="preload" as="script"><link href="/js/chunk-vendors.551dc917.js" rel="preload" as="script"><link href="/css/chunk-vendors.a2fcebda.css" rel="stylesheet"><link href="/css/app.5b8edb2f.css" rel="stylesheet"><link rel="stylesheet" type="text/css" href="/css/chunk-569e10ed.2433757a.css"><script charset="utf-8" src="/js/chunk-569e10ed.db480022.js"></script><link rel="stylesheet" type="text/css" href="/css/chunk-750b37ab.fb9b3b65.css"><script charset="utf-8" src="/js/chunk-750b37ab.a914ea54.js"></script><link rel="stylesheet" type="text/css" href="/css/local-compromise.css"><script type="text/javascript" src="./wicket/resource/com.googlecode.wicket.jquery.core.resource.JQueryUIResourceReference/jquery-ui.min-ver-80CBC031ED1AE0BD82C578DD2D6A4EA0.js"></script>
+<script type="text/javascript" src="/js_min/min/epmc-min.js?v=12077"></script>
+<script type="text/javascript" src="/js_min/min/responsify-analytics-min.js?v=12077"></script>
+<link rel="stylesheet" type="text/css" href="/css_min/min/jquery-ui-min.css?v=12077">
+<link rel="stylesheet" type="text/css" href="/css_min/min/advanced_search-min.css?v=12077">
+</head>
+<body><div id="WzTtDiV" style="visibility: hidden; position: absolute; overflow: hidden; padding: 0px; width: 0px; left: 0px; top: 0px;"></div>
+<span style="display:none" id="piwikIdSite">1</span>
+<div class="page_proper epmc-home-page" id="body">
+<noscript>
+<div style="text-align:center">
+<p><b>Europe PMC</b> requires Javascript to function effectively.</p>
+<p>Either your web browser doesn't support Javascript or it is currently turned off. In the latter case, please
+turn on Javascript support in your web browser and reload this page.</p>
+</div>
+</noscript>
+<header>
+<div id="epmc_pageHeader">
+
+
+<div class="dark-gray">
+<div class="container">
+<div>
+<span>
+
+<span id="id1">
+<span style="color: white !important;">
+<i class="fa fa-user profile-icon"></i><a id="login-bar--signin-link" class="orcid_signin_text" href="/accounts/login">Sign in</a> | <a class="orcid_signin_text" href="/accounts/registration">Create an account</a>
+</span>
+</span>
+</span>
+<iframe id="iframeId" name="aframe" style="border:none" seamless=""></iframe>
+<span id="orcidurlId" class="screenReader">https://orcid.org</span>
+<span style="display:none" id="plusLogoutUrl">https://plus.europepmc.org</span>
+</div>
+</div>
+</div>
+<nav class="container">
+<ul id="epmc_mainNav">
+<li>
+<div class="logo">
+<a href="/" target="_top" accesskey="U" class="current parent">
+<span class="screenReader">Europe PMC</span>
+</a>
+</div>
+<a id="menu_button" href="#" onclick="return navDrop(this);" class="">
+<span>Menu</span>
+</a>
+<ul class="dropdown">
+<li>
+<a href="./About" onclick="return navDrop(this);">
+<span>About</span>
+</a>
+<ul class="sub_menu">
+<li class="citation_navigation_unselected">
+<a href="./About">
+<span>About Europe PMC</span>
+</a>
+</li><li class="citation_navigation_unselected">
+<a href="./Preprints">
+<span>Preprints in Europe PMC</span>
+</a>
+</li><li class="citation_navigation_unselected">
+<a href="./Funders">
+<span>Funders</span>
+</a>
+</li><li class="citation_navigation_unselected">
+<a href="./Joining">
+<span>Joining Europe PMC</span>
+</a>
+</li><li class="citation_navigation_unselected">
+<a href="./Governance">
+<span>Governance</span>
+</a>
+</li><li class="citation_navigation_unselected">
+<a href="./Roadmap">
+<span>Roadmap</span>
+</a>
+</li><li class="citation_navigation_unselected">
+<a href="./Outreach">
+<span>Outreach</span>
+</a>
+</li>
+</ul>
+</li><li>
+<a href="./tools" onclick="return navDrop(this);">
+<span>Tools</span>
+</a>
+<ul class="sub_menu">
+<li class="citation_navigation_unselected">
+<a href="./tools">
+<span>Tools overview</span>
+</a>
+</li><li class="citation_navigation_unselected">
+<a href="./ArticleStatusMonitor">
+<span>Article status monitor</span>
+</a>
+</li><li class="citation_navigation_unselected">
+<a href="./orcid/import">
+<span>ORCID article claiming</span>
+</a>
+</li><li class="citation_navigation_unselected">
+<a href="./journalList">
+<span>Journal list</span>
+</a>
+</li><li class="citation_navigation_unselected">
+<a href="./grantfinder">
+<span>Grant finder</span>
+</a>
+</li><li class="citation_navigation_unselected">
+<a href="./LabsLink">
+<span>External links service</span>
+</a>
+</li><li class="citation_navigation_unselected">
+<a href="./RssFeeds">
+<span>RSS feeds</span>
+</a>
+</li><li class="citation_navigation_unselected">
+<a href="./Annotations">
+<span>Annotations</span>
+</a>
+</li><li class="citation_navigation_unselected">
+<a href="./AnnotationsSubmission">
+<span>Annotations submission service</span>
+</a>
+</li>
+</ul>
+</li><li>
+<a href="./developers" onclick="return navDrop(this);">
+<span>Developers</span>
+</a>
+<ul class="sub_menu">
+<li class="citation_navigation_unselected">
+<a href="./developers">
+<span>Developer resources</span>
+</a>
+</li><li class="citation_navigation_unselected">
+<a href="./RestfulWebService">
+<span>Articles RESTful API</span>
+</a>
+</li><li class="citation_navigation_unselected">
+<a href="./GristAPI">
+<span>Grants RESTful API</span>
+</a>
+</li><li class="citation_navigation_unselected">
+<a href="./API-case-studies">
+<span>API case studies</span>
+</a>
+</li><li class="citation_navigation_unselected">
+<a href="./SoapWebServices">
+<span>SOAP web service</span>
+</a>
+</li><li class="citation_navigation_unselected">
+<a href="./AnnotationsApi">
+<span>Annotations API</span>
+</a>
+</li><li class="citation_navigation_unselected">
+<a href="./OaiService">
+<span>OAI service</span>
+</a>
+</li><li class="citation_navigation_unselected">
+<a href="./downloads">
+<span>Bulk downloads</span>
+</a>
+</li><li class="citation_navigation_unselected">
+<a href="http://groups.google.com/a/ebi.ac.uk/forum/#!forum/epmc-webservices">
+<span>Developers Forum</span>
+</a>
+</li>
+</ul>
+</li><li>
+<a href="./Help" onclick="return navDrop(this);">
+<span>Help</span>
+</a>
+<ul class="sub_menu">
+<li class="citation_navigation_unselected">
+<a href="./Help">
+<span>Help using Europe PMC</span>
+</a>
+</li><li class="citation_navigation_unselected">
+<a href="./searchsyntax">
+<span>Search syntax reference</span>
+</a>
+</li><li class="citation_navigation_unselected">
+<a href="./ContactUs">
+<span>Contact us</span>
+</a>
+</li>
+</ul>
+</li><li class="contact-us">
+<a href="/ContactUs" onclick="return navDrop(this);">
+<span>Contact us</span>
+</a>
+<ul class="sub_menu">
+<li>
+<a href="/ContactUs">
+<span>Helpdesk</span>
+</a>
+</li>
+<li>
+<a href="/feedback?url=" onclick="var w = window.open('/feedback?url='+getReferredUrl(), 'ukpmc_feedback', 'scrollbars=no,location=no,menuBar=yes,resizable=yes,status=no,toolbar=yes,width=1050,height=810'); try {if (w.blur) w.focus();}catch(ignore){}; return false;"><span>Feedback</span></a>
+</li>
+<li>
+<a href="https://twitter.com/EuropePMC_news">
+<span>Twitter</span>
+</a>
+</li>
+<li>
+<a href="http://blog.europepmc.org">
+<span>Blog</span>
+</a>
+</li>
+<li>
+<a href="//europepmc.github.io/techblog/">
+<span>Tech blog</span>
+</a>
+</li>
+<li>
+<a href="//groups.google.com/a/ebi.ac.uk/forum/#!forum/epmc-webservices">
+<span>Developer Forum</span>
+</a>
+</li>
+</ul>
+</li><li class="last">
+<a href="https://plus.europepmc.org/" target="epmcplus" onmouseover="TipAllowed('Submit your manuscripts, manage your grants and publish your research impact using <b>Europe PMC plus</b>')" onmouseout="UnTipAllowed()">
+<span>Europe PMC plus</span>
+</a>
+</li>
+</ul>
+<div style="clear:both"></div>
+</li>
+</ul>
+</nav>
+</div>
+<script type="text/javascript">
+/*<![CDATA[*/
+
+function openFeedbackForm() {
+var referredURL = window.location.origin + window.location.pathname + encodeURIComponent(window.location.search)
+var w = window.open(
+window.location.protocol + '//' + window.location.host + '/feedback?url=' + referredURL,
+'ukpmc_feedback',
+'scrollbars=no,location=no,menuBar=yes,resizable=yes,status=no,toolbar=yes,width=550,height=810'
+);
+try {
+if (w.blur) w.focus();
+} catch(ignore){};
+return false;
+}
+function navDrop(link){
+if ($('#epmc_pageHeader').width() < 870) {
+if ($('.nav_clicked').length > 0){
+if ($(link).hasClass('nav_clicked')) {
+$(link).removeClass('nav_clicked');
+} else {
+if ($(link).not('#menu_button')) {
+$('.nav_clicked').not('#menu_button').removeClass('nav_clicked');
+}
+$(link).addClass('nav_clicked');
+}
+} else {
+$(link).addClass('nav_clicked');
+}
+return false;
+} else {
+return true;
+}
+}
+$(document).ready(function(){
+$('#epmc_mainNav a').each(function(){
+if($(this).attr('href').replace(/\./g, '').replace(/\//g, '') == window.location.pathname.replace(/\//g, '')){
+$(this).addClass('current');
+$(this).closest('ul').closest('li').children('a').addClass('current');
+}
+if(window.location.pathname.replace(/\//g, '').indexOf($(this).attr('href').replace(/\./g, '').replace(/\//g, ''))!= -1){
+$(this).addClass('parent');
+$(this).closest('ul').closest('li').children('a').addClass('current');
+}
+});
+if (window.location.pathname.includes('AnnotationsApi')) {
+$('#epmc_mainNav .dropdown a[href="./tools"]').removeClass('current');
+}
+});
+
+/*]]>*/
+</script>
+</header>
+<div id="epmc_pageBody">
+
+<div id="app" class="epmc-elements"><div data-v-4f1e385e=""><div data-v-4f1e385e="" id="search-panel" class="home-search-panel"><div data-v-4f1e385e="" class="grid-row"><div data-v-4f1e385e="" class="col-16"><h1 data-v-4f1e385e=""><label data-v-4f1e385e="" for="banner--search-input" class="semi-bold">Search life-sciences literature
+            <span data-v-4f1e385e="" id="article-count" class="regular">(<a data-v-4f1e385e="" id="article-count-link" href="/search?query=SRC:*">Over 39 million</a>
+              articles, preprints and more)</span></label></h1><div data-v-4f1e385e="" id="search-bar"><form data-v-4f1e385e="" id="search-bar-inputs" method="get" action="/search"><input data-v-4f1e385e="" id="banner--search-input" name="query" type="text"><button data-v-4f1e385e="" id="banner--search-button" type="submit" class="regular"><i data-v-4f1e385e="" class="fa fa-search"></i><span data-v-4f1e385e="" id="search-btn-text">&nbsp;Search</span></button><!----></form><div data-v-4f1e385e=""><a data-v-4f1e385e="" id="banner--advanced-search" href="/advancesearch">Advanced search</a></div></div><div data-v-4f1e385e="" id="features"><div data-v-4f1e385e="" class="feature"><div data-v-4f1e385e=""><img data-v-4f1e385e="" src="/img/innovative-features.b45d0859.svg" alt="Innovative features"></div><h2 data-v-4f1e385e="">Innovative features</h2><p data-v-4f1e385e="">
+              Intuitive and powerful search tools, linked resources and author
+              services help you stay on top of the cutting edge of science. To
+              learn more, see
+              <a data-v-4f1e385e="" href="/About#why-use-europe-pmc">Why use Europe PMC</a>.
+            </p></div><div data-v-4f1e385e="" class="feature"><div data-v-4f1e385e=""><img data-v-4f1e385e="" src="/img/comprehensive-search.0e8a687e.svg" alt="Comprehensive search"></div><h2 data-v-4f1e385e="">Comprehensive search</h2><p data-v-4f1e385e="">
+              Search life sciences literature from trusted sources around the
+              globe, all in one search, accessible by anyone anywhere, for
+              free. Learn more
+              <a data-v-4f1e385e="" href="/About">About Europe PMC</a>.
+            </p></div><div data-v-4f1e385e="" class="feature"><div data-v-4f1e385e=""><img data-v-4f1e385e="" src="/img/trusted-partnerships.a5a6b213.svg" alt="Trusted partnerships"></div><h2 data-v-4f1e385e="">Trusted partnerships</h2><p data-v-4f1e385e="">
+              Europe PMC is the partner of
+              <a data-v-4f1e385e="" href="//www.ncbi.nlm.nih.gov/pmc/about/pmci/">PubMed Central (PMC)</a>, an
+              <a data-v-4f1e385e="" href="//www.elixir-europe.org/platforms/data/core-data-resources">ELIXIR core data resource</a>, and the repository of choice for many international science
+              <a data-v-4f1e385e="" href="/Funders">Funders</a>.
+            </p></div></div></div></div><!----></div><div data-v-e41b678c="" data-v-4f1e385e="" id="data-protection-banner"><div data-v-e41b678c="" class="grid-row"><div data-v-e41b678c="" class="col-16"><div data-v-e41b678c="" id="data-protection-banner-left">
+        This website requires cookies, and the limited processing of your
+        personal data in order to function. By using the site you are agreeing
+        to this as outlined in our
+        <a data-v-e41b678c="" href="https://www.ebi.ac.uk/data-protection/privacy-notice/europe-pmc-website">privacy notice</a>
+        and <a data-v-e41b678c="" href="/CookiePolicy">cookie policy</a>.
+      </div><div data-v-e41b678c=""><a data-v-e41b678c="" href="#" role="button" onclick="var param = 'epmcPrivacyNoticeAgreed=true'; if (!window.location.href.includes('?')) { param = '?' + param; }; window.location.href = window.location.href + param;"><input data-v-e41b678c="" id="data-protection-agree" type="button" value="I agree, dismiss this banner" class="secondary"></a></div></div></div></div></div><div data-v-199aa96e="" id="home-page"><div data-v-199aa96e="" class="grid-row"><div data-v-199aa96e="" id="covid-doodad" class="col-16"><a data-v-199aa96e="" id="covid-19-find-out-more-link" href="/Preprints#preprint-indexing" aria-label="Covid preprint indexing"><div data-v-199aa96e="" id="covid-banner"><div data-v-199aa96e="" class="semi-bold">
+            COVID-19 full text preprints initiative
+            <i data-v-199aa96e="" class="fas fa-arrow-right"></i></div></div></a></div></div><div data-v-199aa96e="" class="grid-row"><div data-v-199aa96e="" class="col-16"><div data-v-199aa96e="" class="home-section"><p data-v-199aa96e="" class="h2">
+          Learn more about Europe PMC
+        </p><div data-v-199aa96e="" id="home-videos"><div data-v-72ffff0a="" data-v-199aa96e="" class="video"><div data-v-72ffff0a="" class="video-container"><img data-v-72ffff0a="" src="/img/what-is-europe-pmc.b5e62f34.jpeg" alt="What is Europe PMC?" loading="lazy"><div data-v-72ffff0a="" class="play"><div data-v-72ffff0a="" class="tri"></div></div><div data-v-72ffff0a="" class="duration">
+      1:52
+    </div></div><div data-v-72ffff0a="" class="video-title">
+    What is Europe PMC?
+  </div></div><div data-v-72ffff0a="" data-v-199aa96e="" class="video"><div data-v-72ffff0a="" class="video-container"><img data-v-72ffff0a="" src="/img/how-researchers-are-using-europe-pmc.a752be03.jpg" alt="How researchers are using Europe PMC" loading="lazy"><div data-v-72ffff0a="" class="play"><div data-v-72ffff0a="" class="tri"></div></div><div data-v-72ffff0a="" class="duration">
+      5:06
+    </div></div><div data-v-72ffff0a="" class="video-title">
+    How researchers are using Europe PMC
+  </div></div></div></div><!----><!----></div></div></div><div data-v-2f3a24bc="" id="footer"><div data-v-2f3a24bc="" id="follow-us-section"><p class="h2">
+    Follow us
+  </p><div id="follow-us-icons"><a href="http://blog.europepmc.org/" class="action"><i class="fas fa-blog feature-large"></i><br>News blog
+    </a><a href="//europepmc.github.io/techblog/" class="action"><i class="fas fa-cogs feature-large"></i><br>Technical blog
+    </a><a href="//twitter.com/EuropePMC_news" class="action"><i class="fab fa-twitter feature-large"></i><br>Twitter
+    </a><a href="//www.youtube.com/user/EuropePMC" class="action"><i class="fab fa-youtube feature-large"></i><br>YouTube
+    </a></div></div><div data-v-2f3a24bc="" id="menus" class="grid-row"><div data-v-2f3a24bc="" class="col-16"><div data-v-2f3a24bc=""><p data-v-2f3a24bc="" class="h5"><a data-v-2f3a24bc="" href="/About" target="[object Object]">About</a></p><div data-v-2f3a24bc=""><a data-v-2f3a24bc="" href="/About" class="extra-small">About Europe PMC</a></div><div data-v-2f3a24bc=""><a data-v-2f3a24bc="" href="/Funders" class="extra-small">Funders</a></div><div data-v-2f3a24bc=""><a data-v-2f3a24bc="" href="/Joining" class="extra-small">Joining Europe PMC</a></div><div data-v-2f3a24bc=""><a data-v-2f3a24bc="" href="/Governance" class="extra-small">Governance</a></div><div data-v-2f3a24bc=""><a data-v-2f3a24bc="" href="/Roadmap" class="extra-small">Roadmap</a></div><div data-v-2f3a24bc=""><a data-v-2f3a24bc="" href="/Outreach" class="extra-small">Outreach</a></div></div><div data-v-2f3a24bc=""><p data-v-2f3a24bc="" class="h5"><a data-v-2f3a24bc="" href="/tools" target="[object Object]">Tools</a></p><div data-v-2f3a24bc=""><a data-v-2f3a24bc="" href="/tools" class="extra-small">Tools overview</a></div><div data-v-2f3a24bc=""><a data-v-2f3a24bc="" href="/orcid/import" class="extra-small">ORCID article claiming</a></div><div data-v-2f3a24bc=""><a data-v-2f3a24bc="" href="/journalList" class="extra-small">Journal list</a></div><div data-v-2f3a24bc=""><a data-v-2f3a24bc="" href="/grantfinder" class="extra-small">Grant finder</a></div><div data-v-2f3a24bc=""><a data-v-2f3a24bc="" href="/LabsLink" class="extra-small">External links service</a></div><div data-v-2f3a24bc=""><a data-v-2f3a24bc="" href="/RssFeeds" class="extra-small">RSS feeds</a></div><div data-v-2f3a24bc=""><a data-v-2f3a24bc="" href="/Annotations" class="extra-small">Annotations</a></div><div data-v-2f3a24bc=""><a data-v-2f3a24bc="" href="/AnnotationsSubmission" class="extra-small">Annotations submission service</a></div></div><div data-v-2f3a24bc=""><p data-v-2f3a24bc="" class="h5"><a data-v-2f3a24bc="" href="/developers" target="[object Object]">Developers</a></p><div data-v-2f3a24bc=""><a data-v-2f3a24bc="" href="/developers" class="extra-small">Developer resources</a></div><div data-v-2f3a24bc=""><a data-v-2f3a24bc="" href="/RestfulWebService" class="extra-small">Articles RESTful API</a></div><div data-v-2f3a24bc=""><a data-v-2f3a24bc="" href="/GristAPI" class="extra-small">Grants RESTful API</a></div><div data-v-2f3a24bc=""><a data-v-2f3a24bc="" href="/API-case-studies" class="extra-small">API case studies</a></div><div data-v-2f3a24bc=""><a data-v-2f3a24bc="" href="/SoapWebServices" class="extra-small">SOAP web service</a></div><div data-v-2f3a24bc=""><a data-v-2f3a24bc="" href="/AnnotationsApi" class="extra-small">Annotations API</a></div><div data-v-2f3a24bc=""><a data-v-2f3a24bc="" href="/OaiService" class="extra-small">OAI service</a></div><div data-v-2f3a24bc=""><a data-v-2f3a24bc="" href="/downloads" class="extra-small">Bulk downloads</a></div><div data-v-2f3a24bc=""><a data-v-2f3a24bc="" href="//groups.google.com/a/ebi.ac.uk/forum/#!forum/epmc-webservices" class="extra-small">Developers Forum</a></div></div><div data-v-2f3a24bc=""><p data-v-2f3a24bc="" class="h5"><a data-v-2f3a24bc="" href="/Help" target="[object Object]">Help</a></p><div data-v-2f3a24bc=""><a data-v-2f3a24bc="" href="/Help" class="extra-small">Help using Europe PMC</a></div><div data-v-2f3a24bc=""><a data-v-2f3a24bc="" href="/searchsyntax" class="extra-small">Search syntax reference</a></div><div data-v-2f3a24bc=""><a data-v-2f3a24bc="" href="/ContactUs" class="extra-small">Contact us</a></div></div><div data-v-2f3a24bc=""><p data-v-2f3a24bc="" class="h5"><a data-v-2f3a24bc="" href="/ContactUs" target="[object Object]">Contact us</a></p><div data-v-2f3a24bc=""><a data-v-2f3a24bc="" href="/ContactUs" class="extra-small">Helpdesk</a></div><div data-v-2f3a24bc=""><a data-v-2f3a24bc="" href="#" onclick="var w = window.open('/feedback?url='+window.location.origin + window.location.pathname + encodeURIComponent(window.location.search), 'ukpmc_feedback', 'scrollbars=no,location=no,menuBar=yes,resizable=yes,status=no,toolbar=yes,width=1050,height=810'); try {if (w.blur) w.focus();}catch(ignore){}; return false;" class="extra-small">Feedback</a></div><div data-v-2f3a24bc=""><a data-v-2f3a24bc="" href="//twitter.com/EuropePMC_news" class="extra-small">Twitter</a></div><div data-v-2f3a24bc=""><a data-v-2f3a24bc="" href="http://blog.europepmc.org/" class="extra-small">Blog</a></div><div data-v-2f3a24bc=""><a data-v-2f3a24bc="" href="//europepmc.github.io/techblog/" class="extra-small">Tech blog</a></div><div data-v-2f3a24bc=""><a data-v-2f3a24bc="" href="//groups.google.com/a/ebi.ac.uk/forum/#!forum/epmc-webservices" class="extra-small">Developer forum</a></div></div></div></div><div data-v-2f3a24bc="" id="feedback"><div data-v-2f3a24bc="" class="grid-row"><div data-v-2f3a24bc="" class="col-16"><span data-v-2f3a24bc="" id="feedback-label">Let us know how we are doing.</span><span data-v-2f3a24bc="" id="mobile-feedback-label">How are we doing.</span><input data-v-2f3a24bc="" id="feedback-button" type="button" value="Give feedback" onclick="var w = window.open('/feedback?url='+window.location.origin + window.location.pathname + encodeURIComponent(window.location.search), 'ukpmc_feedback', 'scrollbars=no,location=no,menuBar=yes,resizable=yes,status=no,toolbar=yes,width=1050,height=810'); try {if (w.blur) w.focus();}catch(ignore){}; return false;" class="secondary"></div></div></div><div data-v-2f3a24bc="" id="elixir-banner"><div data-v-2f3a24bc="" class="grid-row"><div data-v-2f3a24bc="" class="col-16"><a data-v-2f3a24bc="" href="//www.elixir-europe.org/platforms/data/core-data-resources"><div data-v-2f3a24bc="" id="elixir-logo-kite"></div><p data-v-2f3a24bc="" class="h5">
+            Europe PMC is part of the ELIXIR infrastructure
+          </p><div data-v-2f3a24bc="" id="elixir-logo-text" class="small">
+            Europe PMC is an ELIXIR Core Data Resource
+            <span data-v-2f3a24bc="" id="elixir-banner-learn-more">Learn more &gt;</span></div></a></div></div></div><div data-v-2f3a24bc="" id="footer-bottom"><div data-v-2f3a24bc="" class="grid-row"><div data-v-2f3a24bc="" class="col-16 extra-small">
+        Europe PMC is a service of the
+        <a data-v-2f3a24bc="" href="/Funders">Europe PMC Funders' Group</a>, in partnership with
+        the
+        <a data-v-2f3a24bc="" href="//www.ebi.ac.uk/"> European Bioinformatics Institute </a>;
+        and in cooperation with the
+        <a data-v-2f3a24bc="" href="//www.ncbi.nlm.nih.gov/">
+          National Center for Biotechnology Information
+        </a>
+        at the
+        <a data-v-2f3a24bc="" href="//www.nlm.nih.gov/">
+          U.S. National Library of Medicine (NCBI/NLM) </a>. It includes content provided to the
+        <a data-v-2f3a24bc="" href="//www.ncbi.nlm.nih.gov/pmc/">
+          PMC International archive
+        </a>
+        by participating publishers.
+      </div></div><div data-v-2f3a24bc="" id="footer-bottom-links" class="extra-small"><a data-v-2f3a24bc="" href="/ContactUs">Contact us</a>
+      |
+      <a data-v-2f3a24bc="" href="/PrivacyNotice">Privacy</a>
+      |
+      <a data-v-2f3a24bc="" href="//www.ebi.ac.uk/Information/termsofuse.html">
+        Terms of use
+      </a>
+      |
+      <a data-v-2f3a24bc="" href="/Copyright">Copyright</a>
+      |
+      <a data-v-2f3a24bc="" href="/Accessibility">Accessibility</a></div></div></div></div><script>
+/*<![CDATA[*/
+window.onload = function () {
+// for performance of homepage
+if (window.location.pathname !== '/') {
+changeLinks(document.querySelectorAll("#epmc_mainNav a"), "./", "/");
+changeLinks(document.querySelectorAll(".top-menu--my-account, .top-menu--manage-account"), "./", "/accounts/");
+changeLinks(document.querySelectorAll(".top-menu--my-account, .top-menu--manage-account"), "/accounts/accounts/", "/accounts/");
+function changeLinks(links, source, target) {
+if (links.length) {
+var length = links.length;
+for(var i=0; i<length; i++) {
+var link = links[i];
+var href = link.getAttribute("href");
+if (href.startsWith(source)) {
+link.setAttribute("href", href.replace(source, target));
+}
+}
+}
+}
+}
+if (window.location.href.includes('orcid/auth/autoclose?auth=true')) {
+if (window.opener === undefined) {
+localStorage.setItem(
+'ORCID_AUTH_SUCCEEDED',
+urlParams('auth', window.location.href)
+)
+if (urlParams('iesupport', window.location.href) == null)
+createHiddenIframe()
+} else {
+window.opener.postMessage(
+urlParams('auth', window.location.href),
+'https://' + window.location.host
+)
+window.opener.postMessage(
+urlParams('auth', window.location.href),
+'http://' + window.location.host
+)
+}
+window.close()
+}
+function urlParams(name, url) {
+const results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(url)
+return results === null ? null : decodeURI(results[1]) || 0
+}
+function createHiddenIframe() {
+const iframe = document.createElement('iframe')
+const url = window.location.href + '&iesupport=true'
+iframe.setAttribute('id', 'orcid-auth-redirect')
+iframe.style.display = 'none'
+iframe.style.border = 'none'
+iframe.width = 0
+iframe.height = 0
+iframe.src =
+url.indexOf('https:') !== -1
+? url.replace('https:', 'http:')
+: url.replace('http:', 'https:')
+document.body.appendChild(iframe)
+}
+}
+/*]]>*/
+</script><script src="/js/chunk-vendors.551dc917.js"></script><script src="/js/app.a280f4f7.js"></script>
+
+</div>
+
+
+
+
+<script type="text/javascript" src="/Scripts/wz_tooltip.js?v=12077"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+
+/**$(document).ready(function(){
+$('#container-1 > ul').tabs();
+});*/
+
+/*]]>*/
+</script>
+<script type="text/javascript">
+/*<![CDATA[*/
+
+var width = $(window).width();
+if (width < 700) {
+/* $('#feedback-container').css('top', '44px'); */
+/* $('#feedback-container').css('position', 'absolute'); */
+$('#feedback-container').draggable();
+} else {
+//@date 23/08/2016 https://www.ebi.ac.uk/panda/jira/browse/CIT-2216
+//$('#feedback-container').css('top', height - 39 + 'px');
+//$('#feedback-container').css('position', 'fixed');
+}
+
+/*]]>*/
+</script>
+<style>
+/*<![CDATA[*/
+
+@media screen and (max-width: 870px) {
+#feedback-container {
+top: 44px;
+bottom: auto;
+position: absolute;
+}
+}
+
+/*]]>*/
+</style>
+<script type="text/javascript">
+/*<![CDATA[*/
+
+jQuery.cachedScript = function (url, options) {
+// Allow user to set any option except for dataType, cache, and url
+options = jQuery.extend(options || {}, {
+dataType: "script",
+cache: true,
+url: url
+});
+// Use $.ajax() since it is more flexible than $.getScript
+// Return the jqXHR object so we can chain callbacks
+return jQuery.ajax(options);
+};
+jQuery.cachedCss = function (url, options) {
+// Allow user to set any option except for dataType, cache, and url
+options = jQuery.extend(options || {}, {
+dataType: "text",
+cache: true,
+url: url
+});
+// Use $.ajax() since it is more flexible than $.getScript
+// Return the jqXHR object so we can chain callbacks
+return jQuery.ajax(options);
+};
+
+/*]]>*/
+</script>
+<script type="text/javascript"></script>
+<noscript></noscript>
+</div>
+
+
+</body></html>

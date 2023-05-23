@@ -1,0 +1,566 @@
+<html lang="en"><head>
+<link rel="preload" href="/min.css" as="style">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,800,600,700&amp;text=+01234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz%21%40%23%24%25%5E%26%2A%28%29_%2B-%3D%5B%5D%5C%7B%7D%7C%3C%3E%3F%2C.%2F%3B%3A%27%22%C2%BB%C2%AB" rel="stylesheet" type="text/css">
+<meta charset="UTF-8">
+<link rel="shortcut icon" href="favicon.png">
+<style>
+#card_effect{
+	z-index: 0;
+}.slide-zero{background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAGQAgMAAAAyypX0AAAADFBMVEUfPF0RIjMRITMQIDIrXEt5AAABvklEQVR4Ae3VMQ0AIBAEsHsSFhb8u8UDG3xronkYUDM/YwQAB+NgABzsYAAcjIMBHIyDAXAwDgZwMA4GwME4GMDBOBgAB+NgAAfjYAAcjIMBHIyDAXCwgwFwMA4GcDAOBsDBOBjAwTgYAAfjYAAH42AAHMz1wQA4GAcDOBgHA+BgHAzgYBwMgINxMICDcTAADsbBAA7GwQA4GAcDOBgHA+BgBwPgYBwMQK3gYAAcjIMBHEyjgwFwMA4GcDAOBsDBOBjAwTgYAAfjYAAH42AAHIyDARyMgwFwsIMBcDAOBsDBDgbAwTgYwME4GAAH42AAB+NgAByMgwEcjIMBcDAOBnAwDgbAwTgYwME4GAAHOxgAB+NgAAfjYAAcjIMBHIyDAXAwDgZwMA4GwME4GMDBOBgAB+NgAAfjYAAc7GAAHIyDAagdHAyAg3EwgINxMAAOxsEADsbBADgYBwM4GAcD4GAcDODg1hwMgIMdDICDcTAADnYwAA7GwQAOxsEAOBgHAzgYBwPgYBwM4GAcDICDcTCAg3EwAA7GwQAOxsEAONjBADgYBwM4GAcD4GAcDOBgHAyAg3EwgINxMAAOxsEcpz4FBu0gvK4AAAAASUVORK5CYII=")!important;}
+.slide-one{background-image: url(layout_images/poker_back_tile.png)!important;background-size:376px 400px!important;background-repeat:repeat!important;}
+.slide-two{background-image:url(layout_images/bj_home_new.jpg)!important;}
+.slide-three{background-image:url(layout_images/roulette_home_tile.png)!important;background-size:400px 345px!important;background-repeat:repeat!important;}
+.slide-four{background-image:url(layout_images/new_site.jpg)!important;}
+.slide-five{background-image:url(layout_images/baccarat_home.jpg)!important;}
+.account_panel{
+	white-space:nowrap;
+	-webkit-transition:all .08s linear;
+	-moz-transition: all .08s linear;
+	transition: all .08s linear;
+	height:0px;
+	width:0px;
+	opacity:0;
+	overflow:hidden;
+	position:absolute;
+	right:0px;
+	top:0px;
+	padding:0;
+	background:rgb(108,150,178);
+	border-left:1px solid rgba(0,0,0,0.7);
+	border-bottom:1px solid rgba(0,0,0,0.7);
+	z-index:100000;
+	border-bottom-left-radius:12px;
+	font-weight:300;
+	box-shadow: 0 0 15px 0 rgba(0,0,0,0.2);
+	text-shadow:1px 1px 1px #000;
+	color:#fff;
+}
+#tfa_container.tfa_overlay{
+	background:rgba(0,0,0,0.8);
+}
+.tfa_overlay{
+	height:0px;
+	left:1000px;	
+	opacity:0;
+	transition:background 0.05s linear, opacity 0.1s linear;
+}
+.tfa_visible{
+	height:70px;
+	left:0;	
+	opacity:1;
+}
+#tfa_container.tfa_invalid{
+	background:rgba(75,0,0,0.875);
+}
+.alert{
+	padding:6px 10px !important;
+}
+.alert-danger{
+	color:#800;
+	text-shadow:1px 1px #fff;
+}
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+}
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+#footer{
+	background:#274665!important;
+	border-top:1px solid rgba(255,255,255,0.15);
+}
+</style>
+<title>777Coin - The Exciting Bitcoin Casino</title>
+<style>
+@font-face{font-family:Ultra;font-style:normal;font-weight:400;src:local('Ultra'),url(/fonts/ultra.woff2) format('woff2'),url(/fonts/ultra.woff) format('woff')}
+
+body{background:#30557B}#content{width:100%;position:relative}.container{position:relative;right:200px;top:0px;}@font-face{font-family:Suit-Regular;src:url(../fonts/suit-regular.eot);src:url(../fonts/suit-regular.eot?#iefix) format('embedded-opentype'),url(../fonts/suit-regular.woff) format('woff'),url(../fonts/suit-regular.ttf) format('truetype'),url(../fonts/suit-regular.svg#suit-regular) format('svg');font-weight:400;font-style:normal}.card{background-color:#fff;font-family:Suit-Regular,'Helvetica Neue',Helvetica,Arial,sans-serif!important;-moz-border-radius:.8em;-webkit-border-radius:.8em;border-radius:.8em;-moz-box-shadow:0 0 5px rgba(0,0,0,.5);-webkit-box-shadow:0 0 5px rgba(0,0,0,.5);box-shadow:0 0 5px rgba(0,0,0,.5);display:inline-block;width:16em;height:22.4em;margin:0 1.2em 1.2em 0;position:relative;z-index:2}.card.noshadow{-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none}.card .card-back img{width:16em;height:22.4em}.card .flipped{-ms-transform:rotateY(180deg);-moz-transform:rotateY(180deg);-webkit-transform:rotateY(180deg);transform:rotateY(180deg)}.card .diamond,.card .heart{color:#df0000}.card .corner{line-height:1;position:absolute;text-align:center}.card .corner span{display:block;font-size:1.5em;font-weight:700}.card .corner .number{font-size:2em;height:1.92em/2;line-height:1.92em/2}.card .corner.top{left:.64em;top:.96em}.card .corner.bottom{bottom:.96em;right:.64em;-ms-transform:rotate(180deg);-moz-transform:rotate(180deg);-webkit-transform:rotate(180deg);transform:rotate(180deg)}.card .card-ace span.suit.middle_center{font-size:10.24em;left:.45517241379310347em;top:.593103448275862em}.card .card-ten .corner .number{font-size:1.5em}.card .face img{position:absolute;left:2.56em;top:2.08em;width:10.8em;height:18.24em}.card .suit{font-size:5.8em;font-weight:400;width:.6896551724137931em;height:.786206896551724em;line-height:.786206896551724em;position:absolute;text-align:center}.card .suit.top_center{left:1.0482758620689656em;top:.3310344827586207em}.card .suit.top_left{left:.41379310344827586em;top:.3310344827586207em}.card .suit.top_right{right:.41379310344827586em;top:.3310344827586207em}.card .suit.middle_center{left:1.0482758620689656em;top:1.517241379310345em}.card .suit.middle_top{left:1.0482758620689656em;top:.9655172413793103em}.card .suit.middle_bottom{bottom:.9655172413793103em;left:1.0482758620689656em;-ms-transform:rotate(180deg);-moz-transform:rotate(180deg);-webkit-transform:rotate(180deg);transform:rotate(180deg)}.card .suit.middle_left{left:.41379310344827586em;top:1.517241379310345em}.card .suit.middle_right{right:.41379310344827586em;top:1.517241379310345em}.card .suit.middle_top_center{left:1.0482758620689656em;top:.8275862068965517em}.card .suit.middle_top_left{left:.41379310344827586em;top:1.103448275862069em}.card .suit.middle_top_right{right:.41379310344827586em;top:1.103448275862069em}.card .suit.middle_bottom_left{bottom:1.103448275862069em;left:.41379310344827586em;-ms-transform:rotate(180deg);-moz-transform:rotate(180deg);-webkit-transform:rotate(180deg);transform:rotate(180deg)}.card .suit.middle_bottom_right{bottom:1.103448275862069em;right:.41379310344827586em;-ms-transform:rotate(180deg);-moz-transform:rotate(180deg);-webkit-transform:rotate(180deg);transform:rotate(180deg)}.card .suit.middle_bottom_center{bottom:.8275862068965517em;left:1.0482758620689656em;-ms-transform:rotate(180deg);-moz-transform:rotate(180deg);-webkit-transform:rotate(180deg);transform:rotate(180deg)}.card .suit.bottom_center{bottom:.3310344827586207em;left:1.0482758620689656em;-ms-transform:rotate(180deg);-moz-transform:rotate(180deg);-webkit-transform:rotate(180deg);transform:rotate(180deg)}.card .suit.bottom_left{bottom:.3310344827586207em;left:.41379310344827586em;-ms-transform:rotate(180deg);-moz-transform:rotate(180deg);-webkit-transform:rotate(180deg);transform:rotate(180deg)}.card .suit.bottom_right{bottom:.3310344827586207em;right:.41379310344827586em;-ms-transform:rotate(180deg);-moz-transform:rotate(180deg);-webkit-transform:rotate(180deg);transform:rotate(180deg)}</style>
+<link rel="stylesheet" type="text/css" href="/min.css">
+<style>body{background-image:url(layout_images/site_tile.png);background-size:143.5px 143px;}</style>
+<style>
+.carousel-footer .coins {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAO4AAAAzCAMAAACnkMThAAAC9FBMVEX2kxr2jxL2iwj2gwDykBrhhhjUfRb2kxrzkRnrjRnUiyC4iC2YdyaNcyiLdzSHdiyGdi6Abil8ZzZyWyeKXRqZbyWVfy2ieDmXgECLdU2JhW2VkHacl32hnoWsooKtqI22sI++uJjMv5LJw6Hax5jizY/m0obizIHcyYDcxHbavm/VuGDKr2a5pGe5mFa7kE7EmkPHpk/UrVLPrUPLqTTCpzS/ojS6oDS0mjO0lSStihm0exqqeya5hi7EkTPJkCPBiR7QixvbjivNmijWoRbbqyPjuyTfvDjnzjfzyiX13i3x3Ubw1Vn142P35Hjv1XPlyGXevFTnyk76rFH3pD71myrotgy3iT6pikunjTGucge0axKBVBB0ZB51SBNZSydbVz5MTlBFR0tCQz40Nzc0Njk1OT1JSkxTU1hbXF5jY2Nra2t2dXB6e3yGh4eRj4KSkpOenp6lp6OrrKyvs7K4ta24uLnAwMG3y7zJysrQ0tHY2Njc3t3k5OTq6eju7+/19PT9+PL8+/r////99OX18eT38Nz16dft5df25bz89bH44Kbq3q3k2L3Y0Kfn1pzv24/36JD++JT7yo38uWrSun7Tw4i0pn6in4yKhGxvaVhWUklaSzFCNBAvLi8PLRcQDxEFBQMAAAACAgIAAAABAQAAAAABAgIDBAMFCAQSEg4WFgwAAAAnQS0yTyYrNSciSy0fXzMeXzAcXTAYTycYTigVQSEgIB8kIRkUFikQFzgYHkUbI1AlK1MnK0chJTYNF0wBDlQCCTwBBSYEBAgPOBsBRxMAPwkNUCEZWSoaWzAdXzAaWS4ZVis5bUlWhWNwmX2Ip5GlkW1/nFyWuVpgtyI2oAYngAIOiwQBZQJHgQ5COSQ1OlQ9Ql1ESmhKUXVSWoBeZYlHXJ1OZq5VbrtgfMpAUow5SHwyPGgnMGEXIl5fhmyKj4alp5ytnoHNzMPc1sjY18/Qy7nZz7fd0rDj1LPt48nv69bt69P++sv9+V789ELJu9ZWAAAA+XRSTlP/////7enY0KZ1RzFnlsbl//7////////////////////////9/////v/////7////////////////////////////////////////////////////////////w7Ti/////v3//+jK4v/////////////////////////////////////////////////////////////s2bbdz7Wpm6ChoYF4cmdZTDUhFAwDAEhZcISoydfVzbrD///////////////////////////36v//////////////////////////////////////kHpPHT1RaX+pyd/dupzIDchaAAAXzklEQVR4AeXaZYBd1dXw8f9a+5xz7x2JYEFjNEKwukuItbxoEqCK1whad3dvyoM71IAIIThEao/Vk0IySICUBk+GzMyVc87e682VydzphMrn50eST2v23D97H4nIEv4viRjpFDPDA05ErhN2KTjd9t8CYK8dG7yyK3aqiiBgmIVrlV2aZbEg4CS1sIoXGVKVyJorWbhH2RUfOREBMDOfO/7eiN091VuNNgXR60dm6Av/46LYOQHzPsv9a0bbyP9tTiWB2QCrILXgRy516pM/+W7IF4SgsDxy7z9XK6t20ercYu8/ubho92Wj2F6cd7K/D4Yz5/bPAQQMIHrCe/mHuaeEKiMU5XqhnbszjktxJLRYnlXT7EhPu9NUk9mPWjABMFGZtCoN4VraHXHzt/xxH3rUoUzfgM0I5cW3PRBqw1NmRdHiFEU+dtl95g3w2rHht/5e2oQ42guENgbP5Jm+aO6peY1dKri2bZG742JHAsNllXL2Vhtayrl4cjCUnYKJ25R5f91Qx03fyo4+IQkcRLmoZYqobMiW3bkxVFaz05z4h7lC6CpeNkN4HO/Hp2IJ6/+YrWKQJHshjGA8k9qL5J5c4UUVbxAarO9/O7pi2ljAQLBK36u6hYbTo3hyrnlXarQz00ez/GqhYearwpHvYrr1CyLWWTZACrqRn9175tmDWzcrvigDKu+YbSAoBJjWP/GINK6x6C6hzpK9EXbJeKqmu8idtW+Vf6AQXQeQry50l2A4781MFN9fnRUBsya6tz0kqi8UOzLaPRYOzKfc1dzgsPVbR52g6eTgOgY6rb9btneJlVWMYo8s+Y6tFIDZyQ8D9F8/9w6ZBT2jACRYD/uePBDl7oJ0NZB3jGuvHbHB/fGI3Fn71PiHouR6yFZ3joppyqppMBAXF5zPIQtxMtA3K+bUSKd6B7qdsbkxJLUnmejdgyG/jrD1O285LUwfkI77CYAcKuvEOKTsguwI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") !important;
+}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1"> <link rel="canonical" href="https://777coin.com/"> <meta name="description" content="Win Big Now at 777Coin - The most exciting provably fair Bitcoin casino! Featuring Blackjack, Slots, Video Poker, Roulette and more!"><script async="" src="//www.google-analytics.com/analytics.js"></script><script async="" charset="utf-8" src="//v2.zopim.com/?3EUbarGKfxy1dZ4ySgdKf4viuRKNOs2h" type="text/javascript"></script><script async="" src="/cdn-cgi/bm/cv/669835187/api.js"></script><script type="text/javascript" src="https://v2.zopim.com/w?3EUbarGKfxy1dZ4ySgdKf4viuRKNOs2h"></script><style media="print" class="jx_ui_StyleSheet" __jx__id="___$_2" type="text/css">.zopim { display: none !important }</style></head>
+<body class="logged-in"><div class="zopim" __jx__id="___$_72 ___$_72" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; padding: 0px; border: 0px none; background: transparent none repeat scroll 0% 0%; overflow: hidden; position: fixed; z-index: 16000002; width: 180px; height: 30px; right: 10px; bottom: 0px;" data-test-id="ChatWidgetButton"><iframe style="background-color: transparent; vertical-align: text-bottom; position: relative; width: 100%; height: 100%; min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%; margin: 0px; overflow: hidden; display: block;" src="about:blank" data-test-id="ChatWidgetButton-iframe" title="Zendesk Chat widget button" frameborder="0"></iframe></div><div class="zopim" __jx__id="___$_4 ___$_4" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; padding: 0px; border: 0px none; background: transparent none repeat scroll 0% 0%; overflow: hidden; position: fixed; z-index: 16000001; right: 10px; bottom: 0px; border-top-left-radius: 5px; border-top-right-radius: 5px; display: none; width: 290px; height: 400px; box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 3px 2px;" data-test-id="ChatWidgetWindow"><iframe style="background-color: transparent; vertical-align: text-bottom; position: relative; width: 100%; height: 100%; min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%; margin: 0px; overflow: hidden; display: block;" src="about:blank" data-test-id="ChatWidgetWindow-iframe" title="Zendesk Chat widget window" frameborder="0"></iframe></div>
+
+<div style="" class="pop-container">
+<div class="pop">
+<div id="create_account_new" style="position:relative;height:100%;">
+<h2 style="margin-top:0px;">Welcome to 777Coin!</h2>
+<p>We've automatically created an account for you.</p><p>
+</p><div style="height:97px;position:relative;background:rgba(255,255,200,0.16);padding:14px;padding-top:15px;border:1px solid black;margin-bottom:8px;border-left:0;border-right:0;">
+<b>Username: </b>YellowTRex5642459<br>
+<b>Deposit Address: </b><small><span class="address_replace">3LU1LWYDbMzNeWwpfjGtTi547V71f6TqHm</span></small><br>
+<b>Secret URL: </b><small>https://777coin.com?s=E5150g1YPWrUfEo0HmFYn</small>
+<div id="address_qr_register" style="position:absolute;right:0px;top:0px;"><img src="//chart.googleapis.com/chart?cht=qr&amp;chs=95x95&amp;chl=bitcoin:3LU1LWYDbMzNeWwpfjGtTi547V71f6TqHm&amp;chld=L|0" width="95" height="95"></div>
+</div>
+<p>You may pick a permanent username and password to use any time on your account page.</p>
+<p>You may use the secret URL above to login from another location, or recover your account if you delete your cookies.</p>
+<p>Good luck, and have fun at 777Coin!</p>
+<div style="text-align:center;position:absolute;bottom:17px;left:42px;">
+<a href="settings.php"><button class="slide-button green" style="width:300px;border-radius:0;">Create Full Account Now</button></a>
+<b><button class="slide-button red" onclick="close_pop();" style="border-radius:0;">Close &amp; Play</button></b>
+</div>
+</div>
+</div>
+</div>
+
+<div id="container" style="">
+<div id="nav">
+<ul id="nav-hidden" class="nav-hidden visible-sm visible-xs">
+<li class="nav-toggle"><a><i style="font-size:23px;margin-right:2px;position:relative;top:4px;" class="glyphicon glyphicon-chevron-down"></i> Toggle Nav</a></li><li><a href="/"><i style="font-size:21px" class="glyphicon glyphicon-home"></i> Home</a></li><li><a href="/games.php"><i style="font-size:21px" class="glyphicon glyphicon-tower"></i> Games</a></li><li><a href="/winners.php"><i style="font-size:21px" class="glyphicon glyphicon-star"></i> Winners</a></li><li><a href="/contact.php"><i style="font-size:21px" class="glyphicon glyphicon-envelope"></i> Contact Us</a></li><li><a href="/settings.php"><i style="font-size:21px" class="glyphicon glyphicon-user"></i> Account</a></li><li><a href="/logout.php?mobile=1"><i style="font-size:21px" class="glyphicon glyphicon-log-out"></i> Sign Out</a></li> </ul>
+<ul class="hidden-sm hidden-xs">
+<li><a href="/"><i style="font-size:17px;margin-right:4px;" class="glyphicon glyphicon-home"></i> Home</a></li>
+<li>
+<a href="/games.php"><i style="font-size:17px;margin-right:4px;" class="glyphicon glyphicon-tower"></i> Games</a>
+<div><div class="shadow-box"></div>
+<ul>
+<li data-name="Roulette"><a href="roulette.php">Roulette</a>
+<div class="display-default">
+<div class="title">Provably Fair Gaming</div>
+<p style="font-weight:600!important;">Our games are more than just fair; they're provably fair! We use math to
+prove every game's result is fair and even let you "roll the dice" with us. Don't just trust us, trust mathematics!</p>
+<div class="fair-badge"><i class="glyphicon glyphicon-ok"></i>Provably Fair</div>
+</div>
+<div>
+<a href="roulette.php" style="text-indent:0">
+<div class="game table-game roulette">
+<h2 class="game-title">Roulette</h2>
+<p class="game-desc">
+Spin your way to riches with the well-known casino classic, Roulette!
+Watch the wheel spin and win up to 35x your bet in this highly exciting game!
+</p>
+<div class="bets">.001 - 100 mBTC</div>
+</div>
+</a>
+</div>
+</li>
+<li data-name="Blackjack"><a href="blackjack.php">Blackjack</a>
+<div>
+<a style="text-indent:0" href="blackjack.php"> 
+<div class="game table-game card-game bj">
+<h2 class="game-title">Blackjack</h2>
+<p class="game-desc">
+Test your luck at the ever-popular card game, the casino favorite of many, Blackjack!
+Win big with our "Genius" feature which plays the best possible move for you automatically!
+</p>
+<div class="bets">0.001 - 50 mBTC</div>
+</div>
+</a>
+</div>
+</li>
+<li data-name="Video Poker"><a href="poker.php">Poker</a>
+<div>
+<div class="game card-game poker">
+<h2 class="game-title">Video Poker</h2>
+<p class="game-desc">
+Try out the casino favourite in three highly addicting modes!
+Pick a mode below and go for a royal flush!</p>
+<div style="width:100%;margin-top:-237px;text-align:center;">
+<a href="poker.php?game=jacks"><button class="slide-button green" style="font-size:17px;height:38px;line-height:26px;width:88px;">Jacks+</button></a>
+<a href="poker.php?game=deuces"><button class="slide-button blue" style="font-size:17px;height:38px;line-height:26px;width:88px;">2's Wild</button></a>
+<a href="poker.php?game=aces"><button class="slide-button red" style="font-size:17px;height:38px;line-height:26px;width:88px;">S-Aces</button></a>
+</div>
+<div class="bets">0.001 - 10 mBTC</div>
+</div>
+</div>
+</li>
+<li data-name="Bits &amp; Bars"><a href="cryptoslot_deluxe.php">Bits &amp; Bars</a>
+<div>
+<div class="game bitbar slot" style="width:100%;">
+<h2 class="game-title">Bits &amp; Bars Deluxe</h2>
+<p class="game-desc">
+Check out the new Bits &amp; Bars Deluxe! We've upped the max bet, added more bonuses, and increased the top prize!<br>
+<a href="cryptoslot.php"><button style="width:145px;height:40px;line-height:12px;font-size:21px;padding-bottom:2px;margin-top:18px;" class="slide-button blue">Classic</button></a>
+<a href="cryptoslot_deluxe.php"><button style="width:145px;height:40px;line-height:12px;font-size:21px;padding-bottom:2px;margin-top:18px;" class="slide-button red">Deluxe</button></a>
+</p>
+<div class="bets">0.08 - 20 mBTC</div>
+</div>
+</div>
+</li>
+<li data-name="Bit Drop"><a href="bitdrop.php">Bit Drop</a>
+<div>
+<div style="width:100%;" class="game bitdrop other">
+<h2 class="game-title">Bit Drop! <span style="color:#fd3">(Popular!)</span></h2>
+<p class="game-desc">
+Watch the bit drop in this exciting high stakes game. Choose your way to play with five betting options win prizes
+of up to 5,250 mBTC per bit!<br><a href="bitdrop.php"><button style="width:145px;height:40px;line-height:12px;font-size:21px;padding-bottom:2px;margin-top:18px;" class="slide-button blue">Classic</button></a>
+<a href="super_bitdrop.php"><button style="width:145px;height:40px;line-height:12px;font-size:21px;padding-bottom:2px;margin-top:18px;" class="slide-button red">Super</button></a>
+</p>
+<div class="bets" style="width:142px">.001 - 10000 mBTC</div>
+</div>
+</div>
+</li>
+<li data-name="More Games"><a href="games.php">More Games</a>
+<div style="font-size:0;line-height:0;">
+<a class="tile" data-name="Bit Spin" href="wheel.php"><span>Bit Spin</span></a>
+<a class="tile" data-name="Roulette" href="roulette.php"><span>Roulette</span></a>
+<a class="tile" data-name="Suits &amp; Sevens" href="suits7.php"><span>Suits &amp; Sevens</span></a>
+<a class="tile" data-name="Jewels &amp; Gems" href="superslot.php"><span>Jewels &amp; Gems</span></a>
+<a class="tile" data-name="Baccarat" href="baccarat.php"><span>Baccarat</span></a>
+<a class="tile" data-name="Satoshi Slider" href="satoshi_slider.php"><span>Satoshi Slider</span></a>
+<a class="tile" data-name="Bit Boxes" href="bitbox.php"><span>Bit Boxes</span></a>
+<a class="tile" data-name="Seven Box" href="7box.php"><span>Seven Box</span></a>
+<a class="tile" data-name="Pyramid Plunder" href="pyramid.php"><span>Pyra Plunder</span></a>
+</div>
+</li>
+</ul>
+</div>
+</li><li><a href="/winners.php"><i style="font-size:17px;margin-right:4px" class="glyphicon glyphicon-star"></i> Winners</a></li><li><a href="/contact.php"><i style="font-size:17px;margin-right:4px;" class="glyphicon glyphicon-envelope"></i> Contact Us</a></li><li><a href="/settings.php" class="account-link"><i style="font-size:17px;margin-right:4px;" class="glyphicon glyphicon-user"></i> Account</a>
+<div><div class="shadow-box"></div>
+<ul><li class="logged-in" data-name="Deposit"><a href="deposit.php">Deposit</a>
+<div class="display-default">
+<div class="title">Account Info</div>
+<p style="font-weight:600!important;">Hello, <span class="update-username">YellowTRex5642459</span><br>
+Balance: <span class="update-balance-mbtc">0.00</span> mBTC <small>(<span class="update-balance-btc">0</span> BTC)</small><br>
+E-Mail: <span class="update-email">None</span><br>
+Two-Factor: <span class="update-tfa"><span style="color:#fbb">Disabled</span></span><br>
+</p>
+</div>
+<div>
+<div class="title">Quick Deposit</div>
+<p style="text-align:center">
+<small><a class="address_replace" href="bitcoin:Loading...">3LU1LWYDbMzNeWwpfjGtTi547V71f6TqHm</a></small></p><div style="position:absolute;bottom:0;left:0">
+<div id="address_qr_account"><img style="float:left;" src="//chart.googleapis.com/chart?cht=qr&amp;chs=160x160&amp;chl=bitcoin:3LU1LWYDbMzNeWwpfjGtTi547V71f6TqHm&amp;chld=L|0" width="160" height="160"></div>
+<small>All deposits require one confirmation (About 10 minutes) to process.</small><br><br>
+<a href="deposit.php"><button style="position:absolute;right:-1px;bottom:5px;" class="slide-button green">Altcoin Deposit</button></a>
+<a href="funding-history.php"><button style="position:absolute;right:-1px;bottom:51px;" class="slide-button blue">Deposit Status</button></a>
+</div>
+<p></p>
+
+</div>
+</li>
+<li class="logged-out" data-name="Deposit"><a href="deposit.php">Login</a>
+<div class="display-default">
+<div class="title" id="login-title">Login or Register</div>
+<div id="nav-form" style="text-align:center;padding:5px;">
+<input style="height:37px" id="nav-username" placeholder="Username" class="form-control" type="text">
+<input style="height:37px" id="nav-password" placeholder="Password" class="form-control" type="password">
+<input id="nav-tfa" style="display:none;height:37px" class="form-control" placeholder="Two-Factor Code" type="text" maxlength="6">
+<div style="height:16px;margin:2px"><label for="rememberMe">Remember Me&nbsp;</label><input id="rememberMe" type="checkbox" value="1"></div>
+<button onclick="send_login();" style="width:47%;position:absolute;left:6px;bottom:6px;" class="slide-button green">Login</button>
+<a href="?register=1"><button style="width:47%;position:absolute;right:3px;bottom:6px;" class="slide-button blue">Register</button><br></a>
+</div>
+</div>
+</li>
+<li class="logged-in"><a href="https://bitcointalk.org/index.php?topic=254871.0" target="_blank">Free BTC!</a>
+<div>
+<div>
+<div class="title">Earn Free Bitcoins!</div>
+<div style="padding:7px;text-align:left;">
+Earn FREE BTC by posting to our bitcointalk <a style="display:inline;line-height:0" href="https://bitcointalk.org/index.php?topic=254871.0" target="_blank">giveaway thread</a>
+once per day or check out our <a style="display:inline;line-height:0" href="referrals.php">referral program</a> to earn even more.
+</div>
+
+</div>
+</div>
+</li>
+<li class="logged-in"><a href="settings.php">Settings</a>
+<div>
+<div>
+<div class="title">Settings</div>
+<p>
+Change your e-mail or password, enable or disable two-factor authentication, check on your referrals,
+or view your transaction history here.
+</p>
+
+</div>
+</div>
+</li>
+<li class="logged-in"><a onclick="temp_destroy();">Log Out</a>
+<div>
+<div>
+<div class="title">Log Out</div>
+<p>
+Log out of your account.
+</p>
+
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li> </ul>
+</div>
+
+<div id="content" class="main">
+<div>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="4500">
+<ol class="carousel-indicators">
+<li data-target="#myCarousel" data-slide-to="1"></li>
+<li data-target="#myCarousel" data-slide-to="2" class=""></li>
+<li data-target="#myCarousel" data-slide-to="3" class=""></li>
+<li data-target="#myCarousel" data-slide-to="4" class="active"></li>
+<li data-target="#myCarousel" data-slide-to="5"></li>
+
+</ol>
+<div class="carousel-inner">
+
+
+<div class="item" data-url="baccarat.php">
+<div class="slide-five slide"></div>
+<div class="container">
+<div class="carousel-caption">
+<h2>Punto Banco Baccarat!</h2>
+<p class="hidden-xs">Test your luck at our latest card game, Baccarat!<br>
+Play as the banker, the player, or even bet on a tie!<br>
+</p><p class="hidden-xs">With our better than average payouts<br>This classic is sure to be a great bet!</p>
+<p class="visible-xs">Test your luck at our latest game, Baccarat! Play as the banker, the player,
+or even bet on a tie! With our better than standard payouts this classic is a great bet!</p>
+</div>
+<div class="carousel-right poker-right hidden-xs hidden-sm" style="z-index:99999;">
+<div style="width:400px;position:relative;left:-15px;">
+<a href="/baccarat.php"><img style="max-width:345px;height:auto;margin-top:44px;margin-bottom:5px;position:relative;left:27px;" src="layout_images/baccarat_logo.png"></a><br>
+<p style="margin-left:-0px;font-size:20px;text-align:center">777Coin's Latest Card Game<br>Baccarat is finally here!</p>
+<div style="text-align:center;">
+<b>Great Odds » Fast Gameplay » Highly Addicting</b>
+<div style="height:3px"></div>
+<a href="/baccarat.php"><button class="slide-button slide-button green" style="width:260px;">Play Baccarat Now!</button></a>
+</div>
+</div>
+</div>
+<div style="position:relative;top:-2px;"><div class="carousel-footer"><span class="chips table">Test your luck today!</span></div></div>
+</div>
+</div>
+<div class="item" data-url="poker.php">
+<div class="slide-one slide"></div>
+<div class="container">
+<div class="carousel-caption">
+<h2><a href="poker.php">Video Poker!</a></h2>
+<p class="hidden-xs">Video poker has arrived at 777Coin!<br>
+Try out all three addicting modes!
+</p><p class="hidden-xs">
+<a class="slide-button green" href="poker.php?game=jacks">Jacks or Better</a>
+<a class="slide-button blue" href="poker.php?game=deuces">Deuces Wild</a>
+<a class="slide-button red" href="poker.php?game=aces">Super Aces</a>
+</p>
+<p class="visible-xs">Video poker has arrived at 777Coin!
+Try out all three addicting and fun modes!</p>
+<p class="visible-xs" style="margin-top:-12px;">
+<a class="slide-button-small slide-button green" href="poker.php?game=jacks">Jacks+</a>
+<a class="slide-button-small slide-button blue" href="poker.php?game=deuces">2's Wild</a>
+<a class="slide-button-small slide-button red" href="poker.php?game=aces">S-Aces</a>
+</p>
+</div>
+<div class="carousel-right poker-right">
+<div id="card_effect" style="width:500px;">
+<div class="card-effect"><div class="card" style="color:black; font-size:9.6px!important; position: relative; overflow: visible;"><div class="card-ace spade"><div class="corner top"><span class="number">A</span><span>♠</span></div><span class="suit middle_center">♠</span><div class="corner bottom"><span class="number">A</span><span>♠</span></div></div></div></div>
+<div class="card-effect"><div class="card" style="color:black; font-size:9.6px!important; position: relative; overflow: visible;"><div class="card-king spade"><div class="corner top"><span class="number">K</span><span>♠</span></div><span class="face middle_center"><img alt="king of spade" src="img/faces/face-king-spade.png"></span><div class="corner bottom"><span class="number">K</span><span>♠</span></div></div></div></div>
+<div class="card-effect"><div class="card" style="color:black; font-size:9.6px!important; position: relative; overflow: visible;"><div class="card-queen spade"><div class="corner top"><span class="number">Q</span><span>♠</span></div><span class="face middle_center"><img alt="queen of spade" src="img/faces/face-queen-spade.png"></span><div class="corner bottom"><span class="number">Q</span><span>♠</span></div></div></div></div>
+<div class="card-effect"><div class="card" style="color:black; font-size:9.6px!important; position: relative; overflow: visible;"><div class="card-jack spade"><div class="corner top"><span class="number">J</span><span>♠</span></div><span class="face middle_center"><img alt="jack of spade" src="img/faces/face-jack-spade.png"></span><div class="corner bottom"><span class="number">J</span><span>♠</span></div></div></div></div>
+<div class="card-effect"><div class="card" style="color:black; font-size:9.6px!important; position: relative; overflow: visible;"><div class="card-ten spade"><div class="corner top"><span class="number">10</span><span>♠</span></div><span class="suit top_left">♠</span><span class="suit top_right">♠</span><span class="suit middle_top_left">♠</span><span class="suit middle_top_center">♠</span><span class="suit middle_top_right">♠</span><span class="suit bottom_left">♠</span><span class="suit bottom_right">♠</span><span class="suit middle_bottom_center">♠</span><span class="suit middle_bottom_left">♠</span><span class="suit middle_bottom_right">♠</span><div class="corner bottom"><span class="number">10</span><span>♠</span></div></div></div></div>
+</div>
+</div>
+<div class="carousel-footer"><span class="table">Go for that Royal Flush now!</span></div>
+</div>
+</div>
+<div class="item" data-url="blackjack.php">
+<div class="slide-two slide"></div>
+<div class="container">
+<div class="carousel-caption">
+<h2><a href="blackjack.php">European Blackjack!</a></h2>
+<p class="hidden-xs">Test your luck at the ever-popular card game,<br>
+A casino favorite of many, Blackjack!<br>
+</p><p class="hidden-xs">Play the best move automatically with our<br>
+"Genius" feature and <b>Win Big</b> effortlessly!</p>
+<p class="visible-xs">Test your luck at the ever-popular card game,
+A casino favorite of many, Blackjack!
+Play the best move automatically with our
+"Genius" feature and <b>Win Big</b> effortlessly!</p>
+</div>
+<div class="carousel-right-bj">
+<div style="height:0;width:0;"><span class="bj-text">BJ!</span></div>
+<div class="bj-right" style="opacity:0.999;z-index:1000;"><img alt="Cards" src="layout_images/bj_cards.png" width="326" height="411"></div>
+</div>
+<div class="carousel-footer"><span class="table">Lady luck is on your side!</span></div>
+</div>
+</div>
+<div class="item active" data-url="roulette.php">
+<div class="slide-three slide"></div>
+<div class="container">
+<div class="carousel-caption">
+<h2><a href="roulette.php">One-Zero Roulette!</a></h2>
+<p class="hidden-xs">Test your luck at our most exciting game yet,<br>
+the well-known casino classic, Roulette!</p>
+<p class="hidden-xs">Watch the wheel spin and win up to <b>35x your bet</b><br>
+in this highly entertaining game</p>
+<p class="visible-xs">Test your luck at our most exciting game yet,
+the well-known casino classic, Roulette!
+Watch the wheel spin and win up to <b>35x your bet</b>
+in this highly entertaining game</p>
+</div>
+<div class="carousel-right">
+<div class="roulette-out"><img alt="Roulette Wheel" src="layout_images/roulette_out.png" width="600" height="600"></div>
+<div class="roulette-in"><img class="rotating" alt="Roulette Wheel" src="layout_images/roulette_in.png" width="600" height="600"></div>
+</div>
+<div class="carousel-footer"><span class="table">Spin your way to fortune!</span></div>
+</div> 
+</div>
+<div class="item" data-url="suits7.php">
+<div class="slide-four slide"></div>
+<div class="container">
+<div class="carousel-caption">
+<h2><a href="suits7.php">Suits &amp; Sevens!</a></h2>
+<p class="tall-line hidden-xs">Win big with our four level progressive<br>
+jackpot system. Suits &amp; Sevens features an<br>
+exciting bonus game, multi-line betting,<br>
+free spins, and many more thrilling features!</p>
+<p class="visible-xs">Win big with our four level progressive
+jackpot system. Suits &amp; Sevens features an
+exciting bonus game, multi-line betting,
+free spins, and many more thrilling features!</p>
+</div>
+<div class="carousel-footer">
+<span class="slot">The game that started it all!</span>
+</div>
+<div class="carousel-right">
+<div class="home-num-container hidden-xs hidden-sm">
+<span class="home-num num-col-1 home-k">K</span><span class="home-num num-col-2 home-q">Q</span><span class="home-num num-col-3 home-j">J</span><span class="home-num num-col-4 home-k">K</span><span class="home-num num-col-0 home-q">Q</span><br><span class="home-num num-col-1 home-j">J</span><span class="home-num num-col-2 home-s">S</span><span class="home-num num-col-3 home-j">J</span><span class="home-num num-col-4 home-j">J</span><span class="home-num num-col-0 home-q">Q</span><br><span class="home-num num-col-1 home-k">K</span><span class="home-num num-col-2 home-j">J</span><span class="home-num num-col-3 home-s">S</span><span class="home-num num-col-4 home-q">Q</span><span class="home-num num-col-0 home-j">J</span><br><span class="home-num num-col-1 home-k">K</span><span class="home-num num-col-2 home-k">K</span><span class="home-num num-col-3 home-q">Q</span><span class="home-num num-col-4 home-a">A</span><span class="home-num num-col-0 home-k">K</span><br><span class="home-num num-col-1 home-q">Q</span><span class="home-num num-col-2 home-j">J</span><span class="home-num num-col-3 home-q">Q</span><span class="home-num num-col-4 home-s">S</span><span class="home-num num-col-0 home-k">K</span><br><span class="home-num num-col-1 home-7">7</span><span class="home-num num-col-2 home-7">7</span><span class="home-num num-col-3 home-7">7</span><span class="home-num num-col-4 home-7">7</span><span class="home-num num-col-0 home-7">7</span><br><span class="home-num num-col-1 home-s">S</span><span class="home-num num-col-2 home-s">S</span><span class="home-num num-col-3 home-q">Q</span><span class="home-num num-col-4 home-s">S</span><span class="home-num num-col-0 home-q">Q</span><br><span class="home-num num-col-1 home-a">A</span><span class="home-num num-col-2 home-a">A</span><span class="home-num num-col-3 home-k">K</span><span class="home-num num-col-4 home-j">J</span><span class="home-num num-col-0 home-s">S</span><br><span class="home-num num-col-1 home-q">Q</span><span class="home-num num-col-2 home-j">J</span><span class="home-num num-col-3 home-a">A</span><span class="home-num num-col-4 home-s">S</span><span class="home-num num-col-0 home-k">K</span><br><span class="home-num num-col-1 home-k">K</span><span class="home-num num-col-2 home-a">A</span><span class="home-num num-col-3 home-q">Q</span><span class="home-num num-col-4 home-k">K</span><span class="home-num num-col-0 home-a">A</span><br> </div>
+</div>
+</div>
+</div>
+</div>
+<a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+<a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
+
+<div class="home-panels">
+<div class="col-lg-4 home-row">
+<h3><i style="font-size:30px;color:#fc3;" class="glyphicon glyphicon-star"></i> Your Favorites</h3>
+<p>777Coin has many popular casino games including <a href="roulette.php">Roulette</a>, <a href="blackjack.php">Blackjack</a>, <a href="poker.php">Video Poker</a>, and <a href="cryptoslot_deluxe.php">Jackpot Slots</a>. We also feature bitcoin casino favorites such as <a href="bitdrop.php">Bit Drop</a> and <a href="satoshi_slider.php">Satoshi Slider</a>.
+Check out our exclusive games too!
+</p>
+</div>
+<div class="col-lg-4 home-row">
+<h3><i style="font-size:30px;color:#3f3;" class="glyphicon glyphicon-ok"></i> Provably Fair</h3>
+<p>Our games are more than just fair; they're provably fair! We use math to prove every game's result is fair and even let you "roll the dice" with us. Don't just trust us, trust mathematics!</p>
+</div>
+<div class="col-lg-4 home-row" style="border-right:0;">
+<h3><i style="font-size:30px;color:#6bf" class="glyphicon glyphicon-cloud"></i> No Downloads</h3>
+<p>If you have a modern web browser and some bitcoins, you already have everything you need to play our exciting games!
+No Flash, no Java, no plugins. Everything is built with HTML5, CSS3, and Javascript so you never have to download anything extra to play at 777Coin.</p>
+</div><div style="clear:both;"></div>
+</div>
+
+<div class="home-panels home-panels-bottom">
+<div class="col-lg-12 home-row home-row-bottom">
+<h3>
+777Coin News
+<i style="font-size:30px;color:rgba(255,255,100,1);" class="glyphicon glyphicon-certificate"></i>
+<small class="news">News from your favorite Bitcoin casino</small></h3>
+<h4><a href="baccarat.php"><i class="glyphicon glyphicon-asterisk"></i> Baccarat Released</a></h4>
+<p>Test your luck at our latest game, Baccarat! Play as the banker, the player, or even bet on a tie!
+With our better than average payouts This classic is sure to be a great bet! <a href="baccarat.php">Play Baccarat Now</a></p><br>
+<h4><a href="bitbox.php"><i class="glyphicon glyphicon-upload"></i> Bit Boxes Updated</a></h4>
+<p>Bit Boxes is more entertaining and easier to play than ever! With our new UI, upgraded graphics, and faster results than ever. You're sure to like the new and improved Bit Boxes. Test your luck today with the new <a href="bitbox.php">Bit Boxes</a>.</p><br>
+<h4><a href="satoshi_slider.php"><i class="glyphicon glyphicon-upload"></i> Satoshi Slider Updated</a></h4>
+<p>With a new modern theme, faster gameplay, and better odds. The new Satoshi Slider is sure to be bundles of fun. Watch the numbers drop and win big, even up to over 62,500x your bet, or even the jackpot if you're lucky! Try the new <a href="satoshi_slider.php">Satoshi Slider</a> now.</p><br>
+<h4><i class="glyphicon glyphicon-check"></i> Automatic Registration</h4>
+<p>Our site has never been quicker and easier to use. With our new, hassle-free account system you can just <a href="deposit.php">deposit</a> and play right away! If your account was
+automatically created, you may pick a username on your <a href="settings.php">account</a> page, or keep the one you were given.</p><br>
+<h4><i class="glyphicon glyphicon-asterisk"></i> <a href="cryptoslot_deluxe.php">Bits &amp; Bars Deluxe Released!</a></h4>
+<p> You asked for it, and we listened! The much-anticipated <a href="cryptoslot_deluxe.php">Bits &amp; Bars Deluxe</a> is finally here!
+With a higher max bet, more bonuses, and bigger prizes, you're sure to love the deluxe version of our most popular slot ever!
+<a href="cryptoslot_deluxe.php">Try it now</a>, and go for the maxi!<br>
+<b style="font-size:25px;">»</b>
+<a href="blackjack.php">Play Now: Bits &amp; Bars Deluxe</a>
+<b style="font-size:25px;">«</b>
+</p><br>
+<h4><i class="glyphicon glyphicon-upload"></i> Increased Betting Limits</h4>
+<p>High rollers are welcome at 777Coin! Our games now support larger bets than ever. <a href="roulette.php">Roulette</a> has been increased to 100mBTC, <a href="blackjack.php">Blackjack</a> to 50,
+and <a href="satoshi_slider.php">Satoshi Slider</a> to 125! Good luck, have fun, and win big with our exciting new limits!</p><br>
+<h4><i class="glyphicon glyphicon-check"></i> Updates and Enhancements</h4>
+<p>We've been rolling out graphical updates to our games over the past week, take a look at our new and improved <a href="superslot.php">Jewels &amp; Gems</a> slot and our beautiful
+new chips in <a href="blackjack.php">Blackjack</a>, <a href="roulette.php">Roulette</a>, and <a href="poker.php">Video Poker</a>. Additionally we have optimized
+our games to load lightning fast! Stay tuned, there are more exciting updates coming soon!</p><br>
+<h4><i class="glyphicon glyphicon-lock"></i> Two-Factor Authentication</h4>
+<p>At 777Coin, we're dedicated to bringing you the most entertaining and <b>secure</b> experience a Bitcoin casino can provide.
+We've just deployed two-factor authentication if you have a smartphone or tablet we highly suggest enabling 2FA on your account for enhanced
+security.</p><br>
+<h4><i class="glyphicon glyphicon-asterisk"></i> <a href="poker.php">Video Poker Released</a></h4>
+<p>We've just released another three high-quality Bitcoin casino games: <a href="poker.php">Jacks or Better</a>,
+<a href="poker.php?game=deuces">Deuces Wild</a>, and <a href="poker.php?game=aces">Super Aces</a>.
+For all you Video Poker fans out there, now is the time to sign up and win big at 777Coin! With a top prize of 8,000 mBTC (8 Bitcoins!),
+you could win huge! Just like all of our other games, Video Poker is provably fair and highly entertaining!<br>
+<b style="font-size:25px;">»</b>
+<a href="poker.php">Play Now: Jacks or Better</a> - <a href="poker.php?game=deuces">Deuces Wild</a> - <a href="poker.php?game=aces">Super Aces</a>
+<b style="font-size:25px;">«</b>
+</p><br>
+<h4><i class="glyphicon glyphicon-asterisk"></i> <a href="blackjack.php">Blackjack Released</a></h4>
+<p> Test your luck at yet another great game from 777Coin, the ever-popular card game, and a casino favorite of many, <a href="blackjack.php">Blackjack!</a>
+Win big effortlessly with our "Genius" feature which plays the best possible move for you automatically giving you the greatest
+chance of winning, no matter how much (or little) experience you have with Blackjack!<br>
+<b style="font-size:25px;">»</b>
+<a href="blackjack.php">Play Now: European Blackjack</a>
+<b style="font-size:25px;">«</b>
+</p>
+</div>
+<div style="clear:both;"></div>
+</div>
+<div style="clear:both;margin-bottom:-7px;"></div>
+</div>
+</div>
+<div id="footer" class="footer">
+<h1 class="logoh1">
+<a class="logo-float-home hidden-xs" href="/">777Coin the Exciting Bitcoin Casino</a>
+</h1>
+<div style="height:2px;"></div>
+<a href="/">Home</a> - <a href="/games.php">Games</a> - <a href="/winners.php">Winners</a> - <a href="/contact.php">Contact Us</a> - <a href="/referrals.php">Referrals</a><div style="margin-bottom:-3px;"></div>
+<span style="font-size:14px;">Website &amp; Contents Copyright 2013-2022</span>
+</div>
+</div>
+<div id="notifications">
+</div>
+<script src="/js/jquery.min.js"></script><script>
+function set_cookie(e,t){var i=new Date,o=new Date;o.setTime(i.getTime()+2592e3),document.cookie=e+"="+escape(t)+";expires="+o.toGMTString()}
+section_lock = false;
+logged = false;
+loginPOW = {nonce:'',index:''};
+set_cookie('pop-shown','1');
+logged = true;
+$(function(){
+		create_account_new();
+setInterval(function(){$.post('/notifications.php',{},function(data){$('#notifications').append(data);if (data!='') refresh_account();$('.notification').bind('click',function(){$(this).animate({height:0,opacity:0,marginTop:0,marginBottom:0},350,function(){$(this).remove();})});});},15000);setTimeout("show_register();",500);});
+function show_register(){
+set_cookie('pop-shown','1');
+}
+</script>
+<script src="/live.min.js"></script>
+<script src="/includes/sha256.js"></script>
+<script type="text/javascript">
+window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
+$.src="//v2.zopim.com/?3EUbarGKfxy1dZ4ySgdKf4viuRKNOs2h";z.t=+new Date;$.
+type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('require', 'displayfeatures');
+  ga('create', 'UA-44222564-1', '777coin.com');
+  ga('send', 'pageview');
+</script>
+<script type="text/javascript">(function(){window['__CF$cv$params']={r:'6f0bda395f118d3a',m:'U_NK0oMiOl91KxLFcYBni1gOYwHK_Qi6kAWFKM295Qs-1648087638-0-AS1V3af93p85q/1m7lU2lclXJnxPKnahLK4uO2JZTamiLr+D8z1CW9/JA8w1x2j6cF3Cic3B2D2ysLeY1dVDZDMrtCHqQeYsNKga4RZOFntQ0C/6xcQXykGcCCWHUGy/Ng==',s:[0x4f7a44f9e7,0x5a6089a2f5],}})();</script><script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194" integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw==" data-cf-beacon="{&quot;rayId&quot;:&quot;6f0bda395f118d3a&quot;,&quot;token&quot;:&quot;b7a05dcdcb76452db283eee8511ca77c&quot;,&quot;version&quot;:&quot;2021.12.0&quot;,&quot;si&quot;:100}" crossorigin="anonymous"></script>
+
+</body></html>

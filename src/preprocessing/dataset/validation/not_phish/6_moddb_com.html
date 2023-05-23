@@ -1,0 +1,1223 @@
+<html lang="en"><head>
+	<title>Games and mods development for Windows, Linux and Mac - Mod DB</title>
+	<meta charset="utf-8">
+	 
+	<meta name="keywords" content="pc, games, mods, linux, mac, addons, downloads, videos, gallery, development, community, features, reviews, previews, tutorials, forums">
+	<meta name="description" content="Mod DB covers game development and modding on Windows, Mac and Linux with downloads of the best user generated content.">
+	<meta property="fb:app_id" content="210134345672070">
+	<meta property="og:title" content="Games and mods development for Windows, Linux and Mac">
+	<meta property="og:description" content="Mod DB covers game development and modding on Windows, Mac and Linux with downloads of the best user generated content.">
+	<meta property="og:site_name" content="Mod DB">
+	<meta property="og:type" content="website"> 
+	<meta property="og:url" content="https://www.moddb.com"> 
+	<meta property="og:image" content="https://static.moddb.com/cutoff/images/default/splash.png"> 
+	 
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:site" content="@moddb">
+	<meta property="twitter:title" content="Games and mods development for Windows, Linux and Mac">
+	<meta property="twitter:description" content="Mod DB covers game development and modding on Windows, Mac and Linux with downloads of the best user generated content.">
+	<meta property="twitter:url" content="https://www.moddb.com"> 
+	<meta property="twitter:image" content="https://static.moddb.com/cutoff/images/default/splash.png"> 
+	<link rel="stylesheet" type="text/css" media="all" href="https://static.moddb.com/html/external/min/index.php?g=css&amp;72">
+	<link rel="icon" href="https://www.moddb.com/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="https://www.moddb.com/favicon.png" type="image/png" sizes="96x96">
+	<link rel="icon" href="https://www.moddb.com/favicon-192x192.png" type="image/png" sizes="192x192">
+	<link rel="apple-touch-icon" href="https://www.moddb.com/apple-touch-icon.png" sizes="180x180">
+	<link rel="alternate" href="https://rss.moddb.com/headlines/feed/rss.xml" type="application/rss+xml" title="Games and mods development for Windows, Linux and Mac feed">	<!--[if lt IE 9]>
+	<script src="https://static.moddb.com/html/cutoff/js/misc.html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" async="" src="https://www.google-analytics.com/plugins/ua/linkid.js"></script><script async="" type="text/javascript" src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script async="" src="https://sb.scorecardresearch.com/beacon.js"></script><script src="https://static.moddb.com/html/external/min/index.php?g=jquery&amp;1"></script>
+<meta http-equiv="origin-trial" content="AxujKG9INjsZ8/gUq8+dTruNvk7RjZQ1oFhhgQbcTJKDnZfbzSTE81wvC2Hzaf3TW4avA76LTZEMdiedF1vIbA4AAABueyJvcmlnaW4iOiJodHRwczovL2ltYXNkay5nb29nbGVhcGlzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0="><meta http-equiv="origin-trial" content="Azuce85ORtSnWe1MZDTv68qpaW3iHyfL9YbLRy0cwcCZwVnePnOmkUJlG8HGikmOwhZU22dElCcfrfX2HhrBPAkAAAB7eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A16nvcdeoOAqrJcmjLRpl1I6f3McDD8EfofAYTt/P/H4/AWwB99nxiPp6kA0fXoiZav908Z8etuL16laFPUdfQsAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="AxBHdr0J44vFBQtZUqX9sjiqf5yWZ/OcHRcRMN3H9TH+t90V/j3ENW6C8+igBZFXMJ7G3Pr8Dd13632aLng42wgAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A88BWHFjcawUfKU3lIejLoryXoyjooBXLgWmGh+hNcqMK44cugvsI5YZbNarYvi3roc1fYbHA1AVbhAtuHZflgEAAAB2eyJvcmlnaW4iOiJodHRwczovL2dvb2dsZS5jb206NDQzIiwiZmVhdHVyZSI6IlRydXN0VG9rZW5zIiwiZXhwaXJ5IjoxNjUyNzc0NDAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A8FHS1NmdCwGqD9DwOicnHHY+y27kdWfxKa0YHSGDfv0CSpDKRHTQdQmZVPDUdaFWUsxdgVxlwAd6o+dhJykPA0AAACWeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjQzMTU1MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><meta http-equiv="origin-trial" content="A8zdXi6dr1hwXEUjQrYiyYQGlU3557y5QWDnN0Lwgj9ePt66XMEvNkVWOEOWPd7TP9sBQ25X0Q15Lr1Nn4oGFQkAAACceyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjQzMTU1MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><meta http-equiv="origin-trial" content="A4/Htern2udN9w3yJK9QgWQxQFruxOXsXL7cW60DyCl0EZFGCSme/J33Q/WzF7bBkVvhEWDlcBiUyZaim5CpFQwAAACceyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjQzMTU1MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><script src="https://securepubads.g.doubleclick.net/gpt/pubads_impl_2022031601.js" async=""></script><link rel="preload" href="https://adservice.google.com/adsid/integrator.js?domain=www.moddb.com" as="script"><script type="text/javascript" src="https://adservice.google.com/adsid/integrator.js?domain=www.moddb.com"></script></head>
+<body style="position: relative;"><div style="top: 0px; width: 100%; height: auto; position: absolute; bottom: 0px;" id="gn-takeover-sticky-wrapper"><div style="position: sticky; top: 0px; left: 0px; width: 100%; height: 1300px; background: transparent url(&quot;https://tpc.googlesyndication.com/simgad/5858294942605653104?&quot;) no-repeat scroll center 0px; min-width: 970px; z-index: 0;" id="gn-takeover"><a style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;" href="https://adclick.g.doubleclick.net/pcs/click%253Fxai%253DAKAOjsvPG2h9wtBe4q3eFG7jCqFQCQmzq-wVJNVcrUCSBZibsqRTG7OT-_QSYXYfn-rU7ycCM_Tddf1SilcWUdowlOq9ihK7tyAVRCwRZ6O8HiiCXA8HS6YZTyXIpSnsXATamkI-jKwCbu7ya9I8iLIM8Pwz7sDSpEhKyHMeaf2p42NVyTVVwAb3mknWebKNBuN0QQCnebalKSFxbt0KmpOUoAu_xvLaqBHhXGqBwyqjQxUUTU6CHFLE5FZaLMb8Hg5qxbIGdvYhBD7Kus1RWgqlPvQe0qMgxKNc0wUPnhDeBVX6iDxr%2526sig%253DCg0ArKJSzBrPhyFrLKphEAE%2526fbs_aeid%253D%255Bgw_fbsaeid%255D%2526urlfix%253D1%2526adurl%253Dhttps://discord.gg/YfY8DDyN2B" target="_blank" title="Advertising overlay"></a></div><a style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;" href="https://adclick.g.doubleclick.net/pcs/click%253Fxai%253DAKAOjsvPG2h9wtBe4q3eFG7jCqFQCQmzq-wVJNVcrUCSBZibsqRTG7OT-_QSYXYfn-rU7ycCM_Tddf1SilcWUdowlOq9ihK7tyAVRCwRZ6O8HiiCXA8HS6YZTyXIpSnsXATamkI-jKwCbu7ya9I8iLIM8Pwz7sDSpEhKyHMeaf2p42NVyTVVwAb3mknWebKNBuN0QQCnebalKSFxbt0KmpOUoAu_xvLaqBHhXGqBwyqjQxUUTU6CHFLE5FZaLMb8Hg5qxbIGdvYhBD7Kus1RWgqlPvQe0qMgxKNc0wUPnhDeBVX6iDxr%2526sig%253DCg0ArKJSzBrPhyFrLKphEAE%2526fbs_aeid%253D%255Bgw_fbsaeid%255D%2526urlfix%253D1%2526adurl%253Dhttps://discord.gg/YfY8DDyN2B" target="_blank" title="Advertising overlay"></a></div>
+
+<div id="body">
+<div class="container">
+	<header><div id="header">
+		<div id="searchbox">
+			 
+			<span class="guest">Hello guest <a href="/members/register">register</a> or <a href="/members/login" id="togglelogin">sign in</a></span><span class="arrow">&nbsp;</span>
+			<form action="https://www.moddb.com/search" class="search" method="get"><input type="text" name="q" maxlength="500" value="" id="sitesearch" class="text" placeholder="Search" autocomplete="off"><input type="image" name="sa" value="Search" src="https://static.moddb.com/cutoff/images/default/btn_search_box.png" class="button" alt="Search Mod DB" title="Search Mod DB"></form>			 
+			<form action="https://www.moddb.com/members/login" method="post" name="memberform" class="login"><input type="hidden" name="referer" value="/"><input type="hidden" name="rememberme" value="1"><input type="hidden" name="members" value="1"><span class="abdbfdfccfbbaformouter"><span><span><span><span><span class="abdbfdfccfbbaforminner"><input type="text" name="IyMzZDQzZjhlNWQxOWY5NDJjNGZhZmY5YmE1NDA0YmIxMTcyMDU5NjMxNDBib3RjYXRjaGVy" maxlength="500" placeholder="Username" class="text" autocomplete="off"></span></span></span></span></span></span><span class="abdbfdfccfbbaformouter"><span><span><span><span class="abdbfdfccfbbaforminner"><input type="text" name="IyMzZDQzZjhlNWQxOWY5NDJjNGZhZmY5YmE1NDA0YmIxMTM4NjQ1NzI4MjZ1c2VybmFtZQ:E::E:" maxlength="500" value="" placeholder="Username" class="text" autocomplete="off"></span></span></span></span></span><style> span.abdbfdfccfbbaformouter span span span span span { display: none; } span.abdbfdfccfbbaformouter span span { display: inline; }</style>
+<input type="password" name="password" maxlength="100" placeholder="Password" class="text password" autocomplete="off"><input type="submit" name="members" value="GO" class="button" title="Sign In"></form>			<span class="login" style="display: none;">or with: <a href="/members/loginext/steam" class="steamiconsml" style="float: right; margin: 3px 1px 0 4px;" title="Click to connect via Steam"></a><a href="/members/loginext/google" class="googleiconsml" style="float: right; margin: 3px 1px 0 4px;" title="Click to connect via Google"></a><a href="/members/loginext/twitter" class="twittericonsml" style="float: right; margin: 3px 1px 0 4px;" title="Click to connect via Twitter"></a><a href="/members/loginext/facebook" class="facebookiconsml" style="float: right; margin: 3px 1px 0 4px;" title="Click to connect via Facebook"></a></span>
+			 
+		<ul class="suggest_search"></ul></div>
+
+		<h1>Games and mods development for Windows, Linux and Mac</h1>
+		<a href="/" class="logo" title="Mod DB Home"></a>
+
+ 		 
+		<ul class="tabs">
+			<li class="on"><a href="/" title="All platforms">HOME</a></li>
+			 
+			<li><a href="/platforms/xone/set">XONE</a></li>
+			 
+			<li><a href="/platforms/ps4/set">PS4</a></li>
+			 
+			<li><a href="/platforms/switch/set">Switch</a></li>
+			 
+			<li><a href="/platforms/vr/set">VR</a></li>
+			 
+			<li><a href="/platforms/ios/set">iOS</a></li>
+			 
+			<li><a href="/platforms/android/set">Android</a></li>
+			 
+			<li class="none"><a href="/platforms/selection" rel="iframe=true;innerHeight=480;innerWidth=670" class="thickbox" title="Choose any platform">»</a></li>
+		</ul>
+	</div>
+	<div id="subheader">
+		<nav><ul class="tabs">
+			<li class="firsttab"><a href="/games">games</a>
+				<ul>
+					<li><a href="/games/top">popular</a></li>
+					<li><a href="/games/latest">latest</a></li>
+					<li><a href="https://www.indiedb.com">indies</a></li>
+					<li><a href="https://modularity.games">publishing</a></li>
+					<li><a href="/games/add">add game</a></li>
+									</ul>
+			</li>
+			<li><a href="/mods">mods</a>
+				<ul>
+					<li><a href="/mods/top">popular</a></li>
+					<li><a href="/mods/latest">latest</a></li>
+					<li><a href="/mods/add">add mod</a></li>
+				</ul>
+			</li>
+			<li><a href="/addons">addons</a>
+				<ul>
+					<li><a href="/addons/top">popular</a></li>
+					<li><a href="/addons/latest">latest</a></li>
+					<li><a href="/addons/add">upload</a></li>
+				</ul>
+			</li>
+			<li><a href="/downloads">files</a>
+				<ul>
+					<li><a href="/downloads/top">popular</a></li>
+					<li><a href="/downloads/latest">latest</a></li>
+					<li><a href="/downloads/add">upload</a></li>
+				</ul>
+			</li>
+			<li><a href="/videos">videos</a>
+				<ul>
+					<li><a href="/images">images</a></li>
+					<li><a href="/audio">audio</a></li>
+				</ul>
+			</li>
+			<li><a href="/articles">articles</a>
+				<ul>
+					<li><a href="/reviews">reviews</a></li>
+					<li><a href="/headlines">headlines</a></li>
+					<li><a href="/blogs">blogs</a></li>
+					<li><a href="/articles/add">post article</a></li>
+				</ul>
+			</li>
+			<li><a href="/engines">engines</a>
+				<ul>
+					<li><a href="/engines/top">popular</a></li>
+					<li><a href="/engines/latest">latest</a></li>
+					<li><a href="/engines/add">add engine</a></li>
+				</ul>
+			</li>
+			<li><a href="/company">developers</a>
+				<ul>
+					<li><a href="/company/top">popular</a></li>
+					<li><a href="/company/latest">latest</a></li>
+					<li><a href="/company/add">add dev</a></li>
+				</ul>
+			</li>
+			<li><a href="/groups">groups</a>
+				<ul>
+					<li><a href="/groups/top">popular</a></li>
+					<li><a href="/groups/latest">latest</a></li>
+					<li><a href="/groups/add">add group</a></li>
+				</ul>
+			</li>
+			<li><a href="/forum">forums</a></li>
+			<li><a href="/jobs">jobs</a>
+				<ul>
+					<li><a href="/jobs/add">post job</a></li>
+				</ul>
+			</li>
+		</ul></nav>
+	</div></header>
+
+	 
+
+	 
+<div style="clear: both;"></div>
+<div class="headermediabox">
+	<div class="supporter"><div class="DBsupporter" data-dfp-id="MODDB_LB_1" data-dfp-sizes="728x90, 960x250, 970x250" id="div-ga-MODDB_LB_1" data-google-query-id="CPLTvMrr4PYCFaLhwAodceICuQ" style="position: relative;"><div id="google_ads_iframe_/43340684,1013459/MODDB_LB_1_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/43340684,1013459/MODDB_LB_1_0" name="google_ads_iframe_/43340684,1013459/MODDB_LB_1_0" title="3rd party ad content" scrolling="no" marginwidth="0" marginheight="0" style="border: 0px none; vertical-align: bottom; width: 970px; height: 250px;" role="region" aria-label="Advertisement" tabindex="0" srcdoc="" data-google-container-id="1" data-load-complete="true" width="970" height="250" frameborder="0"></iframe></div></div></div> 
+</div>
+<div class="column span-300-alt first" style="position: relative; max-width: 1260px; margin: 0px auto; z-index: 5;">	 
+	<div class="rotator">
+		<div class="links">
+			<a href="/headlines" id="rotatornext" class="next link" title="Next"></a> 
+			<a href="/headlines" id="rotatorprev" class="prev link" title="Previous"></a> 
+			<a href="https://rss.moddb.com/headlines/feed/rss.xml" class="rss link" target="_blank"></a> 
+			<a href="/headlines" class="browse link" title="Browse Headlines"></a> 
+			 
+		</div>
+		<div class="rotatorholder" id="rotatorholder" style="position: relative;">
+			 
+			 
+			<div class="rotatorbox" style="position: absolute; top: 0px; z-index: 10; opacity: 1;">
+				<a href="https://www.moddb.com/mods/the-horse-lords-a-total-modification-for-bfme/news/age-of-the-ring-version-731"><div class="rotatorcorner" style="background-image: url(https://media.moddb.com/cache/images/headlines/1/1/1/crop_620x250x95/ageofthering_headline.jpg);">
+					 
+					<div class="title">
+						<h2>Age of the Ring</h2>
+						<p>New patches arrive just in time for a tournament for this total overhaul mod</p>
+						<span class="bg"></span>
+					</div>
+					 
+				</div></a>
+			</div>
+			 
+			<div class="rotatorbox" style="display: none; position: absolute; top: 0px; z-index: 9;">
+				<a href="https://www.moddb.com/mods/the-crucible-mod/news/crucible-v203-released"><div class="rotatorcorner" data-bg="https://media.moddb.com/cache/images/headlines/1/1/1/crop_620x250x95/crucible_headline.jpg">
+					 
+					<div class="title">
+						<h2>The Crucible</h2>
+						<p>Do war for the Greater Good with the newest update to this overhaul mod</p>
+						<span class="bg"></span>
+					</div>
+					 
+				</div></a>
+			</div>
+			 
+			<div class="rotatorbox" style="display: none; position: absolute; top: 0px; z-index: 8;">
+				<a href="https://www.moddb.com/mods/cadaver-party/news/forbidden-trip-14666-available-15-content-update-soon"><div class="rotatorcorner" data-bg="https://media.moddb.com/cache/images/headlines/1/1/1/crop_620x250x95/forbiddentrip_headline.jpg">
+					 
+					<div class="title">
+						<h2>Forbidden Trip</h2>
+						<p>A two minute adventure turns into a horror nightmare in this total conversion mod</p>
+						<span class="bg"></span>
+					</div>
+					 
+				</div></a>
+			</div>
+			 
+			<div class="rotatorbox" style="display: none; position: absolute; top: 0px; z-index: 7;">
+				<a href="https://www.moddb.com/mods/age-of-warcraft/news/faction-presentation-2"><div class="rotatorcorner" data-bg="https://media.moddb.com/cache/images/headlines/1/1/1/crop_620x250x95/ageofwc_headline.jpg">
+					 
+					<div class="title">
+						<h2>Age of Warcraft</h2>
+						<p>The Draenei make landfall in this faction expansion mod</p>
+						<span class="bg"></span>
+					</div>
+					 
+				</div></a>
+			</div>
+			 
+			<div class="rotatorbox" style="display: none; position: absolute; top: 0px; z-index: 6;">
+				<a href="https://www.moddb.com/mods/combat-evolved-spartan-edition/news/combat-evolved-spartan-edition-v2"><div class="rotatorcorner" data-bg="https://media.moddb.com/cache/images/headlines/1/1/1/crop_620x250x95/cespartan_headline.jpg">
+					 
+					<div class="title">
+						<h2>Combat Evolved: Spartan Edition</h2>
+						<p>Modding evolves too in the latest update for this total overhaul mod</p>
+						<span class="bg"></span>
+					</div>
+					 
+				</div></a>
+			</div>
+			 
+			<div class="rotatorbox" style="display: none; position: absolute; top: 0px; z-index: 5;">
+				<a href="https://www.moddb.com/mods/last-alliance-total-war/news/last-alliance-tw-durins-folk-update-released"><div class="rotatorcorner" data-bg="https://media.moddb.com/cache/images/headlines/1/1/1/crop_620x250x95/lastalliancetotalwar_headline.jpg">
+					 
+					<div class="title">
+						<h2>Last Alliance: Total War</h2>
+						<p>Dwarfkind is up at bat in the latest update for this total conversion mod</p>
+						<span class="bg"></span>
+					</div>
+					 
+				</div></a>
+			</div>
+			 
+			<div class="rotatorbox" style="display: none; position: absolute; top: 0px; z-index: 4;">
+				<a href="https://www.moddb.com/mods/portal-electron/news/progress-update-junkyards"><div class="rotatorcorner" data-bg="https://media.moddb.com/cache/images/headlines/1/1/1/crop_620x250x95/electron_headline.jpg">
+					 
+					<div class="title">
+						<h2>Portal: Electron</h2>
+						<p>Junkyards can be beautiful too - as proven in this robotic original story mod</p>
+						<span class="bg"></span>
+					</div>
+					 
+				</div></a>
+			</div>
+			 
+			<div class="rotatorbox" style="display: none; position: absolute; top: 0px; z-index: 3;">
+				<a href="https://www.moddb.com/mods/f-stop/news/project-capture-part-2-release"><div class="rotatorcorner" data-bg="https://media.moddb.com/cache/images/headlines/1/1/1/crop_620x250x95/projectcapture_headline.jpg">
+					 
+					<div class="title">
+						<h2>Project Capture</h2>
+						<p>A new release is out for this prototype restoration mod</p>
+						<span class="bg"></span>
+					</div>
+					 
+				</div></a>
+			</div>
+			 
+			<div class="rotatorbox" style="display: none; position: absolute; top: 0px; z-index: 2;">
+				<a href="https://www.moddb.com/features/veni-vidi-video-dbolical-youtube-roundup-mar-14th-mar-18th"><div class="rotatorcorner" data-bg="https://media.moddb.com/cache/images/headlines/1/1/1/crop_620x250x95/headline_week3mar.jpg">
+					 
+					<div style="height: 250px;"></div>
+					 
+				</div></a>
+			</div>
+			 
+			<div class="rotatorbox" style="display: none; position: absolute; top: 0px; z-index: 1;">
+				<a href="https://www.moddb.com/mods/goreagulation/features/goreagulation-the-inaugural-article"><div class="rotatorcorner" data-bg="https://media.moddb.com/cache/images/headlines/1/1/1/crop_620x250x95/goreagulation_headline.jpg">
+					 
+					<div class="title">
+						<h2>Goreagulation</h2>
+						<p>Meat and metal are revealed in this stylistic conversion mod</p>
+						<span class="bg"></span>
+					</div>
+					 
+				</div></a>
+			</div>
+			 
+		</div>
+	</div>
+	 	<div class="normalbox browsebox" id="articlesbrowse">
+		<div class="normalcorner">
+			<div class="title">
+				<span class="options">
+					<a href="/articles/add/#articlesform" class="addicon" title="Post article">Post article</a> <a href="https://rss.moddb.com/articles/feed/rss.xml" target="_blank" class="rssicon" title="RSS">RSS</a>				</span>
+				<span class="heading">Latest Articles</span>
+			</div>
+		</div>
+		<div class="inner">
+			<div class="body bodysimple clear">
+								<div class="tooltip"></div>
+				<div class="table">
+			<div class="row rowcontent clear">
+				<a href="/mods/macenwolf/news/projection" title="Projection" class="image"><img src="https://media.moddb.com/cache/images/articles/1/304/303889/crop_120x90/projectwolf_1.jpg" alt="Projection"></a>
+				<div class="content">
+			 
+			<a href="/games/wolfenstein-3d" title="Wolfenstein 3D"><img src="https://media.moddb.com/images/games/1/1/67/icon.gif" alt="Wolfenstein 3D" style="float: right; padding-left: 4px;" width="32" height="32"></a>
+			 
+			<h4><a href="/mods/macenwolf/news/projection">Projection</a></h4>
+			<span class="date">
+				<time datetime="2022-03-25T07:04:06+00:00">1hour ago</time>			</span>
+			<span class="subheading">
+				<a href="/mods/macenwolf" title="Mod">MacenWolf</a>   			</span>
+			<p>Two mapsets, six maps. The apocalypse has already happened, but at least you can kill as many perpetrators as possible.</p>		</div>
+	</div>
+			<div class="row rowcontent clear">
+				<a href="/mods/age-of-doom/news/2022-march-news" title="[Age of DOOM] 2000 DLs Left + New Arachnotron Ep" class="image"><img src="https://media.moddb.com/cache/images/articles/1/304/303876/crop_120x90/Doom_Redux_ModDB_Logo.jpg" alt="[Age of DOOM] 2000 DLs Left + New Arachnotron Ep"></a>
+				<div class="content">
+			 
+			<a href="/games/doom" title="Doom"><img src="https://media.moddb.com/images/games/1/1/26/doom_icon.png" alt="Doom" style="float: right; padding-left: 4px;" width="32" height="32"></a>
+			 
+			<h4><a href="/mods/age-of-doom/news/2022-march-news">[Age of DOOM] 2000 DLs Left + New Arachnotron Ep</a></h4>
+			<span class="date">
+				<time datetime="2022-03-25T00:04:59+00:00">8hours ago</time>			</span>
+			<span class="subheading">
+				<a href="/mods/age-of-doom" title="Mod">DOOM v1.1 | Age of DOOM</a>   			</span>
+			<p>We reached 3000 total download count if we include all download pages. Also a new Arachnotron bonus episode is coming soon...</p>		</div>
+	</div>
+			<div class="row rowcontent clear">
+				<a href="/games/liveware-glitch/news/liveware-glitch-concept-art" title="Liveware Glitch - Concept Art" class="image"><img src="https://media.moddb.com/cache/images/articles/1/304/303878/crop_120x90/logo_indiedb2.png" alt="Liveware Glitch - Concept Art"></a>
+				<div class="content">
+			 
+			<a href="/games/liveware-glitch" title="Liveware Glitch"><img src="https://media.moddb.com/images/games/1/79/78600/icon_indiedb.png" alt="Liveware Glitch" style="float: right; padding-left: 4px;" width="32" height="32"></a>
+			 
+			<h4><a href="/games/liveware-glitch/news/liveware-glitch-concept-art">Liveware Glitch - Concept Art</a></h4>
+			<span class="date">
+				<time datetime="2022-03-24T20:11:59+00:00">12hours ago</time>			</span>
+			<span class="subheading">
+				<a href="/games/liveware-glitch" title="Game">Liveware Glitch</a>  <a href="/games/liveware-glitch/news/liveware-glitch-concept-art" class="commenticon">2 comments</a>  			</span>
+			<p>This week, we bring you a quick sneak peak at the concept art we're currently developing for Liveware Glitch.</p>		</div>
+	</div>
+			<div class="row rowcontent clear">
+				<a href="/games/ebola-3/news/ebola-3-official-website-demo" title="Ebola 3 official website + Demo" class="image"><img src="https://media.moddb.com/cache/images/articles/1/304/303879/crop_120x90/Ebola32.jpg" alt="Ebola 3 official website + Demo"></a>
+				<div class="content">
+			 
+			<a href="/games/ebola-3" title="EBOLA 3"><img src="https://media.moddb.com/images/games/1/76/75904/game-a-ebola2.png" alt="EBOLA 3" style="float: right; padding-left: 4px;" width="32" height="32"></a>
+			 
+			<h4><a href="/games/ebola-3/news/ebola-3-official-website-demo">Ebola 3 official website + Demo</a></h4>
+			<span class="date">
+				<time datetime="2022-03-24">13hours ago</time>			</span>
+			<span class="subheading">
+				<a href="/games/ebola-3" title="Game">EBOLA 3</a>   			</span>
+			<p>Ebola 3 - the official website of the game is now available. A demo version of the game is also available.</p>		</div>
+	</div>
+			<div class="row rowcontent clear">
+				<a href="/games/world-of-contraptions/news/update-10-final-version" title="Update 1.0 – Final Version" class="image"><img src="https://media.moddb.com/cache/images/articles/1/304/303874/crop_120x90/gif_1.gif" alt="Update 1.0 – Final Version"></a>
+				<div class="content">
+			 
+			<a href="/games/world-of-contraptions" title="World of Contraptions"><img src="https://media.moddb.com/images/games/1/65/64930/icon.png" alt="World of Contraptions" style="float: right; padding-left: 4px;" width="32" height="32"></a>
+			 
+			<h4><a href="/games/world-of-contraptions/news/update-10-final-version">Update 1.0 – Final Version</a></h4>
+			<span class="date">
+				<time datetime="2022-03-24T16:04:52+00:00">16hours ago</time>			</span>
+			<span class="subheading">
+				<a href="/games/world-of-contraptions" title="Game">World of Contraptions</a>   			</span>
+			<p>This update defines the final version of the game, it has added an overall leaderboard of the best players, added more variations to the main menu and...</p>		</div>
+	</div>
+			<div class="row rowcontent clear">
+				<a href="/games/o-foliao/news/the-reveller-o-folio-art-update-03" title="The Reveller (O Folião)| Art Update #03" class="image"><img src="https://media.moddb.com/cache/images/articles/1/304/303872/crop_120x90/icon_personagem.png" alt="The Reveller (O Folião)| Art Update #03"></a>
+				<div class="content">
+			 
+			<a href="/games/o-foliao" title="O Folião"><img src="https://media.moddb.com/images/games/1/79/78605/logo_carnaval.png" alt="O Folião" style="float: right; padding-left: 4px;" width="32" height="32"></a>
+			 
+			<h4><a href="/games/o-foliao/news/the-reveller-o-folio-art-update-03">The Reveller (O Folião)| Art Update #03</a></h4>
+			<span class="date">
+				<time datetime="2022-03-24T15:24:28+00:00">17hours ago</time>			</span>
+			<span class="subheading">
+				<a href="/games/o-foliao" title="Game">O Folião</a>   			</span>
+			<p>Update post about the art of the game, like the icons of the areas, the character, UI, and game map.</p>		</div>
+	</div>
+			<div class="row rowcontent clear">
+				<a href="/mods/project-crypt/news/project-crypt-update-12" title="Project Crypt - Update 1.2" class="image"><img src="https://media.moddb.com/cache/images/articles/1/304/303871/crop_120x90/logotip.png" alt="Project Crypt - Update 1.2"></a>
+				<div class="content">
+			 
+			<a href="/games/doom-ii" title="Doom II"><img src="https://media.moddb.com/images/games/1/1/172/icon.png" alt="Doom II" style="float: right; padding-left: 4px;" width="32" height="32"></a>
+			 
+			<h4><a href="/mods/project-crypt/news/project-crypt-update-12">Project Crypt - Update 1.2</a></h4>
+			<span class="date">
+				<time datetime="2022-03-24T15:18:14+00:00">17hours ago</time>			</span>
+			<span class="subheading">
+				<a href="/mods/project-crypt" title="Mod">Project Crypt</a>   			</span>
+			<p>Hello, we're finally delivering Update 1.2 for Project Crypt! More news in this article.</p>		</div>
+	</div>
+			<div class="row rowcontent clear">
+				<a href="/news/isonzo-intel-11-more-about-mortars" title="Isonzo Intel #11 - More about mortars" class="image"><img src="https://media.moddb.com/cache/images/articles/1/304/303870/crop_120x90/Render_LANCIABOMBE_BETTICA_V2.png" alt="Isonzo Intel #11 - More about mortars"></a>
+				<div class="content">
+			 
+			<h4><a href="/news/isonzo-intel-11-more-about-mortars">Isonzo Intel #11 - More about mortars</a></h4>
+			<span class="date">
+				<time datetime="2022-03-24T14:50:59+00:00">17hours ago</time>			</span>
+			<span class="subheading">
+				News  			</span>
+			<p>This dev blog looks at two mortars that will appear in Isonzo, along with a recap of how the mortar system works in our upcoming WW1 Italian Front FPS!</p>		</div>
+	</div>
+			<div class="row rowcontent clear">
+				<a href="/mods/half-lifefractures/news/estimated-release-date2" title="Estimated release date" class="image"><img src="https://media.moddb.com/cache/images/articles/1/304/303868/crop_120x90/14994127547891974214_20220312105.jpg" alt="Estimated release date"></a>
+				<div class="content">
+			 
+			<a href="/games/half-life" title="Half-Life"><img src="https://media.moddb.com/images/games/1/1/1/half-life.png" alt="Half-Life" style="float: right; padding-left: 4px;" width="32" height="32"></a>
+			 
+			<h4><a href="/mods/half-lifefractures/news/estimated-release-date2">Estimated release date</a></h4>
+			<span class="date">
+				<time datetime="2022-03-24T12:23:13+00:00">20hours ago</time>			</span>
+			<span class="subheading">
+				<a href="/mods/half-lifefractures" title="Mod">Half-Life: Fractures</a>  <a href="/mods/half-lifefractures/news/estimated-release-date2" class="commenticon">2 comments</a>  			</span>
+			<p>A brief run-down of the current development of Half-Life: Fractures. As well as an estimate for a release date.</p>		</div>
+	</div>
+			<div class="row rowcontent clear">
+				<a href="/games/black-one-blood-brothers/news/update-118-patches" title="Update 1.18: Patches" class="image"><img src="https://media.moddb.com/cache/images/articles/1/304/303866/crop_120x90/Patch_3.jpg" alt="Update 1.18: Patches"></a>
+				<div class="content">
+			 
+			<a href="/games/black-one-blood-brothers" title="Black One: Blood Brothers"><img src="https://media.moddb.com/images/games/1/77/76289/Icon_BOBB_256.png" alt="Black One: Blood Brothers" style="float: right; padding-left: 4px;" width="32" height="32"></a>
+			 
+			<h4><a href="/games/black-one-blood-brothers/news/update-118-patches">Update 1.18: Patches</a></h4>
+			<span class="date">
+				<time datetime="2022-03-24T09:17:10+00:00">23hours ago</time>			</span>
+			<span class="subheading">
+				<a href="/games/black-one-blood-brothers" title="Game">Black One: Blood Brothers</a>   			</span>
+			<p>New important update is online. Customize your outfits with patches and honor your country.</p>		</div>
+	</div>
+			<div class="row rowcontent clear">
+				<a href="/mods/dei-agminum/news/dei-agminum-developer-blog-03232022" title="Dei Agminum - Developer Blog 03/23/2022" class="image"><img src="https://media.moddb.com/cache/images/articles/1/304/303862/crop_120x90/DeiAgminum_small_logo.png" alt="Dei Agminum - Developer Blog 03/23/2022"></a>
+				<div class="content">
+			 
+			<a href="/games/medieval-ii-total-war-kingdoms" title="Medieval II: Total War: Kingdoms"><img src="https://media.moddb.com/images/games/1/14/13242/m2.png" alt="Medieval II: Total War: Kingdoms" style="float: right; padding-left: 4px;" width="32" height="32"></a>
+			 
+			<h4><a href="/mods/dei-agminum/news/dei-agminum-developer-blog-03232022">Dei Agminum - Developer Blog 03/23/2022</a></h4>
+			<span class="date">
+				<time datetime="2022-03-24T06:20:59+00:00">Mar 24 2022</time>			</span>
+			<span class="subheading">
+				<a href="/mods/dei-agminum" title="Mod">Dei Agminum</a>  <a href="/mods/dei-agminum/news/dei-agminum-developer-blog-03232022" class="commenticon">1 comment</a>  			</span>
+			<p>An update on the mod with news about development on the Ayyubid faction. </p>		</div>
+	</div>
+			<div class="row rowcontent clear">
+				<a href="/games/creator-wizard-seths-multiplayer-fps/news/an-interesting-look-into-the-history-of-my-environmental-design" title="Divine Wizard Reflects on his Magnificent Creations and Desires To Teach Others His Marvelous Ways" class="image"><img src="https://media.moddb.com/cache/images/articles/1/304/303861/crop_120x90/capture78.PNG" alt="Divine Wizard Reflects on his Magnificent Creations and Desires To Teach Others His Marvelous Ways"></a>
+				<div class="content">
+			 
+			<a href="/games/creator-wizard-seths-multiplayer-fps" title="Creator Wizard Seth's Multiplayer FPS"><img src="https://media.moddb.com/images/games/1/79/78579/pic3.PNG" alt="Creator Wizard Seth's Multiplayer FPS" style="float: right; padding-left: 4px;" width="32" height="32"></a>
+			 
+			<h4><a href="/games/creator-wizard-seths-multiplayer-fps/news/an-interesting-look-into-the-history-of-my-environmental-design">Divine Wizard Reflects on his Magnificent Creations and Desires To Teach Others His Marvelous Ways</a></h4>
+			<span class="date">
+				<time datetime="2022-03-24T03:50:19+00:00">Mar 23 2022</time>			</span>
+			<span class="subheading">
+				<a href="/games/creator-wizard-seths-multiplayer-fps" title="Game">Creator Wizard Seth's Multiplayer FPS</a>   			</span>
+			<p>Dive into some colorful and vibrant images of older attempts of me creating a coherent and organized environment for players to move around in. Explore...</p>		</div>
+	</div>
+			<div class="row rowcontent clear">
+				<a href="/mods/infamous-fusion/features/weapon-stats-of-infamous-fusion" title="Weapon stats of Infamous Fusion" class="image"><img src="https://media.moddb.com/cache/images/articles/1/304/303853/crop_120x90/file.png" alt="Weapon stats of Infamous Fusion"></a>
+				<div class="content">
+			 
+			<a href="/games/far-cry-2" title="Far Cry 2"><img src="https://media.moddb.com/images/games/1/11/10005/fc2.png" alt="Far Cry 2" style="float: right; padding-left: 4px;" width="32" height="32"></a>
+			 
+			<h4><a href="/mods/infamous-fusion/features/weapon-stats-of-infamous-fusion">Weapon stats of Infamous Fusion</a></h4>
+			<span class="date">
+				<time datetime="2022-03-23T20:58:11+00:00">Mar 23 2022</time>			</span>
+			<span class="subheading">
+				<a href="/mods/infamous-fusion" title="Mod">Infamous Fusion</a>   			</span>
+			<p>Comparison graphs of modified Far Cry 2 weapons in 5 categories:
+Damage, Range, Accuracy, Durability and Firerate.</p>		</div>
+	</div>
+			<div class="row rowcontent clear">
+				<a href="/games/resonant-blade/news/indie-game-devlog-27-urban-planning" title="Indie Game Devlog 27: Urban Planning!" class="image"><img src="https://media.moddb.com/cache/images/articles/1/304/303816/crop_120x90/devlog27_thumbnail.png" alt="Indie Game Devlog 27: Urban Planning!"></a>
+				<div class="content">
+			 
+			<a href="/games/resonant-blade" title="Resonant Blade"><img src="https://media.moddb.com/images/games/1/67/66487/ResonantBlade_icon7.png" alt="Resonant Blade" style="float: right; padding-left: 4px;" width="32" height="32"></a>
+			 
+			<h4><a href="/games/resonant-blade/news/indie-game-devlog-27-urban-planning">Indie Game Devlog 27: Urban Planning!</a></h4>
+			<span class="date">
+				<time datetime="2022-03-23T20:44:59+00:00">Mar 23 2022</time>			</span>
+			<span class="subheading">
+				<a href="/games/resonant-blade" title="Game">Resonant Blade</a>   			</span>
+			<p>Lower Ionia gets completely reworked! The city also gets some new procedurally-generated NPCs with some basic pathfinding!</p>		</div>
+	</div>
+			<div class="row rowcontent clear">
+				<a href="/mods/ra2yr-enhanced/news/ra2yr-enhanced-80" title="RA2YR Enhanced 8.0" class="image"><img src="https://media.moddb.com/cache/images/articles/1/304/303851/crop_120x90/ra2yre8.jpg" alt="RA2YR Enhanced 8.0"></a>
+				<div class="content">
+			 
+			<a href="/games/cc-red-alert-yuris-revenge" title="C&amp;C: Yuri's Revenge"><img src="https://media.moddb.com/images/games/1/1/267/yuri.png" alt="C&amp;C: Yuri's Revenge" style="float: right; padding-left: 4px;" width="32" height="32"></a>
+			 
+			<h4><a href="/mods/ra2yr-enhanced/news/ra2yr-enhanced-80">RA2YR Enhanced 8.0</a></h4>
+			<span class="date">
+				<time datetime="2022-03-23">Mar 23 2022</time>			</span>
+			<span class="subheading">
+				<a href="/mods/ra2yr-enhanced" title="Mod">RA2YR Enhanced</a>   			</span>
+			<p>RA2YR Enhanced is an overhaul mod for Red Alert 2 Yuri's Revenge with a completely rescripted AI. It aims to make skirmish games against the computer...</p>		</div>
+	</div>
+			<div class="row rowcontent clear">
+				<a href="/games/prehistoric-hunt/news/development-blog-19-trophy-lodges-are-coming" title="Development Blog #19 - Trophy lodges are coming!" class="image"><img src="https://media.moddb.com/cache/images/articles/1/304/303849/crop_120x90/Preview_for_Steam2.png" alt="Development Blog #19 - Trophy lodges are coming!"></a>
+				<div class="content">
+			 
+			<a href="/games/prehistoric-hunt" title="Prehistoric Hunt"><img src="https://media.moddb.com/images/games/1/74/73929/Prehistoric_Hunt_Logo_2048_2048.png" alt="Prehistoric Hunt" style="float: right; padding-left: 4px;" width="32" height="32"></a>
+			 
+			<h4><a href="/games/prehistoric-hunt/news/development-blog-19-trophy-lodges-are-coming">Development Blog #19 - Trophy lodges are coming!</a></h4>
+			<span class="date">
+				<time datetime="2022-03-23T19:03:04+00:00">Mar 23 2022</time>			</span>
+			<span class="subheading">
+				<a href="/games/prehistoric-hunt" title="Game">Prehistoric Hunt</a>   			</span>
+			<p>Trophy lodges are under construction! Check our progress from this article.</p>		</div>
+	</div>
+			<div class="row rowcontent clear">
+				<a href="/mods/field-intensity/tutorials/field-intensity-environmental-storytelling" title="Field Intensity Environmental Storytelling" class="image"><img src="https://media.moddb.com/cache/images/articles/1/304/303846/crop_120x90/fid1a1a0001.png" alt="Field Intensity Environmental Storytelling"></a>
+				<div class="content">
+			 
+			<a href="/games/half-life" title="Half-Life"><img src="https://media.moddb.com/images/games/1/1/1/half-life.png" alt="Half-Life" style="float: right; padding-left: 4px;" width="32" height="32"></a>
+			 
+			<h4><a href="/mods/field-intensity/tutorials/field-intensity-environmental-storytelling">Field Intensity Environmental Storytelling</a></h4>
+			<span class="date">
+				<time datetime="2022-03-23T17:05:50+00:00">Mar 23 2022</time>			</span>
+			<span class="subheading">
+				<a href="/mods/field-intensity" title="Mod">Half-Life: Field Intensity</a>  Level Design/Theory <a href="/mods/field-intensity/tutorials/field-intensity-environmental-storytelling" class="commenticon">1 comment</a>  			</span>
+			<p>Examples of environmental storytelling in Field Intensity narrative.</p>		</div>
+	</div>
+			<div class="row rowcontent clear">
+				<a href="/games/mirror-forge/news/exclusive-main-trailer-2-new-mechanics-4100-wishlists-and-more" title="Exclusive Main Trailer, 2 New Mechanics, 4100+ Wishlists and More!" class="image"><img src="https://media.moddb.com/cache/images/articles/1/304/303843/crop_120x90/Mirror-Forge-Official-Trailer-bl.jpg" alt="Exclusive Main Trailer, 2 New Mechanics, 4100+ Wishlists and More!"></a>
+				<div class="content">
+			 
+			<a href="/games/mirror-forge" title="Mirror Forge"><img src="https://media.moddb.com/images/games/1/78/77830/i.jpg" alt="Mirror Forge" style="float: right; padding-left: 4px;" width="32" height="32"></a>
+			 
+			<h4><a href="/games/mirror-forge/news/exclusive-main-trailer-2-new-mechanics-4100-wishlists-and-more">Exclusive Main Trailer, 2 New Mechanics, 4100+ Wishlists and More!</a></h4>
+			<span class="date">
+				<time datetime="2022-03-23T15:22:37+00:00">Mar 23 2022</time>			</span>
+			<span class="subheading">
+				<a href="/games/mirror-forge" title="Game">Mirror Forge</a>   			</span>
+			<p>The Official Trailer for Mirror Forge, new levels, semi-open world environments, 2 new core game mechanics, 4100+ Wishlists surpassed and several Game...</p>		</div>
+	</div>
+			<div class="row rowcontent clear">
+				<a href="/mods/resident-evil-hd-brx/news/resident-evil-hd-brx" title="Resident Evil - HD BRX" class="image"><img src="https://media.moddb.com/cache/images/articles/1/304/303842/crop_120x90/1.png" alt="Resident Evil - HD BRX"></a>
+				<div class="content">
+			 
+			<a href="/games/resident-evil" title="Resident Evil"><img src="https://media.moddb.com/images/games/1/19/18555/photo-thumb-1361528.jpg" alt="Resident Evil" style="float: right; padding-left: 4px;" width="32" height="32"></a>
+			 
+			<h4><a href="/mods/resident-evil-hd-brx/news/resident-evil-hd-brx">Resident Evil - HD BRX</a></h4>
+			<span class="date">
+				<time datetime="2022-03-23T14:47:30+00:00">Mar 23 2022</time>			</span>
+			<span class="subheading">
+				<a href="/mods/resident-evil-hd-brx" title="Mod">Resident Evil - HD BRX</a>   			</span>
+			<p>Improvements for Resident Evil 1 Classic / Biohazard 1 Classic (1996).</p>		</div>
+	</div>
+			<div class="row rowcontent clear">
+				<a href="/mods/infernal-stroggos/news/quake-4-in-quake-released" title="Quake 4 in Quake released!" class="image"><img src="https://media.moddb.com/cache/images/articles/1/304/303841/crop_120x90/quake.jpg" alt="Quake 4 in Quake released!"></a>
+				<div class="content">
+			 
+			<a href="/games/quake" title="Quake"><img src="https://media.moddb.com/images/games/1/1/2/Quake.png" alt="Quake" style="float: right; padding-left: 4px;" width="32" height="32"></a>
+			 
+			<h4><a href="/mods/infernal-stroggos/news/quake-4-in-quake-released">Quake 4 in Quake released!</a></h4>
+			<span class="date">
+				<time datetime="2022-03-23T14:34:02+00:00">Mar 23 2022</time>			</span>
+			<span class="subheading">
+				<a href="/mods/infernal-stroggos" title="Mod">Infernal Stroggos (Quake 4 in Quake)</a>   			</span>
+			<p>Greetings, I bring you a new gamepack for the first quake already available for download. If you want to know more click on this article.</p>		</div>
+	</div>
+			<div class="row rowcontent clear">
+				<a href="/games/runewatch/news/runewatch-dev-log-3" title="Runewatch - Dev log #3" class="image"><img src="https://media.moddb.com/cache/images/articles/1/304/303838/crop_120x90/gabriel-santos-bookclosedshot.jpg" alt="Runewatch - Dev log #3"></a>
+				<div class="content">
+			 
+			<a href="/games/runewatch" title="Runewatch"><img src="https://media.moddb.com/images/games/1/79/78564/ao_Logo_1_alpha_black.png" alt="Runewatch" style="float: right; padding-left: 4px;" width="32" height="32"></a>
+			 
+			<h4><a href="/games/runewatch/news/runewatch-dev-log-3">Runewatch - Dev log #3</a></h4>
+			<span class="date">
+				<time datetime="2022-03-23">Mar 23 2022</time>			</span>
+			<span class="subheading">
+				<a href="/games/runewatch" title="Game">Runewatch</a>   			</span>
+			<p>Welcome to our third dev log. Today we will share with you a few stages of the creation of one the assets in our game - the spellbook.</p>		</div>
+	</div>
+			<div class="row rowcontent clear">
+				<a href="/games/blooming-business-casino/news/dev-update-what-to-expect-in-next-playtest-vips" title="Dev update : What to expect in next playtest!? VIPs" class="image"><img src="https://media.moddb.com/cache/images/articles/1/304/303810/crop_120x90/20220208184816_1.jpg" alt="Dev update : What to expect in next playtest!? VIPs"></a>
+				<div class="content">
+			 
+			<a href="/games/blooming-business-casino" title="Blooming Business: Casino"><img src="https://media.moddb.com/images/games/1/77/76446/Profil_Pic_Logo_03.png" alt="Blooming Business: Casino" style="float: right; padding-left: 4px;" width="32" height="32"></a>
+			 
+			<h4><a href="/games/blooming-business-casino/news/dev-update-what-to-expect-in-next-playtest-vips">Dev update : What to expect in next playtest!? VIPs</a></h4>
+			<span class="date">
+				<time datetime="2022-03-23T11:59:59+00:00">Mar 23 2022</time>			</span>
+			<span class="subheading">
+				<a href="/games/blooming-business-casino" title="Game">Blooming Business: Casino</a>   			</span>
+			<p>Showcasing some of our development progress these past months. We’re welcoming back our 1st VIP Ant’ny Barr, his counterpart Nat Kiddin &amp; new client...</p>		</div>
+	</div>
+			<div class="row rowcontent clear">
+				<a href="/games/lumencraft/news/let-there-be-light5" title="Let there be light!" class="image"><img src="https://media.moddb.com/cache/images/articles/1/304/303833/crop_120x90/indiedb.gif" alt="Let there be light!"></a>
+				<div class="content">
+			 
+			<a href="/games/lumencraft" title="Lumencraft"><img src="https://media.moddb.com/images/games/1/78/77467/icon_1.png" alt="Lumencraft" style="float: right; padding-left: 4px;" width="32" height="32"></a>
+			 
+			<h4><a href="/games/lumencraft/news/let-there-be-light5">Let there be light!</a></h4>
+			<span class="date">
+				<time datetime="2022-03-23T08:36:37+00:00">Mar 23 2022</time>			</span>
+			<span class="subheading">
+				<a href="/games/lumencraft" title="Game">Lumencraft</a>   			</span>
+			<p>Critical ALERT 🚨! The Release Date Teaser Trailer is HERE 📽️!</p>		</div>
+	</div>
+			<div class="row rowcontent clear">
+				<a href="/mods/tsardoms-total-war/news/tsardoms-total-war-strat-map-models-for-1448-campaign" title="Tsardoms Total War - Strat map models for 1448 campaign" class="image"><img src="https://media.moddb.com/cache/images/articles/1/304/303832/crop_120x90/Spalsh.png" alt="Tsardoms Total War - Strat map models for 1448 campaign"></a>
+				<div class="content">
+			 
+			<a href="/games/medieval-ii-total-war-kingdoms" title="Medieval II: Total War: Kingdoms"><img src="https://media.moddb.com/images/games/1/14/13242/m2.png" alt="Medieval II: Total War: Kingdoms" style="float: right; padding-left: 4px;" width="32" height="32"></a>
+			 
+			<h4><a href="/mods/tsardoms-total-war/news/tsardoms-total-war-strat-map-models-for-1448-campaign">Tsardoms Total War - Strat map models for 1448 campaign</a></h4>
+			<span class="date">
+				<time datetime="2022-03-23T06:48:36+00:00">Mar 23 2022</time>			</span>
+			<span class="subheading">
+				<a href="/mods/tsardoms-total-war" title="Mod">Tsardoms Total War</a>  <a href="/mods/tsardoms-total-war/news/tsardoms-total-war-strat-map-models-for-1448-campaign" class="commenticon">7 comments</a>  			</span>
+			<p>Tsardoms Total War proudly presents the new set of strat map models for the 1448 campaign.</p>		</div>
+	</div>
+			<div class="row rowcontent clear">
+				<a href="/mods/star-fox-event-horizon/news/taking-the-hovercycle-for-a-spin" title="Taking the Hovercycle for a spin" class="image"><img src="https://media.moddb.com/cache/images/articles/1/304/303831/crop_120x90/HoverbikeRenderYT.jpg" alt="Taking the Hovercycle for a spin"></a>
+				<div class="content">
+			 
+			<a href="/games/freespace-2" title="Freespace 2"><img src="https://media.moddb.com/images/games/1/17/16521/fs2_open.png" alt="Freespace 2" style="float: right; padding-left: 4px;" width="32" height="32"></a>
+			 
+			<h4><a href="/mods/star-fox-event-horizon/news/taking-the-hovercycle-for-a-spin">Taking the Hovercycle for a spin</a></h4>
+			<span class="date">
+				<time datetime="2022-03-23T04:24:09+00:00">Mar 22 2022</time>			</span>
+			<span class="subheading">
+				<a href="/mods/star-fox-event-horizon" title="Mod">Star Fox: Event Horizon</a>  <a href="/mods/star-fox-event-horizon/news/taking-the-hovercycle-for-a-spin" class="commenticon">3 comments</a>  			</span>
+			<p>A little demonstration of the Sharclaw Hovercycle.</p>		</div>
+	</div>
+			<div class="row rowcontent clear">
+				<a href="/games/creator-wizard-seths-multiplayer-fps/news/divine-wizard-manifests-amazing-divine-temples-for-your-viewing-pleasures" title="Divine Wizard Manifests Amazing Divine Temples For Your Viewing Pleasures" class="image"><img src="https://media.moddb.com/cache/images/articles/1/304/303829/crop_120x90/redone.PNG" alt="Divine Wizard Manifests Amazing Divine Temples For Your Viewing Pleasures"></a>
+				<div class="content">
+			 
+			<a href="/games/creator-wizard-seths-multiplayer-fps" title="Creator Wizard Seth's Multiplayer FPS"><img src="https://media.moddb.com/images/games/1/79/78579/pic3.PNG" alt="Creator Wizard Seth's Multiplayer FPS" style="float: right; padding-left: 4px;" width="32" height="32"></a>
+			 
+			<h4><a href="/games/creator-wizard-seths-multiplayer-fps/news/divine-wizard-manifests-amazing-divine-temples-for-your-viewing-pleasures">Divine Wizard Manifests Amazing Divine Temples For Your Viewing Pleasures</a></h4>
+			<span class="date">
+				<time datetime="2022-03-23">Mar 22 2022</time>			</span>
+			<span class="subheading">
+				<a href="/games/creator-wizard-seths-multiplayer-fps" title="Game">Creator Wizard Seth's Multiplayer FPS</a>   			</span>
+			<p>Divine Wizard looks within and manifests the wisdom to create enchanted temples to enchant onlookers and provide endless viewing pleasures to those who...</p>		</div>
+	</div>
+			<div class="row rowcontent clear">
+				<a href="/games/invasion-neo-earth/news/what-to-expect-from-invasion-neo-earth-120" title="What to expect from Invasion: Neo Earth 1.2.0 " class="image"><img src="https://media.moddb.com/cache/images/articles/1/304/303826/crop_120x90/INE_newUI1.jpg" alt="What to expect from Invasion: Neo Earth 1.2.0 "></a>
+				<div class="content">
+			 
+			<a href="/games/invasion-neo-earth" title="Invasion: Neo Earth"><img src="https://media.moddb.com/images/games/1/75/74331/indiedb_thumb.jpg" alt="Invasion: Neo Earth" style="float: right; padding-left: 4px;" width="32" height="32"></a>
+			 
+			<h4><a href="/games/invasion-neo-earth/news/what-to-expect-from-invasion-neo-earth-120">What to expect from Invasion: Neo Earth 1.2.0 </a></h4>
+			<span class="date">
+				<time datetime="2022-03-23T00:30:59+00:00">Mar 22 2022</time>			</span>
+			<span class="subheading">
+				<a href="/games/invasion-neo-earth" title="Game">Invasion: Neo Earth</a>   			</span>
+			<p>Coming Soon: Invasion: Neo Earth 1.2.0 - New world design, New UI design, Big Future Plans. </p>		</div>
+	</div>
+			<div class="row rowcontent clear">
+				<a href="/mods/the-crucible-mod/news/crucible-v203-released" title="Crucible v2.03 released!" class="image"><img src="https://media.moddb.com/cache/images/articles/1/304/303827/crop_120x90/Title_card.jpg" alt="Crucible v2.03 released!"></a>
+				<div class="content">
+			 
+			<a href="/games/dawn-of-war" title="Dawn of War"><img src="https://media.moddb.com/images/games/1/1/100/dow.1.png" alt="Dawn of War" style="float: right; padding-left: 4px;" width="32" height="32"></a>
+			 
+			<h4><a href="/mods/the-crucible-mod/news/crucible-v203-released">Crucible v2.03 released!</a></h4>
+			<span class="date">
+				<time datetime="2022-03-22T23:30:58+00:00">Mar 22 2022</time>			</span>
+			<span class="subheading">
+				<a href="/mods/the-crucible-mod" title="Mod">The Crucible Mod</a>  <a href="/mods/the-crucible-mod/news/crucible-v203-released" class="commenticon">4 comments</a>  			</span>
+			<p>Crucible v2.03 is out so let's have a quick chat about what is new. Campaign bug fixes, new Tau models and more!</p>		</div>
+	</div>
+			<div class="row rowcontent clear">
+				<a href="/mods/half-life-alyxexe/news/half-life-alyxexe" title="Half-Life-Alyx.exe" class="image"><img src="https://media.moddb.com/cache/images/articles/1/304/303618/crop_120x90/Alyx_thumb.jpg" alt="Half-Life-Alyx.exe"></a>
+				<div class="content">
+			 
+			<a href="/games/half-life-alyx" title="Half-Life: Alyx"><img src="https://media.moddb.com/images/games/1/73/72249/i.jpg" alt="Half-Life: Alyx" style="float: right; padding-left: 4px;" width="32" height="32"></a>
+			 
+			<h4><a href="/mods/half-life-alyxexe/news/half-life-alyxexe">Half-Life-Alyx.exe</a></h4>
+			<span class="date">
+				<time datetime="2022-03-22">Mar 22 2022</time>			</span>
+			<span class="subheading">
+				<a href="/mods/half-life-alyxexe" title="Mod">Half-Life-Alyx.exe</a>   			</span>
+			<p>Half-Life: Alyx is a return to the Half-Life series. It’s not a story of an impossible fight against a vicious alien race known as the Combine, set...</p>		</div>
+	</div>
+			<div class="row rowcontent clear">
+				<a href="/games/witchs-hut/news/devlog-012" title="Devlog #01" class="image"><img src="https://media.moddb.com/cache/images/articles/1/304/303824/crop_120x90/Screenshot_2022-03-22_223026.png" alt="Devlog #01"></a>
+				<div class="content">
+			 
+			<a href="/games/witchs-hut" title="Witch's Hut"><img src="https://media.moddb.com/images/games/1/79/78672/Screenshot_2022-03-22_222607.png" alt="Witch's Hut" style="float: right; padding-left: 4px;" width="32" height="32"></a>
+			 
+			<h4><a href="/games/witchs-hut/news/devlog-012">Devlog #01</a></h4>
+			<span class="date">
+				<time datetime="2022-03-22">Mar 22 2022</time>			</span>
+			<span class="subheading">
+				<a href="/games/witchs-hut" title="Game">Witch's Hut</a>   			</span>
+			<p>Welcome to the first devlog of our game Witch's Hut. These logs are intended to show our progress as well to talk about all the setbacks we encountered. </p>		</div>
+	</div>
+		<div class="row" style="text-align: right;">
+		<h4>
+			<a href="/articles/add">Post article</a> | <a href="/articles/page/2">More articles &gt;&gt;</a>		</h4>
+	</div>
+	</div>				<p class="viewbrowse" style="display: none; margin-top: 1em;">
+					No articles were found matching the criteria specified. We suggest you try the <a href="/articles">article list</a> with no filter applied, to browse all available. <a href="/articles/add">Post article</a> and help us achieve our mission of showcasing the best content from all developers. <a href="/members/register">Join now</a> to share your own content, we welcome creators and consumers alike and look forward to your comments.				</p>
+			</div>
+	
+					</div>
+	</div>
+</div><div class="column span-300 last"><div style="clear: both;"></div>
+<div class="nextmediabox">
+	<div class="supporter"><div class="DBsupporter" data-dfp-id="MODDB_MPU_1" data-dfp-sizes="300x250, 300x600" id="div-ga-MODDB_MPU_1" data-google-query-id="CPPTvMrr4PYCFaLhwAodceICuQ"><div id="google_ads_iframe_/43340684,1013459/MODDB_MPU_1_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/43340684,1013459/MODDB_MPU_1_0" name="google_ads_iframe_/43340684,1013459/MODDB_MPU_1_0" title="3rd party ad content" scrolling="no" marginwidth="0" marginheight="0" style="border: 0px none; vertical-align: bottom;" role="region" aria-label="Advertisement" tabindex="0" srcdoc="" data-google-container-id="2" data-load-complete="true" width="300" height="600" frameborder="0"></iframe></div></div></div> 
+</div>
+<div class="normalbox linksbox" id="menulinksmods">
+	<div class="normalcorner">
+		<div class="title">
+			 
+			<span class="options">
+				<a href="/mods/add/#modsform" class="addicon" title="Add mod">Add mod</a>			</span>
+			 
+			<span class="heading">Popular Mods</span>
+		</div>
+	</div>
+	<div class="inner">
+		<div class="body bodysimple">
+			<div class="tooltip"></div>
+			<div class="table tablerelated">
+				 
+				<div class="row rowbutton clear">
+										<a href="/mods" class="button">View All</a>
+										<a href="/mods/top" class="button buttonalt">Top Mods</a>
+									</div>
+								<div class="row clear">
+										<a href="/mods/stalker-anomaly" title="S.T.A.L.K.E.R. Anomaly" class="image"><img src="https://media.moddb.com/cache/images/mods/1/37/36728/crop_120x90/Anomaly-Logo-2.jpg" alt="S.T.A.L.K.E.R. Anomaly"></a>
+										<div class="content">
+						<a href="/mods/stalker-anomaly" class="heading">S.T.A.L.K.E.R. Anomaly</a>
+						<span class="summary">
+							<a href="/games/stalker-call-of-pripyat">S.T.A.L.K.E.R.: Call of Pripyat</a> 						</span>
+					</div>
+				</div>
+								<div class="row clear">
+										<a href="/mods/generals-war-commanders" title="Generals Project Raptor: War Commanders" class="image"><img src="https://media.moddb.com/cache/images/mods/1/42/41496/crop_120x90/Install_Final.2.jpg" alt="Generals Project Raptor: War Commanders"></a>
+										<div class="content">
+						<a href="/mods/generals-war-commanders" class="heading">Generals Project Raptor: War Commanders</a>
+						<span class="summary">
+							<a href="/games/cc-generals-zero-hour">C&amp;C: Generals Zero Hour</a> 						</span>
+					</div>
+				</div>
+								<div class="row clear">
+										<a href="/mods/brutal-doom" title="Brutal Doom" class="image"><img src="https://media.moddb.com/cache/images/mods/1/20/19741/crop_120x90/Brutal_Doom_Cover.png" alt="Brutal Doom"></a>
+										<div class="content">
+						<a href="/mods/brutal-doom" class="heading">Brutal Doom</a>
+						<span class="summary">
+							<a href="/games/doom">Doom</a> 						</span>
+					</div>
+				</div>
+								<div class="row clear">
+										<a href="/mods/new-vegas-weapons-fallout-4-edition" title="New Vegas Weapons (Fallout 4 Edition)" class="image"><img src="https://media.moddb.com/cache/images/mods/1/31/30543/crop_120x90/Cover.4.jpg" alt="New Vegas Weapons (Fallout 4 Edition)"></a>
+										<div class="content">
+						<a href="/mods/new-vegas-weapons-fallout-4-edition" class="heading">New Vegas Weapons (Fallout 4 Edition)</a>
+						<span class="summary">
+							<a href="/games/fallout-4">Fallout 4</a> 						</span>
+					</div>
+				</div>
+								<div class="row clear">
+										<a href="/mods/the-horse-lords-a-total-modification-for-bfme" title="Age of the Ring" class="image"><img src="https://media.moddb.com/cache/images/mods/1/23/22582/crop_120x90/aotr_moddb_image_new.png" alt="Age of the Ring"></a>
+										<div class="content">
+						<a href="/mods/the-horse-lords-a-total-modification-for-bfme" class="heading">Age of the Ring</a>
+						<span class="summary">
+							<a href="/games/battle-for-middle-earth-ii-rise-of-the-witch-king">Battle for Middle-earth II: Rise of the Witch King</a> 						</span>
+					</div>
+				</div>
+				 
+			</div>
+		</div>
+	</div>
+</div>
+<div class="normalbox linksbox" id="menulinksgames">
+	<div class="normalcorner">
+		<div class="title">
+			 
+			<span class="options">
+				<a href="/games/add/#gamesform" class="addicon" title="Add game">Add game</a>			</span>
+			 
+			<span class="heading">Popular Games</span>
+		</div>
+	</div>
+	<div class="inner">
+		<div class="body bodysimple">
+			<div class="tooltip"></div>
+			<div class="table tablerelated">
+				 
+				<div class="row rowbutton clear">
+										<a href="/games" class="button">View All</a>
+										<a href="/games/top" class="button buttonalt">Top Games</a>
+									</div>
+								<div class="row clear">
+										<a href="/games/mount-blade-warband" title="Mount &amp; Blade: Warband" class="image"><img src="https://media.moddb.com/cache/images/games/1/14/13649/crop_120x90/mb69.jpg" alt="Mount &amp; Blade: Warband"></a>
+										<div class="content">
+						<a href="/games/mount-blade-warband" class="heading">Mount &amp; Blade: Warband</a>
+						<span class="summary">
+							Role Playing 						</span>
+					</div>
+				</div>
+								<div class="row clear">
+										<a href="/games/cc-generals-zero-hour" title="C&amp;C: Generals Zero Hour" class="image"><img src="https://media.moddb.com/cache/images/games/1/1/184/crop_120x90/preview.jpg" alt="C&amp;C: Generals Zero Hour"></a>
+										<div class="content">
+						<a href="/games/cc-generals-zero-hour" class="heading">C&amp;C: Generals Zero Hour</a>
+						<span class="summary">
+							Real Time Strategy 						</span>
+					</div>
+				</div>
+								<div class="row clear">
+										<a href="/games/half-life" title="Half-Life" class="image"><img src="https://media.moddb.com/cache/images/games/1/1/1/crop_120x90/hl1_thumb.jpg" alt="Half-Life"></a>
+										<div class="content">
+						<a href="/games/half-life" class="heading">Half-Life</a>
+						<span class="summary">
+							First Person Shooter 						</span>
+					</div>
+				</div>
+								<div class="row clear">
+										<a href="/games/doom-ii" title="Doom II" class="image"><img src="https://media.moddb.com/cache/images/games/1/1/172/crop_120x90/profile.jpg" alt="Doom II"></a>
+										<div class="content">
+						<a href="/games/doom-ii" class="heading">Doom II</a>
+						<span class="summary">
+							First Person Shooter 						</span>
+					</div>
+				</div>
+								<div class="row clear">
+										<a href="/games/mount-blade-ii-bannerlord" title="Mount &amp; Blade II: Bannerlord" class="image"><img src="https://media.moddb.com/cache/images/games/1/20/19261/crop_120x90/p.jpg" alt="Mount &amp; Blade II: Bannerlord"></a>
+										<div class="content">
+						<a href="/games/mount-blade-ii-bannerlord" class="heading">Mount &amp; Blade II: Bannerlord</a>
+						<span class="summary">
+							Role Playing 						</span>
+					</div>
+				</div>
+				 
+			</div>
+		</div>
+	</div>
+</div>
+ 
+<div style="clear: both;"></div>
+<div class="nextmediabox">
+	<div class="supporter"><div class="lazyloaded" data-dfp-id="MODDB_MPU_2" data-dfp-sizes="300x250, 300x600" id="div-ga-MODDB_MPU_2" data-google-query-id="CLL1v8rr4PYCFURH1QodxEYOPw"><div id="google_ads_iframe_/43340684,1013459/MODDB_MPU_2_0__container__" style="border: 0pt none; display: inline-block; width: 300px; height: 600px;"><iframe style="border: 0px none; vertical-align: bottom;" src="https://04153462f436ec0eb3fb4bce359e1e81.safeframe.googlesyndication.com/safeframe/1-0-38/html/container.html" id="google_ads_iframe_/43340684,1013459/MODDB_MPU_2_0" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" data-is-safeframe="true" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" role="region" aria-label="Advertisement" tabindex="0" data-google-container-id="3" data-load-complete="true" width="300" height="600" frameborder="0"></iframe></div></div></div> 
+</div>
+ <div class="normalbox linksbox" id="menulinksjobs">
+	<div class="normalcorner">
+		<div class="title">
+			 
+			<span class="options">
+				<a href="/jobs/add/#jobsform" class="addicon" title="Add job">Add job</a>			</span>
+			 
+			<span class="heading">Jobs</span>
+		</div>
+	</div>
+	<div class="inner">
+		<div class="body bodysimple">
+			<div class="tooltip"></div>
+			<div class="table tablemenu">
+				 
+				<div class="row rowbutton clear">
+										<a href="/jobs" class="button">View All</a>
+										<a href="/jobs/add" class="button buttonalt">Post Job Ad</a>
+									</div>
+				 
+				<div class="row clear">
+					<h5>
+						Glossbird 					</h5>
+					<span class="summary"><a href="/jobs/backend-developer-for-cozy-fitness-mobile-game">Backend Developer for Cozy Fitness Mobile Game</a></span>
+				</div>
+				 
+				<div class="row clear">
+					<h5>
+						Coded Snake 					</h5>
+					<span class="summary"><a href="/jobs/3d-character-rigger-needed-for-rpg-game-and-blender-vtuber-side-project">3D Character Rigger needed for RPG Game and Blender VTuber Side Project</a></span>
+				</div>
+				 
+				<div class="row clear">
+					<h5>
+						Funovus 					</h5>
+					<span class="summary"><a href="/jobs/technical-designer1">Technical Designer</a></span>
+				</div>
+				 
+				<div class="row clear">
+					<h5>
+						Heath Games 					</h5>
+					<span class="summary"><a href="/jobs/3d-artistanimatormodel-hacker">[Hobby] 3D Artist/Animator/Model Hacker</a></span>
+				</div>
+				 
+				<div class="row clear">
+					<h5>
+						DREAM LABS 					</h5>
+					<span class="summary"><a href="/jobs/game-developer-artist-required-for-sidescroller">Game Developer &amp; Artist required for sidescroller</a></span>
+				</div>
+				 
+				<div class="row clear">
+					<h5>
+						Anywhere 					</h5>
+					<span class="summary"><a href="/jobs/paidprogrammerunitygodotgms2ccetc-seeking-programmer-for-2d-pixel">[Paid][Programmer][Unity/Godot/GMS2/C#/C++/etc.] Seeking Programmer for 2D Pixel</a></span>
+				</div>
+				 
+			</div>
+		</div>
+	</div>
+</div>
+<div class="normalbox linksbox" id="menulinksforum">
+	<div class="normalcorner">
+		<div class="title">
+			 
+			<span class="heading">Forum Discussion</span>
+		</div>
+	</div>
+	<div class="inner">
+		<div class="body bodysimple">
+			<div class="tooltip"></div>
+			<div class="table tablemenu">
+				 
+				<div class="row rowbutton clear">
+										<a href="/forum" class="button">View Forums</a>
+										<a href="/forum/board/active-topics" class="button buttonalt">Active Topics</a>
+									</div>
+				 
+				<div class="row clear">
+					<h5>
+						<time datetime="2022-03-25T05:43:36+00:00">2hours ago</time> 					</h5>
+					<span class="summary"><a href="/forum/thread/i-have-an-idea-for-a-new-computer-game/#1116572">I have an idea for a new computer game......</a></span>
+				</div>
+				 
+				<div class="row clear">
+					<h5>
+						<time datetime="2022-03-25T04:29:22+00:00">3hours ago</time> 					</h5>
+					<span class="summary"><a href="/forum/thread/how-to-make-fixed-camera-angles-in-udk1">how to make fixed camera angles in UDK?</a></span>
+				</div>
+				 
+				<div class="row clear">
+					<h5>
+						<time datetime="2022-03-24T19:29:51+00:00">12hours ago</time> 					</h5>
+					<span class="summary"><a href="/forum/thread/androidfree-stick-em-up">[Android][Free] Stick Em Up</a></span>
+				</div>
+				 
+				<div class="row clear">
+					<h5>
+						<time datetime="2022-03-24T19:21:52+00:00">13hours ago</time> 					</h5>
+					<span class="summary"><a href="/forum/thread/for-hire-gameplay-programmer-looking-for-a-project">[For Hire] Gameplay Programmer looking for a project </a></span>
+				</div>
+				 
+				<div class="row clear">
+					<h5>
+						<time datetime="2022-03-24T18:16:14+00:00">14hours ago</time> 					</h5>
+					<span class="summary"><a href="/forum/thread/doing-some-research-for-developing-a-mod-friendly-game-console/#1116566">Doing some research for developing a mod-friendly game console</a></span>
+				</div>
+				 
+				<div class="row clear">
+					<h5>
+						<time datetime="2022-03-24T10:02:54+00:00">22hours ago</time> 					</h5>
+					<span class="summary"><a href="/forum/thread/newbie-introduction-thread/page/89/#1116563">Newbie Introduction Thread</a></span>
+				</div>
+				 
+			</div>
+		</div>
+	</div>
+</div>
+	<div class="normalbox pollbox" id="pollsviewer">
+		<div class="normalcorner">
+			<div class="title">
+								<span class="options">
+					<a href="/messages/ajax/action/?action=report&amp;sitearea=polls&amp;siteareaid=2866" class="reporticon 44825bfc951a8ff5714f8bb710efda3freport" rel="nofollow" title="Report">Report</a>				</span>
+								<span class="heading">Poll</span>
+			</div>
+		</div>
+		<div class="inner">
+			<div class="body clear">
+								<div class="tooltip"></div>
+				
+				<div class="poll">
+					<p class="question">Would you buy ModDB merch (shirts, mugs, etc)?</p><form action="https://www.moddb.com/polls/would-you-buy-moddb-merch-shirts-mugs-etc" method="post"><input type="hidden" name="poll" value="2866">					<div class="baroption clear">
+						<input type="radio" name="option" value="12264" id="pollopt12264"> 
+						<label for="pollopt12264">Yes, and also IndieDB/DBolical merch</label> 
+					</div>
+										<div class="baroption clear">
+						<input type="radio" name="option" value="12265" id="pollopt12265"> 
+						<label for="pollopt12265">Yes, but only simple items like shirts or mugs</label> 
+					</div>
+										<div class="baroption clear">
+						<input type="radio" name="option" value="12266" id="pollopt12266"> 
+						<label for="pollopt12266">Maybe, if the merch is reasonably cheap</label> 
+					</div>
+										<div class="baroption clear">
+						<input type="radio" name="option" value="12267" id="pollopt12267"> 
+						<label for="pollopt12267">No, I don't tend to buy branded merchandise</label> 
+					</div>
+					<input type="submit" name="" value="Vote!" class="button"></form>				</div>
+			</div>
+		</div>
+	</div>
+<div class="normalbox linksbox" id="menulinksdownloads">
+	<div class="normalcorner">
+		<div class="title">
+			 
+			<span class="options">
+				<a href="/downloads/add/#downloadsform" class="addicon" title="Add download">Add download</a>			</span>
+			 
+			<span class="heading">Popular Files</span>
+		</div>
+	</div>
+	<div class="inner">
+		<div class="body bodysimple">
+			<div class="tooltip"></div>
+			<div class="table tablerelated">
+								<div class="row clear">
+										<a href="/mods/stalker-anomaly/downloads/stalker-anomaly-151" title="S.T.A.L.K.E.R. Anomaly 1.5.1" class="image"><img src="https://media.moddb.com/cache/images/downloads/1/208/207799/crop_120x90/Anomaly-1.5.1-Logo.png" alt="S.T.A.L.K.E.R. Anomaly 1.5.1"></a>
+										<div class="content">
+						<a href="/mods/stalker-anomaly/downloads/stalker-anomaly-151" class="heading">S.T.A.L.K.E.R. Anomaly 1.5.1</a>
+						<span class="summary">
+							Full Version 8.75gb 						</span>
+					</div>
+				</div>
+								<div class="row clear">
+										<a href="/mods/brutal-doom/downloads/brutal-doom-v21-beta" title="Brutal Doom v21" class="image"><img src="https://media.moddb.com/cache/images/downloads/1/96/95667/crop_120x90/moddb_reader.jpg" alt="Brutal Doom v21"></a>
+										<div class="content">
+						<a href="/mods/brutal-doom/downloads/brutal-doom-v21-beta" class="heading">Brutal Doom v21</a>
+						<span class="summary">
+							Full Version 77.11mb 						</span>
+					</div>
+				</div>
+								<div class="row clear">
+										<a href="/mods/stalker-anomaly/addons/boomsticks-and-sharpsticks" title="Boomsticks and Sharpsticks" class="image"><img src="https://media.moddb.com/cache/images/downloads/1/183/182679/crop_120x90/31-Aug-2020.gif" alt="Boomsticks and Sharpsticks"></a>
+										<div class="content">
+						<a href="/mods/stalker-anomaly/addons/boomsticks-and-sharpsticks" class="heading">Boomsticks and Sharpsticks</a>
+						<span class="summary">
+							Weapons Model 3.4gb 						</span>
+					</div>
+				</div>
+								<div class="row clear">
+										<a href="/mods/mental-omega/downloads/mental-omega-330" title="Mental Omega 3.3.0" class="image"><img src="https://media.moddb.com/cache/images/downloads/1/116/115776/crop_120x90/moddb-thumb.png" alt="Mental Omega 3.3.0"></a>
+										<div class="content">
+						<a href="/mods/mental-omega/downloads/mental-omega-330" class="heading">Mental Omega 3.3.0</a>
+						<span class="summary">
+							Full Version 403.36mb 						</span>
+					</div>
+				</div>
+								<div class="row clear">
+										<a href="/mods/stalker-anomaly/addons/food-drug-and-drinks-animations-reuploaded" title="Food, drug and drinks animations  v0.8.8i_h2 [1.5.1]" class="image"><img src="https://media.moddb.com/cache/images/downloads/1/210/209819/crop_120x90/ezgif-1-2edea64e732e.gif" alt="Food, drug and drinks animations  v0.8.8i_h2 [1.5.1]"></a>
+										<div class="content">
+						<a href="/mods/stalker-anomaly/addons/food-drug-and-drinks-animations-reuploaded" class="heading">Food, drug and drinks animations  v0.8.8i_h2 [1.5.1]</a>
+						<span class="summary">
+							Models Pack 93.73mb 						</span>
+					</div>
+				</div>
+				 
+			</div>
+		</div>
+	</div>
+</div>
+ 
+<div style="clear: both;"></div>
+<div class="nextmediabox footernextmediabox">
+	<div class="supporter"><div class="lazyload" data-dfp-id="MODDB_MPU_3" data-dfp-sizes="300x250" id="div-ga-MODDB_MPU_3"></div>
+<script>
+$(document).ready(function() {
+if($(".column.span-300").length) {
+	columnBottom = $(".column.span-300").position().top + $(".column.span-300").outerHeight(true) + ($(".column.span-300 .DBsupporter").length*600) + ($(".column.span-300 .lazyload").length*250);
+	footerTop = $("footer").position().top - 250;
+	windowSpacing = $(window).height() + 250;
+	placements = footerTop > columnBottom ? Math.floor((footerTop - columnBottom) / windowSpacing) : 0;
+	
+	for(x = 1; x <= placements; x++) {
+		$("<div class=\"lazyload\" data-dfp-id=\"ModDB_Lazy_load_HP_MPU\" data-dfp-sizes=\"300x250\" id=\"div-ga-MODDB_MPU_"+(x+3)+"\" style=\"clear: both; margin-top: "+windowSpacing+"px; text-align: center;\"></div>").appendTo(".column.span-300");
+	}
+}
+});
+</script></div> 
+</div>
+	<div class="normalbox menubox">
+		<div class="normalcorner">
+			<div class="title">
+								<span class="heading">Mod SDK &amp; Community</span>
+			</div>
+		</div>
+		<div class="inner">
+			<div class="body bodysimple">
+								<div class="tooltip"></div>
+																<div class="table tablemenu">
+										<div class="row clear" style="padding-top: 1em; padding-bottom: 0; background: #fff;">
+						Tap into your communities creativity with <a href="https://mod.io" target="_blank">mod.io, a cross-platform mod SDK</a> you can integrate into your game and tools to enable the sharing of mods on all stores and platforms					</div>
+										<div class="row clear" style="padding: 0;">
+						<div style="text-align: center;"><a href="https://mod.io" title="Cross Platform Mod API and SDK for game developers" target="_blank"><img src="https://media.moddb.com/images/members/1/1/1/profile/modio_menu_bottom.png" alt="Mod API"></a></div>					</div>
+									</div>
+							</div>
+		</div>
+	</div>
+</div> 	<div style="clear: both; height: 1em;"></div><!-- IE6 Hack -->
+</div>
+
+<footer><div id="footer">
+	<div class="content">
+		<a href="https://www.dbolical.com" class="network dbolical" target="_blank" title="DBolical - Entertainment Euphoria"></a>
+		<span class="terms"><a href="/terms-of-use">Terms of Use</a> | <a href="/privacy-policy" style="padding-right: 0">Privacy Policy</a></span>
+		<span class="links"><a href="/blog">Blog</a> | <a href="/about">About</a> | <a href="/advertise">Advertise</a> | <a href="/contact">Contact</a> | <a href="/mods/add">Submit Mod</a> | <a href="https://mod.io" target="_blank" title="Cross Platform Mod support for game developers">Mod SDK for Games</a> | <a href="https://modularity.games" target="_blank" title="Publishing for mod friendly games">Publishing</a> | <a href="/sitemap">Site Map</a></span>
+		<span class="copyright">© 2002 - 2022 <a href="https://www.dbolical.com" target="_blank">DBolical Pty Ltd.</a>&nbsp; All Rights Reserved.&nbsp; <a href="/members/online">5838 modders</a>.</span>
+	</div>
+</div></footer>
+</div>
+
+<script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Mod DB","url":"https://www.moddb.com","logo":"https://static.moddb.com/cutoff/images/default/splash.png","sameAs":["https://www.facebook.com/moddb","https://twitter.com/moddb","https://github.com/dbolical"]},[]]</script>
+<script src="https://static.moddb.com/html/external/min/index.php?g=js&amp;18"></script>
+<script src="https://static.moddb.com/html/external/min/index.php?g=jsgn&amp;1"></script><script src="https://static.moddb.com/html/external/min/index.php?b=cutoff&amp;f=js/jquery.cycle.lite.js&amp;1"></script>
+<script>
+$(document).ready(function() { $("#togglelogin").click(function() { 
+					if($("#searchbox .search").is(":visible")) {
+						$("#searchbox .arrow").html("&nbsp;&#187;");
+						$("#searchbox .search").fadeOut(function() { $("#searchbox .login").show(); });
+					} else {
+						$("#searchbox .arrow").html("&nbsp;");
+						$("#searchbox .login").fadeOut(function() { $("#searchbox .search").show(); });
+					}
+					return false;
+				});
+$("#sitesearch").suggestClick("https://www.moddb.com/html/scripts/autocomplete.php?a=search&p=home",{resultsClass: "suggest_search", positionIn: "#searchbox", limit: 10});
+
+				var custom_variables = {};
+				custom_variables["url"] = document.location.pathname.substr(0,40);
+				custom_variables["channel"] = "mods";
+				custom_variables["source"] = "index";
+				
+				custom_variables["tags"] = ["pc"];
+				
+				
+				window.AdScript = new GNAdScript(".DBsupporter", {
+				    custom_variables: custom_variables,
+				    lazyload_selector: ".lazyload",
+				    lazyload_spacer:450,
+				    showNonPersonalisedAds: "false",
+				    childPublisher: "1013459"
+				});
+				window.AdScript.init();
+
+		if(typeof isAB === "undefined") {
+			yesAB(true);
+		} else {
+			isAB.on(true, yesAB).onNotDetected(noAB);
+		}
+
+		function yesAB(unknown) {
+			if(unknown) {
+				gaAB("send", "event", "Adblock", "Undefined", "true", 1);
+			} else {
+				height = Math.floor((Math.random() * 5)) < 1 ? 600 : 250;
+				gaAB("send", "event", "Adblock", "Blocked", "true", 1);
+
+				$("div.nextmediaboxtop,div.footermediabox").remove();
+				$("div.nextmediabox div.supporter").html("<iframe src=\"https://www.moddb.com/media/block/300/"+height+"?sad=t&t=1648196806\" width=300 height="+height+" frameborder=0></iframe>");
+				$("div.headermediabox div.supporter").html("<iframe src=\"https://www.moddb.com/media/block/728/90?sad=t&t=1648196806\" width=728 height=90 frameborder=0></iframe>");
+			}
+		}
+	
+		function noAB() {
+			gaAB("send", "event", "Adblock", "Unblocked", "false", 1);
+		}
+		
+		function gaAB(var1, var2, var3, var4, var5, var6) {
+			if(typeof ga === "function") {
+				ga(var1, var2, var3, var4, var5, var6);
+			}
+		}
+
+				$("div.rotator a.link").show();
+				$("#rotatorholder").cycle({
+					timeout: 5000,
+					speed: 1000,
+					pause: 1,
+					next: "#rotatornext",
+					prev: "#rotatorprev",
+					before: onBefore,
+					after: onAfter
+				});
+
+				function onBefore(curr, next, opts) {
+					$("#rotator"+(opts.nextSlide > opts.currSlide ? "next" : "prev")).addClass((opts.nextSlide > opts.currSlide ? "next" : "prev")+"on");
+					
+					bg = $(this).find(".rotatorcorner");
+					
+					if(bg.data("bg") && bg.data("bg").length > 0) {
+						bg.css("background-image","url("+bg.data("bg")+")").removeData("bg");
+					}
+				}
+
+				function onAfter() {
+					$("#rotatornext").removeClass("nexton");
+					$("#rotatorprev").removeClass("prevon");
+				}
+
+				viewBrowse = function(currentoption, response) {
+					if(response["success"]) {
+						if(response["labels"]) {
+							for (i in response["labels"]) {
+								currentoption.parent().find("."+i+"uniqueicon").attr("title", response["labels"][i]).html(response["labels"][i]).change();
+							}
+						}	
+					
+						if(response["action"] == "pin" && response["pinned"]) {
+							currentoption.closest(".row").hide().prependTo(currentoption.closest(".table")).fadeIn();
+						} else if(response["action"] == "delete") {
+							if(currentoption.closest(".row").next(".row").hasClass("rowcontentnext")) {
+								currentoption.closest(".row").next(".row").remove();
+							}
+							currentoption.closest(".row").slideUp(400, function(){$(this).remove();});
+						} else if(response["action"] == "ban") {
+							if(currentoption.text() == "Ban") {
+								currentoption.closest(".row").find(".statusbox").removeClass("statusboxbad");
+							} else {
+								currentoption.closest(".row").find(".statusbox").addClass("statusboxbad");
+							}
+						}
+					}
+				};
+$(".44825bfc951a8ff5714f8bb710efda3freport").saveUpdate("report", false);
+$("a.thickbox").click(function() { $.colorbox({href:$(this).attr("href"), rel:$(this).attr("rel"), open:true, onOpen:function(){ $(".nextmediabox").hide(); }, onClosed:function(){ $(".nextmediabox").show(); }}); return false; });
+ });
+</script>
+<script>
+var _comscore = _comscore || [];
+_comscore.push({ c1: "2", c2: "8518622" });
+(function() {
+var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+el.parentNode.insertBefore(s, el);
+})();
+</script>
+<noscript><img src="https://b.scorecardresearch.com/p?c1=2&c2=8518622&cv=2.0&cj=1" height="1" width="1" alt="CS" /></noscript>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-104975-2', 'auto');
+ga('require', 'linkid', 'linkid.js');
+ga('send', 'pageview');
+</script><iframe src="https://04153462f436ec0eb3fb4bce359e1e81.safeframe.googlesyndication.com/safeframe/1-0-38/html/container.html" style="visibility: hidden; display: none;"></iframe>
+ 
+<div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button id="cboxPrevious"></button><button id="cboxNext"></button><button id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div><button id="cboxClose"></button></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div></div><iframe src="https://www.google.com/recaptcha/api2/aframe" style="display: none;" width="0" height="0"></iframe></body></html>

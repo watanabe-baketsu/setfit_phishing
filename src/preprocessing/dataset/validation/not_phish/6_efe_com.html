@@ -1,0 +1,903 @@
+<html style="" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" lang="es"><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="distribution" content="global"><meta name="yandex-verification" content="7e8d2daf8f10b473"><meta name="dailymotion-domain-verification" content="dmuopm4wv6isyjeg0"><link rel="dns-prefetch" href="//www.efe.com"><link rel="dns-prefetch" href="//estaticos.efe.com"><title>
+	Agencia EFE
+</title>
+
+<script src="https://rules.quantcount.com/rules-p-KKvGK-B5qD0pq.js" async=""></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-GJSEWV8NC0&amp;l=dataLayer&amp;cx=c"></script><script async="" type="text/javascript" src="https://www.googletagservices.com/tag/js/gpt.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-M234NTD"></script><script src="https://secure.quantserve.com/quant.js" async="" type="text/javascript"></script><script async="" type="text/javascript" src="https://quantcast.mgr.consensu.org/tcfv2/cmp2.js?referer=www.efe.com"></script><script async="" type="text/javascript" src="https://quantcast.mgr.consensu.org/choice/KKvGK-B5qD0pq/www.efe.com/choice.js"></script><script type="text/javascript" async="true">
+    (function () {
+        var host = window.location.hostname;
+        var element = document.createElement('script');
+        var firstScript = document.getElementsByTagName('script')[0];
+        var url = 'https://quantcast.mgr.consensu.org'
+            .concat('/choice/', 'KKvGK-B5qD0pq', '/', host, '/choice.js')
+        var uspTries = 0;
+        var uspTriesLimit = 3;
+        element.async = true;
+        element.type = 'text/javascript';
+        element.src = url;
+
+        firstScript.parentNode.insertBefore(element, firstScript);
+
+        function makeStub() {
+            var TCF_LOCATOR_NAME = '__tcfapiLocator';
+            var queue = [];
+            var win = window;
+            var cmpFrame;
+
+            function addFrame() {
+                var doc = win.document;
+                var otherCMP = !!(win.frames[TCF_LOCATOR_NAME]);
+
+                if (!otherCMP) {
+                    if (doc.body) {
+                        var iframe = doc.createElement('iframe');
+
+                        iframe.style.cssText = 'display:none';
+                        iframe.name = TCF_LOCATOR_NAME;
+                        doc.body.appendChild(iframe);
+                    } else {
+                        setTimeout(addFrame, 5);
+                    }
+                }
+                return !otherCMP;
+            }
+
+            function tcfAPIHandler() {
+                var gdprApplies;
+                var args = arguments;
+
+                if (!args.length) {
+                    return queue;
+                } else if (args[0] === 'setGdprApplies') {
+                    if (
+                        args.length > 3 &&
+                        args[2] === 2 &&
+                        typeof args[3] === 'boolean'
+                    ) {
+                        gdprApplies = args[3];
+                        if (typeof args[2] === 'function') {
+                            args[2]('set', true);
+                        }
+                    }
+                } else if (args[0] === 'ping') {
+                    var retr = {
+                        gdprApplies: gdprApplies,
+                        cmpLoaded: false,
+                        cmpStatus: 'stub'
+                    };
+
+                    if (typeof args[2] === 'function') {
+                        args[2](retr);
+                    }
+                } else {
+                    queue.push(args);
+                }
+            }
+
+            function postMessageEventHandler(event) {
+                var msgIsString = typeof event.data === 'string';
+                var json = {};
+
+                try {
+                    if (msgIsString) {
+                        json = JSON.parse(event.data);
+                    } else {
+                        json = event.data;
+                    }
+                } catch (ignore) { }
+
+                var payload = json.__tcfapiCall;
+
+                if (payload) {
+                    window.__tcfapi(
+                        payload.command,
+                        payload.version,
+                        function (retValue, success) {
+                            var returnMsg = {
+                                __tcfapiReturn: {
+                                    returnValue: retValue,
+                                    success: success,
+                                    callId: payload.callId
+                                }
+                            };
+                            if (msgIsString) {
+                                returnMsg = JSON.stringify(returnMsg);
+                            }
+                            event.source.postMessage(returnMsg, '*');
+                        },
+                        payload.parameter
+                    );
+                }
+            }
+
+            while (win) {
+                try {
+                    if (win.frames[TCF_LOCATOR_NAME]) {
+                        cmpFrame = win;
+                        break;
+                    }
+                } catch (ignore) { }
+
+                if (win === window.top) {
+                    break;
+                }
+                win = win.parent;
+            }
+            if (!cmpFrame) {
+                addFrame();
+                win.__tcfapi = tcfAPIHandler;
+                win.addEventListener('message', postMessageEventHandler, false);
+            }
+        };
+
+        makeStub();
+
+        var uspStubFunction = function () {
+            var arg = arguments;
+            if (typeof window.__uspapi !== uspStubFunction) {
+                setTimeout(function () {
+                    if (typeof window.__uspapi !== 'undefined') {
+                        window.__uspapi.apply(window.__uspapi, arg);
+                    }
+                }, 500);
+            }
+        };
+
+        var checkIfUspIsReady = function () {
+            uspTries++;
+            if (window.__uspapi === uspStubFunction && uspTries < uspTriesLimit) {
+                console.warn('USP is not accessible');
+            } else {
+                clearInterval(uspInterval);
+            }
+        };
+
+        if (typeof window.__uspapi === 'undefined') {
+            window.__uspapi = uspStubFunction;
+            var uspInterval = setInterval(checkIfUspIsReady, 6000);
+        }
+    })();
+</script>
+
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2.0">
+<meta name="organization" content="Agencia Efe">
+<link href="/efe/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<link href="/efe/images/logos/apple-touch-icon.png " rel="apple-touch-icon">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" media="all">
+<link href="//fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic" rel="stylesheet" media="all">
+<link href="//fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,700,300" rel="stylesheet" media="all">
+<link href="/efe/bundles/comunes-css?v=7hB049K6Wq7K3SJWTH4nPNeJfTrPTXtK6vOoku3_6HY1" rel="stylesheet" media="all">
+<script src="/efe/bundles/modernizr?v=uWvhUYCJ8N40AOzLlCI_Em6o6oq4ysgXZXbpHebcjp81"></script><style type="text/css"> .qc-cmp-button.qc-cmp-secondary-button:hover {    background-color: #368bd6 !important;    border-color: transparent !important;  }  .qc-cmp-button.qc-cmp-secondary-button:hover {    color: #ffffff !important;  }  .qc-cmp-button.qc-cmp-secondary-button {    color: #368bd6 !important;  }  .qc-cmp-button.qc-cmp-secondary-button {    background-color: #eee !important;    border-color: transparent !important;  } </style>
+<script src="/efe/bundles/jquery?v=Ze8b4pfKya06gTUMsYGs5vLeaKb5zNFejCI6PYKd9Cc1"></script>
+
+<script>
+            // Google Analitycs y TFCv2  https://support.google.com/analytics/answer/10022331?hl=es
+            window['gtag_enable_tcf_support'] = true;
+
+            (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer','GTM-M234NTD');</script>
+
+
+<script type="text/javascript">
+// <!--
+
+    var googletag = googletag || {};googletag.cmd = googletag.cmd || [];
+    (function () {
+        var gads = document.createElement('script');gads.async = true; gads.type = 'text/javascript';
+        var useSSL = 'https:' == document.location.protocol;gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+        var node = document.getElementsByTagName('script')[0];node.parentNode.insertBefore(gads, node);
+    })();
+
+    googletag.cmd.push(function () {
+        var mapaMegaBanner = googletag.sizeMapping().
+            addSize([991, 0], [[980, 90], [990, 90], [728, 90]]).
+            addSize([768, 0], [[728, 90], [1, 1]]).
+            addSize([0, 0], [[320, 50], [320, 100]]).
+            build();
+
+
+    googletag.defineSlot('/8613/dqa.efe.com/homepage/roba_1',[[300,250],[300,600]],'div-gpt-ad-efe-4005748').addService(googletag.pubads());
+
+    googletag.defineSlot('/8613/dqa.efe.com/homepage/roba_2',[[300,250],[300,600]],'div-gpt-ad-efe-4006480').addService(googletag.pubads());
+
+    googletag.defineSlot('/8613/dqa.efe.com/homepage',[[990,90],[980,90],[728,90]],'div-gpt-ad-efe-4005747').defineSizeMapping(mapaMegaBanner).addService(googletag.pubads());
+
+
+    googletag.pubads().setTargeting ('edicion','espana');googletag.pubads().setTargeting ('tipopag','portada');googletag.pubads().setTargeting ('slugcompleto','|espana');    
+     
+    // Arranque condicionado al CMP(GDPR)
+    googletag.pubads().disableInitialLoad();
+    googletag.enableServices();
+     
+    });
+     
+    // -->
+
+    // CMP: Añade enganche del estado GDPR
+    if (window.__tcfapi)
+    {
+        // Atención. Se filtra para Google Vendor ID
+        window.__tcfapi('addEventListener', 2, function (tcData, success)
+        {            
+            if (success) {
+                if (tcData.gdprApplies) {
+
+                    var hasDeviceStorageAndAccessConsent = tcData.purpose.consents[1] || false; // Purpose 1? Refers to the storage and/or access of information on a device.                    
+                    var hasPersonalizedProfileConsent = tcData.purpose.consents[3] || false;    // Purpose 3? Create a personalised ads profile
+                    var hasPersonalizedAdsConsent = tcData.purpose.consents[4] || false;        // Purpose 4? Select personalised ads
+                    var hasGoogleAdvertisingProductsConsent = tcData.vendor.consents[755] || false; //  Google Vendor is active?
+                    var nonPersonalizedAds = (hasPersonalizedProfileConsent && hasPersonalizedAdsConsent) ? 0 : 1;
+
+                    if (hasDeviceStorageAndAccessConsent) {
+
+                        (adsbygoogle = window.adsbygoogle || []).requestNonPersonalizedAds = nonPersonalizedAds;
+
+                        if ((tcData.eventStatus === 'tcloaded' || tcData.eventStatus === 'useractioncomplete') && hasGoogleAdvertisingProductsConsent) {
+                            if (typeof googletag != "undefined") {                                
+                                googletag.cmd.push(function () {
+                                    googletag.pubads().setRequestNonPersonalizedAds(nonPersonalizedAds);
+                                    googletag.pubads().refresh();
+                                });
+                            }                           
+                            (adsbygoogle = window.adsbygoogle || []).pauseAdRequests = 0;                            
+
+                            console.log('Debug(755): ', tcData.eventStatus);
+                           // console.log(tcData);
+
+                        } else {
+                            (adsbygoogle = window.adsbygoogle || []).pauseAdRequests = 1;
+                            console.log('Debug(755): ', tcData.eventStatus);
+                        }
+                    }
+
+                } else {
+
+                /* gdpr does not apply */
+
+                    // Most likely you want to make the ad request in this case 
+                    if (typeof googletag != "undefined") {
+                        googletag.cmd.push(function () {
+                            googletag.pubads().refresh();
+                        });
+                    }
+
+                    // adsense
+                    (adsbygoogle = window.adsbygoogle || []).pauseAdRequests = 0;
+                    // print a debug message to the console 
+                    console.log('Debug: gdpr doesn\'t apply');
+                }
+            }
+        },[755]);   // Google Vendor ID
+    }
+</script>
+
+<link href="http://www.efe.com/efe/espana/1/rss" title="RSS - Edición España" rel="alternate" type="application/rss+xml"><link href="http://www.efe.com/" rel="canonical"><meta property="twitter:site" content="@EFEnoticias"><meta property="twitter:creator" content="@EFEnoticias"><meta property="og:site_name" content="www.efe.com"><meta property="fb:admins" content="670792711,1523510951"><meta property="fb:app_id" content="405157086335631"><meta property="fb:page_id" content="182338378632175"><meta property="article:publisher" content="https://www.facebook.com/AgenciaEFEnoticias/"><meta property="article:author" content="https://www.efe.com"><meta property="twitter:description" content="Últimas noticias de la Agencia Efe. Fehaciente, fidedigno y fácil. La información con EFE. Edición España."><meta property="og:description" content="Últimas noticias de la Agencia Efe. Fehaciente, fidedigno y fácil. La información con EFE. Edición España."><meta property="article:section" content="Edición España"><meta property="og:url" content="http://www.efe.com/"><meta property="twitter:card" content="summary"><meta property="og:image" content="http://www.efe.com/efe/images/logos/efe114x114.png"><meta property="og:type" content="website"><meta property="og:title" content="Agencia EFE"><meta name="apple-itunes-app" content="app-id=584702500"><meta name="twitter:app:id:iphone" content="584702500"><meta name="twitter:app:id:ipad" content="584702500"><meta name="google-play-app" content="app-id=com.efe.appaandroidefe"><meta name="twitter:app:id:googleplay" content="com.efe.appaandroidefe"><meta name="robots" content="index,follow,noodp"><link href="/efe/espana/efefuturo/50000905/2" rel="next"><meta name="description" content="Últimas noticias de la Agencia Efe. Fehaciente, fidedigno y fácil. La información con EFE. Edición España."><meta name="keywords" content="últimas noticias, agencia efe, efe, noticias, noticias 24, noticias 24 horas, proveedor de noticias, información, nacional, internacional, deportes, salud, motor, texto, foto, audio, video, reportajes, que es efe, productos, delegaciones, noticias regionales, segmentados, comunicados, última hora"><meta id="viewport" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2.0"><meta http-equiv="origin-trial" content="AxujKG9INjsZ8/gUq8+dTruNvk7RjZQ1oFhhgQbcTJKDnZfbzSTE81wvC2Hzaf3TW4avA76LTZEMdiedF1vIbA4AAABueyJvcmlnaW4iOiJodHRwczovL2ltYXNkay5nb29nbGVhcGlzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0="><meta http-equiv="origin-trial" content="Azuce85ORtSnWe1MZDTv68qpaW3iHyfL9YbLRy0cwcCZwVnePnOmkUJlG8HGikmOwhZU22dElCcfrfX2HhrBPAkAAAB7eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A16nvcdeoOAqrJcmjLRpl1I6f3McDD8EfofAYTt/P/H4/AWwB99nxiPp6kA0fXoiZav908Z8etuL16laFPUdfQsAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="AxBHdr0J44vFBQtZUqX9sjiqf5yWZ/OcHRcRMN3H9TH+t90V/j3ENW6C8+igBZFXMJ7G3Pr8Dd13632aLng42wgAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A88BWHFjcawUfKU3lIejLoryXoyjooBXLgWmGh+hNcqMK44cugvsI5YZbNarYvi3roc1fYbHA1AVbhAtuHZflgEAAAB2eyJvcmlnaW4iOiJodHRwczovL2dvb2dsZS5jb206NDQzIiwiZmVhdHVyZSI6IlRydXN0VG9rZW5zIiwiZXhwaXJ5IjoxNjUyNzc0NDAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A8FHS1NmdCwGqD9DwOicnHHY+y27kdWfxKa0YHSGDfv0CSpDKRHTQdQmZVPDUdaFWUsxdgVxlwAd6o+dhJykPA0AAACWeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjQzMTU1MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><meta http-equiv="origin-trial" content="A8zdXi6dr1hwXEUjQrYiyYQGlU3557y5QWDnN0Lwgj9ePt66XMEvNkVWOEOWPd7TP9sBQ25X0Q15Lr1Nn4oGFQkAAACceyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjQzMTU1MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><meta http-equiv="origin-trial" content="A4/Htern2udN9w3yJK9QgWQxQFruxOXsXL7cW60DyCl0EZFGCSme/J33Q/WzF7bBkVvhEWDlcBiUyZaim5CpFQwAAACceyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjQzMTU1MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><script src="https://securepubads.g.doubleclick.net/gpt/pubads_impl_2022031601.js" async=""></script></head>
+<body id="theBodyTag" class=" espana es">
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M234NTD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<div id="schOrg" itemid="#schOrg" itemscope="" itemtype="http://schema.org/Organization">
+<meta itemprop="url" content="https://www.efe.com">
+<meta itemprop="name" content="Agencia Efe">
+<div itemprop="logo" itemscope="" itemtype="http://schema.org/ImageObject">
+<meta itemprop="url" content="http://www.efe.com/efe/images/logos/efe114x114.png">
+</div>
+<meta itemprop="sameAs" content="https://www.facebook.com/AgenciaEFEnoticias/">
+<meta itemprop="sameAs" content="https://twitter.com/EFEnoticias">
+<div itemprop="contactPoint" itemscope="" itemtype="http://schema.org/ContactPoint">
+<meta itemprop="telephone" content="+34913467100">
+<meta itemprop="contactType" content="customer service">
+</div>
+<div itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
+<meta itemprop="addressCountry" content="ES">
+<meta itemprop="addressLocality" content="Madrid">
+<meta itemprop="addressRegion" content="Madrid">
+<meta itemprop="postalCode" content="28036">
+<meta itemprop="streetAddress" content="Avenida de Burgos, 8-B">
+</div>
+</div>
+<div id="efe-top-link"><i class="fa fa-angle-up"></i></div>
+<header class="hidden-print">
+<div class="header-first publi-wrapper">
+<div class="header-first-content">
+
+
+<div class="box-publi box-publi-header"><div class="publi-head">Publicidad</div><div id="div-gpt-ad-efe-4005747" class="publi-content"><script type="text/javascript">googletag.cmd.push(function(){googletag.display('div-gpt-ad-efe-4005747');});</script></div></div>
+
+</div>
+</div>
+<div id="parent-navheader">
+<div id="navheader" class="header-wrapper affix-top">
+<div class="header-navigation-content">
+<div id="logoOrg">
+<a href="/efe/espana/1" id="linkLogo" class="efe-logo"></a>
+</div>
+<div id="mbarra_101004684" class="efe-mbarra efe-raiz"><nav class="navbar" role="navigation"><div><ul class="nav navbar-nav"><li class=" col-xs-4 col-sm-3 col-md-2 search"><form class="navbar-form" role="search" method="GET" action="/efe/espana/busqueda/50000538"><div class="input-group"><input class="form-control" type="search" name="q" value="" maxlength="50" placeholder="Buscar" pattern=".{3,}" required=""><span class="input-group-btn"><button type="submit" class="btn btn-default" title="Buscar"><span class="glyphicon glyphicon-search"></span></button></span></div></form></li><li><a href="//www.agenciaefe.es" target="_blank" class=" navbar-link" rel="nofollow">Web corporativa</a></li><li><a href="/efe/espana/contacto/150" class="navbar-link">Contacto</a></li><li><a href="https://efecomunica.efe.com/" target="_blank" class=" navbar-link" rel="nofollow">EFE Comunica</a></li><li><a href="https://www.efeservicios.com" target="_blank" class=" navbar-link" rel="nofollow">EFE Servicios</a></li></ul></div></nav></div>
+<div class="efe-mediciones efe-ediciones"><nav class="navbar" role="navigation"><ul class="nav navbar-nav "><li class="dropdown"><a href="/efe/espana/1" class="navbar-link dropdown-toggle" data-toggle="dropdown"><span class="edicion-I">Edición</span> España<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="/efe/espana/1" class=" navbar-link"><span class="edicion-I">Edición</span> España</a></li><li class=" col-md-offset-1 col-md-11"><a href="/efe/castillayleon/7" class=" navbar-link"><span class="edicion-I">Edición</span> Castilla y León</a></li><li class=" col-md-offset-1 col-md-11"><a href="/efe/comunitat-valenciana/10" class=" navbar-link"><span class="edicion-I">Edición</span> C. Valenciana</a></li><li class=" col-md-offset-1 col-md-11"><a href="/efe/andalucia/12" class=" navbar-link"><span class="edicion-I">Edición</span> Andalucía</a></li><li class=" col-md-offset-1 col-md-11"><a href="/efe/canarias/14" class=" navbar-link"><span class="edicion-I">Edición</span> Canarias</a></li><li><a href="/efe/america/2" class=" navbar-link"><span class="edicion-I">Edición</span> América</a></li><li><a href="/efe/brasil/3" class=" navbar-link"><span class="edicion-I">Edição</span> Brasil</a></li><li><a href="/efe/english/4" class=" navbar-link">English <span class="edicion-I">edition</span></a></li><li><a href="/efe/portugal/6" class=" navbar-link"><span class="edicion-I">Edição</span> Portugal</a></li><li><a href="/efe/usa/5" class=" navbar-link"><span class="edicion-I">Edición</span> USA</a></li></ul></li></ul></nav></div>
+<div id="mbarra_101004664" class="efe-mbarra efe-secciones"><nav class="navbar navbar-default" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-101004664-collapse"><span class="sr-only">Desplegar navegación</span>
+<span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div><div class="collapse navbar-collapse navbar-101004664-collapse"><ul class="nav navbar-nav"><li class=" hidden efe-show-on-collapse search"><form class="navbar-form" role="search" method="GET" action="/efe/espana/busqueda/50000538"><div class="input-group"><input class="form-control" type="search" name="q" value="" maxlength="50" placeholder="Buscar" pattern=".{3,}" required=""><span class="input-group-btn"><button type="submit" class="btn btn-default" title="Buscar"><span class="glyphicon glyphicon-search"></span></button></span></div></form></li><li class=" efe-menu-secciones dropdown"><a href="#" class="navbar-link dropdown-toggle" data-toggle="dropdown">EFE Noticias<b class="caret"></b></a><ul class=" dropdown-menu" role="menu"><li><a href="/efe/espana/politica/10002" class="navbar-link">España</a></li><li><a href="/efe/espana/mundo/10001" class="navbar-link">Internacional</a></li><li><a href="/efe/espana/deportes/10006" class="navbar-link">Deportes</a></li><li><a href="/efe/espana/economia/10003" class="navbar-link">Economía</a></li><li><a href="/efe/espana/sociedad/10004" class="navbar-link">Sociedad</a></li><li><a href="/efe/espana/cultura/10005" class="navbar-link">Cultura y entretenimiento</a></li><li><a href="/efe/espana/gente/10007" class="navbar-link">Gente</a></li><li><a href="/efe/espana/efefuturo/50000905" class="navbar-link">Ciencia</a></li></ul></li><li><a href="https://www.efesalud.com/" target="_blank" class=" navbar-link" rel="nofollow">EFE Salud</a></li><li><a href="https://www.efeverde.com/" target="_blank" class=" navbar-link" rel="nofollow">EFE Verde</a></li><li><a href="https://www.efeminista.com/" target="_blank" class=" navbar-link" rel="nofollow">Efeminista</a></li><li><a href="https://www.efeescuela.es/" target="_blank" class=" navbar-link" rel="nofollow">EFE Escuela</a></li><li><a href="https://verifica.efe.com/" target="_blank" class=" navbar-link" rel="nofollow">EFE Verifica</a></li><li><a href="https://www.efeagro.com/" target="_blank" class=" navbar-link" rel="nofollow">EFE Agro</a></li><li><a href="https://euroefe.euractiv.es/" target="_blank" class=" navbar-link" rel="nofollow">EuroEFE</a></li><li class=" navbar-right dropdown"><a href="#" class="navbar-link dropdown-toggle" data-toggle="dropdown">Otras webs<b class="caret"></b></a><ul class=" dropdown-menu" role="menu"><li><a href="https://www.fundeu.es/" target="_blank" class=" navbar-link" rel="nofollow">FundéuRAE</a></li><li><a href="https://www.epa.eu/" target="_blank" class=" navbar-link" rel="nofollow">EPA</a></li></ul></li></ul></div></nav></div>
+</div>
+</div>
+</div>
+<div class="header-features">
+</div>
+</header>
+<div id="body">
+<div id="divBeforeMain">
+<div class="efe-centro-margen clearfix">
+</div>
+</div>
+<div id="divMainLeftCenterRight">
+<div class="efe-centro-margen efe-main clearfix">
+<div id="divMainLeft" class="efe-mainleft">
+</div>
+<div id="divMainCenter" class="efe-maincenter">
+</div>
+<div id="divMainRight" class="efe-mainright">
+</div>
+</div>
+</div>
+<div id="divAfterMain">
+<div class="efe-centro-margen clearfix">
+<div class=" clearfix efe-3col"><div class=" efe-2col">
+<div class="box-1not box-principal importante">
+<article>
+<div class="new_seccion">
+<div class="image_seccion">
+<span class="iconos" aria-hidden="true"><span class="glyphicon glyphicon-camera"></span></span>
+<h2></h2>
+<a href="/efe/espana/portada/los-transportistas-convocantes-del-paro-mantienen-su-protesta-en-madrid/10010-4769414" class="linkimg"><img src="//estaticos.efe.com/efecom/recursos2/imagen.aspx?-P-2fL4Jfo8HOMiOCeDW3Ux9Q1566dEkbxeEQ4TncnkXVSS8kYg8pQc-P-2bYaHdW-P-2f3Ggqy1GjRp0aiaaabQRzZ36Q88GuYAPFzvLxs3X9OnG7r0Usf8h33GVfasL8s4GqeYDBug" alt="Los transportistas convocantes del paro mantienen su protesta en Madrid"></a>
+</div>
+<div class="caption">
+<header><h3><a href="/efe/espana/portada/los-transportistas-convocantes-del-paro-mantienen-su-protesta-en-madrid/10010-4769414" src="#">Los transportistas convocantes del paro mantienen su protesta en Madrid</a></h3></header>
+<div class="fuenteorigen"><span class="fuente">EFE</span>&nbsp;|&nbsp;<span class="origen">Madrid</span></div><p>La Plataforma de Defensa del Transporte por Carretera mantiene su convocatoria de paro y de la concentración prevista para hoy en Madrid, pese al acuerdo alcanzado anoche entre el Gobierno y el Comité Nacional del Transporte por Carretera (CNTC), al que tilda de "mafia opresora".</p>
+<footer></footer>
+</div>
+</div>
+</article>
+</div>
+
+<div id="playeryt4005746" class="w-playeryoutube">
+<div class="header">
+<span class="title">
+Últimos videos
+</span>
+</div>
+<div class="body">
+<div class="player">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/rY9gYCNOWa8?fs=1&amp;showinfo=0&amp;rel=0&amp;modestbranding=1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0"></iframe>
+</div>
+</div>
+<div class="list">
+<ul>
+<li class="active" data-videoid="https://www.youtube.com/embed/rY9gYCNOWa8?fs=1&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;autoplay=1">
+<img src="https://i.ytimg.com/vi/rY9gYCNOWa8/mqdefault.jpg" alt="">
+<span class="titulo">Recuperan la segunda caja negra del avión accidentado en el sur de China</span>
+</li>
+<li class="" data-videoid="https://www.youtube.com/embed/JjL3GDTXBvE?fs=1&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;autoplay=1">
+<img src="https://i.ytimg.com/vi/JjL3GDTXBvE/mqdefault.jpg" alt="">
+<span class="titulo">América al día en 60 segundos, jueves 24 de marzo</span>
+</li>
+<li class="" data-videoid="https://www.youtube.com/embed/zXxx1egASOc?fs=1&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;autoplay=1">
+<img src="https://i.ytimg.com/vi/zXxx1egASOc/mqdefault.jpg" alt="">
+<span class="titulo">Argentina recuerda los 46 años del golpe militar con multitudinaria marcha nacional</span>
+</li>
+<li class="" data-videoid="https://www.youtube.com/embed/w5_AQAQpKEU?fs=1&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;autoplay=1">
+<img src="https://i.ytimg.com/vi/w5_AQAQpKEU/mqdefault.jpg" alt="">
+<span class="titulo">Un "nunca más" en el cielo de Roma en memoria de los desaparecidos</span>
+</li>
+<li class="" data-videoid="https://www.youtube.com/embed/Qy0muelUHvM?fs=1&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;autoplay=1">
+<img src="https://i.ytimg.com/vi/Qy0muelUHvM/mqdefault.jpg" alt="">
+<span class="titulo">El flan reclama su lugar de honor como postre oficial de Florida</span>
+</li>
+<li class="" data-videoid="https://www.youtube.com/embed/_r3YGW-H_2g?fs=1&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;autoplay=1">
+<img src="https://i.ytimg.com/vi/_r3YGW-H_2g/mqdefault.jpg" alt="">
+<span class="titulo">Salmos contra la guerra</span>
+</li>
+<li class="" data-videoid="https://www.youtube.com/embed/7kCVMw0ZOEo?fs=1&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;autoplay=1">
+<img src="https://i.ytimg.com/vi/7kCVMw0ZOEo/mqdefault.jpg" alt="">
+<span class="titulo">Kiev resiste el embate ruso y el oeste de Ucrania retoma cierta normalidad</span>
+</li>
+<li class="" data-videoid="https://www.youtube.com/embed/DZd95D0MuuY?fs=1&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;autoplay=1">
+<img src="https://i.ytimg.com/vi/DZd95D0MuuY/mqdefault.jpg" alt="">
+<span class="titulo">La campaña militar de Putin, un mes negro para los rusos</span>
+</li>
+<li class="" data-videoid="https://www.youtube.com/embed/Kjpfk6MhcJE?fs=1&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;autoplay=1">
+<img src="https://i.ytimg.com/vi/Kjpfk6MhcJE/mqdefault.jpg" alt="">
+<span class="titulo">La bolsa española termina la caída con pérdidas del 0,28 % pero sostiene los 8.300 puntos</span>
+</li>
+<li class="" data-videoid="https://www.youtube.com/embed/IYip8VoRiYk?fs=1&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;autoplay=1">
+<img src="https://i.ytimg.com/vi/IYip8VoRiYk/mqdefault.jpg" alt="">
+<span class="titulo">La Justicia británica rechaza la inmunidad del rey emérito Juan Carlos I</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="efe-listacatact " itemscope="" itemtype="http://schema.org/ItemList">
+<div class="titulo" itemprop="name"><a href="/efe/espana/politica/10002">España</a></div>
+<ul class="lista">
+<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+<article>
+<meta itemprop="position" content="1">
+<a href="/efe/espana/politica/psoe-y-el-sahara-de-la-autodeterminacion-al-plan-autonomia-marruecos/10002-4769385" itemprop="url">
+<img src="//estaticos.efe.com/efecom/recursos2/imagen.aspx?-P-2fL4Jfo8HOMiOCeDW3Ux9Q5WKgeGSc3Hu35LsEXz7TxvyMNgEaQpsSOvm0RqciahyaEn8vlC-P-2b6exfZOhI1q6K4b3Q8DHc35nSNfshsRPQKX3b5bEhG2JjMw-P-3d-P-3d" alt="" onerror="this.style.display = 'none'" itemprop="image" class=" lazy" data-original="//estaticos.efe.com/efecom/recursos2/imagen.aspx?-P-2fL4Jfo8HOMiOCeDW3Ux9Q5WKgeGSc3Hu35LsEXz7TxvyMNgEaQpsSOvm0RqciahyaEn8vlC-P-2b6exfZOhI1q6K4b3Q8DHc35nSNfshsRPQKX3b5bEhG2JjMw-P-3d-P-3d" style="display: block;">
+<div class="caption" itemprop="name">
+<span class="guia">ESPAÑA MARRUECOS</span> PSOE y el Sáhara: de la autodeterminación al plan de autonomía de Marruecos
+</div>
+</a>
+</article>
+</li>
+<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+<article>
+<meta itemprop="position" content="2">
+<a href="/efe/espana/politica/la-justicia-britanica-rechaza-inmunidad-del-rey-emerito-juan-carlos-i/10002-4768671" itemprop="url">
+<img src="//estaticos.efe.com/efecom/recursos2/imagen.aspx?-P-2fL4Jfo8HOMh7TznFTyVaJXNw9sT5As4935LsEXz7TxvyMNgEaQpsSOvm0RqciahyaEn8vlC-P-2b6exfZOhI1q6K4b3Q8DHc35nSNfshsRPQKX0OyxaNimzVvA-P-3d-P-3d" alt="" onerror="this.style.display = 'none'" itemprop="image" class=" lazy" data-original="//estaticos.efe.com/efecom/recursos2/imagen.aspx?-P-2fL4Jfo8HOMh7TznFTyVaJXNw9sT5As4935LsEXz7TxvyMNgEaQpsSOvm0RqciahyaEn8vlC-P-2b6exfZOhI1q6K4b3Q8DHc35nSNfshsRPQKX0OyxaNimzVvA-P-3d-P-3d" style="display: block;">
+<div class="caption" itemprop="name">
+<span class="guia">ESPAÑA MONARQUÍA</span> La Justicia británica rechaza la inmunidad del rey emérito Juan Carlos I
+</div>
+</a>
+</article>
+</li>
+<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+<article>
+<meta itemprop="position" content="3">
+<a href="/efe/espana/politica/espana-ratifica-su-compromiso-con-ucrania-un-nuevo-envio-directo-de-armas/10002-4769027" itemprop="url">
+<img src="//estaticos.efe.com/efecom/recursos2/imagen.aspx?-P-2fL4Jfo8HOMh7TznFTyVaJXgUQ0GbJTzq35LsEXz7TxvyMNgEaQpsSOvm0RqciahyaEn8vlC-P-2b6exfZOhI1q6K4b3Q8DHc35nSNfshsRPQKX0nXnaISVCfMg-P-3d-P-3d" alt="" onerror="this.style.display = 'none'" itemprop="image" class=" lazy" data-original="//estaticos.efe.com/efecom/recursos2/imagen.aspx?-P-2fL4Jfo8HOMh7TznFTyVaJXgUQ0GbJTzq35LsEXz7TxvyMNgEaQpsSOvm0RqciahyaEn8vlC-P-2b6exfZOhI1q6K4b3Q8DHc35nSNfshsRPQKX0nXnaISVCfMg-P-3d-P-3d" style="display: block;">
+<div class="caption" itemprop="name">
+<span class="guia">UCRANIA GUERRA ESPAÑA</span> España ratifica su compromiso con Ucrania con un nuevo envío directo de armas
+</div>
+</a>
+</article>
+</li>
+</ul>
+
+</div>
+
+<div class="efe-listacatact " itemscope="" itemtype="http://schema.org/ItemList">
+<div class="titulo" itemprop="name"><a href="/efe/espana/mundo/10001">Internacional</a></div>
+<ul class="lista">
+<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+<article>
+<meta itemprop="position" content="1">
+<a href="/efe/espana/mundo/dia-30-de-invasion-zelenski-le-dice-a-ue-que-actuo-tarde-biden-visita-polonia/10001-4769310" itemprop="url">
+<img src="//estaticos.efe.com/efecom/recursos2/imagen.aspx?-P-2fL4Jfo8HOMiOCeDW3Ux9Q0w4SCVZimv635LsEXz7TxvyMNgEaQpsSOvm0RqciahyaEn8vlC-P-2b6exfZOhI1q6K4b3Q8DHc35nSNfshsRPQKX3TNdcEiC5nhg-P-3d-P-3d" alt="" onerror="this.style.display = 'none'" itemprop="image" class=" lazy" data-original="//estaticos.efe.com/efecom/recursos2/imagen.aspx?-P-2fL4Jfo8HOMiOCeDW3Ux9Q0w4SCVZimv635LsEXz7TxvyMNgEaQpsSOvm0RqciahyaEn8vlC-P-2b6exfZOhI1q6K4b3Q8DHc35nSNfshsRPQKX3TNdcEiC5nhg-P-3d-P-3d" style="display: block;">
+<div class="caption" itemprop="name">
+<span class="guia">UCRANIA GUERRA</span> Día 30 de invasión: Zelenski le dice a UE que actuó tarde; Biden visita Polonia
+</div>
+</a>
+</article>
+</li>
+<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+<article>
+<meta itemprop="position" content="2">
+<a href="/efe/espana/mundo/ucrania-afirma-que-rusia-sigue-intentando-formar-un-corredor-en-el-sureste/10001-4769376" itemprop="url">
+<img src="../images/logos/efe_logo_150x75alpha.png" alt="" onerror="this.style.display = 'none'" itemprop="image" class=" lazy" data-original="//estaticos.efe.com/efecom/recursos2/imagen.aspx?-P-2fL4Jfo8HOMiOCeDW3Ux9Q0UPBBE9w2kb35LsEXz7TxvyMNgEaQpsSOvm0RqciahyaEn8vlC-P-2b6exfZOhI1q6K4b3Q8DHc35nSNfshsRPQKX0IQ8ocWfvcNw-P-3d-P-3d">
+<div class="caption" itemprop="name">
+<span class="guia">UCRANIA GUERRA</span> Ucrania afirma que Rusia sigue intentando formar un corredor en el sureste
+</div>
+</a>
+</article>
+</li>
+<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+<article>
+<meta itemprop="position" content="3">
+<a href="/efe/espana/mundo/los-rebeldes-de-tigre-anuncian-un-cese-hostilidades-en-la-guerra-etiopia/10001-4769378" itemprop="url">
+<img src="../images/logos/efe_logo_150x75alpha.png" alt="" onerror="this.style.display = 'none'" itemprop="image" class=" lazy" data-original="//estaticos.efe.com/efecom/recursos2/imagen.aspx?-P-2fL4Jfo8HOMiOCeDW3Ux9Q-P-2fCJBAxFv6OF35LsEXz7TxvyMNgEaQpsSOvm0RqciahyaEn8vlC-P-2b6exfZOhI1q6K4b3Q8DHc35nSNfshsRPQKX0DFHJL21HQpA-P-3d-P-3d">
+<div class="caption" itemprop="name">
+<span class="guia">ETIOPÍA CONFLICTO</span> Los rebeldes de Tigré anuncian un "cese de hostilidades" en la guerra de Etiopía
+</div>
+</a>
+</article>
+</li>
+</ul>
+
+</div>
+
+<div class="efe-listacatact " itemscope="" itemtype="http://schema.org/ItemList">
+<div class="titulo" itemprop="name"><a href="/efe/espana/deportes/10006">Deportes</a></div>
+<ul class="lista">
+<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+<article>
+<meta itemprop="position" content="1">
+<a href="/efe/espana/deportes/fracaso-de-italia-exhibicion-bale-susto-portugal-y-triunfo-suecia/10006-4769255" itemprop="url">
+<img src="../images/logos/efe_logo_150x75alpha.png" alt="" onerror="this.style.display = 'none'" itemprop="image" class=" lazy" data-original="//estaticos.efe.com/efecom/recursos2/imagen.aspx?-P-2fL4Jfo8HOMiOCeDW3Ux9Q6nMzFgPJCLT35LsEXz7TxvyMNgEaQpsSOvm0RqciahyaEn8vlC-P-2b6exfZOhI1q6K4b3Q8DHc35nSNfshsRPQKX36jUlvWoxE5g-P-3d-P-3d">
+<div class="caption" itemprop="name">
+<span class="guia">FÚTBOL QATAR 2022: EUROPA</span> Fracaso de Italia, exhibición de Bale, susto de Portugal y triunfo de Suecia
+</div>
+</a>
+</article>
+</li>
+<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+<article>
+<meta itemprop="position" content="2">
+<a href="/efe/espana/deportes/rahm-mantiene-el-pleno-garcia-consigue-un-valioso-empate-ante-morikawa/10006-4769290" itemprop="url">
+<img src="../images/logos/efe_logo_150x75alpha.png" alt="" onerror="this.style.display = 'none'" itemprop="image" class=" lazy" data-original="//estaticos.efe.com/efecom/recursos2/imagen.aspx?-P-2fL4Jfo8HOMiOCeDW3Ux9Q-P-2b4vU54gASt235LsEXz7TxvyMNgEaQpsSOvm0RqciahyaEn8vlC-P-2b6exfZOhI1q6K4b3Q8DHc35nSNfshsRPQKX20yx8aFh4F4w-P-3d-P-3d">
+<div class="caption" itemprop="name">
+<span class="guia">GOLF WGC-MATCH PLAY</span> Rahm mantiene el pleno, García consigue un valioso empate ante Morikawa
+</div>
+</a>
+</article>
+</li>
+<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+<article>
+<meta itemprop="position" content="3">
+<a href="/efe/espana/deportes/canada-eeuu-y-mexico-muy-cerca-de-catar-costa-rica-panama-por-la-repesca/10006-4769365" itemprop="url">
+<img src="../images/logos/efe_logo_150x75alpha.png" alt="" onerror="this.style.display = 'none'" itemprop="image" class=" lazy" data-original="//estaticos.efe.com/efecom/recursos2/imagen.aspx?-P-2fL4Jfo8HOMiOCeDW3Ux9Q0rlGTZm4z7T35LsEXz7TxvyMNgEaQpsSOvm0RqciahyaEn8vlC-P-2b6exfZOhI1q6K4b3Q8DHc35nSNfshsRPQKX2Vjo9pIXcI2A-P-3d-P-3d">
+<div class="caption" itemprop="name">
+<span class="guia">FÚTBOL CATAR 2022</span> Canadá, EEUU y México muy cerca de Catar, Costa Rica y Panamá por la repesca
+</div>
+</a>
+</article>
+</li>
+</ul>
+
+</div>
+
+<div class="efe-listacatact " itemscope="" itemtype="http://schema.org/ItemList">
+<div class="titulo" itemprop="name"><a href="/efe/espana/economia/10003">Economía</a></div>
+<ul class="lista">
+<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+<article>
+<meta itemprop="position" content="1">
+<a href="/efe/espana/economia/el-ine-eleva-crecimiento-de-la-economia-espanola-en-2021-una-decima-hasta-5-1-por-ciento/10003-4769403" itemprop="url">
+<img src="../images/logos/efe_logo_150x75alpha.png" alt="" onerror="this.style.display = 'none'" itemprop="image" class=" lazy" data-original="//estaticos.efe.com/efecom/recursos2/imagen.aspx?-P-2fL4Jfo8HOMiOCeDW3Ux9Q8Ri7sESQFEZ35LsEXz7TxvyMNgEaQpsSOvm0RqciahyaEn8vlC-P-2b6exfZOhI1q6K4b3Q8DHc35nSNfshsRPQKX3Y9QHtUpUvMA-P-3d-P-3d">
+<div class="caption" itemprop="name">
+<span class="guia">ESPAÑA PIB</span> El INE eleva el crecimiento de la economía española en 2021 una décima, hasta el 5,1 por ciento
+</div>
+</a>
+</article>
+</li>
+<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+<article>
+<meta itemprop="position" content="2">
+<a href="/efe/espana/economia/gobierno-y-transportistas-cierran-un-pacto-de-madrugada-con-la-rebaja-en-carburante/10003-4769312" itemprop="url">
+<img src="../images/logos/efe_logo_150x75alpha.png" alt="" onerror="this.style.display = 'none'" itemprop="image" class=" lazy" data-original="//estaticos.efe.com/efecom/recursos2/imagen.aspx?-P-2fL4Jfo8HOMiOCeDW3Ux9Q6minkxO5wKH35LsEXz7TxvyMNgEaQpsSOvm0RqciahyaEn8vlC-P-2b6exfZOhI1q6K4b3Q8DHc35nSNfshsRPQKX2qiSjEZXrozQ-P-3d-P-3d">
+<div class="caption" itemprop="name">
+<span class="guia">TRANSPORTE HUELGA</span> Gobierno y transportistas cierran un pacto de madrugada con la rebaja en carburante
+</div>
+</a>
+</article>
+</li>
+<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+<article>
+<meta itemprop="position" content="3">
+<a href="/efe/espana/economia/los-transportistas-convocantes-del-paro-mantienen-su-protesta-en-madrid/10003-4769414" itemprop="url">
+<img src="../images/logos/efe_logo_150x75alpha.png" alt="" onerror="this.style.display = 'none'" itemprop="image" class=" lazy" data-original="//estaticos.efe.com/efecom/recursos2/imagen.aspx?-P-2fL4Jfo8HOMiOCeDW3Ux9Q1566dEkbxeE35LsEXz7TxvyMNgEaQpsSOvm0RqciahyaEn8vlC-P-2b6exfZOhI1q6K4b3Q8DHc35nSNfshsRPQKX0Kst7QvkKywg-P-3d-P-3d">
+<div class="caption" itemprop="name">
+<span class="guia">TRANSPORTE HUELGA</span> Los transportistas convocantes del paro mantienen su protesta en Madrid
+</div>
+</a>
+</article>
+</li>
+</ul>
+
+</div>
+
+<div class="efe-listacatact " itemscope="" itemtype="http://schema.org/ItemList">
+<div class="titulo" itemprop="name"><a href="/efe/espana/sociedad/10004">Sociedad</a></div>
+<ul class="lista">
+<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+<article>
+<meta itemprop="position" content="1">
+<a href="/efe/espana/sociedad/recuperan-segunda-caja-negra-de-avion-accidentado-en-el-sur-china/10004-4769350" itemprop="url">
+<img src="../images/logos/efe_logo_150x75alpha.png" alt="" onerror="this.style.display = 'none'" itemprop="image" class=" lazy" data-original="//estaticos.efe.com/efecom/recursos2/imagen.aspx?-P-2fL4Jfo8HOMiOCeDW3Ux9Qwd4nJ1P2oyT35LsEXz7TxvyMNgEaQpsSOvm0RqciahyaEn8vlC-P-2b6exfZOhI1q6K4b3Q8DHc35nSNfshsRPQKX2mrKEaKrg8ig-P-3d-P-3d">
+<div class="caption" itemprop="name">
+<span class="guia">CHINA ACCIDENTE</span> Recuperan segunda caja negra de avión accidentado en el sur de China
+</div>
+</a>
+</article>
+</li>
+<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+<article>
+<meta itemprop="position" content="2">
+<a href="/efe/espana/sociedad/malaga-y-cadiz-la-ciudad-de-ceuta-en-aviso-naranja-por-intensas-lluvias/10004-4769395" itemprop="url">
+<img src="../images/logos/efe_logo_150x75alpha.png" alt="" onerror="this.style.display = 'none'" itemprop="image" class=" lazy" data-original="//estaticos.efe.com/efecom/recursos2/imagen.aspx?-P-2fL4Jfo8HOMiOCeDW3Ux9Q-P-2b52IaYo3f-P-2bW35LsEXz7TxvyMNgEaQpsSOvm0RqciahyaEn8vlC-P-2b6exfZOhI1q6K4b3Q8DHc35nSNfshsRPQKX19kTInOZDiXg-P-3d-P-3d">
+<div class="caption" itemprop="name">
+<span class="guia">TIEMPO ALERTAS</span> Málaga y Cádiz y la ciudad de Ceuta en aviso naranja por intensas lluvias
+</div>
+</a>
+</article>
+</li>
+<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+<article>
+<meta itemprop="position" content="3">
+<a href="/efe/espana/sociedad/llega-la-eleccion-mas-dificil-de-las-familias-donde-matriculo-a-mi-hijo/10004-4769377" itemprop="url">
+<img src="../images/logos/efe_logo_150x75alpha.png" alt="" onerror="this.style.display = 'none'" itemprop="image" class=" lazy" data-original="//estaticos.efe.com/efecom/recursos2/imagen.aspx?-P-2fL4Jfo8HOMiOCeDW3Ux9Q000jeeDeMTr35LsEXz7TxvyMNgEaQpsSOvm0RqciahyaEn8vlC-P-2b6exfZOhI1q6K4b3Q8DHc35nSNfshsRPQKX36H-P-2fiMEfxxJA-P-3d-P-3d">
+<div class="caption" itemprop="name">
+<span class="guia">COLEGIOS MATRÍCULA</span> Llega la elección más difícil de las familias: ¿Dónde matriculo a mi hijo?
+</div>
+</a>
+</article>
+</li>
+</ul>
+
+</div>
+
+<div class="efe-listacatact " itemscope="" itemtype="http://schema.org/ItemList">
+<div class="titulo" itemprop="name"><a href="/efe/espana/cultura/10005">Cultura y entretenimiento</a></div>
+<ul class="lista">
+<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+<article>
+<meta itemprop="position" content="1">
+<a href="/efe/espana/cultura/el-buen-patron-y-maixabel-triunfan-tambien-en-los-premios-alma-de-guion/10005-4769197" itemprop="url">
+<img src="../images/logos/efe_logo_150x75alpha.png" alt="" onerror="this.style.display = 'none'" itemprop="image" class=" lazy" data-original="//estaticos.efe.com/efecom/recursos2/imagen.aspx?-P-2fL4Jfo8HOMh7TznFTyVaJWFnPqK-P-2boErp35LsEXz7TxvyMNgEaQpsSOvm0RqciahyaEn8vlC-P-2b6exfZOhI1q6K4b3Q8DHc35nSNfshsRPQKX3LlW4hAMK48A-P-3d-P-3d">
+<div class="caption" itemprop="name">
+<span class="guia">CINE PREMIOS</span> "El buen patrón" y "Maixabel" triunfan también en los Premios ALMA de guion
+</div>
+</a>
+</article>
+</li>
+<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+<article>
+<meta itemprop="position" content="2">
+<a href="/efe/espana/cultura/luis-fonsi-actuara-en-la-94-edicion-anual-de-los-premios-oscar/10005-4769300" itemprop="url">
+<img src="../images/logos/efe_logo_150x75alpha.png" alt="" onerror="this.style.display = 'none'" itemprop="image" class=" lazy" data-original="//estaticos.efe.com/efecom/recursos2/imagen.aspx?-P-2fL4Jfo8HOMiOCeDW3Ux9Q-P-2fj7GWhnShNe35LsEXz7TxvyMNgEaQpsSOvm0RqciahyaEn8vlC-P-2b6exfZOhI1q6K4b3Q8DHc35nSNfshsRPQKX0VNFBKsV6l0g-P-3d-P-3d">
+<div class="caption" itemprop="name">
+<span class="guia">ÓSCAR</span> Luis Fonsi actuará en la 94 edición anual de los premios Óscar
+</div>
+</a>
+</article>
+</li>
+<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+<article>
+<meta itemprop="position" content="3">
+<a href="/efe/espana/cultura/daddy-yankee-dice-adios-con-legendaddy-un-disco-grandes-colaboraciones/10005-4769304" itemprop="url">
+<img src="../images/logos/efe_logo_150x75alpha.png" alt="" onerror="this.style.display = 'none'" itemprop="image" class=" lazy" data-original="//estaticos.efe.com/efecom/recursos2/imagen.aspx?-P-2fL4Jfo8HOMiOCeDW3Ux9Q-P-2fjL97qwQyq035LsEXz7TxvyMNgEaQpsSOvm0RqciahyaEn8vlC-P-2b6exfZOhI1q6K4b3Q8DHc35nSNfshsRPQKX35RnXSw9Wn1g-P-3d-P-3d">
+<div class="caption" itemprop="name">
+<span class="guia">P.RICO MÚSICA</span> Daddy Yankee dice adiós con "Legendaddy", un disco con grandes colaboraciones
+</div>
+</a>
+</article>
+</li>
+</ul>
+
+</div>
+
+<div class="efe-listacatact " itemscope="" itemtype="http://schema.org/ItemList">
+<div class="titulo" itemprop="name"><a href="/efe/espana/efefuturo/50000905">Ciencia</a></div>
+<ul class="lista">
+<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+<article>
+<meta itemprop="position" content="1">
+<a href="/efe/espana/efefuturo/cientificos-de-25-sociedades-espanolas-claman-por-la-proteccion-donana/50000905-4769293" itemprop="url">
+<img src="../images/logos/efe_logo_150x75alpha.png" alt="" onerror="this.style.display = 'none'" itemprop="image" class=" lazy" data-original="//estaticos.efe.com/efecom/recursos2/imagen.aspx?-P-2fL4Jfo8HOMiOCeDW3Ux9QyOl7pqWPAcr35LsEXz7TxvyMNgEaQpsSOvm0RqciahyaEn8vlC-P-2b6exfZOhI1q6K4b3Q8DHc35nSNfshsRPQKX2hDQt3dPcRPA-P-3d-P-3d">
+<div class="caption" itemprop="name">
+<span class="guia">DOÑANA CONSERVACIÓN</span> Científicos de 25 sociedades españolas claman por la protección de Doñana
+</div>
+</a>
+</article>
+</li>
+<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+<article>
+<meta itemprop="position" content="2">
+<a href="/efe/espana/efefuturo/la-temperatura-global-seria-un-grado-mas-alta-sin-bosques-tropicales/50000905-4769101" itemprop="url">
+<img src="../images/logos/efe_logo_150x75alpha.png" alt="" onerror="this.style.display = 'none'" itemprop="image" class=" lazy" data-original="//estaticos.efe.com/efecom/recursos2/imagen.aspx?-P-2fL4Jfo8HOMh7TznFTyVaJUtNoYf1VaQ735LsEXz7TxvyMNgEaQpsSOvm0RqciahyaEn8vlC-P-2b6exfZOhI1q6K4b3Q8DHc35nSNfshsRPQKX1zQOZhd6qqGA-P-3d-P-3d">
+<div class="caption" itemprop="name">
+<span class="guia">CIENCIA MEDIOAMBIENTE</span> La temperatura global sería un grado más alta sin bosques tropicales
+</div>
+</a>
+</article>
+</li>
+<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" class=" vert">
+<article>
+<meta itemprop="position" content="3">
+<a href="/efe/espana/efefuturo/los-edulcorantes-artificiales-podrian-estar-asociados-a-un-mayor-riesgo-de-cancer/50000905-4769167" itemprop="url">
+<img src="../images/logos/efe_logo_150x75alpha.png" alt="" onerror="this.style.display = 'none'" itemprop="image" class=" lazy vert" data-original="//estaticos.efe.com/efecom/recursos2/imagen.aspx?-P-2fL4Jfo8HOMh7TznFTyVaJaXZjRogd-P-2bmj35LsEXz7TxvyMNgEaQpsSOvm0RqciahyaEn8vlC-P-2b6exfZOhI1q6K4b3Q8DHc35nSNfshsRPQKX2o8VhEDTAaEQ-P-3d-P-3d">
+<div class="caption" itemprop="name">
+<span class="guia">INVESTIGACIÓN ALIMENTACIÓN</span> Los edulcorantes artificiales podrían estar asociados a un mayor riesgo de cáncer
+</div>
+</a>
+</article>
+</li>
+</ul>
+
+</div>
+
+<div class="efe-box">
+<iframe src="//widgets.efe.com/widgetsMM_EFEWEBS/Default.aspx?Pat=no&amp;idp=437712&amp;color=azul&amp;tipovis=W-Caja&amp;width=100%&amp;height=600&amp;ptrblanco=no&amp;auto=multimediafoto" scrolling="no" id="iframeWidgEfe437712" style="border-width: 0px;" width="100%" height="600"></iframe>
+</div>
+</div><div class=" efe-1col">
+
+<div class="box-publi"><div class="publi-head">Publicidad</div><div id="div-gpt-ad-efe-4005748" class="publi-content"><script type="text/javascript">googletag.cmd.push(function(){googletag.display('div-gpt-ad-efe-4005748');});</script></div></div>
+<div class=" efecomunica nopadding">
+<div class="efe-box nopadding">
+<style>
+.efecomunica .cabecera {background-color:#fff;}
+.efecomunica .cabecera .logo {width:100%;}
+.efecomunica .cabecera .lema{
+    padding: 10px 20px 20px;
+    text-shadow: 0px 1px 1px rgba(150, 150, 150, 0.5);
+    text-align: center;
+    border-bottom: 4px solid #16bbbf;
+    color: #16bbbf;
+    text-transform: uppercase;
+    font: 500 14px/22px 'Roboto','Roboto Condensed',Arial,Helvetica,Verdana,sans-serif;
+}
+.efecomunica .efe-listacatact ul.lista img {
+  width: 100px;
+  height: 75px;
+  object-fit: cover;
+}
+.efecomunica .efe-listacatact ul.lista article a {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 400;
+}
+.efecomunica .efe-listacatact ul.lista article a .guia {
+        font-size: 13px;
+        line-height: 16px; 
+        font-weight: normal;
+    }
+
+.efecomunica .efe-listacatact ul.lista article a .entry {
+        font-size: 13px;
+        line-height: 13px;
+    }
+
+</style>
+</div>
+
+<div class="efe-box nopadding">
+<div class="cabecera">
+<a href="https://efecomunica.efe.com/" target="_blank" rel="nofollow">
+<img class="logo" style="width:100%;" src="https://estaticos.efe.com/efecom/promosinternas/webs/logo-efe-comunica.png" alt="logo efe comunica" border="0">
+<div class="lema">Contenidos para instituciones y empresas</div>
+</a>
+</div>
+</div>
+
+<div class="efe-listacatact">
+<ul class="lista">
+<li>
+<article>
+<a href="https://efecomunica.efe.com/basf-liderazgo-ue-crisis-climatica/" target="_blank" rel="nofollow noopener">
+<img alt="" src="https://efecomunica.efe.com/wp-content/uploads/2022/03/rss-efe433bf6578f001e613f0ecf4ba888f729618c9284w-430x286.jpg" onerror="this.style.display = 'none'">
+<div class="caption">
+<span class="titulo">Basf aplaude el liderazgo de la UE en la lucha contra la crisis climática</span>
+</div>
+</a>
+</article>
+</li>
+<li>
+<article>
+<a href="https://efecomunica.efe.com/ilerna-expansion-cataluna-macrocentro-fp-en/" target="_blank" rel="nofollow noopener">
+<img alt="" src="https://efecomunica.efe.com/wp-content/uploads/2022/03/rss-efeb6d908df3d91724e129373dde52703faeee29e7cw-430x185.jpg" onerror="this.style.display = 'none'">
+<div class="caption">
+<span class="titulo">ILERNA refuerza su expansión en Cataluña con un nuevo macrocentro de FP en Barcelona</span>
+</div>
+</a>
+</article>
+</li>
+<li>
+<article>
+<a href="https://efecomunica.efe.com/abanca-ayudas-europeas-rehabilitacion/" target="_blank" rel="nofollow noopener">
+<img alt="" src="https://efecomunica.efe.com/wp-content/uploads/2022/03/rss-efe3d3bc19ad99f3a618e0f49e200875c221b3eaae5w-390x286.jpg" onerror="this.style.display = 'none'">
+<div class="caption">
+<span class="titulo">Abanca facilita asesoramiento para acceso a ayudas europeas de rehabilitación</span>
+</div>
+</a>
+</article>
+</li>
+<li>
+<article>
+<a href="https://efecomunica.efe.com/realidad-virtual-becan-mieloma-multiple/" target="_blank" rel="nofollow noopener">
+<img alt="" src="https://efecomunica.efe.com/wp-content/uploads/2022/03/rss-efe237fc1dfbc5558a3d36a0b63955aeaa9af7944e9w-430x243.jpg" onerror="this.style.display = 'none'">
+<div class="caption">
+<span class="titulo">Becan proyecto de realidad virtual para el tratamiento del mieloma múltiple</span>
+</div>
+</a>
+</article>
+</li>
+<li>
+<article>
+<a href="https://efecomunica.efe.com/docente-espana-mal-menor-finlandia-honor/" target="_blank" rel="nofollow noopener">
+<img alt="" src="https://efecomunica.efe.com/wp-content/uploads/2022/03/rss-efeabc29bff6517f69e49857e969f668a0567166105w-370x286.jpg" onerror="this.style.display = 'none'">
+<div class="caption">
+<span class="titulo">El docente en España es un mal menor, en Finlandia es un honor</span>
+</div>
+</a>
+</article>
+</li>
+<li>
+<article>
+<a href="https://efecomunica.efe.com/planificacion-oficinas-sformas-trabajo/" target="_blank" rel="nofollow noopener">
+<img alt="" src="https://efecomunica.efe.com/wp-content/uploads/2022/03/rss-efea4792d0d3d553fabbf1f84f9fa17dcf8debeef5dw-407x286.jpg" onerror="this.style.display = 'none'">
+<div class="caption">
+<span class="titulo">Planificación de oficinas según las diferentes formas de trabajo</span>
+</div>
+</a>
+</article>
+</li>
+</ul>
+</div>
+</div>
+<div id="prom4006482" class="w-promo">
+<div class="fijo">
+<div><a href="https://zoom.us/webinar/register/WN_I2DFNgziQz69-u4zo5SziQ" target="_blank">
+<img title="EFE Fórum Mujer - UPS" src="//estaticos.efe.com/efecom/recursos2/imagen.aspx?TcQP6YSEh95-P-2f5XojbBXKHSIOONNwdKBnxxbykLN11cgD2B4RHHiqzNNwuIgfoPkFzN3IjMMe7ZV2vVEp586WTH3BtFnksh8jpZenfXw70tyIqQbIgMpy7A-P-3d-P-3d" alt="EFE Fórum Mujer - UPS"></a></div>
+</div>
+</div>
+
+
+<div class="box-publi"><div class="publi-head">Publicidad</div><div id="div-gpt-ad-efe-4006480" class="publi-content"><script type="text/javascript">googletag.cmd.push(function(){googletag.display('div-gpt-ad-efe-4006480');});</script></div></div>
+</div></div>
+</div>
+</div>
+</div>
+<footer class="panel-footer hidden-print">
+<div id="footer-features">
+</div>
+<div id="footer-last" class="efe-centro-margen clearfix">
+<div class="container-fluid">
+<div class="row efe-margen-bott-box">
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 efe-menu-footer hidden-xs"><div class="efe-tree"><label>Noticias</label><ul><li class=" hidden efe-show-on-collapse"></li><li><a href="https://www.efesalud.com/" rel="nofollow">EFE Salud</a></li><li><a href="https://www.efeverde.com/" rel="nofollow">EFE Verde</a></li><li><a href="https://www.efeminista.com/" rel="nofollow">Efeminista</a></li><li><a href="https://www.efeescuela.es/" rel="nofollow">EFE Escuela</a></li><li><a href="https://verifica.efe.com/" rel="nofollow">EFE Verifica</a></li><li><a href="https://www.efeagro.com/" rel="nofollow">EFE Agro</a></li><li><a href="https://euroefe.euractiv.es/" rel="nofollow">EuroEFE</a></li></ul></div></div>
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 efe-menu-footer hidden-xs"><div class="efe-tree"><label>Ediciones</label><ul><li><a href="/efe/espana/1"><span class="edicion-I">Edición</span> España</a></li><li class=" col-md-offset-1 col-md-11"><a href="/efe/castillayleon/7"><span class="edicion-I">Edición</span> Castilla y León</a></li><li class=" col-md-offset-1 col-md-11"><a href="/efe/comunitat-valenciana/10"><span class="edicion-I">Edición</span> C. Valenciana</a></li><li class=" col-md-offset-1 col-md-11"><a href="/efe/andalucia/12"><span class="edicion-I">Edición</span> Andalucía</a></li><li class=" col-md-offset-1 col-md-11"><a href="/efe/canarias/14"><span class="edicion-I">Edición</span> Canarias</a></li><li><a href="/efe/america/2"><span class="edicion-I">Edición</span> América</a></li><li><a href="/efe/brasil/3"><span class="edicion-I">Edição</span> Brasil</a></li><li><a href="/efe/english/4">English <span class="edicion-I">edition</span></a></li><li><a href="/efe/portugal/6"><span class="edicion-I">Edição</span> Portugal</a></li><li><a href="/efe/usa/5"><span class="edicion-I">Edición</span> USA</a></li></ul></div></div>
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 efe-menu-footer hidden-xs"><div class="efe-tree"><label>Empresa</label><ul><li><a href="//www.agenciaefe.es" target="_blank" rel="nofollow">Web corporativa</a></li><li><a href="/efe/espana/contacto/150">Contacto</a></li><li><a href="/efe/espana/concursos/120">Concursos de contratación</a></li><li><a href="//www.agenciaefe.es/premios-rey-espana/" target="_blank">Premios Rey de España</a></li><li><a href="//www.agenciaefe.es/premio-don-quijote/" target="_blank">Premios Don Quijote de Periodismo</a></li><li><a href="//www.efe.com/iptc/" target="_blank">IPTC</a></li><li><a href="/efe/espana/aviso-legal/170">Aviso legal</a></li><li><a href="/efe/espana/politica-privacidad/160">Política de privacidad</a></li><li><a href="https://www.agenciaefe.es/empleo/" target="_blank">Empleo en EFE</a></li></ul></div></div>
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 efe-menu-footer efe-menu-collapse hidden-sm hidden-md hidden-lg">
+<a data-toggle="collapse" href="#collapsemenuFooterEmpresa" class="collapsed" aria-expanded="false" aria-controls="collapsemenuFooterEmpresa">
+Empresa
+<i class="glyphicon glyphicon-chevron-right"></i>
+</a>
+<div class="collapse" id="collapsemenuFooterEmpresa">
+<div><div class="efe-tree"><ul><li><a href="//www.agenciaefe.es" target="_blank" rel="nofollow">Web corporativa</a></li><li><a href="/efe/espana/contacto/150">Contacto</a></li><li><a href="/efe/espana/concursos/120">Concursos de contratación</a></li><li><a href="//www.agenciaefe.es/premios-rey-espana/" target="_blank">Premios Rey de España</a></li><li><a href="//www.agenciaefe.es/premio-don-quijote/" target="_blank">Premios Don Quijote de Periodismo</a></li><li><a href="//www.efe.com/iptc/" target="_blank">IPTC</a></li><li><a href="/efe/espana/aviso-legal/170">Aviso legal</a></li><li><a href="/efe/espana/politica-privacidad/160">Política de privacidad</a></li><li><a href="https://www.agenciaefe.es/empleo/" target="_blank">Empleo en EFE</a></li></ul></div></div>
+</div>
+</div>
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 efe-menu-footer hidden-xs"><div class="efe-tree"><ul><li><a href="https://www.efeservicios.com" target="_blank" rel="nofollow">EFE Servicios</a></li><li><a href="http://www.efelibredescarga.com/" target="_blank" rel="nofollow">contenidos<b>gratuitos</b></a></li><li class=" divider"></li><li class=" share24 twt"><a href="https://twitter.com/efenoticias" target="_blank" rel="nofollow">TWITTER</a></li><li class=" share24 fb"><a href="https://www.facebook.com/AgenciaEFEnoticias/" target="_blank">FACEBOOK</a></li><li class=" share24 ytb"><a href="http://www.youtube.com/efe" target="_blank" rel="nofollow">YOUTUBE</a></li><li class=" share24 dmotion"><a href="http://www.dailymotion.com/agenciaefe" target="_blank" rel="nofollow">DAILYMOTION</a></li><li class=" share24 rss"><a href="http://www.efe.com/efe/espana/1/rss" target="_blank">RSS</a></li><li class=" share24 insta"><a href="https://www.instagram.com/efe_noticias/" target="_blank" rel="nofollow">INSTAGRAM</a></li></ul></div></div>
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 efe-menu-footer efe-menu-horiz hidden-sm hidden-md hidden-lg"><div class="efe-tree"><ul><li><a href="https://www.efeservicios.com" target="_blank" rel="nofollow">EFE Servicios</a></li><li><a href="http://www.efelibredescarga.com/" target="_blank" rel="nofollow">contenidos<b>gratuitos</b></a></li><li class=" divider"></li><li class=" share24 twt"><a href="https://twitter.com/efenoticias" target="_blank" rel="nofollow">TWITTER</a></li><li class=" share24 fb"><a href="https://www.facebook.com/AgenciaEFEnoticias/" target="_blank">FACEBOOK</a></li><li class=" share24 ytb"><a href="http://www.youtube.com/efe" target="_blank" rel="nofollow">YOUTUBE</a></li><li class=" share24 dmotion"><a href="http://www.dailymotion.com/agenciaefe" target="_blank" rel="nofollow">DAILYMOTION</a></li><li class=" share24 rss"><a href="http://www.efe.com/efe/espana/1/rss" target="_blank">RSS</a></li><li class=" share24 insta"><a href="https://www.instagram.com/efe_noticias/" target="_blank" rel="nofollow">INSTAGRAM</a></li></ul></div></div>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align: center;">
+<a rel="nofollow noopener" href="https://sepi.es/" target="_blank" style="background-color: #fff;">
+<img src="/efe/Images/logos/sepi_logo_pie_de.png" alt="sepi" style="height: 30px;"></a>
+</div>
+</div>
+</div>
+</div>
+<div class="copyright ">
+<div class="efe-centro-margen clearfix" style="overflow: hidden;">
+© Agencia EFE, S.A. Avd. de Burgos, 8-B. 28036 Madrid. España Tel: +34 91 346 7100. Todos los derechos reservados
+<div style="float: right;">
+<a target="_blank" rel="nofollow" href="//www.efe.com/mkt/certificado_sostenibilidad_ips_agencia_efe_2.jpg" title="Certificado de sostenibilidad IPS de la Agencia Efe">
+<img style="height: 32px; width: auto;" src="//estaticos.efe.com/efeCOM/LOGOS/IPS/IPS_LOGO.PNG" alt="Logo del certificado de sostenibilidad">
+</a>
+<a target="_blank" rel="nofollow noopener" href="http://www.w3.org/WAI/WCAG1A-Conformance" title="Explanation of Level A Conformance">
+<img style="height: 32px; width: 88px;" src="//estaticos.efe.com/efeCOM/LOGOS/wcag1A.png" alt="Level A conformance icon, W3C-WAI Web Content Accessibility Guidelines 1.0">
+</a>
+</div>
+</div>
+</div>
+</footer>
+<script src="/efe/bundles/comunes-js?v=2g84_C-5wknMKxr5rn0ybh87qtpAz8aAe3pdckk7l7w1"></script>
+
+<script type="text/javascript">        
+        efe_tcfv2_runIfHasRequiredPurposes(function () {
+            var gads = document.createElement('script'); gads.async = true; gads.type = 'text/javascript';
+            var useSSL = 'https:' == document.location.protocol; gads.src = (useSSL ? 'https:' : 'http:') + '//tc.dataxpand.com/tc/788283f.js';
+            var node = document.getElementsByTagName('script')[0]; node.parentNode.insertBefore(gads, node);
+        }, [1, 9]);
+    </script>
+<script type="text/javascript">
+        window.onload = function () {
+            setTimeout(function () {
+                var _theAd = document.querySelector("[id^=google_ads_iframe_]");
+                if (_theAd == null || (_theAd && _theAd.innerHTML.replace(/\s/g, "").length == 0)) {
+                    if (typeof ga !== "undefined")
+                        ga("send", "event", "AdBlock", "True", { "nonIteraction": 1 });
+                }
+            }, 3000);
+        };
+    </script>
+<script type="text/javascript">efe_tcfv2_runIfHasRequiredPurposes(function () { createCookie("efe_e", "1", 30); },[1]);</script>
+<script type="text/javascript">efeSetRefresh(900);</script>
+<noscript>
+        <meta http-equiv="Refresh" content="900" />
+    </noscript>
+<script defer="">if (window.__tcfapi) window.__tcfapi('getTCData', 2, function (data, success) { console.log(data); }, [517]);</script>
+
+
+<iframe style="display: none;" name="__tcfapiLocator"></iframe></body></html>

@@ -1,0 +1,160 @@
+<html><head>
+		
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<!-- Load CSS. -->
+		
+		<!-- Load JavaScript library. -->
+		<script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+		
+		<!-- Load Bootstrap. -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">-->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		
+		<!-- Load BitcoinJS -->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bitcoinjs-lib/0.2.0-1/bitcoinjs-min.js" integrity="sha256-FilB5ir32toR4c80H4e31Wzh7MbA0kOd/LzvRxgletA=" crossorigin="anonymous"></script>
+		
+		<script type="text/javascript" src="js/jquery.qrcode.min.js"></script>
+		<script type="text/javascript" src="js/bitcore-lib.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+		
+		<title>Bitcoin Script Online Debugger</title>
+		
+	</head>
+	<body>
+		
+		<div class="modal fade" id="modal-qr" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+						<h4 class="modal-title">QR code</h4>
+					</div>
+					<div class="modal-body">
+						<div class="text-center">
+							<div id="qr-image"></div>
+							<p id="qr-text"></p>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		
+		<div class="container">
+			
+			<div class="page-header">
+				<h1>Bitcoin Script Online Debugger</h1>
+			</div>
+			
+			<p><a href="javascript:$('#usage').toggle('fast');">≫ Toggle Usage</a></p>
+			
+			<div id="usage" style="display:none;">
+				<p>Enter a script to debug in the following textarea. The script is automatically parsed and executed. The step-by-step execution status (incl. stack status) will be shown.</p>
+				<p>Notice that there are some restriction (some of them are inherited from the backend library, Bitcore):</p>
+				<ul>
+					<li>Hex data should be prefixed by "0x".</li>
+					<li>Hex data to be pushed onto the stack should be prefixed by the number of bytes to be pushed (e.g. "4 0x01020304") or OP_PUSHDATA? should be used (e.g. "OP_PUSHDATA1 4 0x01020304").</li>
+					<li>Signature checks such as OP_CHECKSIG and OP_CHECKMULTISIG are not supported (yet).</li>
+				</ul>
+				<p>Users not being familiar with Bitcoin's script language should refer to <a href="https://en.bitcoin.it/wiki/Script">this article</a> at Bitcoin Wiki.</p>
+				<p>Tha sample code shown by default is "transaction puzzle" described at <a href="https://en.bitcoin.it/wiki/Script#Transaction_puzzle">Bitcoin Wiki</a>. The first 80byte pushdata is the hex-encoded block header of the genesis block and the second to last push data is the doulbe-SHA256 hash of it, namely the block hash (reversed block ID) of the genesis block.</p>
+				<p>The input code can be specified by <a href="?input=OP_1%20OP_DUP%20OP_ADD%20OP_DUP%20OP_ADD%20OP_DUP%20OP_ADD%20OP_DUP%20OP_ADD%20OP_16%20OP_EQUAL">URL query</a>. Use "input" as a key.</p>
+				<p>Enjoy scripting!</p>
+			</div>
+			
+			<h2>Input</h2>
+			
+			<textarea id="input" rows="10" class="form-control" title="Enter your script here. It will be executed and evaluated automatically." style="width:100%;" onkeydown="rerun();" onkeyup="rerun();" onchange="rerun();"></textarea>
+			
+			<div class="text-center" style="margin-top:10px;">
+				<div class="btn-group" id="template-selector"><button type="button" title="Empty script." class="btn btn-default" onclick="selectTemplate('empty')">Empty</button><button type="button" title="Pay-to-PubKey-Hash (P2PKH / P2PH) script." class="btn btn-default" onclick="selectTemplate('p2pkh')">P2PKH</button><button type="button" title="Pay-to-PubKey script (absolate)." class="btn btn-default" onclick="selectTemplate('p2pubkey')">P2PubKey</button><button type="button" title="Pay-to-Script-Hash (P2SH) script." class="btn btn-default" onclick="selectTemplate('p2sh')">P2SH</button><button type="button" title="Unspendable output with any user-defined commitments." class="btn btn-default" onclick="selectTemplate('op_return')">OP_RETURN</button><button type="button" title="Outputs spendable by anyone." class="btn btn-default" onclick="selectTemplate('anyone_can_spend')">Anyone-Can-Spend</button><button type="button" title="Tranasction puzzle describled at Bitcoin wiki." class="btn btn-default" onclick="selectTemplate('puzzle')">Transaction Puzzle</button></div>
+			</div>
+			
+			<div class="text-center" style="margin-top:30px;font-size:300%;"><span class="glyphicon glyphicon-chevron-down"></span></div>
+			
+			<h2>Results</h2>
+			
+			<div id="result-error" style="color: red; display: none;"></div>
+			<div class="text-center" style="font-size:200%;margin-bottom:30px;">
+				<span id="result" class="label label-default label-success">Result: OK</span>
+			</div>
+			
+			<h3>Link to This Script</h3>
+			
+			<input type="text" class="form-control" id="result-url" title="You can restart scripting by bookmarking this, or tell friends your beautiful script via this URL!" readonly="readonly" style="width: 100%; background-color: rgb(221, 221, 221);">
+			
+			<h3>Human-readable Text</h3>
+			
+			<div id="result-text-error" style="color: red; display: none;">Failed to parse input script. Please check the syntax.</div>
+			<textarea id="result-text" class="form-control" title="Formatted script." rows="3" style="width: 100%; background-color: rgb(221, 221, 221);" readonly="readonly"></textarea>
+			
+			<h3>Hex</h3>
+			
+			<textarea id="result-hex" class="form-control" title="Binary-encoded (assembled) script." rows="3" style="width: 100%; background-color: rgb(221, 221, 221);" readonly="readonly"></textarea>
+			
+			<h3>P2SH Address</h3>
+			
+			<div class="row">
+				<div class="col-md-6">
+					<div class="input-group" title="Pay-to-Script-Hash (P2SH) address of your script (mainnet). You can fund your coins to this address to test your script on the real network.">
+						<span class="input-group-addon">Mainnet <span style="color:white;background-color:#ff9900;border-radius:50%;padding:2px 5px 3px 5px;"><span class="glyphicon glyphicon-btc" style="font-size:80%;"></span></span></span>
+						<input type="text" class="form-control" id="result-address-mainnet" readonly="readonly" style="width: 100%; background-color: rgb(221, 221, 221);">
+						<span class="input-group-addon">
+							<a href="https://blockchain.info/ja/address/35GFE6cAAjxmghp5ADr9FQVyLtPdWjZdBV" id="result-address-mainnet-explorer"><span class="glyphicon glyphicon-search"></span></a>
+							<a href="javascript:showqr('mainnet');" style="color:black;"><span class="glyphicon glyphicon-qrcode"></span></a>
+						</span>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="input-group" title="Pay-to-Script-Hash (P2SH) address of your script (testnet). You can fund your coins to this address to test your script on the real network.">
+						<span class="input-group-addon">Testnet <span style="color:white;background-color:#66f826;border-radius:50%;padding:2px 5px 3px 5px;"><span class="glyphicon glyphicon-btc" style="font-size:80%;"></span></span></span>
+						<input type="text" class="form-control" id="result-address-testnet" readonly="readonly" style="width: 100%; background-color: rgb(221, 221, 221);">
+						<span class="input-group-addon">
+							<a href="https://live.blockcypher.com/btc-testnet/address/2MvpTHqYBnCU7tVScqMU1sMVEZEboK22DfM" id="result-address-testnet-explorer"><span class="glyphicon glyphicon-search"></span></a>
+							<a href="javascript:showqr('testnet');" style="color:black;"><span class="glyphicon glyphicon-qrcode"></span></a>
+						</span>
+					</div>
+				</div>
+			</div>
+			
+			<div class="text-center" style="margin:10px 0px;">
+				<p>Wanna redeem your deposits? Try <a href="https://bip32jp.github.io/english/createp2sh.html">here</a>! (thx <a href="https://twitter.com/kinoshitajona">@kinoshitajona</a>!)</p>
+			</div>
+			
+			<h3>Step Execution</h3>
+			
+			<table id="result-steps" class="table table-bordered">
+				<thead>
+					<tr>
+						<th style="width:50px;" title="The # of steps executed (program counter).">#Step</th>
+						<th title="The stack status after a step execution.">Resulted Stack</th>
+						<th title="An OP code executed at this step.">Executed OP Code</th>
+						<th title="OP codes wainting for execution.">Remaining OP Codes</th>
+					</tr>
+				</thead>
+				<tbody><tr><td>1</td><td style="max-width:100px;overflow-x:scroll;">0100000000000000000000000000000000000000000000000000000000000000000000003ba3edfd7a7b12b27ac72c3e67768f617fc81bc3888a51323a9fb8aa4b1e5e4a29ab5f49ffff001d1dac2b7c</td><td style="max-width:100px;overflow-x:scroll;">OP_PUSHDATA1 80 0x0100000000000000000000000000000000000000000000000000000000000000000000003ba3edfd7a7b12b27ac72c3e67768f617fc81bc3888a51323a9fb8aa4b1e5e4a29ab5f49ffff001d1dac2b7c</td><td style="max-width:100px;overflow-x:scroll;">OP_HASH256 32 0x6fe28c0ab6f1b372c1a6a246ae63f74f931e8365e15a089c68d6190000000000 OP_EQUAL</td></tr><tr><td>2</td><td style="max-width:100px;overflow-x:scroll;">6fe28c0ab6f1b372c1a6a246ae63f74f931e8365e15a089c68d6190000000000</td><td style="max-width:100px;overflow-x:scroll;">OP_HASH256</td><td style="max-width:100px;overflow-x:scroll;">32 0x6fe28c0ab6f1b372c1a6a246ae63f74f931e8365e15a089c68d6190000000000 OP_EQUAL</td></tr><tr><td>3</td><td style="max-width:100px;overflow-x:scroll;">6fe28c0ab6f1b372c1a6a246ae63f74f931e8365e15a089c68d6190000000000<br>6fe28c0ab6f1b372c1a6a246ae63f74f931e8365e15a089c68d6190000000000</td><td style="max-width:100px;overflow-x:scroll;">32 0x6fe28c0ab6f1b372c1a6a246ae63f74f931e8365e15a089c68d6190000000000</td><td style="max-width:100px;overflow-x:scroll;">OP_EQUAL</td></tr><tr><td>4</td><td style="max-width:100px;overflow-x:scroll;">01</td><td style="max-width:100px;overflow-x:scroll;">OP_EQUAL</td><td style="max-width:100px;overflow-x:scroll;"></td></tr></tbody>
+			</table>
+			
+			<hr>
+			
+			<footer>
+				<div class="pull-left">
+					<p>Copyright <a href="https://twitter.com/visvirial">@visvirial</a> 2016. All rights are reserved.</p>
+				</div>
+				<div class="pull-right">
+					<p>[ Powered by <a href="https://bitcore.io/">Bitcore</a> | <a href="https://github.com/visvirial/bitcoin-script-debugger">Source Repo (GitHub)</a> | Hosted at <a href="https://pages.github.com/">GitHub Pages</a> | <a href="https://github.com/visvirial/bitcoin-script-debugger/archive/master.zip" title="This service is serverless and can be run locally in case of internet connection trouble!">Download ZIP</a> ]</p>
+				</div>
+			</footer>
+			
+		</div>
+		
+	
+
+
+</body></html>

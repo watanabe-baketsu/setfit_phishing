@@ -1,0 +1,685 @@
+<html lang="en-gb"><head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ghost: Turn your audience into a business</title>
+<meta name="description" content="The world's most popular modern publishing platform for creating a new media platform. Used by Apple, SkyNews, Buffer, OpenAI, and thousands more.">
+<link rel="canonical" href="https://ghost.org/">
+<meta name="theme-color" content="#15171A">
+<meta property="og:site_name" content="Ghost - The Professional Publishing Platform">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ghost: Turn your audience into a business">
+<meta property="og:description" content="The world's most popular modern publishing platform for creating a new media platform. Used by Apple, SkyNews, Buffer, OpenAI, and thousands more.">
+<meta property="og:url" content="https://ghost.org/">
+<meta property="og:image" content="https://ghost.org/images/meta/ghost.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta name="twitter:title" content="Ghost: Turn your audience into a business">
+<meta name="twitter:description" content="The world's most popular modern publishing platform for creating a new media platform. Used by Apple, SkyNews, Buffer, OpenAI, and thousands more.">
+<meta name="twitter:url" content="https://ghost.org/">
+<meta name="twitter:site" content="@ghost">
+<meta name="twitter:creator" content="@ghost">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://ghost.org/images/meta/ghost.png">
+<script type="text/javascript" async="" src="https://cdn.firstpromoter.com/fprom.js"></script><script type="application/ld+json">{"@context":"https://schema.org/","@type":"WebSite","url":"https://ghost.org/","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/ghost.org/"},"image":{"@type":"ImageObject","url":"https://ghost.org/images/meta/ghost.png","width":1280,"height":640},"description":"The world's most popular modern publishing platform for creating a new media platform. Used by Apple, SkyNews, Buffer, OpenAI, and thousands more."}</script>
+<meta name="generator" content="Hugo 0.92.1">
+<link rel="sitemap" type="application/xml" title="Sitemap" href="https://ghost.org/sitemap.xml">
+<link rel="stylesheet" as="style" onload="this.rel='stylesheet'" href="/fonts/inter.css">
+<link rel="preload" as="font" href="/fonts/Inter-roman.var.woff2" type="font/woff2" crossorigin="anonymous">
+<link rel="stylesheet" href="https://ghost.org/css/main.min.42dfc9dcb7d682af6ba12a726a4436b97cb5cf6d3ed4c4f888312aa9b1257a85.css">
+<script async="" defer="" data-domain="ghost.org" src="/js/script.js"></script>
+<script type="text/javascript" async="">(function(){var a=document.createElement("script"),b;a.type="text/javascript",a.async=!0,a.src='https://cdn.firstpromoter.com/fprom.js',a.onload=a.onreadystatechange=function(){var a=this.readyState;if(!a||"complete"==a||"loaded"==a)try{$FPROM.init("pq6gukie",".ghost.org")}catch(a){}},b=document.getElementsByTagName("script")[0],b.parentNode.insertBefore(a,b)})()</script>
+</head>
+<body class="gh-head-transparent gh-home-template" x-data="{ ...navDropdown(), ...searchModal(), ...mobileMenu() }" x-on:keydown.escape="closeSearchModal();closeNavDropdown();closeMobileMenu()" x-on:keydown.cmd.f="handleGlobalShortcut($event)" :class="{'gh-head-open': mobileMenuIsOpen()}">
+<div class="gh-viewport">
+<header id="gh-head" class="gh-head" :class="{'is-open': navDropdownIsOpen()}" x-on:click.away="closeNavDropdown()">
+<nav class="gh-head-inner inner">
+<div class="gh-head-brand">
+<a class="gh-head-logo" href="/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 294" preserveAspectRatio="xMidYMid meet" class="ghost-orb-logo">
+<title>Ghost Logo</title>
+<style>
+svg.ghost-orb-logo {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url(/images/logos/logo-black-1.png);
+}
+</style>
+</svg>
+</a>
+<a class="gh-burger" role="button" aria-label="Show Navigation Menu" x-on:click="toggleMobileMenu()">
+<div class="gh-burger-box">
+<div class="gh-burger-inner"></div>
+</div>
+</a>
+</div>
+<div class="gh-head-menu">
+<a href="/customers/">Showcase</a>
+<div class="js-dropdown" :class="{'is-open': navDropdownIsOpen()}" x-on:click="toggleNavDropdown()">
+Resources <span><svg viewBox="0 0 26 17" xmlns="http://www.w3.org/2000/svg"><path d="M1.469 2.18l11.5 13.143 11.5-13.143" stroke-width="3" stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</span>
+</div>
+<a href="/pricing/">Pricing</a>
+</div>
+<div class="gh-head-actions" x-on:mouseenter.once="initSearch()">
+<a id="search-button" href="javascript:;" role="button" x-on:click="openSearchModal()" aria-label="Search"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M23.5 24c-.134 0-.259-.052-.354-.146l-5.589-5.589C15.617 20.031 13.121 21 10.5 21 4.71 21 0 16.29 0 10.5S4.71 0 10.5 0 21 4.71 21 10.5c0 2.621-.969 5.117-2.736 7.057l5.589 5.589c.095.095.147.22.147.354s-.052.259-.146.354-.22.146-.354.146zm-13-23C5.262 1 1 5.262 1 10.5S5.262 20 10.5 20s9.5-4.262 9.5-9.5S15.738 1 10.5 1z"></path></svg>
+</a>
+<a id="signin-button" href="https://account.ghost.org/signin/"><span>Sign in</span></a>
+<a id="signup-button" class="gh-btn gh-btn-s" href="https://account.ghost.org/signup/">Get started <em> — free</em></a>
+</div>
+</nav>
+<div class="gh-head-drop" :class="{'is-open': navDropdownIsOpen()}">
+<div class="inner">
+<button class="gh-head-drop-back" x-on:click="toggleNavDropdown()">Back</button>
+<div class="gh-head-drop-grid">
+<a href="/marketplace/">
+<strong><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<g>
+	<path d="M11.993,14.251c-0.365,0-0.729-0.088-1.052-0.255L0.732,8.714C0.478,8.584,0.275,8.38,0.144,8.125
+		c-0.344-0.67-0.079-1.494,0.59-1.838l10.206-5.28c0.324-0.167,0.688-0.255,1.052-0.255s0.729,0.088,1.052,0.255l10.21,5.281
+		c0.252,0.131,0.454,0.333,0.585,0.585c0.346,0.67,0.083,1.495-0.585,1.842l-10.209,5.281
+		C12.723,14.162,12.359,14.251,11.993,14.251z M11.63,12.663c0.112,0.058,0.237,0.088,0.364,0.088c0.126,0,0.252-0.031,0.363-0.088
+		l9.979-5.162l-9.979-5.162c-0.111-0.058-0.237-0.088-0.363-0.088s-0.252,0.03-0.364,0.088L1.652,7.501L11.63,12.663z"></path>
+	<path d="M11.996,18.751c-0.366,0-0.73-0.088-1.055-0.256L0.433,13.426c-0.18-0.087-0.316-0.239-0.382-0.428
+		c-0.066-0.189-0.054-0.393,0.033-0.573c0.124-0.258,0.389-0.424,0.675-0.424c0.114,0,0.224,0.025,0.326,0.075l10.527,5.078
+		c0.126,0.064,0.256,0.096,0.385,0.096c0.125,0,0.25-0.03,0.361-0.088l10.576-5.087c0.103-0.049,0.212-0.074,0.325-0.074
+		c0.287,0,0.552,0.167,0.676,0.425c0.179,0.372,0.022,0.821-0.351,1l-10.557,5.078C12.718,18.664,12.359,18.751,11.996,18.751z"></path>
+	<path d="M11.996,23.251c-0.366,0-0.73-0.088-1.055-0.256L0.433,17.926c-0.18-0.087-0.316-0.239-0.382-0.428
+		c-0.066-0.189-0.054-0.393,0.033-0.573c0.124-0.258,0.389-0.424,0.676-0.424c0.114,0,0.223,0.025,0.326,0.075l10.527,5.078
+		c0.126,0.065,0.256,0.096,0.385,0.096c0.125,0,0.25-0.03,0.361-0.087l10.576-5.087c0.103-0.049,0.212-0.074,0.325-0.074
+		c0.287,0,0.552,0.167,0.676,0.425c0.179,0.372,0.022,0.821-0.351,1l-10.557,5.078C12.718,23.164,12.359,23.251,11.996,23.251z"></path>
+</g>
+</svg>
+Marketplace</strong>
+<p>Professional themes, custom integrations and qualified experts</p>
+</a>
+<a href="/themes/">
+<strong><svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" enable-background="new 0 0 24 24" version="1.1" viewBox="0 0 24 24" xml:space="preserve"><path d="M1.5,22.997c-0.827,0-1.5-0.673-1.5-1.5v-20c0-0.827,0.673-1.5,1.5-1.5h20c0.827,0,1.5,0.673,1.5,1.5v20 c0,0.827-0.673,1.5-1.5,1.5H1.5z M21.5,21.997c0.276,0,0.5-0.224,0.5-0.5v-6.5H8v7H21.5z M1,21.497c0,0.276,0.224,0.5,0.5,0.5H7 v-15H1V21.497z M22,13.997v-7H8v7H22z M22,5.997v-4.5c0-0.276-0.224-0.5-0.5-0.5h-20c-0.276,0-0.5,0.224-0.5,0.5v4.5H22z"></path></svg>
+Themes</strong>
+<p>Hundreds of beautifully designed publication templates</p>
+</a>
+<a href="/integrations/">
+<strong><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>module-three-1</title><path d="M17.5 22.999l-.035-.003c-.283-.003-.575-.091-.825-.252L12 19.764l-4.63 2.981c-.254.164-.548.251-.851.254L6.5 23l-.036-.003c-.283-.003-.575-.091-.825-.252l-4.4-2.83c-.461-.293-.738-.796-.74-1.344v-4.063c-.001-.544.27-1.047.727-1.344L6 10.096V5.73c0-.268.069-.535.2-.773l.007-.015c.005-.01.011-.019.018-.028.128-.222.321-.419.552-.557l4.4-2.64c.249-.149.534-.228.823-.228.29 0 .574.079.823.229l4.4 2.64c.228.137.42.331.556.563l.009.013.012.024c.129.229.2.5.2.773v4.366l4.771 3.066c.459.299.731.802.729 1.347v4.061c.001.544-.27 1.046-.727 1.344l-4.402 2.831c-.254.164-.548.251-.851.254l-.02-.001zm.5-1.205l4.229-2.72c.169-.11.271-.299.271-.503v-3.78l-4.5 2.7v4.303zm-11 0l4.5-2.898V14.79L7 17.49v4.304zm10-.006V17.49l-4.5-2.7v4.106l4.5 2.892zM1.5 18.569c.001.204.105.393.278.503L6 21.788V17.49l-4.5-2.7v3.779zm5-1.945l4.553-2.732L6.5 10.964l-4.556 2.927L6.5 16.624zm11 0l4.556-2.733-4.556-2.927-4.553 2.929 4.553 2.731zm-5-3.633l4.5-2.895V5.99l-4.5 2.7v4.301zm-1 0V8.69L7 5.99v4.106l4.5 2.895zm.5-5.167l4.528-2.718-4.22-2.532c-.093-.056-.2-.086-.309-.086-.108 0-.215.03-.309.086L7.472 5.107 12 7.824z"></path></svg> Integrations</strong>
+<p>Connect thousands of apps &amp; services with your website</p>
+</a>
+<a href="/resources/">
+<strong><svg version="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.5 4H20V.5a.5.5 0 0 0-.5-.5h-14A2.503 2.503 0 0 0 3 2.5v19C3 22.878 4.121 24 5.5 24h15a.5.5 0 0 0 .5-.5v-19a.5.5 0 0 0-.5-.5zm-15-3H19v3h-1v-.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0-.5.5V4H5.5C4.673 4 4 3.327 4 2.5S4.673 1 5.5 1zM12 4h5v10.293l-2.146-2.147a.502.502 0 0 0-.708 0L12 14.293V4zm8 19H5.5c-.827 0-1.5-.673-1.5-1.5V4.487c.419.318.935.513 1.5.513H11v10.5a.5.5 0 0 0 .854.354l2.646-2.647 2.646 2.647A.504.504 0 0 0 17.5 16l.191-.038A.5.5 0 0 0 18 15.5V5h2v18z"></path></svg> Resources</strong>
+<p>Guides, stories, interviews and tips</p>
+</a>
+<a href="/help/">
+<strong><svg version="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.5 10h-.692C21.987 5.548 18.453 2.014 14 1.191V.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v.691C5.547 2.014 2.012 5.548 1.19 10H.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h.69c.823 4.454 4.357 7.988 8.81 8.809v.691a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-.691c4.453-.821 7.986-4.356 8.808-8.809h.692a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zm-1.708 0h-4.674A5.522 5.522 0 0 0 14 6.882V2.208A10.036 10.036 0 0 1 21.792 10zM12 16.5c-2.481 0-4.5-2.019-4.5-4.5S9.519 7.5 12 7.5s4.5 2.019 4.5 4.5-2.019 4.5-4.5 4.5zM13 1v5.596c-.325-.06-.658-.096-1-.096s-.675.036-1 .096V1h2zm-3 1.208v4.674A5.522 5.522 0 0 0 6.882 10H2.207A10.037 10.037 0 0 1 10 2.208zM1 11h5.596c-.06.325-.096.658-.096 1s.036.675.096 1H1v-2zm1.207 3h4.675A5.522 5.522 0 0 0 10 17.118v4.674A10.032 10.032 0 0 1 2.207 14zM11 23v-5.596c.325.06.658.096 1 .096s.675-.036 1-.096V23h-2zm3-1.208v-4.674A5.522 5.522 0 0 0 17.118 14h4.674A10.03 10.03 0 0 1 14 21.792zM23 13h-5.596c.06-.325.096-.658.096-1s-.036-.675-.096-1H23v2z"></path></svg>
+Help center</strong>
+<p>Detailed help for getting the most out of the product</p>
+</a>
+<a href="/changelog/">
+<strong><svg version="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.5 13.382V11.5a.5.5 0 0 0-1 0v1.882l-4.947 9.895A.5.5 0 0 0 7 24h10a.498.498 0 0 0 .447-.723L12.5 13.382zm-.5 1.236l.941 1.882h-1.882L12 14.618zm1.441 2.882l.415.829-1.853 1.239-1.858-1.239.414-.829h2.882zm-2.338 2.669l-2.822 1.887 1.413-2.826 1.409.939zm.901.601L15.349 23h-6.68l3.335-2.23zm.9-.601l1.402-.938 1.405 2.809-2.807-1.871zM12 0C5.383 0 0 5.383 0 12c0 3.102 1.184 6.048 3.332 8.295a.5.5 0 0 0 .723-.691A10.955 10.955 0 0 1 1 12C1 5.935 5.935 1 12 1s11 4.935 11 11c0 2.844-1.085 5.544-3.055 7.604a.5.5 0 0 0 .723.692A11.96 11.96 0 0 0 24 12c0-6.617-5.383-12-12-12zm0 4c-4.411 0-8 3.589-8 8a7.94 7.94 0 0 0 1.502 4.655.5.5 0 1 0 .812-.583A6.948 6.948 0 0 1 5 12c0-3.86 3.141-7 7-7s7 3.14 7 7a6.942 6.942 0 0 1-1.315 4.072.5.5 0 0 0 .812.584A7.946 7.946 0 0 0 20 12c0-4.411-3.589-8-8-8zm3.468 8.622h.023c.263 0 .485-.233.504-.497L16 12c0-2.206-1.794-4-4-4s-4 1.794-4 4l.005.125.503.028-.5.019c.011.272.235.416.506.404.272-.005.486-.303.486-.576 0-1.654 1.346-3 3-3s3 1.346 3 3h.5l-.508.134c-.01.273.202.473.476.488z"></path></svg>
+Product updates</strong>
+<p>All the latest changes and improvements</p>
+</a>
+<a href="/docs/">
+<strong><svg version="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.354 3.147a.5.5 0 0 0-.707 0l-8.5 8.5a.5.5 0 0 0 0 .707l8.5 8.5a.498.498 0 0 0 .707 0 .5.5 0 0 0 0-.707L1.207 12l8.147-8.146a.5.5 0 0 0 0-.707zm14.5 8.499l-8.5-8.5a.5.5 0 0 0-.707.707L22.793 12l-8.146 8.146a.5.5 0 0 0 .707.708l8.5-8.5a.502.502 0 0 0 0-.708z"></path></svg>
+Developers</strong>
+<p>Source code, documentation, guides and tutorials</p>
+</a>
+<a href="/about/">
+<strong><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>house-heart</title><path d="M4.5 23.5c-.827 0-1.5-.673-1.5-1.5v-9c0-.276.224-.5.5-.5s.5.224.5.5v9c0 .276.224.5.5.5h15c.276 0 .5-.224.5-.5v-8.5c0-.276.224-.5.5-.5s.5.224.5.5V22c0 .827-.673 1.5-1.5 1.5h-15z"></path><path d="M23.5 13c-.134 0-.259-.052-.354-.146L12 1.707.854 12.854C.759 12.948.634 13 .5 13s-.259-.052-.354-.146c-.195-.195-.195-.512 0-.707l11.5-11.5C11.741.552 11.867.5 12 .5s.259.052.354.146l11.5 11.5c.195.195.195.512 0 .707-.095.095-.22.147-.354.147zM19.5 6c-.275 0-.5-.224-.5-.5v-3h-3c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h3c.552 0 1 .449 1 1v3c0 .276-.224.5-.5.5z"></path><path d="M11.998 20.311c-.207 0-.406-.065-.574-.189-.015-.011-.031-.024-.047-.039-.853-.614-4.877-3.666-4.877-6.473-.046-.869.257-1.719.854-2.38.597-.661 1.415-1.051 2.302-1.097l.054-.003c.879.017 1.71.394 2.29 1.021.579-.627 1.403-1.004 2.26-1.022.908.032 1.737.408 2.346 1.06.609.652.927 1.5.896 2.39l-.002.048c-.006 2.863-4.401 6.117-4.902 6.478-.187.139-.39.206-.6.206zm-2.287-9.18c-.623.033-1.196.306-1.614.77-.418.464-.63 1.062-.598 1.683.001 1.976 2.938 4.597 4.492 5.709l.012.009c1.555-1.123 4.497-3.758 4.497-5.692l.003-.071c.045-1.282-.964-2.364-2.25-2.41-.743.016-1.444.442-1.815 1.112-.085.154-.253.249-.438.249s-.353-.095-.437-.248c-.37-.668-1.071-1.093-1.833-1.112l-.019.001z"></path></svg> About us</strong>
+<p>Learn more about the people behind the platform</p>
+</a>
+</div>
+</div>
+</div>
+</header>
+<div id="search-modal" class="gh-modal-overlay" :class="{ 'gh-modal-open': searchIsOpen()}" :aria-expanded="searchIsOpen() ? 'true' : 'false'" aria-expanded="false">
+<section class="gh-modal gh-search-modal" x-on:click.away="closeSearchModal()">
+<div class="gh-modal-content">
+<header class="gh-modal-head">
+<span class="gh-search-input-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M23.5 24c-.134 0-.259-.052-.354-.146l-5.589-5.589C15.617 20.031 13.121 21 10.5 21 4.71 21 0 16.29 0 10.5S4.71 0 10.5 0 21 4.71 21 10.5c0 2.621-.969 5.117-2.736 7.057l5.589 5.589c.095.095.147.22.147.354s-.052.259-.146.354-.22.146-.354.146zm-13-23C5.262 1 1 5.262 1 10.5S5.262 20 10.5 20s9.5-4.262 9.5-9.5S15.738 1 10.5 1z"></path></svg>
+</span>
+<label class="hidden" for="search">Search</label>
+<input id="search-input" class="gh-input" type="text" placeholder="Quick-search for anything" autocomplete="off" autofocus="" name="search" x-on:keydown.enter.prevent="" aria-label="Search">
+<div class="gh-search-input-shortcut" x-on:click="closeSearchModal()" role="button" aria-label="Close Search">ESC</div>
+</header>
+<div class="gh-modal-body">
+<div id="suggestions">
+<div class="gh-search-common-terms">
+<div class="gh-search-common-terms-title">
+Common searches
+</div>
+<ul role="listbox" class="gh-search-common-terms-list">
+<li role="option">
+<a href="/help/using-custom-domains/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M23.5 24c-.134 0-.259-.052-.354-.146l-5.589-5.589C15.617 20.031 13.121 21 10.5 21 4.71 21 0 16.29 0 10.5S4.71 0 10.5 0 21 4.71 21 10.5c0 2.621-.969 5.117-2.736 7.057l5.589 5.589c.095.095.147.22.147.354s-.052.259-.146.354-.22.146-.354.146zm-13-23C5.262 1 1 5.262 1 10.5S5.262 20 10.5 20s9.5-4.262 9.5-9.5S15.738 1 10.5 1z"></path></svg>
+<span>how to set up my custom domain</span>
+</a>
+</li>
+<li role="option">
+<a href="/docs/install/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M23.5 24c-.134 0-.259-.052-.354-.146l-5.589-5.589C15.617 20.031 13.121 21 10.5 21 4.71 21 0 16.29 0 10.5S4.71 0 10.5 0 21 4.71 21 10.5c0 2.621-.969 5.117-2.736 7.057l5.589 5.589c.095.095.147.22.147.354s-.052.259-.146.354-.22.146-.354.146zm-13-23C5.262 1 1 5.262 1 10.5S5.262 20 10.5 20s9.5-4.262 9.5-9.5S15.738 1 10.5 1z"></path></svg>
+<span>how to install ghost</span>
+</a>
+</li>
+<li role="option">
+<a href="/help/change-account-details/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M23.5 24c-.134 0-.259-.052-.354-.146l-5.589-5.589C15.617 20.031 13.121 21 10.5 21 4.71 21 0 16.29 0 10.5S4.71 0 10.5 0 21 4.71 21 10.5c0 2.621-.969 5.117-2.736 7.057l5.589 5.589c.095.095.147.22.147.354s-.052.259-.146.354-.22.146-.354.146zm-13-23C5.262 1 1 5.262 1 10.5S5.262 20 10.5 20s9.5-4.262 9.5-9.5S15.738 1 10.5 1z"></path></svg>
+<span>login not working, how to reset password</span>
+</a>
+</li>
+<li role="option">
+<a href="/help/cloudflare-domain-setup/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M23.5 24c-.134 0-.259-.052-.354-.146l-5.589-5.589C15.617 20.031 13.121 21 10.5 21 4.71 21 0 16.29 0 10.5S4.71 0 10.5 0 21 4.71 21 10.5c0 2.621-.969 5.117-2.736 7.057l5.589 5.589c.095.095.147.22.147.354s-.052.259-.146.354-.22.146-.354.146zm-13-23C5.262 1 1 5.262 1 10.5S5.262 20 10.5 20s9.5-4.262 9.5-9.5S15.738 1 10.5 1z"></path></svg>
+<span>cloudflare setup and config</span>
+</a>
+</li>
+<li role="option">
+<a href="/docs/themes/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M23.5 24c-.134 0-.259-.052-.354-.146l-5.589-5.589C15.617 20.031 13.121 21 10.5 21 4.71 21 0 16.29 0 10.5S4.71 0 10.5 0 21 4.71 21 10.5c0 2.621-.969 5.117-2.736 7.057l5.589 5.589c.095.095.147.22.147.354s-.052.259-.146.354-.22.146-.354.146zm-13-23C5.262 1 1 5.262 1 10.5S5.262 20 10.5 20s9.5-4.262 9.5-9.5S15.738 1 10.5 1z"></path></svg>
+<span>how to make a ghost theme</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div id="results"></div>
+<footer class="gh-search-footer">
+<div class="gh-search-footer-kbd gh-search-footer-kbd-arrow-up-down"><span>↓</span></div>
+<div class="gh-search-footer-kbd gh-search-footer-kbd-arrow-up-down"><span>↑</span></div>
+<p>to navigate</p>
+<div class="gh-search-footer-kbd gh-search-footer-kbd-arrow-return"><span>&nbsp;↵</span></div>
+<p>to select</p>
+<a class="gh-search-algolia" href="https://www.algolia.com" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" version="1.1" viewBox="0 0 168 24" xml:space="preserve"><g fill="none"><path fill="#5468FF" d="M78.988.938h16.594a2.968 2.968 0 012.966 2.966V20.5a2.967 2.967 0 01-2.966 2.964H78.988a2.967 2.967 0 01-2.966-2.964V3.897A2.961 2.961 0 0178.988.938zm41.937 17.866c-4.386.02-4.386-3.54-4.386-4.106l-.007-13.336 2.675-.424v13.254c0 .322 0 2.358 1.718 2.364v2.248zm-10.846-2.18c.821 0 1.43-.047 1.855-.129v-2.719a6.334 6.334 0 00-1.574-.199 5.7 5.7 0 00-.897.069 2.699 2.699 0 00-.814.24c-.24.116-.439.28-.582.491-.15.212-.219.335-.219.656 0 .628.219.991.616 1.23s.938.362 1.615.362zm-.233-9.7c.883 0 1.629.109 2.231.328.602.218 1.088.525 1.444.915.363.396.609.922.76 1.483.157.56.232 1.175.232 1.85v6.874a32.5 32.5 0 01-1.868.314c-.834.123-1.772.185-2.813.185-.69 0-1.327-.069-1.895-.198a4.001 4.001 0 01-1.471-.636 3.085 3.085 0 01-.951-1.134c-.226-.465-.343-1.12-.343-1.803 0-.656.13-1.073.384-1.525a3.24 3.24 0 011.047-1.106c.445-.287.95-.492 1.532-.615a8.8 8.8 0 011.82-.185 8.404 8.404 0 011.972.24v-.438c0-.307-.035-.6-.11-.874a1.88 1.88 0 00-.384-.73 1.784 1.784 0 00-.724-.493 3.164 3.164 0 00-1.143-.205c-.616 0-1.177.075-1.69.164a7.735 7.735 0 00-1.26.307l-.321-2.192c.335-.117.834-.233 1.478-.349a10.98 10.98 0 012.073-.178zm52.842 9.626c.822 0 1.43-.048 1.854-.13V13.7a6.347 6.347 0 00-1.574-.199c-.294 0-.595.021-.896.069a2.7 2.7 0 00-.814.24 1.46 1.46 0 00-.582.491c-.15.212-.218.335-.218.656 0 .628.218.991.615 1.23.404.245.938.362 1.615.362zm-.226-9.694c.883 0 1.629.108 2.231.327.602.219 1.088.526 1.444.915.355.39.609.923.759 1.483a6.8 6.8 0 01.233 1.852v6.873c-.41.088-1.034.19-1.868.314-.834.123-1.772.184-2.813.184-.69 0-1.327-.068-1.895-.198a4.001 4.001 0 01-1.471-.635 3.085 3.085 0 01-.951-1.134c-.226-.465-.343-1.12-.343-1.804 0-.656.13-1.073.384-1.524.26-.45.608-.82 1.047-1.107.445-.286.95-.491 1.532-.614a8.803 8.803 0 012.751-.13c.329.034.671.096 1.04.185v-.437a3.3 3.3 0 00-.109-.875 1.873 1.873 0 00-.384-.731 1.784 1.784 0 00-.724-.492 3.165 3.165 0 00-1.143-.205c-.616 0-1.177.075-1.69.164a7.75 7.75 0 00-1.26.307l-.321-2.193c.335-.116.834-.232 1.478-.348a11.633 11.633 0 012.073-.177zm-8.034-1.271a1.626 1.626 0 01-1.628-1.62c0-.895.725-1.62 1.628-1.62.904 0 1.63.725 1.63 1.62 0 .895-.733 1.62-1.63 1.62zm1.348 13.22h-2.689V7.27l2.69-.423v11.956zm-4.714 0c-4.386.02-4.386-3.54-4.386-4.107l-.008-13.336 2.676-.424v13.254c0 .322 0 2.358 1.718 2.364v2.248zm-8.698-5.903c0-1.156-.253-2.119-.746-2.788-.493-.677-1.183-1.01-2.067-1.01-.882 0-1.574.333-2.065 1.01-.493.676-.733 1.632-.733 2.788 0 1.168.246 1.953.74 2.63.492.683 1.183 1.018 2.066 1.018.882 0 1.574-.342 2.067-1.019.492-.683.738-1.46.738-2.63zm2.737-.007c0 .902-.13 1.584-.397 2.33a5.52 5.52 0 01-1.128 1.906 4.986 4.986 0 01-1.752 1.223c-.685.286-1.739.45-2.265.45-.528-.006-1.574-.157-2.252-.45a5.096 5.096 0 01-1.744-1.223c-.487-.527-.863-1.162-1.137-1.906a6.345 6.345 0 01-.41-2.33c0-.902.123-1.77.397-2.508a5.554 5.554 0 011.15-1.892 5.133 5.133 0 011.75-1.216c.679-.287 1.425-.423 2.232-.423.808 0 1.553.142 2.237.423a4.88 4.88 0 011.753 1.216 5.644 5.644 0 011.135 1.892c.287.738.431 1.606.431 2.508zm-20.138 0c0 1.12.246 2.363.738 2.882.493.52 1.13.78 1.91.78.424 0 .828-.062 1.204-.178.377-.116.677-.253.917-.417V9.33a10.476 10.476 0 00-1.766-.226c-.971-.028-1.71.37-2.23 1.004-.513.636-.773 1.75-.773 2.788zm7.438 5.274c0 1.824-.466 3.156-1.404 4.004-.936.846-2.367 1.27-4.296 1.27-.705 0-2.17-.137-3.34-.396l.431-2.118c.98.205 2.272.26 2.95.26 1.074 0 1.84-.219 2.299-.656.459-.437.684-1.086.684-1.948v-.437a8.07 8.07 0 01-1.047.397c-.43.13-.93.198-1.492.198-.739 0-1.41-.116-2.018-.349a4.206 4.206 0 01-1.567-1.025c-.431-.45-.774-1.017-1.013-1.694-.24-.677-.363-1.885-.363-2.773 0-.834.13-1.88.384-2.577.26-.696.629-1.298 1.129-1.796.493-.498 1.095-.881 1.8-1.162a6.605 6.605 0 012.428-.457c.87 0 1.67.109 2.45.24.78.129 1.444.265 1.985.415V18.17z"></path><path fill="#5D6494" d="M6.972 6.677v1.627c-.712-.446-1.52-.67-2.425-.67-.585 0-1.045.13-1.38.391a1.24 1.24 0 00-.502 1.03c0 .425.164.765.494 1.02.33.256.835.532 1.516.83.447.192.795.356 1.045.495.25.138.537.332.862.582.324.25.563.548.718.894.154.345.23.741.23 1.188 0 .947-.334 1.691-1.004 2.234-.67.542-1.537.814-2.601.814-1.18 0-2.16-.229-2.936-.686v-1.708c.84.628 1.814.942 2.92.942.585 0 1.048-.136 1.388-.407.34-.271.51-.646.51-1.125 0-.287-.1-.55-.302-.79-.203-.24-.42-.42-.655-.542-.234-.123-.585-.29-1.053-.503a61.27 61.27 0 01-.582-.271 13.67 13.67 0 01-.55-.287 4.275 4.275 0 01-.567-.351 6.92 6.92 0 01-.455-.4c-.18-.17-.31-.34-.39-.51-.08-.17-.155-.37-.224-.598a2.553 2.553 0 01-.104-.742c0-.915.333-1.638.998-2.17.664-.532 1.523-.798 2.576-.798.968 0 1.793.17 2.473.51zm7.468 5.696v-.287c-.022-.607-.187-1.088-.495-1.444-.309-.357-.75-.535-1.324-.535-.532 0-.99.194-1.373.583-.382.388-.622.949-.717 1.683h3.909zm1.005 2.792v1.404c-.596.34-1.383.51-2.362.51-1.255 0-2.255-.377-3-1.132-.744-.755-1.116-1.744-1.116-2.968 0-1.297.34-2.316 1.021-3.055.68-.74 1.548-1.11 2.6-1.11 1.033 0 1.852.323 2.458.966.606.644.91 1.572.91 2.784 0 .33-.033.676-.096 1.038h-5.314c.107.702.405 1.239.894 1.611.49.372 1.106.558 1.85.558.862 0 1.58-.202 2.155-.606zm6.605-1.77h-1.212c-.596 0-1.045.116-1.349.35-.303.234-.454.532-.454.894 0 .372.117.664.35.877.235.213.575.32 1.022.32.51 0 .912-.142 1.204-.424.293-.281.44-.651.44-1.108v-.91zm-4.068-2.554V9.325c.627-.361 1.457-.542 2.489-.542 2.116 0 3.175 1.026 3.175 3.08V17h-1.548v-.957c-.415.68-1.143 1.02-2.186 1.02-.766 0-1.38-.22-1.843-.661-.462-.442-.694-1.003-.694-1.684 0-.776.293-1.38.878-1.81.585-.431 1.404-.647 2.457-.647h1.34V11.8c0-.554-.133-.971-.399-1.253-.266-.282-.707-.423-1.324-.423a4.07 4.07 0 00-2.345.718zm9.333-1.93v1.42c.394-1 1.101-1.5 2.123-1.5.148 0 .313.016.494.048v1.531a1.885 1.885 0 00-.75-.143c-.542 0-.989.24-1.34.718-.351.479-.527 1.048-.527 1.707V17h-1.563V8.91h1.563zm5.01 4.084c.022.82.272 1.492.75 2.019.479.526 1.15.79 2.01.79.639 0 1.235-.176 1.788-.527v1.404c-.521.319-1.186.479-1.995.479-1.265 0-2.276-.4-3.031-1.197-.755-.798-1.133-1.792-1.133-2.984 0-1.16.38-2.151 1.14-2.975.761-.825 1.79-1.237 3.088-1.237.702 0 1.346.149 1.93.447v1.436a3.242 3.242 0 00-1.77-.495c-.84 0-1.513.266-2.019.798-.505.532-.758 1.213-.758 2.042zM40.24 5.72v4.579c.458-1 1.293-1.5 2.505-1.5.787 0 1.42.245 1.899.734.479.49.718 1.17.718 2.042V17h-1.564v-5.106c0-.553-.14-.98-.422-1.284-.282-.303-.652-.455-1.11-.455-.531 0-1.002.202-1.411.606-.41.405-.615 1.022-.615 1.851V17h-1.563V5.72h1.563zm14.966 10.02c.596 0 1.096-.253 1.5-.758.404-.506.606-1.157.606-1.955 0-.915-.202-1.62-.606-2.114-.404-.495-.92-.742-1.548-.742-.553 0-1.05.224-1.491.67-.442.447-.662 1.133-.662 2.058 0 .958.212 1.67.638 2.138.425.469.946.703 1.563.703zM53.004 5.72v4.42c.574-.894 1.388-1.341 2.44-1.341 1.022 0 1.857.383 2.506 1.149.649.766.973 1.781.973 3.047 0 1.138-.309 2.109-.925 2.912-.617.803-1.463 1.205-2.537 1.205-1.075 0-1.894-.447-2.457-1.34V17h-1.58V5.72h1.58zm9.908 11.104l-3.223-7.913h1.739l1.005 2.632 1.26 3.415c.096-.32.48-1.458 1.15-3.415l.909-2.632h1.66l-2.92 7.866c-.777 2.074-1.963 3.11-3.559 3.11a2.92 2.92 0 01-.734-.079v-1.34c.17.042.351.064.543.064 1.032 0 1.755-.57 2.17-1.708z"></path><path fill="#FFF" d="M89.632 5.967v-.772a.978.978 0 00-.978-.977h-2.28a.978.978 0 00-.978.977v.793c0 .088.082.15.171.13a7.127 7.127 0 011.984-.28c.65 0 1.295.088 1.917.259.082.02.164-.04.164-.13m-6.248 1.01l-.39-.389a.977.977 0 00-1.382 0l-.465.465a.973.973 0 000 1.38l.383.383c.062.061.15.047.205-.014.226-.307.472-.601.746-.874.281-.28.568-.526.883-.751.068-.042.075-.137.02-.2m4.16 2.453v3.341c0 .096.104.165.192.117l2.97-1.537c.068-.034.089-.117.055-.184a3.695 3.695 0 00-3.08-1.866c-.068 0-.136.054-.136.13m0 8.048a4.489 4.489 0 01-4.49-4.482 4.488 4.488 0 014.49-4.482 4.488 4.488 0 014.489 4.482 4.484 4.484 0 01-4.49 4.482m0-10.85a6.363 6.363 0 100 12.729 6.37 6.37 0 006.372-6.368 6.358 6.358 0 00-6.371-6.36"></path></g></svg>
+</a>
+</footer>
+</div>
+</div>
+</section></div>
+
+<main class="gh-main" role="main">
+<style type="text/css">@media(max-width:600px){.gh-home-head{background-image:url(/images/home/home-header_hu7423763c3d95a80ce5486a6e0b22079f_849470_800x0_resize_q100_h2_box.webp)}}@media(min-width:601px) and (max-width:1200px){.gh-home-head{background-image:url(/images/home/home-header_hu7423763c3d95a80ce5486a6e0b22079f_849470_1400x0_resize_q100_h2_box.webp)}}@media(min-width:1201px) and (max-width:1700px){.gh-home-head{background-image:url(/images/home/home-header_hu7423763c3d95a80ce5486a6e0b22079f_849470_2000x0_resize_q100_h2_box.webp)}}@media(min-width:1701px){.gh-home-head{background-image:url(/images/home/home-header_hu7423763c3d95a80ce5486a6e0b22079f_849470_2500x0_resize_q100_h2_box.webp)}}</style>
+<header class="gh-home-head">
+<div class="inner">
+<span>Launch your own
+<span x-text="text" x-data="{
+        text: '',
+        textArray: [&quot;Patreon&quot;,&quot;Stratechery&quot;,&quot;Correspondent&quot;,&quot;Substack&quot;,&quot;Netflix&quot;,&quot;Newsletter&quot;,&quot;Podcast&quot;,&quot;Community&quot;,&quot;Platform&quot;],
+        textIndex: 0,
+        charIndex: 0,
+        pauseEnd: 2500,
+        pauseStart: 20,
+        pauseLoop: 10000,
+        typeSpeed: 50,
+        direction: 'forward'
+    }" x-init="(() => {
+        let typingInterval = setInterval(startTyping, $data.typeSpeed);
+
+        function startTyping(){
+            let current = $data.textArray[$data.textIndex];
+            if($data.charIndex > current.length){
+                $data.direction = 'backward';
+                clearInterval(typingInterval);
+                setTimeout(function(){
+                    typingInterval = setInterval(startTyping, $data.typeSpeed);
+                }, $data.pauseEnd);
+            }
+            $data.text = current.substring(0, $data.charIndex);
+            if($data.direction == 'forward'){
+                $data.charIndex += 1;
+            } else {
+                if($data.charIndex == 0){
+                    $data.direction = 'forward';
+                    clearInterval(typingInterval);
+                    setTimeout(function(){
+
+                        $data.textIndex += 1;
+                        if($data.textIndex >= $data.textArray.length){
+                            $data.textIndex = 0;
+                        }
+
+                        typingInterval = setInterval(startTyping, $data.typeSpeed);
+                    }, $data.pauseStart);
+                }
+                $data.charIndex -= 1;
+            }
+        }
+    })()">Patreon</span>
+</span>
+<h1>Turn your audience <span>into a business</span>.</h1>
+<img srcset="/images/home/home-screenshot_hub16a8f8cd368011dde6bde1c63bdcb1f_730392_100x0_resize_q100_h2_box_3.webp 100w, /images/home/home-screenshot_hub16a8f8cd368011dde6bde1c63bdcb1f_730392_200x0_resize_q100_h2_box_3.webp 200w, /images/home/home-screenshot_hub16a8f8cd368011dde6bde1c63bdcb1f_730392_300x0_resize_q100_h2_box_3.webp 300w, /images/home/home-screenshot_hub16a8f8cd368011dde6bde1c63bdcb1f_730392_450x0_resize_q100_h2_box_3.webp 450w, /images/home/home-screenshot_hub16a8f8cd368011dde6bde1c63bdcb1f_730392_600x0_resize_q100_h2_box_3.webp 600w, /images/home/home-screenshot_hub16a8f8cd368011dde6bde1c63bdcb1f_730392_800x0_resize_q100_h2_box_3.webp 800w, /images/home/home-screenshot_hub16a8f8cd368011dde6bde1c63bdcb1f_730392_1000x0_resize_q100_h2_box_3.webp 1000w, /images/home/home-screenshot_hub16a8f8cd368011dde6bde1c63bdcb1f_730392_1600x0_resize_q100_h2_box_3.webp 1600w, /images/home/home-screenshot_hub16a8f8cd368011dde6bde1c63bdcb1f_730392_2000x0_resize_q100_h2_box_3.webp 2000w, /images/home/home-screenshot_hub16a8f8cd368011dde6bde1c63bdcb1f_730392_2400x0_resize_q100_h2_box_3.webp 2400w, /images/home/home-screenshot_hub16a8f8cd368011dde6bde1c63bdcb1f_730392_3000x0_resize_q100_h2_box_3.webp 3000w" sizes="(min-width: 1340px) 1300px, 100vw" src="/images/home/home-screenshot.png" alt="Ghost screenshot" loading="eager" width="3584" height="2062">
+</div>
+</header>
+<div class="gh-home-reviews-wrapper">
+<div class="inner">
+<div class="gh-home-reviews">
+<div>
+<div class="gh-home-stars"><svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12.6 0L15.4289 8.70639H24.5833L17.1772 14.0872L20.0061 22.7936L12.6 17.4128L5.19391 22.7936L8.02278 14.0872L0.616688 8.70639H9.77112L12.6 0Z" fill="#A0A3B7"></path>
+</svg><svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12.6 0L15.4289 8.70639H24.5833L17.1772 14.0872L20.0061 22.7936L12.6 17.4128L5.19391 22.7936L8.02278 14.0872L0.616688 8.70639H9.77112L12.6 0Z" fill="#A0A3B7"></path>
+</svg><svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12.6 0L15.4289 8.70639H24.5833L17.1772 14.0872L20.0061 22.7936L12.6 17.4128L5.19391 22.7936L8.02278 14.0872L0.616688 8.70639H9.77112L12.6 0Z" fill="#A0A3B7"></path>
+</svg><svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12.6 0L15.4289 8.70639H24.5833L17.1772 14.0872L20.0061 22.7936L12.6 17.4128L5.19391 22.7936L8.02278 14.0872L0.616688 8.70639H9.77112L12.6 0Z" fill="#A0A3B7"></path>
+</svg><svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12.6 0L15.4289 8.70639H24.5833L17.1772 14.0872L20.0061 22.7936L12.6 17.4128L5.19391 22.7936L8.02278 14.0872L0.616688 8.70639H9.77112L12.6 0Z" fill="#A0A3B7"></path>
+</svg>
+</div>
+<h4>“Ghost has been a truly game-changing product for me”</h4>
+<span>— Steph Smith</span>
+</div>
+<div>
+<div class="gh-home-stars"><svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12.6 0L15.4289 8.70639H24.5833L17.1772 14.0872L20.0061 22.7936L12.6 17.4128L5.19391 22.7936L8.02278 14.0872L0.616688 8.70639H9.77112L12.6 0Z" fill="#A0A3B7"></path>
+</svg><svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12.6 0L15.4289 8.70639H24.5833L17.1772 14.0872L20.0061 22.7936L12.6 17.4128L5.19391 22.7936L8.02278 14.0872L0.616688 8.70639H9.77112L12.6 0Z" fill="#A0A3B7"></path>
+</svg><svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12.6 0L15.4289 8.70639H24.5833L17.1772 14.0872L20.0061 22.7936L12.6 17.4128L5.19391 22.7936L8.02278 14.0872L0.616688 8.70639H9.77112L12.6 0Z" fill="#A0A3B7"></path>
+</svg><svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12.6 0L15.4289 8.70639H24.5833L17.1772 14.0872L20.0061 22.7936L12.6 17.4128L5.19391 22.7936L8.02278 14.0872L0.616688 8.70639H9.77112L12.6 0Z" fill="#A0A3B7"></path>
+</svg><svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12.6 0L15.4289 8.70639H24.5833L17.1772 14.0872L20.0061 22.7936L12.6 17.4128L5.19391 22.7936L8.02278 14.0872L0.616688 8.70639H9.77112L12.6 0Z" fill="#A0A3B7"></path>
+</svg>
+</div>
+<h4>“Ghost is just an amazing experience. It just works.”</h4>
+<span>— Albert Henk van Urk</span>
+</div>
+<div>
+<a href="https://account.ghost.org/signup/">
+<img srcset="/images/home/home-mobile_huc2897a8fecd32b57507d6b29d4664fbb_231988_100x0_resize_q100_h2_box_3.webp 100w, /images/home/home-mobile_huc2897a8fecd32b57507d6b29d4664fbb_231988_200x0_resize_q100_h2_box_3.webp 200w, /images/home/home-mobile_huc2897a8fecd32b57507d6b29d4664fbb_231988_300x0_resize_q100_h2_box_3.webp 300w, /images/home/home-mobile_huc2897a8fecd32b57507d6b29d4664fbb_231988_450x0_resize_q100_h2_box_3.webp 450w, /images/home/home-mobile_huc2897a8fecd32b57507d6b29d4664fbb_231988_600x0_resize_q100_h2_box_3.webp 600w" sizes="(min-width: 1000px) 800px, 30vw" src="/images/home/home-mobile.png" alt="Mobile screenshot" loading="lazy" width="700" height="1340">
+<img src="/images/home/home-stripe-logo.svg" alt="Verified Stripe Partner" loading="lazy" width="221" height="41">
+</a>
+</div>
+</div>
+</div>
+</div>
+<section class="gh-section gh-section-dark canvas">
+<div class="grid">
+<div class="s-9 m:s-9 s:s-12">
+<h2 class="t-eyebrow">Launch a publication</h2>
+<p class="t-main"><strong>Create your own platform on the web.</strong> Ghost is a powerful app for new-media creators to publish, share, and grow a business around their content. It comes with modern tools to build a website, publish content, send newsletters &amp; offer paid subscriptions to members.</p>
+<p class="t-main">Don't settle for another basic profile that looks just like everyone else. <strong>Make it yours.</strong></p>
+</div>
+</div>
+<div class="gh-themes-gallery">
+<div>
+<img srcset="/images/marketplace/themes/gallery/1_hue3493b35e18683fc18b4e18de641178d_265724_100x0_resize_q100_h2_box_3.webp 100w, /images/marketplace/themes/gallery/1_hue3493b35e18683fc18b4e18de641178d_265724_200x0_resize_q100_h2_box_3.webp 200w, /images/marketplace/themes/gallery/1_hue3493b35e18683fc18b4e18de641178d_265724_300x0_resize_q100_h2_box_3.webp 300w, /images/marketplace/themes/gallery/1_hue3493b35e18683fc18b4e18de641178d_265724_450x0_resize_q100_h2_box_3.webp 450w, /images/marketplace/themes/gallery/1_hue3493b35e18683fc18b4e18de641178d_265724_600x0_resize_q100_h2_box_3.webp 600w, /images/marketplace/themes/gallery/1_hue3493b35e18683fc18b4e18de641178d_265724_800x0_resize_q100_h2_box_3.webp 800w, /images/marketplace/themes/gallery/1_hue3493b35e18683fc18b4e18de641178d_265724_1000x0_resize_q100_h2_box_3.webp 1000w" sizes="(max-width: 800px) calc((100vw - 12vmin - 3rem) / 4), calc((100vw - 12vmin - 6rem) / 5)" src="/images/marketplace/themes/gallery/1.png" alt="" loading="lazy" width="1200" height="750">
+<img srcset="/images/marketplace/themes/gallery/30_hu668532d7c2625804aa5d6d8dbcf50927_39882_100x0_resize_q100_h2_box_3.webp 100w, /images/marketplace/themes/gallery/30_hu668532d7c2625804aa5d6d8dbcf50927_39882_200x0_resize_q100_h2_box_3.webp 200w, /images/marketplace/themes/gallery/30_hu668532d7c2625804aa5d6d8dbcf50927_39882_300x0_resize_q100_h2_box_3.webp 300w, /images/marketplace/themes/gallery/30_hu668532d7c2625804aa5d6d8dbcf50927_39882_450x0_resize_q100_h2_box_3.webp 450w, /images/marketplace/themes/gallery/30_hu668532d7c2625804aa5d6d8dbcf50927_39882_600x0_resize_q100_h2_box_3.webp 600w" sizes="(max-width: 800px) calc((100vw - 12vmin - 3rem) / 4), calc((100vw - 12vmin - 6rem) / 5)" src="/images/marketplace/themes/gallery/30.png" alt="" loading="lazy" width="700" height="380">
+<img srcset="/images/marketplace/themes/gallery/9_hu7f65267634ae5611e15c6c9193a30606_103301_100x0_resize_q100_h2_box_3.webp 100w, /images/marketplace/themes/gallery/9_hu7f65267634ae5611e15c6c9193a30606_103301_200x0_resize_q100_h2_box_3.webp 200w, /images/marketplace/themes/gallery/9_hu7f65267634ae5611e15c6c9193a30606_103301_300x0_resize_q100_h2_box_3.webp 300w, /images/marketplace/themes/gallery/9_hu7f65267634ae5611e15c6c9193a30606_103301_450x0_resize_q100_h2_box_3.webp 450w, /images/marketplace/themes/gallery/9_hu7f65267634ae5611e15c6c9193a30606_103301_600x0_resize_q100_h2_box_3.webp 600w, /images/marketplace/themes/gallery/9_hu7f65267634ae5611e15c6c9193a30606_103301_800x0_resize_q100_h2_box_3.webp 800w, /images/marketplace/themes/gallery/9_hu7f65267634ae5611e15c6c9193a30606_103301_1000x0_resize_q100_h2_box_3.webp 1000w" sizes="(max-width: 800px) calc((100vw - 12vmin - 3rem) / 4), calc((100vw - 12vmin - 6rem) / 5)" src="/images/marketplace/themes/gallery/9.png" alt="" loading="lazy" width="1042" height="583">
+<img srcset="/images/marketplace/themes/gallery/10_hu70a322e78cd25fadb797f09d7028b7c6_158995_100x0_resize_q100_h2_box_3.webp 100w, /images/marketplace/themes/gallery/10_hu70a322e78cd25fadb797f09d7028b7c6_158995_200x0_resize_q100_h2_box_3.webp 200w, /images/marketplace/themes/gallery/10_hu70a322e78cd25fadb797f09d7028b7c6_158995_300x0_resize_q100_h2_box_3.webp 300w, /images/marketplace/themes/gallery/10_hu70a322e78cd25fadb797f09d7028b7c6_158995_450x0_resize_q100_h2_box_3.webp 450w, /images/marketplace/themes/gallery/10_hu70a322e78cd25fadb797f09d7028b7c6_158995_600x0_resize_q100_h2_box_3.webp 600w, /images/marketplace/themes/gallery/10_hu70a322e78cd25fadb797f09d7028b7c6_158995_800x0_resize_q100_h2_box_3.webp 800w, /images/marketplace/themes/gallery/10_hu70a322e78cd25fadb797f09d7028b7c6_158995_1000x0_resize_q100_h2_box_3.webp 1000w" sizes="(max-width: 800px) calc((100vw - 12vmin - 3rem) / 4), calc((100vw - 12vmin - 6rem) / 5)" src="/images/marketplace/themes/gallery/10.png" alt="" loading="lazy" width="1134" height="601">
+<img srcset="/images/marketplace/themes/gallery/2_huc60bd78e9687369ad14d5f988e95f0f4_204379_100x0_resize_q100_h2_box_3.webp 100w, /images/marketplace/themes/gallery/2_huc60bd78e9687369ad14d5f988e95f0f4_204379_200x0_resize_q100_h2_box_3.webp 200w, /images/marketplace/themes/gallery/2_huc60bd78e9687369ad14d5f988e95f0f4_204379_300x0_resize_q100_h2_box_3.webp 300w, /images/marketplace/themes/gallery/2_huc60bd78e9687369ad14d5f988e95f0f4_204379_450x0_resize_q100_h2_box_3.webp 450w, /images/marketplace/themes/gallery/2_huc60bd78e9687369ad14d5f988e95f0f4_204379_600x0_resize_q100_h2_box_3.webp 600w, /images/marketplace/themes/gallery/2_huc60bd78e9687369ad14d5f988e95f0f4_204379_800x0_resize_q100_h2_box_3.webp 800w, /images/marketplace/themes/gallery/2_huc60bd78e9687369ad14d5f988e95f0f4_204379_1000x0_resize_q100_h2_box_3.webp 1000w" sizes="(max-width: 800px) calc((100vw - 12vmin - 3rem) / 4), calc((100vw - 12vmin - 6rem) / 5)" src="/images/marketplace/themes/gallery/2.png" alt="" loading="lazy" width="1010" height="767">
+</div>
+<div>
+<img srcset="/images/marketplace/themes/gallery/32_huab68c0400e99d7ba654d78c9bbfb06f6_24785_100x0_resize_q100_h2_box_3.webp 100w, /images/marketplace/themes/gallery/32_huab68c0400e99d7ba654d78c9bbfb06f6_24785_200x0_resize_q100_h2_box_3.webp 200w, /images/marketplace/themes/gallery/32_huab68c0400e99d7ba654d78c9bbfb06f6_24785_300x0_resize_q100_h2_box_3.webp 300w, /images/marketplace/themes/gallery/32_huab68c0400e99d7ba654d78c9bbfb06f6_24785_450x0_resize_q100_h2_box_3.webp 450w, /images/marketplace/themes/gallery/32_huab68c0400e99d7ba654d78c9bbfb06f6_24785_600x0_resize_q100_h2_box_3.webp 600w" sizes="(max-width: 800px) calc((100vw - 12vmin - 3rem) / 4), calc((100vw - 12vmin - 6rem) / 5)" src="/images/marketplace/themes/gallery/32.png" alt="" loading="lazy" width="700" height="477">
+<img srcset="/images/marketplace/themes/gallery/16_hu15106a464093f7531d0ae40d764c2870_115750_100x0_resize_q100_h2_box_3.webp 100w, /images/marketplace/themes/gallery/16_hu15106a464093f7531d0ae40d764c2870_115750_200x0_resize_q100_h2_box_3.webp 200w, /images/marketplace/themes/gallery/16_hu15106a464093f7531d0ae40d764c2870_115750_300x0_resize_q100_h2_box_3.webp 300w, /images/marketplace/themes/gallery/16_hu15106a464093f7531d0ae40d764c2870_115750_450x0_resize_q100_h2_box_3.webp 450w, /images/marketplace/themes/gallery/16_hu15106a464093f7531d0ae40d764c2870_115750_600x0_resize_q100_h2_box_3.webp 600w, /images/marketplace/themes/gallery/16_hu15106a464093f7531d0ae40d764c2870_115750_800x0_resize_q100_h2_box_3.webp 800w, /images/marketplace/themes/gallery/16_hu15106a464093f7531d0ae40d764c2870_115750_1000x0_resize_q100_h2_box_3.webp 1000w" sizes="(max-width: 800px) calc((100vw - 12vmin - 3rem) / 4), calc((100vw - 12vmin - 6rem) / 5)" src="/images/marketplace/themes/gallery/16.png" alt="" loading="lazy" width="1116" height="687">
+<img srcset="/images/marketplace/themes/gallery/7_hub7d4ed8d68e4b8522178aea5cbee02bb_151385_100x0_resize_q100_h2_box_3.webp 100w, /images/marketplace/themes/gallery/7_hub7d4ed8d68e4b8522178aea5cbee02bb_151385_200x0_resize_q100_h2_box_3.webp 200w, /images/marketplace/themes/gallery/7_hub7d4ed8d68e4b8522178aea5cbee02bb_151385_300x0_resize_q100_h2_box_3.webp 300w, /images/marketplace/themes/gallery/7_hub7d4ed8d68e4b8522178aea5cbee02bb_151385_450x0_resize_q100_h2_box_3.webp 450w, /images/marketplace/themes/gallery/7_hub7d4ed8d68e4b8522178aea5cbee02bb_151385_600x0_resize_q100_h2_box_3.webp 600w, /images/marketplace/themes/gallery/7_hub7d4ed8d68e4b8522178aea5cbee02bb_151385_800x0_resize_q100_h2_box_3.webp 800w, /images/marketplace/themes/gallery/7_hub7d4ed8d68e4b8522178aea5cbee02bb_151385_1000x0_resize_q100_h2_box_3.webp 1000w" sizes="(max-width: 800px) calc((100vw - 12vmin - 3rem) / 4), calc((100vw - 12vmin - 6rem) / 5)" src="/images/marketplace/themes/gallery/7.png" alt="" loading="lazy" width="1136" height="679">
+<img srcset="/images/marketplace/themes/gallery/5_hu89f7b185f65fd61c5580b08baf42760d_49230_100x0_resize_q100_h2_box_3.webp 100w, /images/marketplace/themes/gallery/5_hu89f7b185f65fd61c5580b08baf42760d_49230_200x0_resize_q100_h2_box_3.webp 200w, /images/marketplace/themes/gallery/5_hu89f7b185f65fd61c5580b08baf42760d_49230_300x0_resize_q100_h2_box_3.webp 300w, /images/marketplace/themes/gallery/5_hu89f7b185f65fd61c5580b08baf42760d_49230_450x0_resize_q100_h2_box_3.webp 450w, /images/marketplace/themes/gallery/5_hu89f7b185f65fd61c5580b08baf42760d_49230_600x0_resize_q100_h2_box_3.webp 600w, /images/marketplace/themes/gallery/5_hu89f7b185f65fd61c5580b08baf42760d_49230_800x0_resize_q100_h2_box_3.webp 800w, /images/marketplace/themes/gallery/5_hu89f7b185f65fd61c5580b08baf42760d_49230_1000x0_resize_q100_h2_box_3.webp 1000w" sizes="(max-width: 800px) calc((100vw - 12vmin - 3rem) / 4), calc((100vw - 12vmin - 6rem) / 5)" src="/images/marketplace/themes/gallery/5.png" alt="" loading="lazy" width="1090" height="578">
+<img srcset="/images/marketplace/themes/gallery/29_hu7d8007571fef1208eae8c9987d766944_90794_100x0_resize_q100_h2_box_3.webp 100w, /images/marketplace/themes/gallery/29_hu7d8007571fef1208eae8c9987d766944_90794_200x0_resize_q100_h2_box_3.webp 200w, /images/marketplace/themes/gallery/29_hu7d8007571fef1208eae8c9987d766944_90794_300x0_resize_q100_h2_box_3.webp 300w, /images/marketplace/themes/gallery/29_hu7d8007571fef1208eae8c9987d766944_90794_450x0_resize_q100_h2_box_3.webp 450w, /images/marketplace/themes/gallery/29_hu7d8007571fef1208eae8c9987d766944_90794_600x0_resize_q100_h2_box_3.webp 600w" sizes="(max-width: 800px) calc((100vw - 12vmin - 3rem) / 4), calc((100vw - 12vmin - 6rem) / 5)" src="/images/marketplace/themes/gallery/29.png" alt="" loading="lazy" width="700" height="595">
+</div>
+<div>
+<img srcset="/images/marketplace/themes/gallery/31_hu23677a6dc7ceb9d950273b47389ee9f2_102543_100x0_resize_q100_h2_box_3.webp 100w, /images/marketplace/themes/gallery/31_hu23677a6dc7ceb9d950273b47389ee9f2_102543_200x0_resize_q100_h2_box_3.webp 200w, /images/marketplace/themes/gallery/31_hu23677a6dc7ceb9d950273b47389ee9f2_102543_300x0_resize_q100_h2_box_3.webp 300w, /images/marketplace/themes/gallery/31_hu23677a6dc7ceb9d950273b47389ee9f2_102543_450x0_resize_q100_h2_box_3.webp 450w, /images/marketplace/themes/gallery/31_hu23677a6dc7ceb9d950273b47389ee9f2_102543_600x0_resize_q100_h2_box_3.webp 600w" sizes="(max-width: 800px) calc((100vw - 12vmin - 3rem) / 4), calc((100vw - 12vmin - 6rem) / 5)" src="/images/marketplace/themes/gallery/31.png" alt="" loading="lazy" width="700" height="389">
+<img srcset="/images/marketplace/themes/gallery/33_hu052ed601aea7d9b9dcfdefe81929a862_99991_100x0_resize_q100_h2_box_3.webp 100w, /images/marketplace/themes/gallery/33_hu052ed601aea7d9b9dcfdefe81929a862_99991_200x0_resize_q100_h2_box_3.webp 200w, /images/marketplace/themes/gallery/33_hu052ed601aea7d9b9dcfdefe81929a862_99991_300x0_resize_q100_h2_box_3.webp 300w, /images/marketplace/themes/gallery/33_hu052ed601aea7d9b9dcfdefe81929a862_99991_450x0_resize_q100_h2_box_3.webp 450w, /images/marketplace/themes/gallery/33_hu052ed601aea7d9b9dcfdefe81929a862_99991_600x0_resize_q100_h2_box_3.webp 600w" sizes="(max-width: 800px) calc((100vw - 12vmin - 3rem) / 4), calc((100vw - 12vmin - 6rem) / 5)" src="/images/marketplace/themes/gallery/33.png" alt="" loading="lazy" width="700" height="604">
+<img srcset="/images/marketplace/themes/gallery/28_hu329f0920a232a553ca5ce7531e0e2ba7_83664_100x0_resize_q100_h2_box_3.webp 100w, /images/marketplace/themes/gallery/28_hu329f0920a232a553ca5ce7531e0e2ba7_83664_200x0_resize_q100_h2_box_3.webp 200w, /images/marketplace/themes/gallery/28_hu329f0920a232a553ca5ce7531e0e2ba7_83664_300x0_resize_q100_h2_box_3.webp 300w, /images/marketplace/themes/gallery/28_hu329f0920a232a553ca5ce7531e0e2ba7_83664_450x0_resize_q100_h2_box_3.webp 450w, /images/marketplace/themes/gallery/28_hu329f0920a232a553ca5ce7531e0e2ba7_83664_600x0_resize_q100_h2_box_3.webp 600w" sizes="(max-width: 800px) calc((100vw - 12vmin - 3rem) / 4), calc((100vw - 12vmin - 6rem) / 5)" src="/images/marketplace/themes/gallery/28.png" alt="" loading="lazy" width="700" height="721">
+<img srcset="/images/marketplace/themes/gallery/15_hu11e331409657f9ea278e420d0f59bce6_111652_100x0_resize_q100_h2_box_3.webp 100w, /images/marketplace/themes/gallery/15_hu11e331409657f9ea278e420d0f59bce6_111652_200x0_resize_q100_h2_box_3.webp 200w, /images/marketplace/themes/gallery/15_hu11e331409657f9ea278e420d0f59bce6_111652_300x0_resize_q100_h2_box_3.webp 300w, /images/marketplace/themes/gallery/15_hu11e331409657f9ea278e420d0f59bce6_111652_450x0_resize_q100_h2_box_3.webp 450w, /images/marketplace/themes/gallery/15_hu11e331409657f9ea278e420d0f59bce6_111652_600x0_resize_q100_h2_box_3.webp 600w, /images/marketplace/themes/gallery/15_hu11e331409657f9ea278e420d0f59bce6_111652_800x0_resize_q100_h2_box_3.webp 800w, /images/marketplace/themes/gallery/15_hu11e331409657f9ea278e420d0f59bce6_111652_1000x0_resize_q100_h2_box_3.webp 1000w" sizes="(max-width: 800px) calc((100vw - 12vmin - 3rem) / 4), calc((100vw - 12vmin - 6rem) / 5)" src="/images/marketplace/themes/gallery/15.png" alt="" loading="lazy" width="1134" height="726">
+</div>
+<div>
+<img srcset="/images/marketplace/themes/gallery/27_hu084232fd0add9091fbcdf313dd0581d6_41497_100x0_resize_q100_h2_box_3.webp 100w, /images/marketplace/themes/gallery/27_hu084232fd0add9091fbcdf313dd0581d6_41497_200x0_resize_q100_h2_box_3.webp 200w, /images/marketplace/themes/gallery/27_hu084232fd0add9091fbcdf313dd0581d6_41497_300x0_resize_q100_h2_box_3.webp 300w, /images/marketplace/themes/gallery/27_hu084232fd0add9091fbcdf313dd0581d6_41497_450x0_resize_q100_h2_box_3.webp 450w, /images/marketplace/themes/gallery/27_hu084232fd0add9091fbcdf313dd0581d6_41497_600x0_resize_q100_h2_box_3.webp 600w" sizes="(max-width: 800px) calc((100vw - 12vmin - 3rem) / 4), calc((100vw - 12vmin - 6rem) / 5)" src="/images/marketplace/themes/gallery/27.png" alt="" loading="lazy" width="700" height="428">
+<img srcset="/images/marketplace/themes/gallery/22_hue240de9ea8b16371c26140b52a6f1b14_276993_100x0_resize_q100_h2_box_3.webp 100w, /images/marketplace/themes/gallery/22_hue240de9ea8b16371c26140b52a6f1b14_276993_200x0_resize_q100_h2_box_3.webp 200w, /images/marketplace/themes/gallery/22_hue240de9ea8b16371c26140b52a6f1b14_276993_300x0_resize_q100_h2_box_3.webp 300w, /images/marketplace/themes/gallery/22_hue240de9ea8b16371c26140b52a6f1b14_276993_450x0_resize_q100_h2_box_3.webp 450w, /images/marketplace/themes/gallery/22_hue240de9ea8b16371c26140b52a6f1b14_276993_600x0_resize_q100_h2_box_3.webp 600w, /images/marketplace/themes/gallery/22_hue240de9ea8b16371c26140b52a6f1b14_276993_800x0_resize_q100_h2_box_3.webp 800w, /images/marketplace/themes/gallery/22_hue240de9ea8b16371c26140b52a6f1b14_276993_1000x0_resize_q100_h2_box_3.webp 1000w" sizes="(max-width: 800px) calc((100vw - 12vmin - 3rem) / 4), calc((100vw - 12vmin - 6rem) / 5)" src="/images/marketplace/themes/gallery/22.png" alt="" loading="lazy" width="1164" height="1059">
+<img srcset="/images/marketplace/themes/gallery/4_hu835c013f2ea94981ae437d729e102449_251558_100x0_resize_q100_h2_box_3.webp 100w, /images/marketplace/themes/gallery/4_hu835c013f2ea94981ae437d729e102449_251558_200x0_resize_q100_h2_box_3.webp 200w, /images/marketplace/themes/gallery/4_hu835c013f2ea94981ae437d729e102449_251558_300x0_resize_q100_h2_box_3.webp 300w, /images/marketplace/themes/gallery/4_hu835c013f2ea94981ae437d729e102449_251558_450x0_resize_q100_h2_box_3.webp 450w, /images/marketplace/themes/gallery/4_hu835c013f2ea94981ae437d729e102449_251558_600x0_resize_q100_h2_box_3.webp 600w, /images/marketplace/themes/gallery/4_hu835c013f2ea94981ae437d729e102449_251558_800x0_resize_q100_h2_box_3.webp 800w, /images/marketplace/themes/gallery/4_hu835c013f2ea94981ae437d729e102449_251558_1000x0_resize_q100_h2_box_3.webp 1000w" sizes="(max-width: 800px) calc((100vw - 12vmin - 3rem) / 4), calc((100vw - 12vmin - 6rem) / 5)" src="/images/marketplace/themes/gallery/4.png" alt="" loading="lazy" width="1000" height="1028">
+<img srcset="/images/marketplace/themes/gallery/20_huafed1ac3adb86ba9ee2c714f2ffb2638_177149_100x0_resize_q100_h2_box_3.webp 100w, /images/marketplace/themes/gallery/20_huafed1ac3adb86ba9ee2c714f2ffb2638_177149_200x0_resize_q100_h2_box_3.webp 200w, /images/marketplace/themes/gallery/20_huafed1ac3adb86ba9ee2c714f2ffb2638_177149_300x0_resize_q100_h2_box_3.webp 300w, /images/marketplace/themes/gallery/20_huafed1ac3adb86ba9ee2c714f2ffb2638_177149_450x0_resize_q100_h2_box_3.webp 450w, /images/marketplace/themes/gallery/20_huafed1ac3adb86ba9ee2c714f2ffb2638_177149_600x0_resize_q100_h2_box_3.webp 600w, /images/marketplace/themes/gallery/20_huafed1ac3adb86ba9ee2c714f2ffb2638_177149_800x0_resize_q100_h2_box_3.webp 800w, /images/marketplace/themes/gallery/20_huafed1ac3adb86ba9ee2c714f2ffb2638_177149_1000x0_resize_q100_h2_box_3.webp 1000w" sizes="(max-width: 800px) calc((100vw - 12vmin - 3rem) / 4), calc((100vw - 12vmin - 6rem) / 5)" src="/images/marketplace/themes/gallery/20.png" alt="" loading="lazy" width="1152" height="824">
+</div>
+<div>
+<img srcset="/images/marketplace/themes/gallery/19_hu33a0ac050ddeefda399b8f9a2e3cbe6e_126115_100x0_resize_q100_h2_box_3.webp 100w, /images/marketplace/themes/gallery/19_hu33a0ac050ddeefda399b8f9a2e3cbe6e_126115_200x0_resize_q100_h2_box_3.webp 200w, /images/marketplace/themes/gallery/19_hu33a0ac050ddeefda399b8f9a2e3cbe6e_126115_300x0_resize_q100_h2_box_3.webp 300w, /images/marketplace/themes/gallery/19_hu33a0ac050ddeefda399b8f9a2e3cbe6e_126115_450x0_resize_q100_h2_box_3.webp 450w, /images/marketplace/themes/gallery/19_hu33a0ac050ddeefda399b8f9a2e3cbe6e_126115_600x0_resize_q100_h2_box_3.webp 600w, /images/marketplace/themes/gallery/19_hu33a0ac050ddeefda399b8f9a2e3cbe6e_126115_800x0_resize_q100_h2_box_3.webp 800w, /images/marketplace/themes/gallery/19_hu33a0ac050ddeefda399b8f9a2e3cbe6e_126115_1000x0_resize_q100_h2_box_3.webp 1000w" sizes="(max-width: 800px) calc((100vw - 12vmin - 3rem) / 4), calc((100vw - 12vmin - 6rem) / 5)" src="/images/marketplace/themes/gallery/19.png" alt="" loading="lazy" width="1064" height="869">
+<img srcset="/images/marketplace/themes/gallery/25_huf058e85a6804c0f90790051235815319_142266_100x0_resize_q100_h2_box_3.webp 100w, /images/marketplace/themes/gallery/25_huf058e85a6804c0f90790051235815319_142266_200x0_resize_q100_h2_box_3.webp 200w, /images/marketplace/themes/gallery/25_huf058e85a6804c0f90790051235815319_142266_300x0_resize_q100_h2_box_3.webp 300w, /images/marketplace/themes/gallery/25_huf058e85a6804c0f90790051235815319_142266_450x0_resize_q100_h2_box_3.webp 450w, /images/marketplace/themes/gallery/25_huf058e85a6804c0f90790051235815319_142266_600x0_resize_q100_h2_box_3.webp 600w, /images/marketplace/themes/gallery/25_huf058e85a6804c0f90790051235815319_142266_800x0_resize_q100_h2_box_3.webp 800w, /images/marketplace/themes/gallery/25_huf058e85a6804c0f90790051235815319_142266_1000x0_resize_q100_h2_box_3.webp 1000w" sizes="(max-width: 800px) calc((100vw - 12vmin - 3rem) / 4), calc((100vw - 12vmin - 6rem) / 5)" src="/images/marketplace/themes/gallery/25.png" alt="" loading="lazy" width="1044" height="649">
+<img srcset="/images/marketplace/themes/gallery/23_hu47c2a1061c0cd45cee9df9fcb33b6a0e_122179_100x0_resize_q100_h2_box_3.webp 100w, /images/marketplace/themes/gallery/23_hu47c2a1061c0cd45cee9df9fcb33b6a0e_122179_200x0_resize_q100_h2_box_3.webp 200w, /images/marketplace/themes/gallery/23_hu47c2a1061c0cd45cee9df9fcb33b6a0e_122179_300x0_resize_q100_h2_box_3.webp 300w, /images/marketplace/themes/gallery/23_hu47c2a1061c0cd45cee9df9fcb33b6a0e_122179_450x0_resize_q100_h2_box_3.webp 450w, /images/marketplace/themes/gallery/23_hu47c2a1061c0cd45cee9df9fcb33b6a0e_122179_600x0_resize_q100_h2_box_3.webp 600w, /images/marketplace/themes/gallery/23_hu47c2a1061c0cd45cee9df9fcb33b6a0e_122179_800x0_resize_q100_h2_box_3.webp 800w, /images/marketplace/themes/gallery/23_hu47c2a1061c0cd45cee9df9fcb33b6a0e_122179_1000x0_resize_q100_h2_box_3.webp 1000w" sizes="(max-width: 800px) calc((100vw - 12vmin - 3rem) / 4), calc((100vw - 12vmin - 6rem) / 5)" src="/images/marketplace/themes/gallery/23.png" alt="" loading="lazy" width="1184" height="909">
+<img srcset="/images/marketplace/themes/gallery/14_hu7470a22c374a118c6f730f1a5ba4ae12_171273_100x0_resize_q100_h2_box_3.webp 100w, /images/marketplace/themes/gallery/14_hu7470a22c374a118c6f730f1a5ba4ae12_171273_200x0_resize_q100_h2_box_3.webp 200w, /images/marketplace/themes/gallery/14_hu7470a22c374a118c6f730f1a5ba4ae12_171273_300x0_resize_q100_h2_box_3.webp 300w, /images/marketplace/themes/gallery/14_hu7470a22c374a118c6f730f1a5ba4ae12_171273_450x0_resize_q100_h2_box_3.webp 450w, /images/marketplace/themes/gallery/14_hu7470a22c374a118c6f730f1a5ba4ae12_171273_600x0_resize_q100_h2_box_3.webp 600w, /images/marketplace/themes/gallery/14_hu7470a22c374a118c6f730f1a5ba4ae12_171273_800x0_resize_q100_h2_box_3.webp 800w, /images/marketplace/themes/gallery/14_hu7470a22c374a118c6f730f1a5ba4ae12_171273_1000x0_resize_q100_h2_box_3.webp 1000w" sizes="(max-width: 800px) calc((100vw - 12vmin - 3rem) / 4), calc((100vw - 12vmin - 6rem) / 5)" src="/images/marketplace/themes/gallery/14.png" alt="" loading="lazy" width="1218" height="925">
+</div>
+</div>
+</section>
+<div class="gh-section canvas gh-section-toppad">
+<div class="grid">
+<div class="s-9 m:s-12">
+<h2 class="t-eyebrow">Advanced Creator Tools</h2>
+<p class="t-main"><strong>Publish by web &amp; email newsletter.</strong> An editor built from the ground-up for professionals. Calm by design, with advanced workflows by default. No more suffering through clumsy toolbars or drag &amp; oops. Immerse yourself in the story with an interface that's invisible until you need it, and powerful when you do.</p>
+</div>
+</div>
+<div class="grid">
+<img class="s-12 r" src="/images/home/editor-koenig.jpg" alt="The Ghost editor" loading="lazy" sizes="(max-width: 1400px) calc(100vw - 12vmin), 1380px" srcset="/images/home/editor-koenig/editor-koenig-100.jpg 100w, /images/home/editor-koenig/editor-koenig-300.jpg 300w, /images/home/editor-koenig/editor-koenig-450.jpg 450w, /images/home/editor-koenig/editor-koenig-600.jpg 600w, /images/home/editor-koenig/editor-koenig-800.jpg 800w, /images/home/editor-koenig/editor-koenig-1000.jpg 1000w, /images/home/editor-koenig/editor-koenig-1600.jpg 1600w, /images/home/editor-koenig/editor-koenig-2000.jpg 2000w, /images/home/editor-koenig/editor-koenig-2400.jpg 2400w, /images/home/editor-koenig/editor-koenig-3000.jpg 3000w">
+</div>
+</div>
+<section class="gh-section gh-section-dark canvas">
+<div class="grid">
+<div class="s-6 m:s-12">
+<h2 class="t-eyebrow">Grow your audience</h2>
+<p class="t-main"><strong>Transform clicks into contacts.</strong> Until now, building an indie publication with memberships and subscriptions has been difficult and complicated.</p>
+<p class="t-main">Ghost makes it easy, with native signup forms that turn anonymous views into logged-in members.</p>
+<p class="t-main"><strong>Hello new friends.</strong></p>
+</div>
+<img class="s-6 m:s-12 r" src="/images/home/portal-signup.jpg" alt="Portal" loading="lazy" sizes="(max-width: 1068px) calc(100vw - 12vmin), (max-width: 1400px) calc((100vw - 16vmin) / 2), calc((1380px - 4vmin) / 2)" srcset="/images/home/portal-signup/portal-signup-100.jpg 100w, /images/home/portal-signup/portal-signup-300.jpg 300w, /images/home/portal-signup/portal-signup-450.jpg 450w, /images/home/portal-signup/portal-signup-600.jpg 600w, /images/home/portal-signup/portal-signup-800.jpg 800w, /images/home/portal-signup/portal-signup-1000.jpg 1000w, /images/home/portal-signup/portal-signup-1600.jpg 1600w, /images/home/portal-signup/portal-signup-2000.jpg 2000w, /images/home/portal-signup/portal-signup-2400.jpg 2400w, /images/home/portal-signup/portal-signup-3000.jpg 3000w">
+</div>
+</section>
+<section class="gh-section gh-section-whitegrey canvas">
+<div class="grid">
+<div class="s-6 m:s-12">
+<h2 class="t-eyebrow">Native Analytics</h2>
+<p class="t-main"><strong>Understand what's working.</strong> Detailed engagement analytics for your audience so you can understand what content is getting the most attention, and who your biggest fans are.</p>
+<p class="t-main"><strong class="t-grad">Then create more for them.</strong></p>
+</div>
+<img class="s-6 m:s-12 r" src="/images/home/analytics.png" alt="The Ghost editor" loading="lazy" sizes="(max-width: 1068px) calc(100vw - 12vmin), (max-width: 1400px) calc((100vw - 16vmin) / 2), calc((1380px - 4vmin) / 2)" srcset="/images/home/analytics/analytics-100.png 100w, /images/home/analytics/analytics-300.png 300w, /images/home/analytics/analytics-450.png 450w, /images/home/analytics/analytics-600.png 600w, /images/home/analytics/analytics-800.png 800w, /images/home/analytics/analytics-1000.png 1000w, /images/home/analytics/analytics-1600.png 1600w, /images/home/analytics/analytics-2000.png 2000w, /images/home/analytics/analytics-2400.png 2400w, /images/home/analytics/analytics-3000.png 3000w">
+</div>
+</section>
+<section class="gh-section gh-section-dark gh-section-pink canvas">
+<div class="grid">
+<img class="s-6 m:s-12 r" src="/images/home/revenue.png" alt="MRR chart" loading="lazy" sizes="(max-width: 1068px) calc(100vw - 12vmin), (max-width: 1400px) calc((100vw - 16vmin) / 2), calc((1380px - 4vmin) / 2)" srcset="/images/home/revenue/revenue-100.png 100w, /images/home/revenue/revenue-300.png 300w, /images/home/revenue/revenue-450.png 450w, /images/home/revenue/revenue-600.png 600w, /images/home/revenue/revenue-800.png 800w, /images/home/revenue/revenue-1000.png 1000w, /images/home/revenue/revenue-1600.png 1600w, /images/home/revenue/revenue-2000.png 2000w, /images/home/revenue/revenue-2400.png 2400w, /images/home/revenue/revenue-3000.png 3000w">
+<div class="s-6 m:s-12">
+<h2 class="t-eyebrow">Subscription Commerce</h2>
+<p class="t-main"><strong>Fund your work with subscription revenue.</strong> Connect your Stripe account and offer premium content to your audience. Our creators are making over <strong>$10 million</strong> per year, while Ghost takes <strong>0% payment fees</strong>.</p>
+</div>
+</div>
+</section>
+<section class="gh-section canvas">
+<div class="grid">
+<div class="s-6 s:s-12">
+<h2 class="t-eyebrow">Powerful Integrations</h2>
+<p class="t-main"><strong>Will it play nicely with my other tools?</strong> Referral programs, push notifications, social sharing, payment gateways, A/B testing, desktop editors, mobile apps, comments. <strong>Yes.</strong></p>
+</div>
+</div>
+</section>
+<section class="gh-section gh-section-integrations-gallery gh-section-members-integrations">
+<a href="/integrations/" class="gh-integrations-gallery-wrapper">
+<div class="gh-integrations-gallery-grid">
+<div class="gh-integrations-gallery-grid-column">
+<div id="spotify" class="gh-integrations-gallery-grid-item">
+<div class="gh-integrations-gallery-img-wrapper">
+<img src="/images/logos/integrations/spotify-logo_huc465e40f12c1ae42cb292d7bd8fee69b_1318_60x0_resize_q100_h2_box_3.webp" alt="Spotify" loading="lazy" width="60" height="60">
+</div>
+<div class="gh-integrations-gallery-name">Spotify</div>
+</div>
+</div>
+<div class="gh-integrations-gallery-grid-column">
+<div id="typeform" class="gh-integrations-gallery-grid-item">
+<div class="gh-integrations-gallery-img-wrapper">
+<img src="/images/logos/integrations/typeform-logo_hud855d1c277a394298a05442fe9d83f36_818_59x0_resize_q100_h2_box_3.webp" alt="Typeform" loading="lazy" width="59" height="61">
+</div>
+<div class="gh-integrations-gallery-name">Typeform</div>
+</div>
+</div>
+<div class="gh-integrations-gallery-grid-column">
+<div id="unsplash" class="gh-integrations-gallery-grid-item">
+<div class="gh-integrations-gallery-img-wrapper">
+<img src="/images/logos/integrations/unsplash-logo_hu7ef22dbed8e57b1fd7fe7189e661150a_211_60x0_resize_q100_h2_box_3.webp" alt="Unsplash" loading="lazy" width="60" height="60">
+</div>
+<div class="gh-integrations-gallery-name">Unsplash</div>
+</div>
+</div>
+<div class="gh-integrations-gallery-grid-column">
+<div id="zapier" class="gh-integrations-gallery-grid-item">
+<div class="gh-integrations-gallery-img-wrapper">
+<img src="/images/logos/integrations/zapier-logo_hu27d4f23eb64bd4b8e5db5efca7e963da_861_60x0_resize_q100_h2_box_3.webp" alt="Zapier" loading="lazy" width="60" height="60">
+</div>
+<div class="gh-integrations-gallery-name">Zapier</div>
+</div>
+</div>
+<div class="gh-integrations-gallery-grid-column">
+<div id="twitter" class="gh-integrations-gallery-grid-item">
+<div class="gh-integrations-gallery-img-wrapper">
+<img src="/images/logos/integrations/twitter-logo_hu02b4e91b1d83ecc6c8a86b46cb85597e_1148_74x0_resize_q100_h2_box_3.webp" alt="Twitter" loading="lazy" width="74" height="60">
+</div>
+<div class="gh-integrations-gallery-name">Twitter</div>
+</div>
+</div>
+<div class="gh-integrations-gallery-grid-column">
+<div id="slack" class="gh-integrations-gallery-grid-item">
+<div class="gh-integrations-gallery-img-wrapper">
+<img src="/images/logos/integrations/slack-logo_hu3929018aa236297ed98d1c841678be44_1610_60x0_resize_q100_h2_box_3.webp" alt="Slack" loading="lazy" width="60" height="60">
+</div>
+<div class="gh-integrations-gallery-name">Slack</div>
+</div>
+</div>
+<div class="gh-integrations-gallery-grid-column">
+<div id="ia-writer" class="gh-integrations-gallery-grid-item">
+<div class="gh-integrations-gallery-img-wrapper">
+<img src="/images/logos/integrations/ia-writer-logo_hu3b9a56c0fdf6f7800b1e674fd8b61081_909_60x0_resize_q100_h2_box_3.webp" alt="iA Writer" loading="lazy" width="60" height="60">
+</div>
+<div class="gh-integrations-gallery-name">iA Writer</div>
+</div>
+</div>
+<div class="gh-integrations-gallery-grid-column">
+<div id="shopify" class="gh-integrations-gallery-grid-item">
+<div class="gh-integrations-gallery-img-wrapper">
+<img src="/images/logos/integrations/shopify-logo_hu3772293cbdd335336ad9df5858b619e5_1364_53x0_resize_q100_h2_box_3.webp" alt="Shopify" loading="lazy" width="53" height="60">
+</div>
+<div class="gh-integrations-gallery-name">Shopify</div>
+</div>
+</div>
+<div class="gh-integrations-gallery-grid-column">
+<div id="helpscout" class="gh-integrations-gallery-grid-item">
+<div class="gh-integrations-gallery-img-wrapper">
+<img src="/images/logos/integrations/helpscout-logo_hud376c3481a750697c08f111cfb25645a_900_63x0_resize_q100_h2_box_3.webp" alt="Help Scout" loading="lazy" width="63" height="60">
+</div>
+<div class="gh-integrations-gallery-name">Help Scout</div>
+</div>
+</div>
+<div class="gh-integrations-gallery-grid-column">
+<div id="segment" class="gh-integrations-gallery-grid-item">
+<div class="gh-integrations-gallery-img-wrapper">
+<img src="/images/logos/integrations/segment-logo_hu527f83db05775a4cea9dae57fec99487_937_60x0_resize_q100_h2_box_3.webp" alt="Segment" loading="lazy" width="60" height="60">
+</div>
+<div class="gh-integrations-gallery-name">Segment</div>
+</div>
+</div>
+</div>
+<div class="gh-integrations-gallery-grid">
+<div class="gh-integrations-gallery-grid-column">
+<div id="disqus" class="gh-integrations-gallery-grid-item">
+<div class="gh-integrations-gallery-img-wrapper">
+<img src="/images/logos/integrations/disqus-logo_hu743554ff9470ec1d137661aa0ba6911c_839_62x0_resize_q100_h2_box_3.webp" alt="Disqus" loading="lazy" width="62" height="60">
+</div>
+<div class="gh-integrations-gallery-name">Disqus</div>
+</div>
+</div>
+<div class="gh-integrations-gallery-grid-column">
+<div id="mailchimp" class="gh-integrations-gallery-grid-item">
+<div class="gh-integrations-gallery-img-wrapper">
+<img src="/images/logos/integrations/mailchimp-logo_huce085b79c0589d41d24abead99dccadd_2741_60x0_resize_q100_h2_box_3.webp" alt="Mailchimp" loading="lazy" width="60" height="60">
+</div>
+<div class="gh-integrations-gallery-name">Mailchimp</div>
+</div>
+</div>
+<div class="gh-integrations-gallery-grid-column">
+<div id="analytics" class="gh-integrations-gallery-grid-item">
+<div class="gh-integrations-gallery-img-wrapper">
+<img src="/images/logos/integrations/analytics-logo_hue088cc13d8306b31dbb97121dd4aa86d_760_60x0_resize_q100_h2_box_3.webp" alt="Analytics" loading="lazy" width="60" height="60">
+</div>
+<div class="gh-integrations-gallery-name">Analytics</div>
+</div>
+</div>
+<div class="gh-integrations-gallery-grid-column">
+<div id="soundcloud" class="gh-integrations-gallery-grid-item">
+<div class="gh-integrations-gallery-img-wrapper">
+<img src="/images/logos/integrations/soundcloud-logo_hue16142e417b901836495e934a5dffa05_2249_100x0_resize_q100_h2_box_3.webp" alt="SoundCloud" loading="lazy" width="100" height="43">
+</div>
+<div class="gh-integrations-gallery-name">SoundCloud</div>
+</div>
+</div>
+<div class="gh-integrations-gallery-grid-column">
+<div id="intercom" class="gh-integrations-gallery-grid-item">
+<div class="gh-integrations-gallery-img-wrapper">
+<img src="/images/logos/integrations/intercom-logo_hud01b8c398482db142a38eb615176907c_891_60x0_resize_q100_h2_box_3.webp" alt="Intercom" loading="lazy" width="60" height="60">
+</div>
+<div class="gh-integrations-gallery-name">Intercom</div>
+</div>
+</div>
+<div class="gh-integrations-gallery-grid-column">
+<div id="stripe" class="gh-integrations-gallery-grid-item">
+<div class="gh-integrations-gallery-img-wrapper">
+<img src="/images/logos/integrations/stripe-logo_hufa2a714cfb368b89044b81e6e2f90e16_2284_60x0_resize_q100_h2_box_3.webp" alt="Stripe" loading="lazy" width="60" height="60">
+</div>
+<div class="gh-integrations-gallery-name">Stripe</div>
+</div>
+</div>
+<div class="gh-integrations-gallery-grid-column">
+<div id="buffer" class="gh-integrations-gallery-grid-item">
+<div class="gh-integrations-gallery-img-wrapper">
+<img src="/images/logos/integrations/buffer-logo_hu699b0cb0e22e12d0726c9d3e1142d35f_878_59x0_resize_q100_h2_box_3.webp" alt="Buffer" loading="lazy" width="59" height="60">
+</div>
+<div class="gh-integrations-gallery-name">Buffer</div>
+</div>
+</div>
+<div class="gh-integrations-gallery-grid-column">
+<div id="youtube" class="gh-integrations-gallery-grid-item">
+<div class="gh-integrations-gallery-img-wrapper">
+<img src="/images/logos/integrations/youtube-logo_hub8739da4e2961873651798fb4d5e2560_722_86x0_resize_q100_h2_box_3.webp" alt="YouTube" loading="lazy" width="86" height="60">
+</div>
+<div class="gh-integrations-gallery-name">YouTube</div>
+</div>
+</div>
+<div class="gh-integrations-gallery-grid-column">
+<div id="lets-encrypt" class="gh-integrations-gallery-grid-item">
+<div class="gh-integrations-gallery-img-wrapper">
+<img src="/images/logos/integrations/lets-encrypt-logo_hu86e33f844b3c8b0de55a26eafda85f79_916_57x0_resize_q100_h2_box_3.webp" alt="Let's Encrypt" loading="lazy" width="57" height="60">
+</div>
+<div class="gh-integrations-gallery-name">Let's Encrypt</div>
+</div>
+</div>
+<div class="gh-integrations-gallery-grid-column">
+<div id="netlify" class="gh-integrations-gallery-grid-item">
+<div class="gh-integrations-gallery-img-wrapper">
+<img src="/images/logos/integrations/netlify-logo_hu9b70662ea956ee6f0e27a722876bf99c_2605_60x0_resize_q100_h2_box_3.webp" alt="Netlify" loading="lazy" width="60" height="60">
+</div>
+<div class="gh-integrations-gallery-name">Netlify</div>
+</div>
+</div>
+</div>
+</a>
+</section>
+<div class="gh-section gh-section-dark canvas">
+<div class="grid">
+<div class="s-6 m:s-12">
+<h2 class="t-eyebrow">Built to last</h2>
+<p class="t-main"><strong>A product you can depend on.</strong> Ghost is open source, independent, and funded 100% by its users.</p>
+<p class="t-main"><strong>No investors. No bullshit.</strong></p>
+</div>
+</div>
+<div class="grid">
+<img class="s-12 r s darkmode" src="/images/home/post-list.png" alt="The Ghost editor" loading="lazy" sizes="(max-width: 1400px) calc(100vw - 12vmin), 1380px" srcset="/images/home/post-list/post-list-100.png 100w, /images/home/post-list/post-list-300.png 300w, /images/home/post-list/post-list-450.png 450w, /images/home/post-list/post-list-600.png 600w, /images/home/post-list/post-list-800.png 800w, /images/home/post-list/post-list-1000.png 1000w, /images/home/post-list/post-list-1600.png 1600w, /images/home/post-list/post-list-2000.png 2000w, /images/home/post-list/post-list-2400.png 2400w, /images/home/post-list/post-list-3000.png 3000w">
+</div>
+</div>
+<div class="gh-section gh-section-dark canvas gh-section-center">
+<div class="w-6 m:w-12">
+<h2 class="t-eyebrow">Launch your site</h2>
+<p class="t-main">Last week, <strong>
+5,736
+</strong> brand new<br>publications got started with Ghost.</p>
+<p class="t-main"><strong>Today, it's your turn.</strong></p>
+<p class="t-main"><br><a href="https://account.ghost.org/signup/" class="gh-btn gh-btn-lg gh-btn-green"><span>Get started now — free</span></a></p>
+</div>
+</div>
+</main>
+<footer class="gh-foot">
+<div class="gh-foot-top">
+<div class="gh-foot-content inner">
+<div class="gh-foot-top-row">
+<nav class="gh-foot-top-nav">
+<a href="/" class="gh-nav-logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 294" preserveAspectRatio="xMidYMid meet" class="ghost-orb-logo">
+<title>Ghost Logo</title>
+<style>
+svg.ghost-orb-logo {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url(/images/logos/logo-black-1.png);
+}
+</style>
+</svg>
+</a>
+<a href="/about/">About</a>
+<a href="/customers/">Customers</a>
+<a href="https://careers.ghost.org/" target="_blank" rel="noopener noreferrer">Careers</a>
+<a href="https://ghost.org/resources/">Resources</a>
+</nav>
+<div class="gh-foot-github">
+<iframe src="https://ghbtns.com/github-btn.html?user=tryghost&amp;repo=ghost&amp;type=star&amp;count=true" scrolling="0" title="Star TryGhost/Ghost on GitHub" width="110" height="20" frameborder="0"></iframe>
+</div>
+</div>
+<nav class="gh-foot-nav">
+<section class="gh-foot-ghost gh-foot-col">
+<h4>Product</h4>
+<ul>
+<li><a href="/">Creator platform</a></li>
+<li><a href="/marketplace/">Theme marketplace</a></li>
+<li><a href="/integrations/">Integrations</a></li>
+<li><a href="/feature-index/">Feature index</a></li>
+</ul>
+</section>
+<section class="gh-foot-developers gh-foot-col">
+<h4>Developers</h4>
+<ul>
+<li><a href="/docs/install/">How to install Ghost</a></li>
+<li><a href="/docs/">Core concepts</a></li>
+<li><a href="/pricing/">Ghost hosting</a></li>
+<li><a href="/docs/content-api/">API documentation</a></li>
+<li><a href="/docs/security/">Security overview</a></li>
+<li><a href="https://github.com/TryGhost/Ghost" target="_blank" rel="noopener noreferrer">Source code</a></li>
+</ul>
+</section>
+<section class="gh-foot-resources gh-foot-col">
+<h4>Resources</h4>
+<ul>
+<li><a href="/docs/tutorials/">Ghost tutorials</a></li>
+<li><a href="/resources/">Resources</a></li>
+<li><a href="https://nodecms.guide" target="_blank" rel="noopener noreferrer">Node.js CMS guide</a></li>
+<li><a href="https://opensubscriptionplatforms.com">Open Subscription Platforms</a></li>
+</ul>
+</section>
+<section class="gh-foot-compare gh-foot-col">
+<h4>Comparisons</h4>
+<ul>
+<li><a href="/vs/substack/">Ghost vs Substack</a></li>
+<li><a href="/vs/wordpress/">Ghost vs WordPress</a></li>
+<li><a href="/vs/medium/">Ghost vs Medium</a></li>
+<li><a href="/vs/memberful/">Ghost vs Memberful</a></li>
+<li><a href="/vs/patreon/">Ghost vs Patreon</a></li>
+<li><a href="/alternatives/" class="lime">Ghost alternatives →</a></li>
+</ul>
+</section>
+<section class="gh-foot-support gh-foot-col">
+<h4>Support</h4>
+<ul>
+<li><a href="/help/">Help center</a></li>
+<li><a href="https://forum.ghost.org/">Community forum</a></li>
+<li><a href="https://status.ghost.org/" target="_blank" rel="noopener noreferrer">Status&nbsp;<span class="gh-badge gh-badge-grey"><svg width="7" height="4" viewBox="0 0 7 4" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    Triangle
+  </title>
+  <path d="M3.5 0L7 4H0z" fill="#BFD0DC" fill-rule="evenodd"></path>
+</svg>
+99.9%</span></a></li>
+</ul>
+</section>
+</nav>
+</div>
+</div>
+<div class="gh-foot-bottom">
+<div class="gh-foot-bottom-row">
+<div class="gh-foot-bottom-content inner">
+<div class="gh-foot-brands">
+<a class="gh-foot-indie" href="/about/">
+<img src="/images/logos/indie.svg" alt="Non-Profit Foundation" loading="lazy" width="89" height="34">
+</a>
+<a class="gh-foot-indie" href="https://github.com/tryghost" target="_blank" rel="noopener noreferrer">
+<img src="/images/logos/opensource.svg" alt="Open Source" loading="lazy" width="89" height="34">
+</a>
+<a href="https://climateneutral.org" target="_blank" rel="noopener noreferrer">
+<img src="/images/logos/climateneutral.svg" alt="Climate Neutral" loading="lazy" width="102" height="34">
+</a>
+</div>
+<nav class="gh-foot-bottom-nav">
+<a href="/terms/">Terms</a>
+<a href="/privacy/">Privacy</a>
+<a href="/contact/">Contact</a>
+<a href="/">Ghost Foundation © 2022</a>
+</nav>
+</div>
+</div>
+</div>
+</footer>
+<div class="gh-banner">
+<span>👋 <strong>We're hiring remotely, worldwide!</strong> Join the team that's creating the creator economy &nbsp; — &nbsp; <a href="https://careers.ghost.org">See open roles →</a></span>
+</div>
+</div>
+<link rel="preload" href="https://ghost.org/js/app.min.js" as="script">
+<script type="text/javascript" src="https://ghost.org/js/app.min.js"></script>
+<script type="text/javascript" src="https://r10zygrn4kl3.statuspage.io/embed/script.js" async="" defer=""></script>
+
+<iframe src="https://r10zygrn4kl3.statuspage.io/embed/frame" style="position: fixed; border: medium none; box-shadow: rgba(9, 20, 66, 0.25) 0px 20px 32px -8px; z-index: 9999; transition: left 1s ease 0s, bottom 1s ease 0s, right 1s ease 0s; height: 115px; width: 320px; left: -9999px; right: auto; bottom: 60px;"></iframe></body></html>

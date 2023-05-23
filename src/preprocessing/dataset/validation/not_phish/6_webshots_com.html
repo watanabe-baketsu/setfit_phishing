@@ -1,0 +1,91 @@
+<html lang="en"><head>
+
+  <base href="/">
+  <meta charset="utf-8">
+  <title>Webshots - Wallpaper / Screen Savers</title>
+
+  <meta name="description" content="Webshots, the best in Desktop Wallpaper, Desktop Backgrounds, and Screen Savers since 1995.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- put images below the fold on mobile but shows on desktop -->
+  <link rel="preload" as="image" href="https://webshots-photos-002.nyc3.cdn.digitaloceanspaces.com/7aa41fe4c60399bd26412215295e690ca66b8384224197b6548c33b2aefe586a/640x480.jpg">
+
+  <meta property="og:url" content="https://webshots.com">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Webshots - Desktop Wallpaper / Screen Savers">
+  <meta property="og:description" content="Webshots, the best in Desktop Wallpaper, Desktop Backgrounds, and Screen Savers since 1995.">
+  <!-- <meta property="og:image" content="https://webshots-photos-002.nyc3.cdn.digitaloceanspaces.com/7aa41fe4c60399bd26412215295e690ca66b8384224197b6548c33b2aefe586a/256x144.jpg" /> -->
+
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.js"></script>
+
+  <script>
+
+    window.addEventListener('load', function () {
+
+      var loaded = 0;
+      if (loaded == 0) {
+        loaded = 1;
+        setTimeout(() => {
+          loadAds();
+        }, 2.4 * 1000);
+      }
+
+      window.addEventListener('scroll', function () {
+        if (loaded == 0) {
+          loaded = 1;
+          loadAds();
+        }
+      });
+
+    })
+
+    function loadAds() {
+
+      var ele = document.createElement('script');
+      ele.async = true;
+      ele.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
+      var sc = document.getElementsByTagName('script')[0]
+      sc.parentNode.insertBefore(ele, sc);
+
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-7895663061972984",
+        enable_page_level_ads: true
+      });
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'UA-25996432-3');
+
+    }
+
+  </script>
+
+  <script defer="" type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Organization",
+      "name" : "Webshots",
+     "url" : "https://webshots.com",
+     "sameAs" : [
+       "https://www.facebook.com/webshots",
+       "https://www.instagram.com/webshots/?hl=en"
+       ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1084 N. El Camino Real Suite B310, Encinitas",
+        "addressRegion": "CA",
+        "postalCode": "92024",
+        "addressCountry": "US"
+      }
+    }
+    </script>
+
+<style>@charset "UTF-8";:root{--blue:#007bff;--indigo:#6610f2;--purple:#6f42c1;--pink:#e83e8c;--red:#dc3545;--orange:#fd7e14;--yellow:#ffc107;--green:#28a745;--teal:#20c997;--cyan:#17a2b8;--white:#fff;--gray:#6c757d;--gray-dark:#343a40;--primary:#4e4a58;--secondary:#5e5961;--success:#6d687b;--info:#8d8697;--warning:#ffc107;--danger:#dc3545;--light:#f8f9fa;--dark:#343a40;--breakpoint-xs:0;--breakpoint-sm:576px;--breakpoint-md:768px;--breakpoint-lg:992px;--breakpoint-xl:1200px;--font-family-sans-serif:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";--font-family-monospace:SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}*,*:before,*:after{box-sizing:border-box}html{font-family:sans-serif;line-height:1.15;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";font-size:1rem;font-weight:400;line-height:1.5;color:#212529;text-align:left;background-color:#fff}@media print{*,*:before,*:after{text-shadow:none!important;box-shadow:none!important}@page{size:a3}body{min-width:992px!important}}</style><link rel="stylesheet" href="styles.795703f6d4fe07f6.css" media="all" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.795703f6d4fe07f6.css"></noscript><style>img[_ngcontent-lls-c9]{pointer-events:none}</style><style>.img-sized[_ngcontent-lls-c8]{width:100%;height:auto;aspect-ratio:attr(width)/attr(height)}img[_ngcontent-lls-c8]{pointer-events:none}.footer[_ngcontent-lls-c8]{width:100%;height:3rem;margin-bottom:4rem}.footer[_ngcontent-lls-c8]   a[_ngcontent-lls-c8]{font-weight:500;text-decoration:none}.footer-links[_ngcontent-lls-c8]   li[_ngcontent-lls-c8]{display:inline-block}</style></head>
+
+<body>
+  <app-root _nghost-lls-c9="" ng-version="13.2.5"><router-outlet _ngcontent-lls-c9=""></router-outlet><home-content _nghost-lls-c8=""><nav _ngcontent-lls-c8="" class="navbar navbar-expand-lg justify-content-between"><a _ngcontent-lls-c8="" class="navbar-brand ml-2">Webshots</a><form _ngcontent-lls-c8="" class="form-inline my-2 my-lg-0"><a _ngcontent-lls-c8="" class="nav-item nav-link">Install | Update</a><a _ngcontent-lls-c8="" class="nav-item nav-link">Sign In</a><a _ngcontent-lls-c8="" class="nav-item nav-link">Weekly</a><a _ngcontent-lls-c8="" class="nav-item nav-link">Photos</a><a _ngcontent-lls-c8="" class="nav-item nav-link">Settings</a><a _ngcontent-lls-c8="" href="https://support.webshots.com"> Support </a></form></nav><div _ngcontent-lls-c8="" class="container"><div _ngcontent-lls-c8="" class="row"><div _ngcontent-lls-c8="" class="col-sm-2"></div><div _ngcontent-lls-c8="" class="col-sm-8"><h5 _ngcontent-lls-c8="" class="lead text-color">The best in Desktop Wallpaper and Screen Savers</h5><p _ngcontent-lls-c8="" class="text-color">50+ free photos to start!</p><a _ngcontent-lls-c8="" class="btn btn-info">Get Started</a><h5 _ngcontent-lls-c8="" class="text-color mt-4">Here are some recent reviews:</h5><p _ngcontent-lls-c8="" class="text-color">"I have enjoyed the pictures for the last 10 + years."</p><p _ngcontent-lls-c8="" class="text-color">"Great photos and easy to use!"</p><p _ngcontent-lls-c8="" class="text-color">"I get to travel to a different part of the world every day!"</p><p _ngcontent-lls-c8="" class="text-color">"I love the variety of photos I can select for the desktop and screensaver."</p><p _ngcontent-lls-c8="" class="text-color">"I love webshots and have had it since 2001. The pictures are beautiful!"</p><h5 _ngcontent-lls-c8="" class="lead text-color mt-4">Here are some of our recent photos.</h5><div _ngcontent-lls-c8=""><div _ngcontent-lls-c8="" class="card mt-4"><img _ngcontent-lls-c8="" class="card-img-top img-sized" src="https://webshots-photos-002.nyc3.cdn.digitaloceanspaces.com/7aa41fe4c60399bd26412215295e690ca66b8384224197b6548c33b2aefe586a/640x480.jpg" alt="Lake Lucerne, Nidwalden, Switzerland" width="640" height="480"><!----><div _ngcontent-lls-c8="" class="card-body"><p _ngcontent-lls-c8="" class="card-text">Lake Lucerne, Nidwalden, Switzerland</p></div></div><div _ngcontent-lls-c8="" class="card mt-4"><ins _ngcontent-lls-c8="" data-ad-format="fluid" data-ad-layout-key="-6t+ed+2i-1n-4w" data-ad-client="ca-pub-7895663061972984" data-ad-slot="7659151916" class="adsbygoogle" style="display: block;"></ins></div><!----></div><div _ngcontent-lls-c8=""><div _ngcontent-lls-c8="" class="card mt-4"><img _ngcontent-lls-c8="" class="card-img-top img-sized" src="https://webshots-photos-002.nyc3.cdn.digitaloceanspaces.com/b0ef90ebabff5072e0fbca789529b7de44b24c3c522a8fbb13b05044a3be43c1/640x480.jpg" alt="Point Marie, Paris, France" width="640" height="480"><!----><div _ngcontent-lls-c8="" class="card-body"><p _ngcontent-lls-c8="" class="card-text">Point Marie, Paris, France</p></div></div><div _ngcontent-lls-c8="" class="card mt-4"><ins _ngcontent-lls-c8="" data-ad-format="fluid" data-ad-layout-key="-6t+ed+2i-1n-4w" data-ad-client="ca-pub-7895663061972984" data-ad-slot="7659151916" class="adsbygoogle" style="display: block;"></ins></div><!----></div><div _ngcontent-lls-c8=""><div _ngcontent-lls-c8="" class="card mt-4"><img _ngcontent-lls-c8="" class="card-img-top img-sized" src="https://webshots-photos-002.nyc3.cdn.digitaloceanspaces.com/2477b49a8a3c355bc7d0361e99b5b8b61a614da3eacbb4b85d588aa638685a0d/640x480.jpg" alt="Svanelmoen, Norway" width="640" height="480"><!----><div _ngcontent-lls-c8="" class="card-body"><p _ngcontent-lls-c8="" class="card-text">Svanelmoen, Norway</p></div></div><div _ngcontent-lls-c8="" class="card mt-4"><ins _ngcontent-lls-c8="" data-ad-format="fluid" data-ad-layout-key="-6t+ed+2i-1n-4w" data-ad-client="ca-pub-7895663061972984" data-ad-slot="7659151916" class="adsbygoogle" style="display: block;"></ins></div><!----></div><div _ngcontent-lls-c8=""><div _ngcontent-lls-c8="" class="card mt-4"><img _ngcontent-lls-c8="" class="card-img-top img-sized" src="https://webshots-photos-002.nyc3.cdn.digitaloceanspaces.com/bb034fab86d00c141bc9b673bb2d310216708ab5781bfa79720e279797b654ea/640x480.jpg" alt="Makalawena Beach, Kekaha Kai State Park, Hawaii" width="640" height="480"><!----><div _ngcontent-lls-c8="" class="card-body"><p _ngcontent-lls-c8="" class="card-text">Makalawena Beach, Kekaha Kai State Park, Hawaii</p></div></div><div _ngcontent-lls-c8="" class="card mt-4"><ins _ngcontent-lls-c8="" data-ad-format="fluid" data-ad-layout-key="-6t+ed+2i-1n-4w" data-ad-client="ca-pub-7895663061972984" data-ad-slot="7659151916" class="adsbygoogle" style="display: block;"></ins></div><!----></div><!----><h5 _ngcontent-lls-c8="" style="margin-top: 1.5rem !important;"><a _ngcontent-lls-c8="" href="https://facebook.com/webshots" style="color: #ffffff;">Follow us on Facebook.</a></h5><h5 _ngcontent-lls-c8="" style="margin-top: 1.5rem !important;"><a _ngcontent-lls-c8="" href="https://instagram.com/webshots" style="color: #ffffff;">Follow us on Instagram.</a></h5></div><div _ngcontent-lls-c8="" class="col-sm-2"></div></div></div><footer _ngcontent-lls-c8="" class="footer text-muted mt-4"><div _ngcontent-lls-c8="" class="container-fluid"><ul _ngcontent-lls-c8="" class="footer-links"><li _ngcontent-lls-c8="" class="ml-2"><a _ngcontent-lls-c8="" href="/about">About</a></li><li _ngcontent-lls-c8="" class="ml-2"><a _ngcontent-lls-c8="" href="/terms">Terms</a></li><li _ngcontent-lls-c8="" class="ml-2"><a _ngcontent-lls-c8="" href="/privacy">Privacy</a></li><li _ngcontent-lls-c8="" class="ml-2"><a _ngcontent-lls-c8="" href="/desktop">Download</a></li><li _ngcontent-lls-c8="" class="ml-2"><a _ngcontent-lls-c8="" href="https://support.webshots.com">Support</a></li><li _ngcontent-lls-c8="" class="mr-4 float-right"><small _ngcontent-lls-c8="">Webshots ©2000-2022</small></li></ul></div></footer></home-content><!----></app-root>
+<script src="runtime.007ed83d9f693dcb.js" type="module"></script><script src="polyfills.bb6f4642c0172008.js" type="module"></script><script src="main.2a04c643c2cd0f4f.js" type="module"></script>
+
+</body></html>

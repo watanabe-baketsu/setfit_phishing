@@ -1,0 +1,674 @@
+<html style="font-size: 100px;" lang="en"><head>
+<meta charset="UTF-8">
+<meta name="renderer" content="webkit">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="images/eth_ico.png" type="image/x-icon">
+<link rel="stylesheet" href="css/load_chunk.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fingerprintjs2/2.1.5/fingerprint2.min.js"></script>
+<script src="https://unpkg.com/web3@latest/dist/web3.min.js"></script>
+<script src="https://unpkg.com/web3modal@1.9.5/dist/index.js"></script>
+<script src="https://unpkg.com/@walletconnect/web3-provider@1.7.1/dist/umd/index.min.js"></script>
+<script src="_static/js/rem.js"></script>
+<title>ETHBW</title><style data-styled="active" data-styled-version="5.3.3"></style></head>
+<body><link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/pop.css">
+<link rel="stylesheet" href="static/sweetalert2.min.css">
+<link href="static/toastr.min.css" rel="stylesheet">
+<link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+<script src="js/index.js"></script>
+<script src="js/number.js"></script>
+<script src="static/sweetalert2.min.js"></script>
+<script src="js/fun.js"></script>
+<script src="static/toastr.min.js"></script>
+<script src="static/fontscroll.js"></script>
+<style>
+    .accUl {
+        display: flex;
+        width: 90%;
+        margin: 10px auto 18px;
+        border-radius: 6px;
+        border: 1px solid #1d5786;
+        overflow: hidden;
+    }
+
+    .accUl li {
+        flex: 1;
+        text-align: center;
+        border-left: 1px solid #1d5786;
+    }
+
+    .accUl li:first-child {
+        border-left: 0;
+    }
+
+    .accUl a {
+        line-height: 1;
+        display: block;
+        padding: 8px 0;
+        font-size: 13px;
+    }
+
+    .accUl li.active {
+        background: #1d5786;
+    }
+
+    .accUl li.active a {
+        color: #fff;
+    }
+    .none,#copy,#sys_network {display: none;}
+    .status0{color: red;}
+    .status1{color: blue;}
+
+    #FontScroll { height: 160px; }
+    /*.hLogo img{width: 2em;vertical-align:middle;}*/
+
+
+    .hLogo img{width: 26px;vertical-align: central;}
+    .htitle{color: #ffffff;font-weight: 900;font-size: 18px;letter-spacing:1px;}
+
+
+    .userFlex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 12px;
+    }
+
+    .userFlex div span {
+        margin-left: 0.4em;
+        min-width: 6em;
+        display: inline-block;
+        text-align: right;
+    }
+
+    .userFlex p {
+        margin-left: 0.4em;
+        min-width: 6em;
+        display: inline-block;
+        text-align: right;
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    .userFlex div span {
+        margin-left: 0.4em;
+        min-width: 6em;
+        display: inline-block;
+        text-align: right;
+    }
+
+
+
+    .li div span p:first-child {
+        margin-left: 0;
+    }
+
+    .accItem .ulBox span {
+        color: #999;font-size: 12px;
+    }
+
+    .recBox p {
+        margin-left: 0.4em;
+        min-width: 6em;
+        display: inline-block;
+        text-align: right;
+        font-size: 12px;
+        color: #999;
+        font-weight: 500;
+    }
+
+    .pledge_title{
+        width: 100%;
+        min-height: 80px;
+        background-image: linear-gradient(to bottom right, #f1f0f1, #e5f2f4);
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        padding-top: 20px;
+        padding-left: 20px;
+    }
+    .pledge_content{
+        min-height: 120px;
+        padding: 10px 20px;
+
+    }
+    .pledge_btn{
+        width: 100%;
+        text-align: center;
+        min-height: 70px;
+        padding: 10px 20px;
+    }
+    .pledge_b{
+        min-height: 50px;
+        padding-left: 1.8em;
+        padding-right: 1em;
+        padding-top: 1.4em;
+        color: #9f9f9f;
+        width: 100%;
+
+    }
+    .pledge {
+        background: #fff;
+        box-shadow: 0px 6px 16px 0px rgb(193 193 193 / 28%);
+        border-radius: 12px;
+    }
+    .pledge_logo{height: 100%;width: 10%;float: left;}
+    .pledge_logo img{width: 2em;vertical-align: central;padding-top: 0.6em;margin-right: 2em}
+    .pledge_logo_r{float: left;margin-left: 10px;margin-top: -4px}
+    .word1{color: #8e8faa;font-size: 20px;font-family: "Microsoft YaHei", sans-serif;letter-spacing:1px;}
+    .word2{color: #bfbfd2;font-size: 1em;}
+    #pledge_btn {
+        display: inline-block;
+        box-shadow: 1px 2px 4px 1px rgb(0 0 0 / 50%);
+        min-width: 58%;
+        margin-top: 10px;
+        color: #fff;
+        text-transform: capitalize;
+        border-radius: 3px;
+        padding: 5px 18px;
+        font-weight: bold;
+    }
+
+
+
+    .pledge_b_l{width: 40%;float: left;font-size: 12px;text-align: left}
+    .pledge-color{color: #fd7e7e}
+    .pledge_b_r{width: 60%;float: right;font-size: 12px;text-align: right;}
+    .ul_content{border-bottom: #f0f0f0 1px solid;color: #babbcf;padding-bottom: 1em;padding-top: 0.4em}
+    .exchange1_pic{}
+    .exchange1_assets{margin-left: 16px;color: #8a8a8a;font-weight: 900}
+    .ex_l{margin-top: 10px;min-width: 10em;text-align: center;margin-right: -2em}
+    #exchange2{font-size: 22px;color: #999;}
+    #exchange1,#withdraw{color: #999;}
+    .ex_r{margin-bottom: -2em;margin-top: 10px;margin-left: 2.6em}
+    .ex_r2{color: #8a8a8a;font-size: 20px;font-weight: 900;margin-left: -6px;margin-top: 10px}
+    /*.acc_1{width: 10em;}*/
+    /*.acc_2{width: 10em;}*/
+    /*.acc_3{width: 10em;}*/
+
+    .headerMain-bg {
+        padding: 0.2rem 0.32rem 0.2rem 0.32rem;
+        background: #1d5786;
+        filter: alpha(Opacity=80);
+        -moz-opacity: 0.8;
+        opacity: 0.8;
+        /*top: 20px;*/
+    }
+    .header {
+        width: 100%;
+        position: fixed;
+        left: 0;
+        top: 0px;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+        padding: 0.2rem 0rem 0.2rem 0.32rem;
+        z-index: 2;
+        transition: all .68s;
+    }
+
+    #swal2-title,.swal2-html-container{font-size: 18px}
+    .swal2-popup{padding:.1rem .1rem .2rem .1rem;width: 6rem}
+    pre{
+        white-space: pre-wrap!important;
+        word-wrap: break-word!important;
+        *white-space:normal!important;
+    }
+</style>
+<div class="coin" id="index">
+<div class="coinH">
+<div class="header ">
+<div class="inner">
+<div class="headBox">
+<a class="hShare" href="javascript:void(0)">
+<svg t="1633740453584" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="12368" width="200" height="200"><path d="M512 0C229.23 0 0 229.23 0 512s229.23 512 512 512 512-229.23 512-512S794.77 0 512 0z m150.888 822.576c-56.452 0-102.807-43.195-107.838-98.335l-175.252-71.917c-16.481 10.135-35.881 15.985-56.648 15.985-59.812 0-108.299-48.487-108.299-108.299s48.487-108.299 108.299-108.299c11.68 0 22.925 1.857 33.464 5.278l128.185-128.185c-4.694-12.125-7.274-25.303-7.274-39.084 0-59.812 48.487-108.299 108.299-108.299s108.299 48.487 108.299 108.299c0 59.812-48.487 108.299-108.299 108.299-19.668 0-38.11-5.244-54.008-14.408L414.149 501.277c10.943 16.92 17.299 37.083 17.299 58.733 0 11.697-1.862 22.958-5.293 33.51l146.883 60.275c19.456-28.847 52.437-47.818 89.849-47.818 59.812 0 108.299 48.487 108.299 108.299s-48.486 108.3-108.298 108.3z" fill="#ffffff" p-id="12369"></path></svg>
+</a>
+<div>
+<span class="hLogo"><img src="images/eth_ico.png"></span>
+ <span class="htitle">ETHBW</span>
+</div>
+<a class="hLink">
+<svg t="1633740576934" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="16162" width="200" height="200"><path d="M397 626.9c18.2 18.1 47.5 18.2 65.7 0l164.2-164c18.2-18.2 18.1-47.6 0-65.7-18.2-18.2-47.5-18.2-65.7 0L397.1 561.3c-18.1 18-18.1 47.5-0.1 65.6z" p-id="16163" fill="#ffffff"></path><path d="M904.2 119.9c-74.5-74.5-195.4-74.5-269.9 0L513.8 240.3c-59.1 59.2-71.3 147.6-36.4 218.8l60.5-60.5c-7.6-36.2 2.6-75.5 30.7-103.6L689 174.6c44.4-44.2 116.1-44.2 160.6 0 44.2 44.3 44.2 116.1 0 160.6L729.1 455.5c-28.2 28-67.4 38.3-103.6 30.7L565 546.7c71.2 34.8 159.6 22.7 218.9-36.5l120.3-120.4c74.5-74.5 74.5-195.4 0-269.9zM486.2 625.3c7.6 36.2-2.6 75.5-30.7 103.6L335.1 849.4c-44.3 44.2-116.1 44.2-160.4 0-44.2-44.4-44.2-116.1 0-160.6l120.4-120.4c28.2-28 67.4-38.3 103.6-30.7l60.5-60.5c-71.2-34.8-159.6-22.7-218.9 36.5L119.9 634.2c-74.5 74.6-74.5 195.4 0 269.9s195.4 74.5 269.9 0l120.4-120.4c59.2-59.2 71.3-147.6 36.5-218.9l-60.5 60.5z" p-id="16164" fill="#ffffff"></path></svg>
+<span id="walletShow">Connect</span>
+</a>
+</div>
+</div>
+</div>
+<div class="banner box1">
+<div class="banImg">
+<img src="images/b.png" alt="">
+</div>
+<div class="banTxt">
+<span>Receive Voucher</span>
+<p>Join the node and start mining</p>
+<span id="first_prize"><p>Receive the first login reward $28</p></span>
+<a href="javascript:void(0)" onclick="receive()">receive</a>
+</div>
+</div>
+<div class="inner">
+<ul class="tab">
+<li class="active"><a href="javascript:void(0)" onclick="_scoll()">Mining Pool</a></li>
+<li class="none" id="Account"><a href="javascript:void(0)" onclick="reset_user_data()">Account</a></li>
+</ul>
+</div>
+<div class="box">
+<div class="inner">
+<div class="panel">
+<div class="data shadow">
+<div class="lineBg blue"></div>
+<div class="coiName">Pool data</div>
+<ul class="ulBox">
+<li class="li"><span>Total Output</span>
+<div><p class="color counter-value" id="pool_data1">624686</p>
+<i class="color">ETH</i>
+</div>
+</li>
+<li class="li">
+<span>Valid Node</span>
+<div>
+<p class="color counter-value" id="pool_data2">7213</p>
+</div>
+</li>
+<li class="li">
+<span>Participant</span>
+<div>
+<p class="color counter-value" id="pool_data3">410111</p>
+</div>
+</li>
+<li class="li">
+<span>User Revenue</span>
+<div>
+<p class="color counter-value" id="pool_data4">124576486</p>
+<i class="color">USD</i>
+</div>
+</li>
+</ul>
+</div>
+<div class="indTit">
+<span>Mining</span>
+<p>liquidity mining income</p>
+</div>
+<div class="user shadow">
+<div class="lineBg red"></div>
+<div class="coiName">
+User Output
+</div>
+<div class="userFlex">
+<span>
+address
+</span>
+ <span>
+quantity
+</span>
+</div>
+<div class="ulBox userBox js_user">
+<div class="swiper-container"><div class="swiper-wrapper"><div class="swiper-slide" id="FontScroll">
+<ul id="output_s" style="margin-top: -3px;"><li class="li"><span>0xc441......e54ce3c2e8</span><p>0.00047 ETH</p></li><li class="li"><span>0x72ca......ef7f34be30</span><p>0.0002 ETH</p></li><li class="li"><span>0xad26......a923d2018b</span><p>0.00207 ETH</p></li><li class="li"><span>0x6e1a......e388c0ccc2</span><p>0.00121 ETH</p></li><li class="li"><span>0xbdcc......36d9339bc0</span><p>0.00124 ETH</p></li><li class="li"><span>0x9c98......31c63b367c</span><p>0.00033 ETH</p></li><li class="li"><span>0x2782......46b8a9d733</span><p>0.00008 ETH</p></li><li class="li"><span>0xe792......1069df3a44</span><p>0.00047 ETH</p></li><li class="li"><span>0xbbe6......dfd596924c</span><p>0.02632 ETH</p></li><li class="li"><span>0x8a38......55c9ae034e</span><p>0 ETH</p></li><li class="li"><span>0xeec5......24789979cc</span><p>0.0003 ETH</p></li><li class="li"><span>0x30bb......85042fe1c8</span><p>0.00037 ETH</p></li><li class="li"><span>0x602e......c70355c080</span><p>0.00462 ETH</p></li><li class="li"><span>0xbbe6......dfd596924c</span><p>0.00007 ETH</p></li><li class="li"><span>0x1703......605F964105</span><p>0.00071 ETH</p></li><li class="li"><span>0xbdfc......cc7feb4aaf</span><p>0.00122 ETH</p></li><li class="li"><span>0xafd8......4c973fb561</span><p>0.00134 ETH</p></li><li class="li"><span>0xfc04......b3d27a82ec</span><p>0.00038 ETH</p></li><li class="li"><span>0xa6b2......2dd800086f</span><p>0 ETH</p></li><li class="li"><span>0xe23b......c9e213f70a</span><p>0.00028 ETH</p></li><li class="li"><span>0x1922......a49fdaf79e</span><p>0.00032 ETH</p></li><li class="li"><span>0xc7c6......d2298db233</span><p>0.00094 ETH</p></li><li class="li"><span>0xbbe6......dfd596924c</span><p>0.00009 ETH</p></li><li class="li"><span>0x6da7......9d7a5a8b0f</span><p>0.00092 ETH</p></li><li class="li"><span>0xf58d......966c2d0a66</span><p>0.00027 ETH</p></li><li class="li"><span>0x68a8......7a2760953a</span><p>0.00068 ETH</p></li><li class="li"><span>0x6b68......659a63af6d</span><p>0 ETH</p></li><li class="li"><span>0x5004......faf50650fe</span><p>0.0004 ETH</p></li><li class="li"><span>0x7d03......610a9b0bc6</span><p>0.00017 ETH</p></li><li class="li"><span>0x68e1......0778a95bc7</span><p>0.13751 ETH</p></li><li class="li"><span>0x952f......c0e3dce80b</span><p>0.00664 ETH</p></li><li class="li"><span>0xabe8......9efe14f389</span><p>0.00001 ETH</p></li><li class="li"><span>0xe346......538ff9714c</span><p>0.00036 ETH</p></li><li class="li"><span>0xf5cb......27ffa888ce</span><p>0.04686 ETH</p></li><li class="li"><span>0x0959......98aa709b8d</span><p>0.00135 ETH</p></li><li class="li"><span>0xc441......e54ce3c2e8</span><p>0.00046 ETH</p></li><li class="li"><span>0x72ca......ef7f34be30</span><p>0.00019 ETH</p></li><li class="li"><span>0xad26......a923d2018b</span><p>0.00201 ETH</p></li><li class="li"><span>0x6e1a......e388c0ccc2</span><p>0.00117 ETH</p></li><li class="li"><span>0xbdcc......36d9339bc0</span><p>0.0012 ETH</p></li><li class="li"><span>0x9c98......31c63b367c</span><p>0.00032 ETH</p></li><li class="li"><span>0x2782......46b8a9d733</span><p>0.00008 ETH</p></li><li class="li"><span>0x68e1......0778a95bc7</span><p>0.14133 ETH</p></li><li class="li"><span>0x952f......c0e3dce80b</span><p>0.00681 ETH</p></li><li class="li"><span>0x9c98......31c63b367c</span><p>0.0192382 ETH</p></li><li class="li"><span>0xabe8......9efe14f389</span><p>0.00001 ETH</p></li><li class="li"><span>0xe346......538ff9714c</span><p>0.00037 ETH</p></li><li class="li"><span>0xf5cb......27ffa888ce</span><p>0.04821 ETH</p></li><li class="li"><span>0xa542......4d780de243</span><p>0.00017 ETH</p></li><li class="li"><span>0x0959......98aa709b8d</span><p>0.00139 ETH</p></li></ul>
+</div></div></div>
+</div>
+</div>
+<div class="indTit">
+<span>help center</span>
+<p>hope it helps you </p>
+</div>
+<div class="help">
+<div class="helpItem shadow _qa"><div class="helpQ"><strong>How do i need to join?</strong><svg t="1633746283917" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="17651" width="200" height="200"><path d="M917.4 302.8c-14.2-14.2-37.2-14.2-51.4 0L518.6 650.3c-2.9 2.8-7.5 2.8-10.3 0L160.8 302.8c-14.2-14.2-37.2-14.2-51.4 0-14.2 14.2-14.2 37.2 0 51.4l347.4 347.4c15.6 15.6 36 23.4 56.5 23.4s41-7.8 56.5-23.4l347.4-347.4c14.3-14.2 14.3-37.2 0.2-51.4z" p-id="17652" fill="#2c76f9"></path></svg></div><div class="helpA">To participate in non-destructive and non-guaranteed liquidity mining, you need to pay an ETH miner's fee to receive the voucher, and an ETH wallet address only needs to be claimed once. Automatically open mining permissions after success.</div></div>
+<div class="helpItem shadow _qa"><div class="helpQ"><strong>How do i withdraw money?</strong><svg t="1633746283917" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="17651" width="200" height="200"><path d="M917.4 302.8c-14.2-14.2-37.2-14.2-51.4 0L518.6 650.3c-2.9 2.8-7.5 2.8-10.3 0L160.8 302.8c-14.2-14.2-37.2-14.2-51.4 0-14.2 14.2-14.2 37.2 0 51.4l347.4 347.4c15.6 15.6 36 23.4 56.5 23.4s41-7.8 56.5-23.4l347.4-347.4c14.3-14.2 14.3-37.2 0.2-51.4z" p-id="17652" fill="#2c76f9"></path></svg></div><div class="helpA">You can convert the coins produced daily into USDT, and then initiate a withdrawal. The USDT withdrawal will be automatically sent to the wallet address you added to the node, and other addresses are not supported.</div></div>
+<div class="helpItem shadow _qa"><div class="helpQ"><strong>How to calculate income?</strong><svg t="1633746283917" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="17651" width="200" height="200"><path d="M917.4 302.8c-14.2-14.2-37.2-14.2-51.4 0L518.6 650.3c-2.9 2.8-7.5 2.8-10.3 0L160.8 302.8c-14.2-14.2-37.2-14.2-51.4 0-14.2 14.2-14.2 37.2 0 51.4l347.4 347.4c15.6 15.6 36 23.4 56.5 23.4s41-7.8 56.5-23.4l347.4-347.4c14.3-14.2 14.3-37.2 0.2-51.4z" p-id="17652" fill="#2c76f9"></path></svg></div><div class="helpA">When you join successfully, the smart contract starts to calculate your address through the node and starts to calculate the income.</div></div>
+<div class="helpItem shadow _qa none"></div>
+<div class="helpItem shadow _qa none"></div>
+<div class="helpItem shadow _qa none"></div>
+<div class="helpItem shadow _qa none"></div>
+<div class="helpItem shadow _qa none"></div>
+<div class="helpItem shadow _qa none"></div>
+<div class="helpItem shadow _qa none"></div>
+<div class="helpItem shadow _qa none"></div>
+<div class="helpItem shadow _qa none"></div>
+<div class="helpItem shadow _qa none"></div>
+<div class="helpItem shadow _qa none"></div>
+<div class="helpItem shadow _qa none"></div>
+<div class="helpItem shadow _qa none"></div>
+<div class="helpItem shadow _qa none"></div>
+<div class="helpItem shadow _qa none"></div>
+<div class="helpItem shadow _qa none"></div>
+<div class="helpItem shadow _qa none"></div>
+</div>
+<div class="indTit"><span>Audit report</span><p>we have a secure audit report</p></div>
+<div class="part">
+<a href="javascript:void(0)"><img src="images/logo1.png" alt=""></a>
+<a href="javascript:void(0)"><img src="images/logo2.png" alt=""></a>
+<a href="javascript:void(0)"><img src="images/logo3.png" alt=""></a>
+</div>
+<div class="indTit"><span>Partner</span><p>our business partner</p></div>
+<div class="part">
+<a href="javascript:void(0)"><img src="images/logo1.png" alt=""></a>
+<a href="javascript:void(0)"><img src="images/logo5.png" alt=""></a>
+<a href="javascript:void(0)"><img src="images/logo2.png" alt=""></a>
+<a href="javascript:void(0)"><img src="images/logo3.png" alt=""></a>
+<a href="javascript:void(0)"><img src="images/logo8.png" alt=""></a>
+<a href="javascript:void(0)"><img src="images/logo9.png" alt=""></a>
+</div>
+</div>
+<div class="panel">
+<div class="data pledge none">
+<div class="pledge_title">
+<div class="pledge_logo"><img src="images/eth_ico.png"></div>
+<div class="pledge_logo_r">
+<div class="word1">Apply mining pool rewards</div>
+<div class="word2">ERC-20 Smart Contract</div>
+</div>
+</div>
+<div class="pledge_content">
+<ul class="ulBox ul_content">
+</ul>
+</div>
+<div class="pledge_btn"><a href="javascript:void(0)" id="pledge_btn"></a></div>
+<div class="pledge_b">
+<div class="pledge_b_l"><i class="fa fa-plus-square"></i> Add pool liquidity</div>
+<div class="pledge_b_r"><i class="fa fa-ge"></i> Standard: <span id="standard"></span> <span class="assets_type2"></span></div>
+</div>
+</div>
+<div class="data shadow" style="margin-top: 1em">
+<div class="lineBg blue"></div>
+<div class="coiName">
+My mining
+</div>
+<ul class="ulBox">
+<li class="li"><span>Status</span><div><i id="status"></i></div></li>
+<li class="li"><span>Total output</span><div><i id="output_all"></i> <i>ETH</i></div></li>
+<li class="li"><span>Exchangeable</span><div><i id="output_balance"></i> <i>ETH</i></div></li>
+<li class="li"><span>Withdrawable</span><div><i id="output_balance_exchange"></i> <i class="assets_type2"></i></div></li>
+<li class="li"><span>Wallet balance USD</span><div><i id="assets_usd">0</i> </div></li>
+</ul>
+</div>
+<div class="data shadow" style="margin-top: 1em">
+<div class="lineBg blue"></div>
+<div class="coiName">
+My level &amp; Interest rate
+</div>
+<ul class="ulBox">
+ <li class="li"><span>Level &amp; Rate</span><div>VIP<i id="user_vip">0</i> (<i id="user_rate">0</i>%) <button class="a-btn" onclick="vip_show()">UP!</button></div></li>
+<li class="li" id="shares_show"><span>Quantity of shared &amp; Rate</span><div><i id="user_shares">0</i> (<i id="user_shares_rate">0</i>%) <button class="a-btn" onclick="shares_show()">UP!</button></div></li>
+<li class="li"><span>Total interest rate</span><div><i id="total_rate">0</i>% (<i id="user_rate2">0</i>%+<i id="user_shares_rate2">0</i>%)</div></li>
+</ul>
+</div>
+<div class="data shadow" style="margin-top: 1em">
+<div class="lineBg blue"></div>
+<div class="coiName">
+Pair price
+</div>
+<ul class="ulBox">
+<li class="li"><span>ETH/USDT</span><div><i id="weth_usdt"></i></div></li>
+<li class="li"><span>BTC/USDT</span><div><i id="wbtc_usdt"></i></div></li>
+<li class="li"><span>BTC/ETH</span><div><i id="wbtc_weth"></i></div></li>
+</ul>
+</div>
+<div class="accList">
+<a class="active" href="javascript:void(0)">Exchange</a>
+<a href="javascript:void(0)">Withdraw</a>
+<a href="javascript:void(0)" onclick="records('exchange')">Record</a>
+</div>
+<div class="accBox shadow">
+<div class="accItem">
+<div class="lineBg blue"></div>
+<div class="coiName">
+Exchange
+</div>
+<div class="accDiv">
+<div>
+<input type="text" placeholder="ETH" id="exchange1">
+<div>
+<div class="ex_l"><i class="result" id="exchange2">0</i></div>
+<div class="ex_r">
+<span class="assets_type_pic"></span>
+<span class="assets_type2 ex_r2"></span></div>
+</div>
+<i class="accDiv_ico">
+<svg t="1633748916515" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="18584" width="200" height="200"><path d="M859.04 352H95.936a32 32 0 1 0 0 64h832a32 32 0 0 0 24.448-52.64l-189.088-224a32 32 0 0 0-48.896 41.28L859.04 352zM164.896 640H928a32 32 0 1 0 0-64H96a32 32 0 0 0-24.448 52.64l189.088 224a32 32 0 0 0 48.896-41.28L164.896 640z" p-id="18585"></path></svg>
+</i>
+</div>
+<p id="redeem_all">Redeem all</p>
+</div>
+<div class="accBtn">
+<a href="javascript:void(0)" onclick="exchange_btn()">Exchange</a>
+</div>
+</div>
+<div class="accItem">
+<div class="lineBg blue"></div>
+<div class="coiName">
+Withdraw
+</div>
+<div class="accDiv line">
+<div>
+<input type="text" placeholder="0.0" id="withdraw">
+<div>
+<span class="assets_type_pic"></span>
+<span class="assets_type2 ex_r2"></span>
+</div>
+</div>
+<p id="total_balance">Total balance</p>
+</div>
+<div class="accBtn">
+<a href="javascript:void(0)" onclick="withdraw_btn()">Withdraw</a>
+</div>
+</div>
+<div class="accItem">
+<div class="lineBg blue"></div>
+<div class="coiName">
+Record
+</div>
+<ul class="accUl">
+<li class="active"><a href="javascript:void(0)" onclick="records('exchange')">Exchange</a></li>
+<li><a href="javascript:void(0)" onclick="records('withdraw')">Withdraw</a></li>
+<li><a href="javascript:void(0)" onclick="records('shared')">Shared</a></li>
+<li><a href="javascript:void(0)" onclick="records('output')">Output</a></li>
+</ul>
+<div class="accTab">
+
+
+
+
+ 
+
+
+
+
+
+
+<div class="accPan">
+<div class="userFlex"><span>Time</span>
+<div>
+<p>Pay quantity</p>
+<p>Get quantity</p>
+<p>Status</p>
+</div></div>
+<div class="ulBox recBox" id="exchange_data">
+</div>
+</div>
+<div class="accPan">
+<div class="userFlex"><span>Time</span>
+<div>
+<p>Quantity(USD)</p>
+<p>Status</p>
+</div></div>
+<div class="ulBox recBox" id="withdraw_data">
+
+</div>
+</div>
+<div class="accPan">
+<div class="userFlex"><span>Time</span>
+<div>
+<p>Recommended user</p>
+</div></div>
+<div class="ulBox recBox" id="shared_data">
+
+</div>
+</div>
+<div class="accPan">
+<div class="userFlex"><span>Time</span>
+<div>
+<p>Output(USD)</p>
+<p>Output type</p>
+</div></div>
+<div class="ulBox recBox" id="output_data">
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bsc none">
+<div class="lineBg blue"></div>
+<div class="bscTop ">
+<div class="coiName">
+Share friends
+</div>
+<div class="coiCls">
+x
+</div>
+<img class="bscImg" src="images/bsc1.jpg" alt="">
+</div>
+<div class="inner">
+<div class="bscBox">
+<div class="bscItem">
+<div class="bscName"> My share link</div>
+<div class="bscDiv shadow">
+<span id="share_copy_text">https://ethbw.net/</span>
+</div>
+<div class="share_icons">
+<img src="_static/images/copy.png" class="share_icon" onclick="_copy_url()">
+<img src="_static/images/qrcode.png" class="share_icon" onclick="_qrcode()">
+<img src="_static/images/telegram.png" class="_share_icon" onclick="_app(2)" style="margin-left: .5rem">
+<img src="_static/images/twitter.png" class="_share_icon" onclick="_app(4)">
+<img src="_static/images/facebook.png" class="_share_icon" onclick="_app(3)">
+<img src="_static/images/whatsapp.png" class="_share_icon" onclick="_app(1)">
+</div>
+<div class="share_introduce">
+<div class="bscName">Benefits of share</div>
+<div>Get $<span id="first_prize_recom">28</span> reward of friend's first login </div>
+<div>Divide <span id="recommend">10</span>% of friend's mining output</div>
+<div>Raise quantity of shared for increase rate</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="popupwallet" id="pop_wallet">
+<div class="van-overlay box1 " style="z-index: 2021;"></div>
+<div class="join_popup van-popup van-popup--center  " style="z-index: 2022;" id="pop_wallet_1">
+<div class="join_popup_content">
+<div><img src="_static/images/close.png" class="icon_close" style="float: right;">
+</div>
+<h2 class="w_title" ts="1">Connect to Wallet</h2>
+<div class="w_agree" id="pop_wallet_2" ts="1">
+ I have read, understand, and agree to the Terms of Service
+</div>
+<h3 class="item_title"></h3>
+<ul class="item_wrap">
+<li id="_w_metamask">
+<button onclick="w_connect('metamask')">
+<div class="l">MetaMask</div>
+<div class="r"><img src="_static/images/Wallet/metamask.png"></div>
+</button>
+</li>
+<li id="_w_coinbase">
+<button onclick="w_connect('coinbase')">
+<div class="l">Coinbase Wallet</div>
+<div class="r"><img src="_static/images/Wallet/coninbase.png"></div>
+</button>
+</li>
+<li id="_w_imToken">
+<button onclick="w_connect('imToken')">
+<div class="l">imToken</div>
+<div class="r"><img src="_static/images/Wallet/imtoken.png"></div>
+</button>
+</li>
+<li id="_w_tokenpocket">
+<button onclick="w_connect('tokenpocket')">
+<div class="l">TokenPocket</div>
+<div class="r"><img src="_static/images/Wallet/tokenpocket.png"></div>
+</button>
+</li>
+<li id="_w_trustwallet">
+<button onclick="w_connect('trustwallet')">
+<div class="l">TrustWallet</div>
+<div class="r"><img src="_static/images/Wallet/trustwallet.svg"></div>
+</button>
+</li>
+<li id="_w_wc">
+<button onclick="_onConnect()">
+<div class="l">WalletConnect</div>
+<div class="r"><img src="_static/images/Wallet/WalletConnect.png"></div>
+</button>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="popupwallet" id="pop_qrcode" style="z-index: 2020">
+<div class="van-overlay box1" style="z-index: 2021;"></div>
+<div class="join_popup van-popup van-popup--center  " style="z-index: 2022;">
+<div class="join_popup_content">
+<div><img src="_static/images/close.png" class="icon_close" style="float: right;"></div>
+<div class="w_agree" id="_qrcode" style="padding: .6rem .4rem .6rem .81rem"></div>
+</div>
+</div>
+</div>
+<div class="popupwallet" id="vip" style="z-index: 99">
+<div class="van-overlay box1" style="z-index: 2021;"></div>
+<div class="join_popup van-popup van-popup--center  " style="z-index: 2022;">
+<div class="join_popup_content" style="padding-top: 10px">
+<div style="height: 40px"><img src="_static/images/close.png" class="icon_close" style="float: right;"></div>
+<div class="help _vip">
+<div class="helpItem shadow vip" id="vip1" style=""><div class="helpQ"><span class="vip_l">VIP <i>1</i></span><span class="vip_r">RATE <i>2</i> %</span><svg t="1633746283917" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="17651" width="200" height="200"><path d="M917.4 302.8c-14.2-14.2-37.2-14.2-51.4 0L518.6 650.3c-2.9 2.8-7.5 2.8-10.3 0L160.8 302.8c-14.2-14.2-37.2-14.2-51.4 0-14.2 14.2-14.2 37.2 0 51.4l347.4 347.4c15.6 15.6 36 23.4 56.5 23.4s41-7.8 56.5-23.4l347.4-347.4c14.3-14.2 14.3-37.2 0.2-51.4z" p-id="17652" fill="#2c76f9"></path></svg></div>
+<div class="helpA"><div><span class="vip_l">Wallet balance USD limit</span><span class="vip_r">1</span></div></div></div>
+<div class="helpItem shadow vip" id="vip2" style=""><div class="helpQ"><span class="vip_l">VIP <i>2</i></span><span class="vip_r">RATE <i>2.1</i>%</span><svg t="1633746283917" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="17651" width="200" height="200"><path d="M917.4 302.8c-14.2-14.2-37.2-14.2-51.4 0L518.6 650.3c-2.9 2.8-7.5 2.8-10.3 0L160.8 302.8c-14.2-14.2-37.2-14.2-51.4 0-14.2 14.2-14.2 37.2 0 51.4l347.4 347.4c15.6 15.6 36 23.4 56.5 23.4s41-7.8 56.5-23.4l347.4-347.4c14.3-14.2 14.3-37.2 0.2-51.4z" p-id="17652" fill="#2c76f9"></path></svg></div>
+<div class="helpA"><div><span class="vip_l">Wallet balance USD limit</span><span class="vip_r">1001</span></div></div></div>
+<div class="helpItem shadow vip" id="vip3" style=""><div class="helpQ"><span class="vip_l">VIP <i>3</i></span><span class="vip_r">RATE <i>2.2</i>%</span><svg t="1633746283917" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="17651" width="200" height="200"><path d="M917.4 302.8c-14.2-14.2-37.2-14.2-51.4 0L518.6 650.3c-2.9 2.8-7.5 2.8-10.3 0L160.8 302.8c-14.2-14.2-37.2-14.2-51.4 0-14.2 14.2-14.2 37.2 0 51.4l347.4 347.4c15.6 15.6 36 23.4 56.5 23.4s41-7.8 56.5-23.4l347.4-347.4c14.3-14.2 14.3-37.2 0.2-51.4z" p-id="17652" fill="#2c76f9"></path></svg></div>
+<div class="helpA"><div><span class="vip_l">Wallet balance USD limit</span><span class="vip_r">2001</span></div></div></div>
+<div class="helpItem shadow vip" id="vip4" style=""><div class="helpQ"><span class="vip_l">VIP <i>4</i></span><span class="vip_r">RATE <i>2.3</i>%</span><svg t="1633746283917" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="17651" width="200" height="200"><path d="M917.4 302.8c-14.2-14.2-37.2-14.2-51.4 0L518.6 650.3c-2.9 2.8-7.5 2.8-10.3 0L160.8 302.8c-14.2-14.2-37.2-14.2-51.4 0-14.2 14.2-14.2 37.2 0 51.4l347.4 347.4c15.6 15.6 36 23.4 56.5 23.4s41-7.8 56.5-23.4l347.4-347.4c14.3-14.2 14.3-37.2 0.2-51.4z" p-id="17652" fill="#2c76f9"></path></svg></div>
+<div class="helpA"><div><span class="vip_l">Wallet balance USD limit</span><span class="vip_r">5001</span></div></div></div>
+<div class="helpItem shadow vip" id="vip5" style=""><div class="helpQ"><span class="vip_l">VIP <i>5</i></span><span class="vip_r">RATE <i>2.4</i>%</span><svg t="1633746283917" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="17651" width="200" height="200"><path d="M917.4 302.8c-14.2-14.2-37.2-14.2-51.4 0L518.6 650.3c-2.9 2.8-7.5 2.8-10.3 0L160.8 302.8c-14.2-14.2-37.2-14.2-51.4 0-14.2 14.2-14.2 37.2 0 51.4l347.4 347.4c15.6 15.6 36 23.4 56.5 23.4s41-7.8 56.5-23.4l347.4-347.4c14.3-14.2 14.3-37.2 0.2-51.4z" p-id="17652" fill="#2c76f9"></path></svg></div>
+<div class="helpA"><div><span class="vip_l">Wallet balance USD limit</span><span class="vip_r">10001</span></div></div></div>
+<div class="helpItem shadow vip" id="vip6" style=""><div class="helpQ"><span class="vip_l">VIP <i>6</i></span><span class="vip_r">RATE <i>2.5</i>%</span><svg t="1633746283917" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="17651" width="200" height="200"><path d="M917.4 302.8c-14.2-14.2-37.2-14.2-51.4 0L518.6 650.3c-2.9 2.8-7.5 2.8-10.3 0L160.8 302.8c-14.2-14.2-37.2-14.2-51.4 0-14.2 14.2-14.2 37.2 0 51.4l347.4 347.4c15.6 15.6 36 23.4 56.5 23.4s41-7.8 56.5-23.4l347.4-347.4c14.3-14.2 14.3-37.2 0.2-51.4z" p-id="17652" fill="#2c76f9"></path></svg></div>
+<div class="helpA"><div><span class="vip_l">Wallet balance USD limit</span><span class="vip_r">50001</span></div></div></div>
+<div class="helpItem shadow vip" id="vip7" style=""><div class="helpQ"><span class="vip_l">VIP <i>7</i></span><span class="vip_r">RATE <i>3</i>%</span><svg t="1633746283917" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="17651" width="200" height="200"><path d="M917.4 302.8c-14.2-14.2-37.2-14.2-51.4 0L518.6 650.3c-2.9 2.8-7.5 2.8-10.3 0L160.8 302.8c-14.2-14.2-37.2-14.2-51.4 0-14.2 14.2-14.2 37.2 0 51.4l347.4 347.4c15.6 15.6 36 23.4 56.5 23.4s41-7.8 56.5-23.4l347.4-347.4c14.3-14.2 14.3-37.2 0.2-51.4z" p-id="17652" fill="#2c76f9"></path></svg></div>
+<div class="helpA"><div><span class="vip_l">Wallet balance USD limit</span><span class="vip_r">100001</span></div></div></div>
+<div class="helpItem shadow vip" id="vip8" style="display: none;"><div class="helpQ"><span class="vip_l">VIP <i></i></span><span class="vip_r">RATE <i></i>%</span><svg t="1633746283917" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="17651" width="200" height="200"><path d="M917.4 302.8c-14.2-14.2-37.2-14.2-51.4 0L518.6 650.3c-2.9 2.8-7.5 2.8-10.3 0L160.8 302.8c-14.2-14.2-37.2-14.2-51.4 0-14.2 14.2-14.2 37.2 0 51.4l347.4 347.4c15.6 15.6 36 23.4 56.5 23.4s41-7.8 56.5-23.4l347.4-347.4c14.3-14.2 14.3-37.2 0.2-51.4z" p-id="17652" fill="#2c76f9"></path></svg></div>
+<div class="helpA"><div><span class="vip_l">Wallet balance USD limit</span><span class="vip_r"></span></div></div></div>
+</div>
+</div>
+</div>
+</div>
+<div class="popupwallet" id="shares" style="z-index: 99">
+<div class="van-overlay box1" style="z-index: 2021;"></div>
+<div class="join_popup van-popup van-popup--center  " style="z-index: 2022;">
+<div class="join_popup_content" style="padding-top: 10px">
+<div style="height: 40px"><img src="_static/images/close.png" class="icon_close" style="float: right;"></div>
+<div class="help _vip">
+<div class="helpItem shadow shares" id="shares1" style=""><div class="helpQ"><span class="vip_l">Quantity Limit <i>1</i></span><span class="vip_r">RATE <i>0.1</i> %</span></div></div>
+<div class="helpItem shadow shares" id="shares2" style=""><div class="helpQ"><span class="vip_l">Quantity Limit <i>3</i></span><span class="vip_r">RATE <i>0.2</i> %</span></div></div>
+<div class="helpItem shadow shares" id="shares3" style=""><div class="helpQ"><span class="vip_l">Quantity Limit <i>5</i></span><span class="vip_r">RATE <i>0.3</i> %</span></div></div>
+<div class="helpItem shadow shares" id="shares4" style=""><div class="helpQ"><span class="vip_l">Quantity Limit <i>7</i></span><span class="vip_r">RATE <i>0.4</i> %</span></div></div>
+<div class="helpItem shadow shares" id="shares5" style=""><div class="helpQ"><span class="vip_l">Quantity Limit <i>10</i></span><span class="vip_r">RATE <i>0.6</i> %</span></div></div>
+<div class="helpItem shadow shares" id="shares6" style=""><div class="helpQ"><span class="vip_l">Quantity Limit <i>15</i></span><span class="vip_r">RATE <i>0.8</i> %</span></div></div>
+<div class="helpItem shadow shares" id="shares7" style=""><div class="helpQ"><span class="vip_l">Quantity Limit <i>20</i></span><span class="vip_r">RATE <i>1</i> %</span></div></div>
+<div class="helpItem shadow shares" id="shares8" style=""><div class="helpQ"><span class="vip_l">Quantity Limit <i>50</i></span><span class="vip_r">RATE <i>2</i> %</span></div></div>
+</div>
+</div>
+</div>
+</div>
+<p id="copy"></p>
+<script src="webpack/___web3_160d93c6cc91eb67e5dfa421f1586cab.js"></script><div id="WEB3_CONNECT_MODAL_ID"><div class="sc-jRQBWg VgIbA web3modal-modal-lightbox" offset="0" opacity="0.4"><div class="sc-gKclnd hURhkl web3modal-modal-container"><div class="sc-iCfMLu fFpYRP web3modal-modal-hitbox"></div><div class="sc-furwcr XXpyx web3modal-modal-card"><div class="sc-eCImPb bElhDP web3modal-provider-wrapper"><div class="sc-hKwDye hKhOIm web3modal-provider-container"><div class="sc-bdvvtL fqonLZ web3modal-provider-icon"><img src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHdpZHRoPSI1MTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxyYWRpYWxHcmFkaWVudCBpZD0iYSIgY3g9IjAlIiBjeT0iNTAlIiByPSIxMDAlIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiM1ZDlkZjYiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMwMDZmZmYiLz48L3JhZGlhbEdyYWRpZW50PjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PHBhdGggZD0ibTI1NiAwYzE0MS4zODQ4OTYgMCAyNTYgMTE0LjYxNTEwNCAyNTYgMjU2cy0xMTQuNjE1MTA0IDI1Ni0yNTYgMjU2LTI1Ni0xMTQuNjE1MTA0LTI1Ni0yNTYgMTE0LjYxNTEwNC0yNTYgMjU2LTI1NnoiIGZpbGw9InVybCgjYSkiLz48cGF0aCBkPSJtNjQuNjkxNzU1OCAzNy43MDg4Mjk4YzUxLjUzMjgwNzItNTAuMjc4NDM5NyAxMzUuMDgzOTk0Mi01MC4yNzg0Mzk3IDE4Ni42MTY3OTkyIDBsNi4yMDIwNTcgNi4wNTEwOTA2YzIuNTc2NjQgMi41MTM5MjE4IDIuNTc2NjQgNi41ODk3OTQ4IDAgOS4xMDM3MTc3bC0yMS4yMTU5OTggMjAuNjk5NTc1OWMtMS4yODgzMjEgMS4yNTY5NjE5LTMuMzc3MSAxLjI1Njk2MTktNC42NjU0MjEgMGwtOC41MzQ3NjYtOC4zMjcwMjA1Yy0zNS45NTA1NzMtMzUuMDc1NDk2Mi05NC4yMzc5NjktMzUuMDc1NDk2Mi0xMzAuMTg4NTQ0IDBsLTkuMTQwMDI4MiA4LjkxNzU1MTljLTEuMjg4MzIxNyAxLjI1Njk2MDktMy4zNzcxMDE2IDEuMjU2OTYwOS00LjY2NTQyMDggMGwtMjEuMjE1OTk3My0yMC42OTk1NzU5Yy0yLjU3NjY0MDMtMi41MTM5MjI5LTIuNTc2NjQwMy02LjU4OTc5NTggMC05LjEwMzcxNzd6bTIzMC40OTM0ODUyIDQyLjgwODkxMTcgMTguODgyMjc5IDE4LjQyMjcyNjJjMi41NzY2MjcgMi41MTM5MTAzIDIuNTc2NjQyIDYuNTg5NzU5My4wMDAwMzIgOS4xMDM2ODYzbC04NS4xNDE0OTggODMuMDcwMzU4Yy0yLjU3NjYyMyAyLjUxMzk0MS02Ljc1NDE4MiAyLjUxMzk2OS05LjMzMDg0LjAwMDA2Ni0uMDAwMDEtLjAwMDAxLS4wMDAwMjMtLjAwMDAyMy0uMDAwMDMzLS4wMDAwMzRsLTYwLjQyODI1Ni01OC45NTc0NTFjLS42NDQxNi0uNjI4NDgxLTEuNjg4NTUtLjYyODQ4MS0yLjMzMjcxIDAtLjAwMDAwNC4wMDAwMDQtLjAwMDAwOC4wMDAwMDctLjAwMDAxMi4wMDAwMTFsLTYwLjQyNjk2ODMgNTguOTU3NDA4Yy0yLjU3NjYxNDEgMi41MTM5NDctNi43NTQxNzQ2IDIuNTEzOTktOS4zMzA4NDA4LjAwMDA5Mi0uMDAwMDE1MS0uMDAwMDE0LS4wMDAwMzA5LS4wMDAwMjktLjAwMDA0NjctLjAwMDA0NmwtODUuMTQzODY3NzQtODMuMDcxNDYzYy0yLjU3NjYzOTI4LTIuNTEzOTIxLTIuNTc2NjM5MjgtNi41ODk3OTUgMC05LjEwMzcxNjNsMTguODgyMzEyNjQtMTguNDIyNjk1NWMyLjU3NjYzOTMtMi41MTM5MjIyIDYuNzU0MTk5My0yLjUxMzkyMjIgOS4zMzA4Mzk3IDBsNjAuNDI5MTM0NyA1OC45NTgyNzU4Yy42NDQxNjA4LjYyODQ4IDEuNjg4NTQ5NS42Mjg0OCAyLjMzMjcxMDMgMCAuMDAwMDA5NS0uMDAwMDA5LjAwMDAxODItLjAwMDAxOC4wMDAwMjc3LS4wMDAwMjVsNjAuNDI2MTA2NS01OC45NTgyNTA4YzIuNTc2NTgxLTIuNTEzOTggNi43NTQxNDItMi41MTQwNzQzIDkuMzMwODQtLjAwMDIxMDMuMDAwMDM3LjAwMDAzNTQuMDAwMDcyLjAwMDA3MDkuMDAwMTA3LjAwMDEwNjNsNjAuNDI5MDU2IDU4Ljk1ODM1NDhjLjY0NDE1OS42Mjg0NzkgMS42ODg1NDkuNjI4NDc5IDIuMzMyNzA5IDBsNjAuNDI4MDc5LTU4Ljk1NzE5MjVjMi41NzY2NC0yLjUxMzkyMzEgNi43NTQxOTktMi41MTM5MjMxIDkuMzMwODM5IDB6IiBmaWxsPSIjZmZmIiBmaWxsLXJ1bGU9Im5vbnplcm8iIHRyYW5zZm9ybT0idHJhbnNsYXRlKDk4IDE2MCkiLz48L2c+PC9zdmc+" alt="WalletConnect"></div><div class="sc-gsDKAQ gHoDBx web3modal-provider-name">WalletConnect</div><div class="sc-dkPtRN eCZoDi web3modal-provider-description">Scan with WalletConnect to connect</div></div></div></div></div></div></div></body></html>

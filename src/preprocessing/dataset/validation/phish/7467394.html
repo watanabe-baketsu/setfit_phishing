@@ -1,0 +1,68 @@
+<html lang="en"><head><meta charset="utf-8"><meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta content="email=no" name="format-detection"><title>đăng nhập</title><style type="text/css">		html {
+	        font-size: 40px;
+	    }
+	</style><link rel="stylesheet" type="text/css" href="/static/wap/css/common.css"><link rel="stylesheet" type="text/css" href="/static/wap/css/login.css"><link rel="stylesheet" type="text/css" href="/static/wap/css/tipmask.css"></head><body><form action="" method="post" id="logins"><div id="app"><div class="t_box_login" style="background-repeat: no-repeat;background-image: linear-gradient(90deg,#03aaff,#3a63ff);"><div style="    margin-top: 0.45rem;    color: white;"><span id="langset" style="float: right;display: inline-block;width: 2.5rem;    line-height: 30px;height: 30px;margin-right: 10px;text-align: center;border-radius: 10px;background: rgb(255,255,255,0.2);" onclick="changelang('list')">language  V</span><br><div id="langlist" style="display: none;position: absolute;right: 10px;margin-top: 10px;width: 2.5rem;line-height: 30px;text-align: center;
+				    background: rgb(255,255,255,0.2);border-radius: 10px;"><span id="langcns" onclick="changelang('zh')">简体中文</span><br><span id="langen" onclick="changelang('en')">English</span><br><span id="langth" onclick="changelang('th')">ภาษาไทย</span><br><span id="langcng" onclick="changelang('hk')">繁体中文</span><br><span id="langth" onclick="changelang('jp')">日本语</span><br><span id="langth" onclick="changelang('kor')">한국어</span><span id="langth" onclick="changelang('ye')">Tiếng Việt</span><br></div></div><div class="t_logo" style="    margin-top: 2rem;"><img style="height:3.16rem;width:7.62rem" src="/upload/6c203f380e09db65/57197fb6e0813c75.png"></div><div class="login_box"><ul><li><i></i><input type="text" placeholder="Vui lòng nhập số tài khoản" onfocus="this.placeholder=''" onblur="this.placeholder='Vui lòng nhập số tài khoản'" name="account" id="phonenumber" style="border-radius: 5px;
+    background: none;border: 1px solid hsla(0, 0%, 100%, .3);"></li><li><i></i><input type="password" placeholder="Vui lòng nhập mật khẩu" onfocus="this.placeholder=''" onblur="this.placeholder='Vui lòng nhập mật khẩu" name="password" id="password" style="border-radius: 5px;
+    background: none;border: 1px solid hsla(0, 0%, 100%, .3);"></li><li><input type="button" value="đăng nhập" id="login_btn"></li><!--<li><input type="button" value="会员注册" id="reg_btn"></li>--></ul><p style="padding: 0 10% 50px 10%"><a id="reg_btn">--Mở tài khoản ngay lập tức--</a><br><br><a href="javascript:;" onclick="msg('mẹo', 'quên mật khẩu', 1, '#')">--quên mật khẩu--</a><!--<a href="https://vm.providesupport.com/16n3m1c6pr89g1e9q4ddc9swq3" target="_blank" style="float:right">在线客服</a>--></p></div></div></div></form><div class="tipMask hide"><div class="cont"><p class="title">mẹo</p><p class="stitle contents"></p><div id="msgBtn"><div class="confirm guanbi" style="background-color:#33B497;">xác nhận</div></div></div></div><script src="/static/wap/js/jquery-1.9.1.min.js"></script><script>		function changelang(t){
+		if(t=="list"){
+			$('#langlist').fadeToggle();return;
+		}else{
+			$.ajax({
+				type:'get',
+				url:'/index/index/changelang?lang='+t,
+				dataType : "json",
+				success : function(res){
+					console.log(t);
+					window.localStorage.setItem('lang',t);
+					var td=$('#lang'+t).text();
+					$('#langset').text(td);
+					//$('#langlist').fadeToggle();
+					window.location.reload();
+					
+				}
+				
+			})
+		}
+		
+		
+		
+		
+	};
+	</script><script type="text/javascript">	$(function(){
+        $('#reg_btn').click(
+            function(){
+                window.location.href='/index/login/reg';
+            }
+        )
+
+		$('#login_btn').click(function(){
+			var url = "/index/login";
+			$.ajax({
+				type : "POST",
+				url : url,
+				data: {phone:$('#phonenumber').val(),password:$('#password').val()},
+				dataType : "json",
+				success : function(result){
+					if(result.code == 1){
+						msg("mẹo",result.info,2,"/index/user/index");
+					}else{
+						msg("mẹo",result.info,1);
+					}
+				}
+			});
+		})
+	});
+	function msg(title, content, type, url) {
+        $(".contents").html(content);
+        if (type == 1) {
+            var btn = '<div class="confirm guanbi"  style="background-color:#33B497;" onclick="$(\'.tipMask\').hide();">x&aacute;c nhận</div>';
+        }
+        else {
+            var btn = '<div class="confirm guanbi"  style="background-color:#33B497;" onclick="window.location.href=\'' + url + '\'">x&aacute;c nhận</div>';
+        }
+        $("#msgBtn").html(btn);
+        $(".tipMask").show();
+    }
+
+</script></body></html>

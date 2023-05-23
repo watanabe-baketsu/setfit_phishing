@@ -1,0 +1,170 @@
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Dashboard | CrypTrader v2</title>
+    <script> window.ByndApp = JSON.parse( '{"title":"Dashboard | CrypTrader v2","js":["app.bundle"],"css":["app.bundle"],"vendor_js":[],"vendor_css":[],"layout":{"config":{"header":{"branding":{"title":"CryptoCurrency Trading Platform","logo":"/img/logo.svg","_weight":-1},"custom_menu":{"_weight":4},"navbar":{"_weight":5},"_weight":-10},"body":{"_weight":5},"footer":{"_weight":99}},"regions":{"body":["dashboard","dock"]}},"router":{"routes":{"/":{"title":"Dashboard | CrypTrader v2","layout":{"body":["dashboard","dock"]}},"/dashboard":{"title":"Dashboard | CrypTrader v2","layout":{"body":["dashboard","dock"]}},"/dashboard/*":{"title":"Dashboard | CrypTrader v2","layout":{"body":["dashboard","dock"]}},"/user/keys":{"title":"Enter API Keys | CrypTrader v2","layout":{"body":["api_keys"]}},"/user/profile":{"title":"Edit Profile | CrypTrader v2","layout":{"body":["edit_profile"]}},"/user/beta-codes":{"title":"Beta Codes | CrypTrader v2","layout":{"body":["beta_codes"]}},"/support/faq":{"title":"Frequently Asked Questions | CrypTrader v2","layout":{"body":["faq"]}},"/support":{"title":"Support Desk | CrypTrader v2","layout":{"body":["support"]}},"/user/login":{"title":"User Login | CrypTrader v2","layout":{"body":["login"]}},"/user/register":{"title":"User Registration | CrypTrader v2","layout":{"body":["register"]}},"/user/reset-password":{"title":"User Password Reset | CrypTrader v2","layout":{"body":["reset-pw"]}},"/chat":{"title":"Chat","layout":{"body":["chat"]}},"/desktop":{"title":"CryptOS | CrypTrader.com","permission":"settings.feature_cryptOS","layout":{"body":{"desktop":{"header":{"branding":{"logo":"/img/logo.svg","title":false}}}}}}}},"settings":{},"themes":["aurora","aurora2","awakend","beach","btc-universal","code","dark-grey","dark-purple","darklights","day","default","desert-castle","desert-frozen","dunes","es-fractal","forest-night","forest-night2","forest","galaxy-beach","grass","light-blue","light-purple","mountains","orange-polygon","secret-base","space","space1","space2","sunset-castle"],"navigation":{"dashboard":{"title":"Dashboard","children":[]}}}' ); </script>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+     <link rel="stylesheet" type="text/css" href="/css/app.bundle.css">
+		 <script type="text/javascript" src="/js/app.bundle.js"></script><div class="bc-theme theme-styles"><style id="bynd-style-notify" type="text/css">.bc-notify .notification {  cursor: pointer; user-select: none; position:fixed; z-index:99999999999; padding:1.1vw; text-align:center; min-width: 20vw; max-width: 35vw; min-height: 1.5vw; font-size: 1.2vw; font-weight: bold; color: rgba( 222, 222, 222, 0.95 ); background-color: rgba( 0, 0, 0, 0.9 ); border:1px solid rgba( 77, 77, 77, 0.75 ); border-radius:8px; box-shadow:0 0 70px -1px rgba( 5, 5, 5, 0.75 ); opacity: 0; }
+.bc-notify .notification.warn {  background-color: rgba( 45, 55, 10, 0.75 ); }
+.bc-notify .notification.error {  border: 1px solid rgba( 200,100,100, 0.75 ); background-color: rgba( 90, 30, 30, 0.9 ); }</style><style id="bynd-style-app" type="text/css">.bc-app {  color: #fff; font-size: 12px; margin:0; padding:0; overflow-x: visible; font-family: sans-serif; background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url("/img/backgrounds/default.jpg") fixed; background-position: center; background-size: cover; }
+.bc-app a {  color: rgba( 125, 157, 195, 255 ); }
+.bc-app h1,
+.bc-app h2,
+.bc-app h3,
+.bc-app h4 {  margin: 0; margin-bottom: 0.25em; }
+.bc-app input {  background-color: inherit; color: inherit; }
+.bc-app .bc-layout .header {  position: fixed; height: 2.5em; font-size: 1.5em; padding: 0.4em; border-top: 1px solid #333; border-bottom: 1px solid rgba( 85, 85, 85, 0.55 ); }
+.bc-app .bc-layout .header.bos {  font-size: 1.1em; height: 2.5em; padding: 0.65em; padding-bottom: 0.7em; }
+.bc-app .bc-layout .header.bos .bc-branding {  flex: 0; }
+.bc-app .bc-layout .header .bc-branding {  height: 100%; }
+.bc-app .bc-layout .header .bc-clock {  flex: 1; font-size: 0.9em; }
+.bc-app .bc-layout .header .bc-clock * {  text-shadow: none; }
+.bc-app .bc-layout .region-body {  margin-top: 5em; }
+.bc-app .bc-layout .region .loading {  animation: loadBounce 4s ease-out infinite; }
+.bc-app .bc-layout .region .loading > * {  opacity: 0.2; transition: opacity 1s; }
+.bc-app .flex-row {  display: flex; }
+.bc-app .flex-row,
+.bc-app .flex-row > * {  flex: 1; }
+.bc-app .form-wrap {  background-color: rgba( 0, 0, 0, 0.7 ); border: 1px solid rgba( 200,200,200,0.3 ); backdrop-filter: blur(2em); box-shadow: black 0 2em 4em 0.5em; border-radius: 4px; margin : 0.5em auto; padding: 2.5%; transition: border 4s, background-color 4s, border-radius 4s; }
+.bc-app .form-wrap.error {  background-color: rgba( 20, 0, 0, 0.7 ); border: 1px solid rgba( 200,100,100,0.5 ); border-radius: 0.7em; transition: border 0.2s, background-color 0.2s, border-radius 0.2s; }
+.bc-app .form-wrap.warn {  background-color: rgba( 40, 30, 0, 0.7 ); border: 1px solid rgba( 200,150,100,0.5 ); border-radius: 0.7em; transition: border 0.2s, background-color 0.2s, border-radius 0.2s; }
+.bc-app .navbar .icon {  padding: 0 0.25em; }
+.bc-app .navbar-nav .dropdown-menu {  background-color: #111; border: 1px solid #777; border-radius: 5px; }
+.bc-app .navbar-nav .dropdown-menu > li > a,
+.bc-app .navbar-nav .dropdown-menu > li > a:focused,
+.bc-app .navbar-nav .dropdown-menu > li > a:hover {  background-color: #222 !important; border: 1px solid #555 !important; color: #fff !important; }
+.bc-app .navbar-nav .dropdown-menu .leaf .button {  background: linear-gradient( to bottom, rgba(73, 73, 73, 0.77) 0%, #1c1c1c 64%, rgba(38, 38, 38, 0.9) 100% ); padding: 5px 15px; text-align: left; font-weight: bold; }
+.bc-app .navbar-default .navbar-nav > .open > a,
+.bc-app .navbar-default .navbar-nav > .open > a:hover,
+.bc-app .navbar-default .navbar-nav > .open > a:focus {  color: #eee; background-color: #222 !important; }
+.bc-app .btn-lg,
+.bc-app .btn-group-lg > .btn {  padding: 6px 16px; font-size: 18px; line-height: 1.3333333; border-radius: 6px; }
+.bc-app .btn-primary {  color: #fff; background-color: #2e4960; border-color: #5f85a6; text-align: center; border-radius: 0.25em; padding: 0.25em 0.5em; margin: 0.15em; }
+.bc-app .button {  cursor: pointer; }
+.bc-app .dashboard .tabs-nav > ul > li {  height: 1.5em; }</style><style id="bynd-style-layout" type="text/css">.bc-layout {  display: flex; flex-direction: column; min-height: 100vh; }
+.bc-layout > * {  flex: 0; }</style><style id="bynd-style-branding" type="text/css">.bc-branding {  flex: 1; }
+.bc-branding .navbar-brand {  display: flex; height: 100%; font-size: 0.8em; width: fit-content; text-decoration: none; align-items: flex-end; white-space: nowrap; }
+.bc-branding .navbar-brand,
+.bc-branding .navbar-brand > * {  padding: 0 0.33em; }
+.bc-branding .navbar-brand .logo {  height: 100%; }
+.bc-branding .navbar-brand .title-text {  text-decoration: none; }</style><style id="bynd-style-custom-menu" type="text/css">.bc-custom-menu {  display: flex; align-items: center; }
+.bc-custom-menu li {  list-style: none; padding: 0.2em; }
+.bc-custom-menu .dropdown {  padding: 0; border: none; }
+.bc-custom-menu .dropdown.active .dd-button {  border-bottom: none; }
+.bc-custom-menu .dropdown .dd-wrap {  margin-top: 1px; }
+.bc-custom-menu .dropdown .dd-menu {  max-height: 90vh; text-align: center; font-size: 1.2em; padding: 0.2em 0.3em; }
+.bc-custom-menu .dropdown .dd-menu .dd-menu-item {  cursor: pointer; padding: 0.2em 0; max-width: 25vw; }
+.bc-custom-menu .dropdown .dd-menu .dd-menu-item .name {  color: #a3a988; }
+.bc-custom-menu .mdd .dd-wrap .dd-menu {  min-width: 35em; max-width: fit-content; }
+.bc-custom-menu .mdd .dd-wrap .dd-menu .menu-top input {  color: white; border-radius: 0.25em; max-height: 2em; }
+.bc-custom-menu .mdd .dd-wrap .dd-menu .dd-items {  display: grid; grid-template-columns: 1fr 1fr; width: fit-content; }
+.bc-custom-menu .mdd .dd-wrap .dd-menu .dd-items .dd-menu-item {  display: flex; flex-wrap: wrap; text-align: left; }
+.bc-custom-menu .mdd .dd-wrap .dd-menu .dd-items .dd-menu-item .image > img {  height: 1em; width: auto; margin: 0 0.15em; }
+.bc-custom-menu .mdd .dd-wrap .dd-menu .dd-items .dd-menu-item .name {  flex: 1; max-width: 16em; margin: 0 0.15em; overflow: hidden; text-overflow: ellipsis; }
+.bc-custom-menu .mdd .dd-wrap .dd-menu .dd-items .dd-menu-item .description {  min-width: 100%; display: block; font-size: 0.8em; color: #888; }
+.bc-custom-menu .mdd .dd-wrap .dd-menu .dd-items .dd-menu-item > * {  white-space: nowrap; }
+.bc-custom-menu .mdd .dd-wrap .dd-menu .search {  width: calc( 100% - 0.75em ); font-size: 1.1em; padding: 0.25em; margin: 0.25em; border-radius: 0.2em; border: 1px solid #555; background-color: #222; }
+.bc-custom-menu .mdd .dd-wrap .dd-menu .sortby {  display: flex; flex-wrap: wrap; }
+.bc-custom-menu .mdd .dd-wrap .dd-menu .sortby > * {  flex: 1; margin: 0.3em 0.7em; font-size: 0.5em; white-space: nowrap; }
+.bc-custom-menu .mdd .dd-wrap .dd-menu .sortby input {  margin-right: 0.3em; padding-left: 0.7em; }</style><style id="bynd-style-dropdown" type="text/css">.bc-dropdown {  flex: 1; color: inherit; text-align: center; min-height: 1.33em; padding: 0.25em 1em; border-radius: 0.3em; border: 1px solid rgba( 85, 85, 85, 1 ); background-color: inherit; }
+.bc-dropdown * {  user-select: none; }
+.bc-dropdown .dd-button {  color: inherit; width: fit-content; white-space: nowrap; line-height: 1em; max-width: 100%; cursor: pointer; }
+.bc-dropdown .dd-wrap {  margin: auto; display: flex; position: fixed; overflow: visible; width: fit-content; height: fit-content; background-color: inherit; z-index: 2147483644; margin-left: -1.5em; margin-top: 1em; color: inherit; }
+.bc-dropdown .dd-menu {  flex: 1; display: flex; width: fit-content; flex-direction: column; background-color: inherit; backdrop-filter: blur( 5px ); border: 1px solid rgba( 85, 85, 85, 1 ); border-radius: 0.2em 0.2em 0.35em 0.35em; text-align: left; color: inherit; }
+.bc-dropdown .dd-menu .loading {  text-align: left; }
+.bc-dropdown .dd-menu .menu-top {  display: flex; flex: 1; max-height: 100%; }
+.bc-dropdown .dd-menu .menu-top .search-items {  flex: 1 1 auto; }
+.bc-dropdown .dd-menu .dd-items {  display: flex; flex-direction: column; font-size: 1.1em; line-height: 1em; overflow-x: hidden; overflow-y: auto; width: fit-content; }
+.bc-dropdown .dd-menu .dd-menu-item {  display: flex; cursor: pointer; padding: 0.1em .35em; border-bottom: 1px dotted rgba( 119, 119, 119, 1 ); }
+.bc-dropdown .dd-menu .dd-menu-item > * {  flex: 0; display: flex; margin: 0 0.2em; width: fit-content; }
+.bc-dropdown .dd-menu .dd-menu-item > .name {  white-space: nowrap; }
+.bc-dropdown .dd-menu .dd-menu-item > .description {  width: 100%; }
+.bc-dropdown .dd-menu .dd-menu-item.active {  background: rgba( 64, 102, 64, 0.5 ); }
+.bc-dropdown .dd-menu .dd-menu-item:hover {  background: rgba( 64, 64, 102, 0.5 ); }
+.bc-dropdown .glyphicon-menu-down {  font-size: 0.75em; margin-left: 0.33em; }</style><style id="bynd-style-navbar" type="text/css">.bc-navbar {  display: flex; align-items: center; overflow: visible; margin: 0; }
+.bc-navbar,
+.bc-navbar * {  user-select: none; }
+.bc-navbar.fixed {  position: fixed; top:0; left:0; }
+.bc-navbar,
+.bc-navbar a {  color: rgba( 239, 239, 239, 255 ); }
+.bc-navbar .nav {  padding: 0; margin: 0; list-style: none; }
+.bc-navbar .nav .navbar-nav {  display: flex; margin: 0; padding: 0 0.33em; white-space: nowrap; }
+.bc-navbar .nav .navbar-nav > * {  flex: 1; }
+.bc-navbar .nav .dropdown-toggle {  white-space: nowrap; }
+.bc-navbar .nav .dropdown-toggle .icon {  padding: 0 0.25em; }
+.bc-navbar .nav .dropdown-menu {  max-width: 33vw; position: absolute; top: 100%; left: 0; z-index: 9999; min-width: 10em; margin: 0; padding: 0.5em; font-size: 1.1em; list-style: none; border: rgba( 191.2, 191.2, 191.2, 255 ); border-radius: 0.2em 0.2em 0.5em 0.5em; }
+.bc-navbar .nav li {  position: relative; display: block; }
+.bc-navbar .nav li a {  display: block; position: relative; padding: 0.3em 0.5em;; text-decoration: none; cursor: pointer; }
+.bc-navbar .nav li a:hover,
+.bc-navbar .nav li a:focus {  background-color: rgba( 430.20000000000005, 430.20000000000005, 430.20000000000005, 255 ); color: rgba( 0, 0, 0, 1 ); }
+.bc-navbar .nav .seperator {  height: 0.25em; margin-bottom: 0.25em; border-bottom: 2px dashed rgba( 51, 51, 51, 1 ); }</style><style id="bynd-style-header" type="text/css">.bc-header {  display: flex; flex: 0; padding: 0; width: 100%; color: rgba( 239, 239, 239, 255 ); align-items: center; backdrop-filter: blur( 5px ); filter: drop-shadow( #111 0 0.5em 0.7em ); border-bottom: 1px solid rgba( 10.2, 9.6, 9.6, 0.5 ); background: linear-gradient( rgba( 22.1, 20.8, 20.8, 0.45 ) 33.3%, rgba( 9.52, 8.96, 8.96, 0.55 ) ); }
+.bc-header li > a > span,
+.bc-header > * > span,
+.bc-header .btn > span,
+.bc-header .buttons > span,
+.bc-header .dd-button,
+.bc-header .menu .icon {  text-shadow: .05em .05em .1em rgba( 17, 16, 16, 0.5 ); }
+.bc-header.fixed {  text-align: left; position: fixed; top: 0; left: 0; z-index: 2147483647; }
+.bc-header .dropdown .dd-menu,
+.bc-header .dropdown .dd-wrap,
+.bc-header .dropdown-menu {  background: rgba( 17, 16, 16, 0.7 ); backdrop-filter: blur( 5px ); }</style><style id="bynd-style-dock" type="text/css">.bc-dock {  display: flex; position: fixed; z-index: 2147483646; width: 100%; height: 1.5vh; padding-top: .3em; text-align: center; font-size: 3vw; bottom: 0; }
+.bc-dock .tray {  display: flex; margin: auto; padding: .05em .1em; margin-top: -.62em; border: 1px solid rgba( 51, 51, 51, 1 ); border-radius: .25em .25em 0 0; background: rgba( 0, 0, 0, 0.68 ); backdrop-filter: blur( 5px ); box-shadow: #222c 0 0 .5em .1em; transition: margin 500ms ease-in-out; }
+.bc-dock .tray .running,
+.bc-dock .tray .launchers {  display: flex; margin: auto; height: 1em; }
+.bc-dock .tray .seperate {  margin: .1em; width: .1em; border: 1px dotted #fff7; border-radius: .1em; }
+.bc-dock .tray .docked,
+.bc-dock .tray .launcher {  display: flex; flex: 1; margin: .1em .15em; transition: font-size 400ms ease-in-out, margin 400ms ease-in-out; }
+.bc-dock .tray .docked svg,
+.bc-dock .tray .launcher svg,
+.bc-dock .tray .docked .glyphicon,
+.bc-dock .tray .launcher .glyphicon {  flex: 1; cursor: pointer; filter: drop-shadow( #eee3 0 0 .1em ); transition: filter 150ms; }
+.bc-dock .tray .docked .glyphicon,
+.bc-dock .tray .launcher .glyphicon {  display: flex; width: 1.2em; }
+.bc-dock .tray .docked .glyphicon:before,
+.bc-dock .tray .launcher .glyphicon:before {  flex: 1; }
+.bc-dock .tray .docked.active,
+.bc-dock .tray .launcher.active {  animation: bouncing 1.5s ease-in-out; }
+.bc-dock .tray .docked.active svg,
+.bc-dock .tray .launcher.active svg,
+.bc-dock .tray .docked.active .glyphicon,
+.bc-dock .tray .launcher.active .glyphicon {  filter: drop-shadow( rgba( 221, 119, 255, 1 ) 0 0 .2em ); }
+.bc-dock .tray .docked:hover,
+.bc-dock .tray .launcher:hover {  margin: 0; margin-top: -.5em; margin-left: .2em; font-size: 1.5em; }
+.bc-dock .tray .docked:hover svg,
+.bc-dock .tray .launcher:hover svg,
+.bc-dock .tray .docked:hover .glyphicon,
+.bc-dock .tray .launcher:hover .glyphicon {  filter: drop-shadow( rgba( 221, 119, 255, 1 ) 0 0 .3em ); }</style><style id="bynd-style-sortable" type="text/css">.bc-sortable [draggable].drag-handle,
+.bc-sortable [draggable] .drag-handle {  cursor: grab; }</style><style id="bynd-style-dropzone" type="text/css">.bc-dropzone.advertise.hovering {  border: 2px dotted rgba( 64, 102, 64, 255 ); }
+.bc-dropzone.advertise.available {  border: 2px dotted rgba( 64, 64, 102, 255 ); }</style><style id="bynd-style-dashboard" type="text/css">.bc-dashboard {  display: flex; flex-direction: row; margin: 0px; margin-bottom: 10px; margin-left: 0.5%; padding: 0.25em; padding-right:0; padding-bottom: 1em; min-height: 33vh; width: 99%; height: auto; background-color: rgba(77, 77, 77, 0.4); border: 1px solid rgba(255, 255, 255, 0.25); border-radius: 3px; backdrop-filter: blur( 8px ) brightness(0.25) saturate(5); text-align: center; }
+.bc-dashboard.grabbing {  cursor: grabbing; }
+.bc-dashboard .point {  cursor: pointer; }
+.bc-dashboard .clear {  clear: both; }
+.bc-dashboard .region {  position: relative; width: auto; min-height: 25vh; padding:0; margin: 0 auto; overflow: visible; }
+.bc-dashboard .region > .sortable {  display: flex; flex-wrap: wrap; width: 100%; height: fit-content; min-height: 100%; align-items: flex-start; align-content: flex-start; }
+.bc-dashboard .region > .resizer {  display: block; position: absolute; cursor: e-resize; user-select: none; width: 1em; height: 100%; top: 0; bottom:0; right: -0.5em; overflow: visible; }
+.bc-dashboard .region > .resizer:hover,
+.bc-dashboard .region > .resizer.hover {  z-index: 3; outline: 1px dotted #7777; }
+.bc-dashboard .region .widget-expand {  display: none; }
+.bc-dashboard .region.region-right > .widget {  order: 1; }
+.bc-dashboard .region .widget {  width: calc( 100% - .5em ); margin: .2em; }
+.bc-dashboard .region .widget.placeholder {  opacity: 0.25; }
+.bc-dashboard .region.region-main {  order: 2; }
+.bc-dashboard .region.region-main .widget-expand {  display: block; }
+.bc-dashboard .region.region-main .widget {  width: calc( 50% - 0.5em ); }
+.bc-dashboard .region.region-main .widget.expanded {  width: calc( 100% - 0.5em ); }
+.bc-dashboard .region.region-main .widget .widget-title {  text-align: left; }
+.bc-dashboard .region.region-right {  order: 3; }
+.bc-dashboard .hidden-panel {  visibility : hidden; padding : 0px 0px !important; }
+.bc-dashboard.mobile .widget {  width: 99% !important; }
+.bc-dashboard.mobile .widget .widget-expand {  display: none !important; }</style><style id="bynd-style-balloon" type="text/css">.bc-balloon {  position: fixed; z-index: 999999; color: rgba( 238, 238, 238, 1 ); font-size: 1.2em; font-weight: bold; padding: 0.8em; border: 1px solid rgba( 51, 51, 51, 1 ); border-radius: 0.5em; background-color: rgba( 0, 0, 0, 0.7 ); transition: width 1500ms, height 1500ms; backdrop-filter: blur( 10px ) saturate(3); box-shadow: 1px 5px 15px 10px #030303ee; }
+.bc-balloon table {  margin-bottom: 0.5em; }
+.bc-balloon,
+.bc-balloon * {  line-height: 1em; letter-spacing: 2px; user-select: none; white-space: nowrap; }</style><style id="bynd-style-footer" type="text/css">.bc-footer .center {  text-align: center; }</style><style id="bynd-style-icon" type="text/css">.bc-icon {  padding: 0; text-align: center; }
+.bc-icon > * {  vertical-align: text-top; }
+.bc-icon img {  height: 1.33em; width: auto; }
+.bc-icon svg {  width: auto; height: 1.1em; max-width: 1.4em; fill: rgba( 238, 238, 238, 1 ); }</style></div>
+		
+
+  </head>
+  <body><div class="app bc-app bc-ct-app bc-touch-events html"><div class="bc-layout layout"><div class="bc-header header navbar fixed region region-header" id="navbar" role="banner"><div class="bc-branding branding"><a class="navbar-brand" href="/" title="CryptoCurrency Trading Platform"><img class="logo" src="/img/logo.svg"><span class="title-text">CryptoCurrency Trading Platform</span></a></div><div class="bc-custom-menu custom-menu"><li><span class="bc-icon icon dark-button" icon="upload"><span></span></span></li><li><span class="bc-icon icon dark-button" icon="console"><span></span></span></li><li><div class="bc-dropdown dropdown mdd"><div class="dd-button"><div class="dd-button dark-button">Markets<span class="glyphicon glyphicon-menu-down"></span></div><span></span></div></div></li><li><div class="bc-dropdown dropdown"><div class="dd-button"><div class="dd-button dark-button">Widgets<span class="glyphicon glyphicon-menu-down"></span></div><span></span></div></div></li><li><div class="bc-dropdown dropdown"><div class="dd-button"><div class="dd-button dark-button">Themes<span class="glyphicon glyphicon-menu-down"></span></div><span></span></div></div></li></div><div class="bc-navbar navigation"><div class="nav" role="navigation"><ul class="menu nav navbar-nav"></ul><ul class="menu nav navbar-nav"><li class="dropdown"><a class="dropdown-toggle" title="Account" href="#"><span>Account<span class="caret"></span></span></a></li><li class="dropdown"><a class="dropdown-toggle" title="Dashboard" href="#"><span>Dashboard<span class="caret"></span></span></a></li></ul></div></div></div><div class="region region-body"><div class="bc-dock dock bc-dropzone dropzone idle"><div class="tray" style="margin-top: 0em;"><div class="bc-sortable sortable running" active="true"></div><div class="bc-sortable sortable launchers" active="true"></div></div></div><div class="bc-dashboard bc-patchbay dashboard loading" id="dashboard-"><div class="bc-balloon balloon"></div></div></div><div class="bc-footer footer container region region-footer"><p class="center"><a href="https://cryptrader.com/">(c) 2022 CrypTrader</a></p></div></div></div><div class="bc-notify notifications"><div class="notification" style="transition: opacity 500ms ease-in-out 0s, bottom 500ms ease-in-out 0s, right 500ms ease-in-out 0s; opacity: 1; bottom: 25px; right: 25px;">Disconnected... Attempting Reconnect</div></div></body></html>

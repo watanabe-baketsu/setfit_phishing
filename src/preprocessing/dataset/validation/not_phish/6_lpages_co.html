@@ -1,0 +1,201 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Page Not Found">
+    <title>404 Not Found</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&amp;display=swap" media="all" onload="this.media='all'">
+    <script>
+      function disableSearch() {
+        try {
+          window.localStorage.setItem("enableSearch", "0");
+          renderWithoutSearch();
+          var searchContainer = document.getElementById("hotspots")
+          searchContainer && searchContainer.remove();
+        } catch (e) {}
+      }
+
+      function checkSearchEnabled() {
+        try {
+          return window.localStorage.getItem("enableSearch") !== "0";
+        } catch (e) {}
+        return true;
+      }
+
+      function renderWithSearch() {
+        document.getElementById("description").innerHTML =
+          '<p id="description">But we&#39;ve found these search results for you instead of displaying an error message. ' +
+          'You can <a href="javascript:disableSearch()">change this setting</a> if you&#39;d prefer ' +
+          'a simple error message next time.</p>';
+
+        document.getElementById("search-results-section").insertAdjacentHTML(
+          "afterbegin",
+          "<h2>Search Results</h2>"
+        )
+
+        var api = new HotspotsAPI("E839B9FE51F6", {});
+        api.showTerms({
+          elementId: "hotspots-search",
+          templateName: {
+            template: "sb_lp",
+            version: "latest"
+          },
+          qc: "Search Box",
+          numOfResults: 1,
+          extraParams: {
+            sectionId: "SCC3D0C3E8C3F5",
+          }
+        });
+        api.showSERP({
+          elementId: "hotspots-content",
+          templateName: {
+            template: "adserppyc",
+            version: "latest"
+          },
+          searchTerm: window.location.hostname,
+          qc: "Domain Match",
+          numOfResults: 3,
+          extraParams: {
+            sectionId: "SCC5FDC609C611",
+          }
+        });
+      }
+
+      function renderWithoutSearch() {
+        document.getElementById("description").textContent =
+          'The page you’re looking for may have been moved. ' +
+          'Double-check that you have the right web address and give it another go!';
+      }
+
+      function render(searchEnabled) {
+        if (searchEnabled) {
+          renderWithSearch();
+        } else {
+          renderWithoutSearch();
+        }
+      }
+    </script>
+    <style>
+      html,
+      body {
+        color: rgb(87, 84, 82);
+        font-family: "Open Sans", sans-serif;
+        font-size: 1em;
+        line-height: 1.5;
+        margin: 0;
+        padding: 0;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+      }
+      main {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        min-height: 100vh;
+        padding: 1rem 1rem;
+        max-width: 1440px;
+      }
+      header {
+        background-color: rgb(247, 247, 247);
+        padding: 1.125rem 1.125rem 1.188rem 1.125rem;
+        display: flex;
+        align-items: center;
+        align-content: center;
+      }
+      .spacer {
+        flex-grow: 1;
+      }
+      a.button,
+      a.button:hover,
+      a.button:visited {
+        border-radius: 2rem;
+        border: 0.188em solid #d1c6f9;
+        color: #603eff;
+        display: inline-block;
+        font-size: 1.125rem;
+        font-weight: 600;
+        line-height: 1;
+        padding: 0.625rem 1.125rem 0.688rem;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+      a.button:hover {
+        color: #fff;
+        background-color: #603eff;
+        border-color: #603eff;
+      }
+      h1 {
+        font-size: 2rem;
+        line-height: 1.625;
+        margin: 0;
+        text-align: center;
+      }
+      h2 {
+        font-size: 1.75rem;
+        margin: 1.5rem 0;
+        border-bottom: 1px solid #979797;
+      }
+      section {
+        padding: 0 2%;
+      }
+      article {
+        margin: 0 auto;
+        width: 100%;
+        background: #fff;
+      }
+      article > p {
+        color: rgb(15, 12, 9);
+        font-size: 1rem;
+        line-height: 1.75;
+        margin: 1.5rem 0;
+      }
+      #hotspots-search {
+        padding-top: 0.5rem;
+      }
+      #hotspots-content {
+        padding-left: 1rem;
+      }
+      a:hover {
+        text-decoration: none;
+      }
+      @media (max-width: 359px) {
+        svg #logo-text {
+          display: none;
+        }
+      }
+    </style>
+    <script src="https://d2fcz6pgmhcecl.cloudfront.net/latest/hotspots.js"></script>
+  </head>
+  <body>
+    <header>
+      <svg width="145" height="24">
+        <path d="M31.884 15.218l-3.996-2.09-11.668 6.105a.446.446 0 01-.415 0L4.138 13.127.142 15.218c-.19.1-.19.37 0 .47l15.662 8.196a.45.45 0 00.416 0l15.664-8.197a.265.265 0 000-.469M3.07 10.573l12.735 6.665c.13.068.286.068.416 0l12.736-6.665c.19-.099.19-.37 0-.47l-3.652-1.91-9.084 4.753a.446.446 0 01-.416 0L6.721 8.193l-3.65 1.91c-.19.1-.19.371 0 .47m2.768-4.837l9.966 5.215c.13.068.286.068.416 0l9.966-5.215c.19-.1.19-.37 0-.47L16.221.051a.446.446 0 00-.416 0L5.839 5.266a.266.266 0 000 .47" fill="#000019" fill-rule="evenodd"></path>
+        <g id="logo-text" fill="#000019" fill-rule="evenodd">
+          <path d="M91.288 9.543c-.397-.506-.993-.903-1.853-.903-2.162 0-2.603 2.05-2.603 3.703 0 1.654.441 3.682 2.603 3.682.86 0 1.456-.397 1.853-.904.573-.75.728-1.785.728-2.778s-.155-2.05-.728-2.8m1.478 7.871c-.706.574-1.632.926-2.802.926-1.367 0-2.47-.485-3-1.124v5.226h-2.758V6.589h2.383l.177 1.257c.684-1.059 1.963-1.522 3.22-1.522 1.148 0 2.074.397 2.78.97 1.368 1.125 2.052 2.845 2.052 5.005 0 2.25-.684 3.99-2.052 5.115M47.191 15.375l1.578 2.69H38.94V2.432h2.845v12.943zM76.926 8.64c-.859 0-1.454.398-1.85.904-.573.748-.727 1.783-.727 2.774s.154 2.046.727 2.795c.396.506.991.903 1.85.903 2.158 0 2.599-2.047 2.599-3.698s-.44-3.677-2.599-3.677zm2.841 9.423l-.176-1.255c-.683 1.057-1.96 1.52-3.216 1.52-1.145 0-2.092-.397-2.797-.969-1.366-1.123-2.026-2.84-2.026-4.997 0-2.246.683-3.985 2.048-5.108.705-.572 1.63-.924 2.797-.924 1.454 0 2.511.484 2.995 1.078V2.432h2.754v15.63h-2.379zM112.9 21.222c-1.08 0-2.885-.132-2.885-1.585 0-.726.44-1.233 1.035-1.409h2.158c1.036 0 2.732 0 2.732 1.41 0 1.518-1.94 1.584-3.04 1.584m-.199-12.834c1.256 0 2.027.903 2.027 2.136s-.771 2.113-2.027 2.113-2.025-.88-2.025-2.113.77-2.136 2.025-2.136m4.45 8.43c-1.08-.747-2.578-.769-3.723-.769h-1.893c-.573 0-1.256-.155-1.256-.837 0-.374.308-.66.573-.815.572.2 1.211.31 1.85.31 2.466 0 4.572-1.497 4.572-3.92 0-1.811-1.423-2.376-1.447-2.407h2.376l1.203-2.056H112.7c-2.576 0-4.69 1.47-4.69 4.2 0 1.166.44 2.112 1.144 2.818-.925.571-1.365 1.342-1.365 2.31 0 .75.419 1.563 1.146 1.96-1.322.66-1.752 2.362-.991 3.836 1.279 1.765 3.248 1.953 5.065 1.953 2.555 0 5.529-.815 5.529-3.83 0-1.101-.397-2.069-1.388-2.752M134.95 18.377c-.637 0-1.362-.088-1.977-.285-1.45-.483-2.68-1.56-3.009-3.096l2.24-.812c.242 1.317 1.516 1.954 2.768 1.954.703 0 1.23-.088 1.625-.33.374-.22.572-.527.572-.922 0-.702-.44-1.076-1.187-1.207l-2.745-.483c-1.867-.33-2.9-1.647-2.9-3.096 0-2.239 2.021-3.776 4.613-3.776 2.219 0 3.998.944 4.547 3.008l-2.262.878c-.242-1.163-1.275-1.69-2.263-1.69-.374 0-.747.022-1.142.175-.505.198-.879.55-.879 1.12 0 .812.703.944 1.318 1.054l2.285.44c1.8.35 3.185 1.492 3.185 3.292 0 2.305-1.868 3.776-4.789 3.776M54.957 9.234c-.397-.419-.992-.684-1.786-.684-1.456 0-2.559 1.036-2.69 2.601h5.138c-.022-.793-.243-1.432-.662-1.917m3.352 3.923h-7.807c.023 1.72 1.323 2.887 2.912 2.887 1.543 0 2.359-.793 2.756-1.807l2.162.904c-.574 1.719-2.294 3.218-4.875 3.218-3.33 0-5.756-2.446-5.756-5.995 0-3.219 1.985-6.04 5.492-6.04 1.918 0 3.484.838 4.389 2.403.617 1.035.815 2.248.793 3.483 0 .572-.066.947-.066.947M67.124 12.98l-2.91.22c-.839.067-1.655.573-1.655 1.499 0 .882.728 1.432 1.632 1.432 1.72 0 2.933-.925 2.933-2.622v-.529zm2.69 2.248c0 .529.309.727.772.727.176 0 .33-.044.33-.044v1.94c-.308.22-.64.396-1.3.396-1.191 0-2.029-.75-2.117-1.609-.64.948-1.853 1.719-3.484 1.719-2.734 0-4.145-1.719-4.145-3.592 0-2.182 1.697-3.438 3.88-3.592l3.374-.243v-.462c0-1.212-.816-1.918-2.16-1.918-1.544 0-2.294.75-2.492 1.896l-2.316-.507c.177-1.917 2.007-3.614 4.873-3.614 2.977 0 4.785 1.454 4.785 4.341v4.562zM102.66 12.98l-2.91.22c-.839.067-1.655.573-1.655 1.499 0 .882.728 1.432 1.632 1.432 1.72 0 2.933-.925 2.933-2.622v-.529zm2.69 2.248c0 .529.309.727.772.727.176 0 .33-.044.33-.044v1.94c-.308.22-.639.396-1.3.396-1.191 0-2.029-.75-2.117-1.609-.64.948-1.853 1.719-3.484 1.719-2.734 0-4.145-1.719-4.145-3.592 0-2.182 1.697-3.438 3.88-3.592l3.374-.243v-.462c0-1.212-.816-1.918-2.16-1.918-1.544 0-2.294.75-2.492 1.896l-2.316-.507c.177-1.917 2.007-3.614 4.873-3.614 2.977 0 4.785 1.454 4.785 4.341v4.562z"></path>
+          <path d="M126.02 9.234c-.397-.419-.992-.684-1.786-.684-1.456 0-2.559 1.036-2.69 2.601h5.138c-.022-.793-.243-1.432-.662-1.917m3.352 3.923h-7.807c.023 1.72 1.323 2.887 2.912 2.887 1.543 0 2.359-.793 2.756-1.807l2.162.904c-.574 1.719-2.294 3.218-4.875 3.218-3.33 0-5.756-2.446-5.756-5.995 0-3.219 1.985-6.04 5.492-6.04 1.918 0 3.484.838 4.389 2.403.617 1.035.815 2.248.793 3.483 0 .572-.066.947-.066.947M142.22 6.92h-.294v.463h.294c.157 0 .259-.07.259-.235 0-.153-.118-.227-.259-.227zm.255 1.259l-.251-.553h-.294v.552h-.263v-1.5h.553c.286 0 .533.165.533.47 0 .196-.086.353-.27.435l.278.596h-.286zm-.318-1.916c-.693 0-1.152.505-1.152 1.19s.459 1.188 1.152 1.188c.694 0 1.152-.506 1.152-1.192 0-.685-.458-1.187-1.152-1.187zm0 2.628c-.811 0-1.415-.634-1.415-1.438 0-.802.604-1.441 1.415-1.441.812 0 1.416.635 1.416 1.437 0 .804-.604 1.443-1.416 1.443z"></path>
+        </g>
+      </svg>
+      <div class="spacer"></div>
+      <a class="button" href="https://www.leadpages.com/free-trial?utm_source=leadpages&amp;utm_medium=customerpages&amp;utm_campaign=404_ads">Get Leadpages</a>
+    </header>
+    <main>
+      <section>
+        <h1>We couldn't find that page</h1>
+        <p id="description"><p id="description">But we've found these search results for you instead of displaying an error message. You can <a href="javascript:disableSearch()">change this setting</a> if you'd prefer a simple error message next time.</p></p>
+      </section>
+      <div id="hotspots">
+        <section>
+          <div id="hotspots-search"><style></style><div></div></div></section>
+        <section id="search-results-section"><h2>Search Results</h2>
+          <div id="hotspots-content"><style></style><div></div></div></section>
+      </div>
+    </main>
+  
+  <script>
+    render(checkSearchEnabled());
+  </script>
+
+<script src="https://ff.search.yahoo.com/gossip?output=jsonp&amp;command=www.lpages.co&amp;callback=d697829"></script></body></html>

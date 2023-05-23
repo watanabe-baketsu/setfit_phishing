@@ -1,0 +1,415 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<title>SPEC - Standard Performance Evaluation Corporation</title>
+<link rel="home" href="/" title="Home">
+<link rel="help" href="/spec/faq/" title="FAQ">
+<link rel="contents" href="/contents.html" title="Contents">
+<link rel="index" href="/permuted.html" title="Site Index">
+<link rel="glossary" href="/spec/glossary/" title="Glossary">
+<link rel="copyright" href="/spec/copyright.html" title="Copyright">
+<link rel="search" href="/search.html" title="Search">
+<link rel="stylesheet" href="/includes/printstyle.css" type="text/css" media="print">
+<style type="text/css" media="screen">
+@import url("/includes/sitestyle.css");
+</style>
+<link rel="stylesheet" type="text/css" media="screen" href="/includes/scripts/superfish-1.5.8/css/superfish.css">
+<!-- script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script --> 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script> 
+<script src="/includes/scripts/superfish-1.5.8/js/hoverIntent.js" type="text/javascript"></script> 
+<script src="/includes/scripts/superfish-1.5.8/js/superfish.js" type="text/javascript"></script> 
+<script src="/includes/scripts/superfish-1.5.8/js/supersubs.js" type="text/javascript"></script> 
+<script type="text/javascript">
+
+	$(document).ready(function(){
+		$("ul.sf-menu").supersubs({
+			minWidth:    12,   // minimum width of sub-menus in em units
+			maxWidth:    40,   // maximum width of sub-menus in em units
+			extraWidth:  1     // extra width can ensure lines don't sometimes turn over
+                               // due to slight rounding differences and font-family
+		}).superfish();  // call supersubs first, then superfish, so that subs are
+                         // not display:none when measuring. Call before initialising
+                         // containing tabs for same reason.
+	});
+
+</script>
+</head>
+<body vlink="#4c0077" link="#0000bb" bgcolor="#fefefe" alink="#a4005a">
+<a href="#content"><img src="/images/spacer.gif" alt="Skip navigation" width="1" height="1" border="0"></a>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+   <tbody><tr>
+      <td class="toplogo" width="98" valign="top" height="93" align="center"><a href="/"><img src="/images/spectmlogo.jpg" alt="SPEC logo" style="margin-top: 2px; margin-bottom: 2px;" border="0"></a></td>
+      <td class="masthead" width="678" valign="middle" align="left"><div class="printonly">
+            <h1 class="masthead">Standard Performance Evaluation Corporation</h1>
+         </div></td>
+   </tr>
+   <tr bgcolor="#556699">
+      <td colspan="2" class="topmenu" style="border-top: 1px solid #000; background-color: #569;" valign="bottom" align="left"><ul class="sf-menu sf-js-enabled" style="margin-bottom: 0px;">
+            <li class="current"><a href="/" class="sf-with-ul">Home</a></li>
+            <li class="current"><a href="/benchmarks.html" class="sf-with-ul">Benchmarks<span class="sf-sub-indicator"> »</span></a>
+               <ul style="float: none; width: 16.8125em; display: none;">
+                  <li style="white-space: normal; float: left; width: 100%;"><a href="/benchmarks.html#cloud" style="float: none; width: auto;" class="sf-with-ul">Cloud<span class="sf-sub-indicator"> »</span></a>
+                     <ul style="left: 16.8125em; float: none; width: 12em; display: none;">
+                        <li style="white-space: normal; float: left; width: 100%;"><a href="/cloud_iaas2018/" style="float: none; width: auto;">SPEC Cloud IaaS 2018</a></li>
+                     </ul>
+                  </li>
+                  <li style="white-space: normal; float: left; width: 100%;"><a href="/benchmarks.html#cpu" style="float: none; width: auto;" class="sf-with-ul">CPU<span class="sf-sub-indicator"> »</span></a>
+                     <ul style="left: 16.8125em; float: none; width: 12em; display: none;">
+                        <li style="white-space: normal; float: left; width: 100%;"><a href="/cpu2017/" style="float: none; width: auto;">SPEC CPU 2017</a></li>
+                        <li style="white-space: normal; float: left; width: 100%;"><a href="/cpu2006/" style="float: none; width: auto;">SPEC CPU 2006</a></li>
+                     </ul>
+                  </li>
+                  <li style="white-space: normal; float: left; width: 100%;"><a href="http://gwpg.spec.org/benchmarks/" style="float: none; width: auto;">Graphics/Workstations</a>
+                     <!-- ul>
+                        <li><a href="https://gwpg.spec.org/bench-marks/specapc-3dsmax-2020/">SPECapc for 3ds Max 2020</a></li>
+                        <li><a href="https://gwpg.spec.org/bench-marks/specapc-maya-2017/">SPECapc for Maya 2017</a></li>
+                        <li><a href="https://gwpg.spec.org/bench-marks/specapc-for-ptc-creo/">SPECapc for PTC Creo 3.0</a></li>
+                        <li><a href="https://gwpg.spec.org/bench-marks/specapc-solidworks-2021/">SPECapc for Solidworks 2021</a></li>
+                        <li><a href="https://gwpg.spec.org/bench-marks/specapc-solidworks-2020/">SPECapc for Solidworks 2020</a></li>
+                        <li><a href="https://gwpg.spec.org/bench-marks/specviewperf-2020/">SPECviewperf 2020</a></li>
+                        <li><a href="https://gwpg.spec.org/bench-marks/specworkstation-3_1/">SPECworkstation 3.1</a></li>
+                     </ul -->
+                  </li>
+                  <li style="white-space: normal; float: left; width: 100%;"><a href="/benchmarks.html#hpg" style="float: none; width: auto;" class="sf-with-ul">High Performance Computing (HPC)<span class="sf-sub-indicator"> »</span></a>
+                     <ul style="left: 16.8125em; float: none; width: 12em; display: none;">
+                        <li style="white-space: normal; float: left; width: 100%;"><a href="/accel/" style="float: none; width: auto;">SPEC ACCEL</a></li>
+                        <li style="white-space: normal; float: left; width: 100%;"><a href="/hpc2021/" style="float: none; width: auto;">SPEChpc 2021</a></li>
+                        <li style="white-space: normal; float: left; width: 100%;"><a href="/mpi2007/" style="float: none; width: auto;">SPEC MPI 2007</a></li>
+                        <li style="white-space: normal; float: left; width: 100%;"><a href="/omp2012/" style="float: none; width: auto;">SPEC OMP 2012</a></li>
+                     </ul>
+                  </li>
+                  <li style="white-space: normal; float: left; width: 100%;"><a href="/benchmarks.html#java" style="float: none; width: auto;" class="sf-with-ul">Java Client/Server<span class="sf-sub-indicator"> »</span></a>
+                     <ul style="left: 16.8125em; float: none; width: 16em; display: none;">
+                        <li style="white-space: normal; float: left; width: 100%;"><a href="/jbb2015/" style="float: none; width: auto;">SPECjbb 2015</a></li>
+                        <li style="white-space: normal; float: left; width: 100%;"><a href="/jEnterprise2018web/" style="float: none; width: auto;">SPECjEnterprise 2018 Web Profile</a></li>
+                        <li style="white-space: normal; float: left; width: 100%;"><a href="/jEnterprise2010/" style="float: none; width: auto;">SPECjEnterprise 2010</a></li>
+                        <li style="white-space: normal; float: left; width: 100%;"><a href="/jvm2008/" style="float: none; width: auto;">SPECjvm 2008</a></li>
+                     </ul>
+                  </li>
+                  <li style="white-space: normal; float: left; width: 100%;"><a href="/benchmarks.html#sfs" style="float: none; width: auto;" class="sf-with-ul">Storage<span class="sf-sub-indicator"> »</span></a>
+                     <ul style="left: 16.8125em; float: none; width: 13.3125em; display: none;">
+		        <li style="white-space: normal; float: left; width: 100%;"><a href="/storage2020/" style="float: none; width: auto;">SPECstorage Solution 2020</a></li>      
+                        <li style="white-space: normal; float: left; width: 100%;"><a href="/sfs2014/" style="float: none; width: auto;">SPEC SFS 2014</a></li>
+                     </ul>
+                  </li>
+                  <li style="white-space: normal; float: left; width: 100%;"><a href="/benchmarks.html#power" style="float: none; width: auto;" class="sf-with-ul">Power<span class="sf-sub-indicator"> »</span></a>
+                     <ul style="left: 16.8125em; float: none; width: 12em; display: none;">
+                        <li style="white-space: normal; float: left; width: 100%;"><a href="/power_ssj2008/" style="float: none; width: auto;">SPECpower_ssj 2008</a></li>
+                     </ul>
+                  </li>
+                  <li style="white-space: normal; float: left; width: 100%;"><a href="/benchmarks.html#virtual" style="float: none; width: auto;" class="sf-with-ul">Virtualization<span class="sf-sub-indicator"> »</span></a>
+                     <ul style="left: 16.8125em; float: none; width: 12.625em; display: none;">
+                        <li style="white-space: normal; float: left; width: 100%;"><a href="/virt_datacenter2021/" style="float: none; width: auto;">SPECvirt Datacenter 2021</a></li>
+                        <li style="white-space: normal; float: left; width: 100%;"><a href="/virt_sc2013/" style="float: none; width: auto;">SPEC VIRT_SC 2013</a></li>
+                     </ul>
+                  </li>
+                  <li style="white-space: normal; float: left; width: 100%;"><a href="/retired.html" style="float: none; width: auto;">Retired Benchmarks</a> </li>
+               </ul>
+            </li>
+            <li class="current"><a href="/benchmarks.html#tools" class="sf-with-ul">Tools<span class="sf-sub-indicator"> »</span></a>
+               <ul style="float: none; width: 13.1875em; display: none;">
+                  <li style="white-space: normal; float: left; width: 100%;"><a href="/chauffeur-wdk/" style="float: none; width: auto;">Chauffeur WDK</a></li>
+                  <li style="white-space: normal; float: left; width: 100%;"><a href="/power/docs/SPECpower-Device_List.html" style="float: none; width: auto;">SPEC PTDaemon Interface</a></li>
+                  <li style="white-space: normal; float: left; width: 100%;"><a href="/sert/" style="float: none; width: auto;">SERT Suite</a></li>
+               </ul>
+            </li>
+            <li class="current"><a href="/results.html" class="sf-with-ul">Results<span class="sf-sub-indicator"> »</span></a>
+               <ul style="float: none; width: 16em; display: none;">
+                  <li style="white-space: normal; float: left; width: 100%;"><a href="/accel/results/" style="float: none; width: auto;">SPEC ACCEL</a></li>
+                  <li style="white-space: normal; float: left; width: 100%;"><a href="/cloud_iaas2018/results/" style="float: none; width: auto;">SPEC Cloud IaaS 2018</a></li>
+                  <li style="white-space: normal; float: left; width: 100%;"><a href="/cloud_iaas2016/results/" style="float: none; width: auto;">SPEC Cloud IaaS 2016</a></li>
+                  <li style="white-space: normal; float: left; width: 100%;"><a href="/cpu2017/results/" style="float: none; width: auto;" class="sf-with-ul">SPEC CPU 2017<span class="sf-sub-indicator"> »</span></a>
+                     <ul style="left: 16em; float: none; width: 24.5em; display: none;">
+                        <li style="white-space: normal; float: left; width: 100%;"><a href="/cgi-bin/osgresults?conf=cpu2017" style="float: none; width: auto;">Search all SPEC CPU 2017 results</a></li>
+                        <li style="white-space: normal; float: left; width: 100%;"><a href="/cgi-bin/osgresults?conf=cint2017" style="float: none; width: auto;">Search all SPEC CPU 2017 Integer Speed results</a></li>
+                        <li style="white-space: normal; float: left; width: 100%;"><a href="/cgi-bin/osgresults?conf=rint2017" style="float: none; width: auto;">Search all SPEC CPU 2017 Integer Rate results</a></li>
+                        <li style="white-space: normal; float: left; width: 100%;"><a href="/cgi-bin/osgresults?conf=cfp2017" style="float: none; width: auto;">Search all SPEC CPU 2017 Floating Point Speed results</a></li>
+                        <li style="white-space: normal; float: left; width: 100%;"><a href="/cgi-bin/osgresults?conf=rfp2017" style="float: none; width: auto;">Search all SPEC CPU 2017 Floating Point Rate results</a></li>
+                     </ul>
+                  </li>
+                  <li style="white-space: normal; float: left; width: 100%;"><a href="/cpu2006/results/" style="float: none; width: auto;" class="sf-with-ul">SPEC CPU 2006<span class="sf-sub-indicator"> »</span></a>
+                     <ul style="left: 16em; float: none; width: 16.6875em; display: none;">
+                        <li style="white-space: normal; float: left; width: 100%;"><a href="/cgi-bin/osgresults?conf=cpu2006" style="float: none; width: auto;">Search all SPEC CPU 2006 results</a></li>
+                        <li style="white-space: normal; float: left; width: 100%;"><a href="/cgi-bin/osgresults?conf=cint2006" style="float: none; width: auto;">Search all SPECint2006 results</a></li>
+                        <li style="white-space: normal; float: left; width: 100%;"><a href="/cgi-bin/osgresults?conf=rint2006" style="float: none; width: auto;">Search all SPECint_rate2006 results</a></li>
+                        <li style="white-space: normal; float: left; width: 100%;"><a href="/cgi-bin/osgresults?conf=cfp2006" style="float: none; width: auto;">Search all SPECfp2006 results</a></li>
+                        <li style="white-space: normal; float: left; width: 100%;"><a href="/cgi-bin/osgresults?conf=rfp2006" style="float: none; width: auto;">Search all SPECfp_rate2006 results</a></li>
+                     </ul>
+                  </li>
+                  <li style="white-space: normal; float: left; width: 100%;"><a href="/hpc2021/results/" style="float: none; width: auto;">SPEChpc 2021</a></li>
+                  <li style="white-space: normal; float: left; width: 100%;"><a href="/jbb2015/results/" style="float: none; width: auto;" class="sf-with-ul">SPECjbb 2015<span class="sf-sub-indicator"> »</span></a>
+                     <ul style="left: 16em; float: none; width: 13.9375em; display: none;">
+                        <li style="white-space: normal; float: left; width: 100%;"><a href="/cgi-bin/osgresults?conf=jbb2015" style="float: none; width: auto;">Search SPECjbb 2015 results</a></li>
+                     </ul>
+                  </li>
+                  <li style="white-space: normal; float: left; width: 100%;"><a href="/jEnterprise2018web/results/" style="float: none; width: auto;">SPECjEnterprise 2018 Web Profile</a> 
+                     <!-- ul>
+            <li><a href="/cgi-bin/osgresults?conf=jent2018web">Search SPECjEnterprise2018 Web Profile results</a></li>
+            </ul --> 
+                  </li>
+                  <li style="white-space: normal; float: left; width: 100%;"><a href="/jEnterprise2010/results/" style="float: none; width: auto;" class="sf-with-ul">SPECjEnterprise 2010<span class="sf-sub-indicator"> »</span></a>
+                     <ul style="left: 16em; float: none; width: 16.9375em; display: none;">
+                        <li style="white-space: normal; float: left; width: 100%;"><a href="/cgi-bin/osgresults?conf=jent2010" style="float: none; width: auto;">Search SPECjEnterprise 2010 results</a></li>
+                     </ul>
+                  </li>
+                  <li style="white-space: normal; float: left; width: 100%;"><a href="/jvm2008/results/" style="float: none; width: auto;" class="sf-with-ul">SPECjvm 2008<span class="sf-sub-indicator"> »</span></a>
+                     <ul style="left: 16em; float: none; width: 14.125em; display: none;">
+                        <li style="white-space: normal; float: left; width: 100%;"><a href="/cgi-bin/osgresults?conf=jvm2008" style="float: none; width: auto;">Search SPECjvm 2008 results</a></li>
+                     </ul>
+                  </li>
+                  <li style="white-space: normal; float: left; width: 100%;"><a href="/mpi2007/results/" style="float: none; width: auto;" class="sf-with-ul">MPI2007<span class="sf-sub-indicator"> »</span></a>
+                     <ul style="left: 16em; float: none; width: 16.375em; display: none;">
+                        <li style="white-space: normal; float: left; width: 100%;"><a href="/cgi-bin/osgresults?conf=mpi2007" style="float: none; width: auto;">Search all SPEC MPI 2007 results</a></li>
+                        <li style="white-space: normal; float: left; width: 100%;"><a href="/cgi-bin/osgresults?conf=mpil2007" style="float: none; width: auto;">Search all SPEC MPIL 2007 results</a></li>
+                        <li style="white-space: normal; float: left; width: 100%;"><a href="/cgi-bin/osgresults?conf=mpim2007" style="float: none; width: auto;">Search all SPEC MPIM 2007 results</a></li>
+                     </ul>
+                  </li>
+                  <li style="white-space: normal; float: left; width: 100%;"><a href="/omp2012/results/" style="float: none; width: auto;">SPEC OMP 2012</a></li>
+                  <li style="white-space: normal; float: left; width: 100%;"><a href="/power_ssj2008/results/" style="float: none; width: auto;" class="sf-with-ul">SPECpower_ssj 2008<span class="sf-sub-indicator"> »</span></a>
+                     <ul style="left: 16em; float: none; width: 16.625em; display: none;">
+                        <li style="white-space: normal; float: left; width: 100%;"><a href="/cgi-bin/osgresults?conf=power_ssj2008" style="float: none; width: auto;">Search SPECpower_ssj 2008 results</a></li>
+                     </ul>
+                  </li>
+		  <li style="white-space: normal; float: left; width: 100%;"><a href="/storage2020/results/" style="float: none; width: auto;">SPECstorage Solution 2020</a> </li> 
+                  <li style="white-space: normal; float: left; width: 100%;"><a href="/sfs2014/results/" style="float: none; width: auto;">SPEC SFS 2014</a> </li>
+                  <li style="white-space: normal; float: left; width: 100%;"><a href="https://gwpg.spec.org/results/" style="float: none; width: auto;" class="sf-with-ul">SPECapc<span class="sf-sub-indicator"> »</span></a>
+                     <ul style="left: 16em; float: none; width: 14.1875em; display: none;">
+		        <li style="white-space: normal; float: left; width: 100%;"><a href="/gwpg/apc.static/apc3dsMaxResults.html" style="float: none; width: auto;">SPECapc for 3ds Max</a></li>
+                        <li style="white-space: normal; float: left; width: 100%;"><a href="/gwpg/apc.data/specapc_maya2017_summary.html" style="float: none; width: auto;">SPECapc for Maya 2017</a></li>
+                        <li style="white-space: normal; float: left; width: 100%;"><a href="/gwpg/apc.data/specapc_creo30_summary.html" style="float: none; width: auto;">SPECapc for PTC Creo 3.0</a></li>
+                        <li style="white-space: normal; float: left; width: 100%;"><a href="/gwpg/apc.data/specapc_sw2021_summary.html" style="float: none; width: auto;">SPECapc for Solidworks 2021</a></li>
+                        <li style="white-space: normal; float: left; width: 100%;"><a href="/gwpg/apc.data/specapc_sw2020_summary.html" style="float: none; width: auto;">SPECapc for Solidworks 2020</a></li>
+                     </ul>
+                  </li>
+		  <li style="white-space: normal; float: left; width: 100%;"><a href="/gwpg/gpc.static/specviewperfresults.html" style="float: none; width: auto;">SPECviewperf</a></li>
+                  <li style="white-space: normal; float: left; width: 100%;"><a href="/gwpg/wpc.static/specworkstationresults.html" style="float: none; width: auto;">SPECworkstation</a></li>
+                  <li style="white-space: normal; float: left; width: 100%;"><a href="/virt_datacenter2021/results/" style="float: none; width: auto;">SPECvirt Datacenter 2021</a>
+                     <!-- ul>
+                        <li><a href="/cgi-bin/osgresults?conf=virt_datacenter2021">Search SPECvirt Datacenter 2021results</a></li>
+                     </ul -->
+                  </li>
+                  <li style="white-space: normal; float: left; width: 100%;"><a href="/virt_sc2013/results/" style="float: none; width: auto;" class="sf-with-ul">SPEC VIRT_SC 2013<span class="sf-sub-indicator"> »</span></a>
+                     <ul style="left: 16em; float: none; width: 16.375em; display: none;">
+                        <li style="white-space: normal; float: left; width: 100%;"><a href="/cgi-bin/osgresults?conf=virt_sc2013" style="float: none; width: auto;">Search SPEC VIRT_SC 2013 results</a></li>
+                     </ul>
+                  </li>
+                  <li style="white-space: normal; float: left; width: 100%;"><a href="/retired.html" style="float: none; width: auto;">Retired benchmarks</a> </li>
+               </ul>
+            </li>
+            <li class="current"><a href="/spec/contact.html" class="sf-with-ul">Contact</a></li>
+            <li class="current"><a href="/blog/" class="sf-with-ul">Blog</a></li>
+            <li class="current"><a href="/contents.html" class="sf-with-ul">Site Map</a></li>
+            <li class="current"><a href="/search.html" class="sf-with-ul">Search</a></li>
+            <li class="current"><a href="/help.html" class="sf-with-ul">Help</a></li>
+         </ul>
+         <div style="position: relative;">
+            <div style="position: absolute; top: 10px; bottom: 0px; right: 0px;"> <a href="http://www.facebook.com/spec.org"><img src="/images/social/facebook20x20.png" alt="Facebook logo" hspace="0" border="0"></a> <a href="https://www.linkedin.com/company/standard-performance-evaluation-corporation"><img src="/images/social/linkedin20x20.png" alt="LinkedIn logo" hspace="0" border="0"></a> <a href="http://www.twitter.com/spec_perf"><img src="/images/social/twitter20x20.png" alt="Twitter logo" hspace="0" border="0"></a> </div>
+         </div></td>
+   </tr>
+</tbody></table>
+<table width="95%" cellspacing="0" cellpadding="0" align="left">
+<tbody><tr>
+   <td colspan="2" height="5">&nbsp;</td>
+</tr>
+<!-- begin sidebar here --> 
+ 
+<tr>
+	<td class="navbar" width="150" valign="top"><!-- robots content="noindex" --> 
+		<font size="-1">
+		<div class="navbartitle">&nbsp;<b>Benchmarks</b></div>
+		<ul>
+			<li class="navbarlist"> <a href="/benchmarks.html#cloud">Cloud</a></li>
+			<li class="navbarlist"> <a href="/benchmarks.html#cpu">CPU</a></li>
+			<li class="navbarlist"> <a href="https://gwpg.spec.org/">Graphics/Workstations</a></li>
+			<li class="navbarlist"> <a href="/benchmarks.html#hpg">High Performance Computing</a></li>
+			<li class="navbarlist"> <a href="/benchmarks.html#java">Java Client/Server</a></li>
+			<li class="navbarlist"> <a href="/ml/">Machine Learning</a></li>
+			<li class="navbarlist"> <a href="/benchmarks.html#sfs">Storage</a></li>
+			<li class="navbarlist"> <a href="/benchmarks.html#power">Power</a></li>
+			<li class="navbarlist"> <a href="/benchmarks.html#virtual">Virtualization</a></li>
+			<li class="navbarlist"> <a href="/results_search.html">Results Search</a><br>
+				<br>
+			</li>
+			<li class="navbarlist"> Submitting Results</li>
+			<li class="submenu"> <a href="/osg/submitting_results.html">Cloud/CPU/Java/Power<br>
+				&nbsp;&nbsp;Storage/Virtualization</a></li>
+			<li class="submenu"> <a href="/hpg/submitting_results.html">ACCEL/HPC/MPI/OMP</a></li>
+			<li class="submenu"> <a href="https://gwpg.spec.org/membership/">SPECapc/SPECviewperf<br>
+				&nbsp;&nbsp;SPECworkstation</a></li>
+		</ul>
+		<div class="navbartitle">&nbsp;<b>Tools</b></div>
+		<ul>
+			<li class="navbarlist"> <a href="/sert/">SERT Suite</a></li>
+			<li class="navbarlist"> <a href="/power/docs/SPECpower-Device_List.html">PTDaemon Interface</a></li>
+			<li class="navbarlist"> <a href="/chauffeur-wdk/">Chauffeur WDK</a></li>
+		</ul>
+		<div class="navbartitle">&nbsp;<b>Order Benchmarks</b></div>
+		<ul>
+			<li class="navbarlist"> <a href="/order.html">Purchase Benchmarks</a></li>
+			<li class="navbarlist"> <a href="/orderretired.html">Purchase Retired<br> Benchmarks</a></li>
+		</ul>
+		<div class="navbartitle">&nbsp;<b>SPEC</b></div>
+		<ul>
+			<li class="navbarlist"> <a href="/spec/">About SPEC</a></li>
+			<li class="submenu"> <a href="/30th/">30 Years</a></li>
+			<li class="submenu"> <a href="https://gwpg.spec.org/">GWPG</a></li>
+			<li class="submenu"> <a href="/hpg/">HPG</a></li>
+			<li class="submenu"> <a href="/isg/">ISG</a></li>
+			<li class="submenu"> <a href="/osg/">OSG</a></li>
+			<li class="submenu"> <a href="https://research.spec.org/">RG</a></li>
+			<li class="navbarlist"> <a href="/spec/membership.html">Membership</a></li>
+			<li class="submenu"> <a href="/consortium/">Member organizations</a><br>
+			</li><li class="navbarlist"> <a href="/spec/awards/">Awards</a></li>
+			<li class="navbarlist"> <a href="/pressroom.html">Press Releases</a></li>
+			<li class="navbarlist"> <a href="/spec/trademarks.html">Trademarks</a></li>
+			<li class="navbarlist"> <a href="/fairuse.html">Fair Use Policy</a></li>
+			<li class="navbarlist"> <a href="/events/">Upcoming Events</a></li>
+			<li class="navbarlist"> <a href="/spec/contact.html">Contact</a></li>
+			<li class="navbarlist"> <a href="/blog/">Blog</a></li>
+		</ul>
+		<div class="navbartitle">&nbsp;<b>Mirror Sites</b></div>
+		<ul>
+			<li class="navbarlist"> <a href="/mirrors.html">FTP/HTTP</a></li>
+		</ul>
+		<div class="navbartitle">&nbsp;<b>Resources</b></div>
+		<ul>
+			<li class="navbarlist"> <a href="/contents.html">Site Map</a></li>
+			<li class="navbarlist"> <a href="/search.html">Site Search</a></li>
+			<li class="navbarlist"> <a href="/permuted.html">Site Index</a></li>
+			<li class="navbarlist"> <a href="/spec/glossary/">Glossary</a></li>
+			<li class="navbarlist"> <a href="/spec/perflinks.html">Performance Links</a></li>
+		</ul>
+		</font> 
+		<!-- /robots --></td>
+	<td width="85%" valign="top">
+
+
+<a name="content" id="content">&nbsp;</a>
+<div class="content">
+  <p><b>The Standard Performance Evaluation Corporation (SPEC)</b> is a
+    non-profit corporation formed to establish, maintain and endorse
+    standardized benchmarks and tools to evaluate performance and energy 
+    efficiency for the newest generation of computing systems. SPEC develops benchmark
+    suites and also reviews and publishes submitted results from our <a href="/consortium/">member
+    organizations</a> and other benchmark licensees.</p>
+  
+  <!-- blockquote style="border:thin black dashed ; text-align:justify; padding-top: 1em; padding-bottom: 1em;"> 
+	   <center><i>The SPEC office will be closed on Monday, September 6, 2021.</i></center> 
+   </blockquote -->
+  
+  <p><u><b>What's New:</b></u></p>
+
+  <p><b>March 22, 2022:</b> SPECapc releases new <a href="https://gwpg.spec.org/benchmarks/benchmark/specapc-3dsmax-2020/">SPECapc for 3ds Max 2020 benchmark</a> 
+  for workstations running Autodesk 3ds Max 2020. The new benchmark replaces SPECapc for 3ds Max 2015 benchmark 
+  and includes 43 tests for comprehensive measurement of CPU and GPU performance with modeling, interactive 
+  graphics and visual effects.</p>
+
+  <p><b>March 18, 2022</b> - André Bauer from the University of Würzburg has been
+ recognized as the winner of the <a href="https://research.spec.org/news/2022-03-15-00-00-winner-of-spec-kaivalya-dixit-distinguished-dissertation-award-2021/">2021 Kaivalya Dixit Distinguished
+ Dissertation Award</a> for his work, "Automated Hybrid Time Series
+ Forecasting: Design, Benchmarking, and Use Cases." The award will be
+ presented at the <a href="https://icpe2022.spec.org/">13th Annual ACM/SPEC 
+ International Conference on Performance Engineering (ICPE)</a> conference in 
+ April 2022.</p>
+
+  <p><b>March 17, 2022</b> - The <a href="https://icpe2022.spec.org/">13th ACM/SPEC International Conference 
+	  on Performance Engineering</a> (ICPE) will be virtual this year and is open for 
+  	<a href="https://icpe2022.spec.org/registration/">registration</a>.  ICPE is also included for the first 
+  	time in the CORE ranking with rank B.  <a href="https://research.spec.org/news/2022-03-11-00-00-icpe-in-core-ranking/">More 
+	details are here</a>.
+
+  </p><p><b>March 10, 2022</b> - SPEC has announced the formation of the <a href="/ml/">SPEC Machine Learning Committee</a>. The 
+  	new committee will develop practical methodologies for benchmarking artificial intelligence (AI) and 
+	machine learning (ML) performance in the context of real-world platforms and environments.</p>
+
+  <p><b>March 3, 2022</b> - SPECgpc released a <a href="https://gwpg.spec.org/news-items/standard-performance-evaluation-corporation-releases-linux-edition-of-specviewperf-2020-v3-0-benchmark-worldwide-standard-for-measuring-graphics-performance/">Linux Edition of its SPECviewperf 2020 v3.0 performance benchmark</a>, 
+  	the worldwide standard for measuring graphics performance based on professional applications. The SPECviewperf 2020 
+	v3.0 Linux Edition benchmark enables hardware and software vendors and consumers to measure the 3D graphics 
+	performance of systems running under the OpenGL application programming interface.</p>
+  <p><b>December 10, 2021</b> - The IEEE Micro Special Issue on the Microprocessor at 50 includes 
+  an article by SPEC's John Henning, <a href="/cpu/publications/HowManyVAXesFitInThePalmsOfYourHands-AuthorVersion.pdf">"How Many VAXes Fit in the Palms of Your Hands?"</a> 
+  The article, and a <a href="/cpu/publications/HenningHowManyVaxes.mov">companion video</a>, use 
+  the original SPECmark benchmark to show relative performance on a modern system vs. a system 
+  from the 1970s.</p>
+  <p><b>December 9, 2021:</b> SPECgpc has released the <a href="/gwpg/gpc.static/vp2020v3info.html">SPECviewperf 2020 
+	  v3.0 benchmark</a>. The worldwide standard for measuring graphics performance based on professional 
+  applications, the SPECviewperf 2020 benchmark measures the 3D graphics performance of systems running 
+  under the OpenGL and Direct X application programming interfaces.</p> 
+  <p><b>October 28, 2021:</b> SPEC has released the <a href="/hpc2021/">SPEChpc 2021 Benchmark Suites</a>, 
+	designed to provide a comprehensive measure of real-world performance for High Performance 
+	Computing (HPC) systems. Offering science and engineering codes that are representative of 
+	HPC workloads and are portable across CPU and accelerators, the benchmark includes four suites, 
+	Tiny, Small, Medium, and Large, enabling fair vendor-neutral comparisons of the performance of 
+	different HPC systems, ranging from a single node to hundreds of nodes with support multiple 
+	programming models, including MPI, MPI+OpenACC, MPI+OpenMP, and MPI+OpenMP with target offload.</p>  
+  <p><b>October 4, 2021:</b> U.S. EPA adopts SPEC's SERT 2.0.4 Suite;
+   The United States Department of Energy's (DOE) Environmental Protection Agency (EPA) 
+   issued a memo titled "<a href="https://www.energystar.gov/sites/default/files/ENERGY STAR Computer Servers SERT V2.0.4 Clarification Memo.pdf">ENERGY STAR Computer Servers SERT V2.0.4 Clarification Memo</a>" 
+   clarifying that certifying to the <a href="https://www.energystar.gov/products/spec/enterprise_servers_specification_version_3_0_pd">ENERGY STAR Version 3.0 Computer Servers</a> 
+   Program shall require using the newly updated SERT 2.0.4 Suite from this point forward.</p>
+  <p><b>September 14, 2021:</b> <a href="https://research.spec.org/awards/call-for-nominations/">SPEC's Call for 
+     nominations for the Kaivalya Dixit Distinguished Dissertation Award 2021</a>. The program is open to 
+     dissertations that have been defended between October 2020 and September 2021. Deadline for submissions 
+     is September 30, 2021.</p>
+  <p><b>September 14, 2021:</b> SPEC has released the <a href="/virt_datacenter2021/">SPECvirt
+    Datacenter 2021</a> benchmark, a multi-host benchmark using simulated and real-life workloads to measure the overall 
+    efficiency of virtualization solutions and their management environments.</p>
+  <p><b>June 23, 2021:</b> SPECgpc has released the <a href="https://www.spec.org/gwpg/gpc.static/vp2020info.html">SPECviewperf
+    2020 v2.0</a> benchmark, with an updated SOLIDWORKS-06 viewset that uses the same viewport rendering modes in both 4K and 2K
+    resolutions. In addition, viewsets are now individually downloaded and may be independently installed and removed
+    using the new "Manage Viewsets" utility.</p>
+  <p><b>June 15, 2021:</b> SPEC releases a new ISO-compliant version of the SERT suite, which forms the 
+    core of the ISO/IEC 21836:2020 standard. This next-generation measurement standard was designed in 
+    collaboration with leaders of global energy-efficiency regulatory programs. The <a href="/sert2/">SERT 
+    2.0.4 Suite</a> supports certification of the latest ARM, Power, and x86 architectures driving global 
+    regulatory energy goals.</p>
+  <p><b>April 29, 2021:</b> The <a href="/cpuv8/">SPEC CPUv8 Search Program</a> has extended the deadline for submitting
+    applications that could potentially be used in the next CPU-intensive benchmark suite until February 2022.</p>
+  <p><b>March 24, 2021:</b> SPEC has announced the winners of the <a href="/spec/awards/">2021 SPEC Achievement Awards</a> and <a href="/spec/awards/2021/dixitaward2020.html">2020 Kaivalya Dixit Distinguished Dissertation Award</a>.</p>
+  <p><b>March 17, 2021:</b> SPECwpc has released an updated version of its SPECworkstation benchmark, <a href="/gwpg/publish/workstation31_rel.html">SPECworkstation 3.1</a>, which measures all key 
+    aspects of workstation performance based on diverse professional applications.</p>
+  <p><b>March 16, 2021:</b> An update to the <a href="/cpu2017/">SPEC CPU 2017</a> benchmark is available. This
+    update includes support for macOS arm64, updates to benchmarks, PTDaemon, the presubmission tools,
+    and more.  Details can be found in the list of <a href="/cpu2017/Docs/changes-in-v1.1.7.html">changes
+    in version 1.1.7</a>.
+  </p><p><b>March 16, 2021:</b> <em>Systems Benchmarking For Scientists and Engineers</em>, a new <a href="https://research.spec.org/news/single-view/article/new-textbook-on-systems-benchmarking.html">textbook 
+    on the topic of systems benchmarking written by SPEC RG Members</a>, is available from
+    Springer International Publishing.</p>
+  <p><b>March 9, 2021:</b> SPECapc has released a <a href="/gwpg/publish/sw2021_rel.html">new benchmark for workstations 
+    running SOLIDWORKS 2021</a>. The new benchmark includes 10 models and 50 tests exercising a full range of graphics 
+    and CPU functionality.</p>
+  <p><b>12/15/2020:</b> SPEC has released an updated storage benchmark, the <a href="/storage2020/">SPECstorage Solution 2020</a> benchmark.
+    It includes new workloads for artificial intelligence (AI) and genomics, expanded custom workload 
+    capabilities, massively better scaling, and a statistical visualization mechanism for displaying benchmark 
+    results.  More details are available in <a href="/storage2020/docs/Whats_new_in_SPECstorage_Solution_2020.pdf">"What's 
+    New in SPECstorage Solution 2020"</a>.</p>
+  <p>[Older items can be found in the <a href="/news/">archive</a>.]</p>
+</div>
+
+<div class="footer">
+  <hr size="1" noshade="noshade">
+  <a href="/">Home</a> - <a href="/spec/contact.html">Contact</a> - 
+  <a href="/contents.html">Site Map</a> - <a href="/spec/privacy_policy.html">Privacy</a> - 
+  <a href="/spec/">About SPEC</a>
+  <span style="margin-left: 4em;">
+	<a href="http://www.facebook.com/spec.org"><img src="/images/social/facebook20x20.png" alt="Facebook logo" hspace="0" border="0"></a>
+        <a href="https://www.linkedin.com/company/standard-performance-evaluation-corporation"><img src="/images/social/linkedin20x20.png" alt="LinkedIn logo" hspace="0" border="0"></a>
+        <a href="http://www.twitter.com/spec_perf"><img src="/images/social/twitter20x20.png" alt="Twitter logo" hspace="0" border="0"></a>
+</span>
+  <hr size="1" noshade="noshade">
+        <a href="mailto:webmaster@spec.org">webmaster@spec.org</a> <br>
+        Last updated: <i>
+        
+        Tue Mar 22 14:04:37 EDT 2022 </i> <br>
+        <a href="/spec/copyright.html">Copyright</a> 1995
+        - 2022 Standard Performance Evaluation Corporation <br>
+	URL: <i>http://www.spec.org/index.html</i>
+</div></td>
+</tr>
+</tbody></table>
+      <script type="text/javascript">
+      createMenu();
+      </script>
+
+
+
+ 
+</body></html>

