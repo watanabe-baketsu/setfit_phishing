@@ -53,7 +53,7 @@ def build_trainer(
 if __name__ == "__main__":
     # Read dataset
     dataset = read_dataset(file_path="preprocessing/dataset/dataset.json")
-    training_data = dataset["training"].shuffle().select(range(30))
+    training_data = dataset["training"].shuffle().select(range(200))
     validation_data = dataset["validation"].shuffle()
 
     print(f"training dataset count : {len(training_data)}")
@@ -61,7 +61,7 @@ if __name__ == "__main__":
 
     # Build trainer
     trainer = build_trainer(
-        model_name= "sentence-transformers/all-MiniLM-L6-v2",  # "google/long-t5-tglobal-xl",
+        model_name="sentence-transformers/sentence-t5-xxl",  # "sentence-transformers/all-MiniLM-L6-v2",
         train_dataset=training_data,
         validation_data=validation_data
     )
