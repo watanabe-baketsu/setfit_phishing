@@ -35,7 +35,7 @@ def build_trainer(
         Validation dataset
     """
     # Build training model
-    model = SetFitModel.from_pretrained(model_name, max_length=16384)
+    model = SetFitModel.from_pretrained(model_name)
 
     # Build training trainer
     trainer = SetFitTrainer(
@@ -43,8 +43,8 @@ def build_trainer(
         train_dataset=training_data,
         eval_dataset=validation_data,
         loss_class=CosineSimilarityLoss,
-        batch_size=16,
-        num_epochs=20,
+        batch_size=1,
+        num_epochs=10,
     )
 
     return trainer
@@ -61,7 +61,7 @@ if __name__ == "__main__":
 
     # Build trainer
     trainer = build_trainer(
-        model_name="sentence-transformers/sentence-t5-xxl",  # "sentence-transformers/all-MiniLM-L6-v2",
+        model_name="sentence-transformers/gtr-t5-large",  # "sentence-transformers/sentence-t5-large",
         training_data=training_data,
         validation_data=validation_data
     )

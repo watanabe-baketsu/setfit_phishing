@@ -13,5 +13,8 @@
 ```angular2html
 src/preprocessing/dataset/dataset.json
 ```
-
+### Make Dataset
+```bash
+python3 src/preprocessing/dataset/make_dataset.py
+```
 
