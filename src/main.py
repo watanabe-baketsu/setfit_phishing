@@ -24,7 +24,7 @@ def read_dataset(file_path: str) -> DatasetDict:
 
 def build_trainer(
         model_name: str,
-        train_dataset: datasets.Dataset,
+        training_data: datasets.Dataset,
         validation_data: datasets.Dataset) -> SetFitTrainer:
     """
     model_name: str
@@ -40,7 +40,7 @@ def build_trainer(
     # Build training trainer
     trainer = SetFitTrainer(
         model=model,
-        train_dataset=train_dataset,
+        train_dataset=training_data,
         eval_dataset=validation_data,
         loss_class=CosineSimilarityLoss,
         batch_size=16,
@@ -62,7 +62,7 @@ if __name__ == "__main__":
     # Build trainer
     trainer = build_trainer(
         model_name="sentence-transformers/sentence-t5-xxl",  # "sentence-transformers/all-MiniLM-L6-v2",
-        train_dataset=training_data,
+        training_data=training_data,
         validation_data=validation_data
     )
 
