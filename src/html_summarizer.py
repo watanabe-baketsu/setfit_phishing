@@ -1,17 +1,16 @@
 import torch
 
 from datasets import Dataset
-from transformers import AutoTokenizer, AutoModelForSeq2SeqLM, AutoConfig, pipeline
+from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 
 
 class Summarizer:
     def __init__(self, model_name: str):
-        device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
-        print(f"Device: {device}")
+        self.device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+        torch.set_default_tensor_type('torch.cuda.FloatTensor')
+        print(f"Device: {self.device}")
         self.tokenizer = AutoTokenizer.from_pretrained(model_name)
-        self.model = AutoModelForSeq2SeqLM.from_pretrained(model_name).to(device)
-        self.config = AutoConfig.from_pretrained(model_name)
-        self.pipe = pipeline("summarization", model=self.model, tokenizer=self.tokenizer, device=device)
+        self.model = AutoModelForSeq2SeqLM.from_pretrained(model_name).to(self.device)
 
     def summarize_dataset(self, dataset: Dataset) -> Dataset:
         """
@@ -21,7 +20,9 @@ class Summarizer:
         from pprint import pprint
         # Summarize dataset
         for data in dataset:
-            data["text"] = self.pipe(data["text"], max_length=128, min_length=50, do_sample=False)[0]["summary_text"]
+            inputs = self.tokenizer(data["text"], return_tensors="pt", max_length=16384, truncation=True).input_ids
+            summary_ids = self.model.generate(inputs, max_length=512, min_length=50, do_sample=False)
+            data["text"] = self.tokenizer.decode(summary_ids[0], skip_special_tokens=True)
             pprint(data)
 
         return dataset
@@ -31,4 +32,7 @@ class Summarizer:
         text: str
             Text to be summarized
         """
-        return self.pipe(text, max_length=128, min_length=50, do_sample=False)[0]["summary_text"]
+        inputs = self.tokenizer(text, return_tensors="pt", max_length=16384, truncation=True).input_ids
+        summary_ids = self.model.generate(inputs, max_length=512, min_length=50, do_sample=False)
+
+        return self.tokenizer.decode(summary_ids[0], skip_special_tokens=True)

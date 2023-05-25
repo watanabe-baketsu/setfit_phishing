@@ -56,14 +56,14 @@ def build_trainer(
 if __name__ == "__main__":
     # Read dataset
     dataset = read_dataset(file_path="preprocessing/dataset/dataset.json")
-    training_data = dataset["training"].shuffle(seed=25).select(range(10))
+    training_data = dataset["training"].shuffle(seed=25).select(range(40))
     validation_data = dataset["validation"].shuffle()
 
     print(f"training dataset count : {len(training_data)}")
     print(f"validation dataset count : {len(validation_data)}")
 
     # Transform(Summarize) training dataset
-    summarizer = Summarizer(model_name="ashwinR/CodeExplainer")
+    summarizer = Summarizer(model_name="google/long-t5-tglobal-large")
     training_data = summarizer.summarize_dataset(training_data)
     pprint(training_data[0])
 
