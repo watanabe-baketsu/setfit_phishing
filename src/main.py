@@ -1,12 +1,9 @@
 import json
-from pprint import pprint
 
 import datasets
 from datasets import Dataset, DatasetDict
 from sentence_transformers.losses import CosineSimilarityLoss
 from setfit import SetFitModel, SetFitTrainer
-
-from html_summarizer import Summarizer
 
 
 def read_dataset(file_path: str) -> DatasetDict:
@@ -46,7 +43,7 @@ def build_trainer(
         train_dataset=training_data,
         eval_dataset=validation_data,
         loss_class=CosineSimilarityLoss,
-        batch_size=32,
+        batch_size=8,
         num_epochs=20,
     )
 
@@ -56,18 +53,13 @@ def build_trainer(
 if __name__ == "__main__":
     # Read dataset
     dataset = read_dataset(file_path="preprocessing/dataset/dataset.json")
-    training_data = dataset["training"].shuffle(seed=25).select(range(40))
+    training_data = dataset["training"].shuffle(seed=25).select(range(30))
     validation_data = dataset["validation"].shuffle()
 
     print(f"training dataset count : {len(training_data)}")
     print(f"validation dataset count : {len(validation_data)}")
 
-    # Transform(Summarize) training dataset
-    summarizer = Summarizer(model_name="google/long-t5-tglobal-large")
-    training_data = summarizer.summarize_dataset(training_data)
-    pprint(training_data[0])
-
-    model_name = "sentence-transformers/all-MiniLM-L6-v2"  # "sentence-transformers/sentence-t5-large"
+    model_name = "sentence-transformers/all-mpnet-base-v2"  # "sentence-transformers/paraphrase-MiniLM-L6-v2"
 
     # Build trainer
     trainer = build_trainer(
