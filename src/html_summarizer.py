@@ -20,6 +20,7 @@ class Summarizer:
         from pprint import pprint
         # Summarize dataset
         for data in dataset:
+            data["text"] = "summarize: " + data["text"]
             inputs = self.tokenizer(data["text"], return_tensors="pt", max_length=16384, truncation=True).input_ids
             summary_ids = self.model.generate(inputs, max_length=512, min_length=50, do_sample=False)
             data["text"] = self.tokenizer.decode(summary_ids[0], skip_special_tokens=True)
@@ -32,6 +33,7 @@ class Summarizer:
         text: str
             Text to be summarized
         """
+        text = "summarize: " + text
         inputs = self.tokenizer(text, return_tensors="pt", max_length=16384, truncation=True).input_ids
         summary_ids = self.model.generate(inputs, max_length=512, min_length=50, do_sample=False)
 
