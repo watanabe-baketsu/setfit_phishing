@@ -1,5 +1,6 @@
 beautifulsoup4
 datasets
+evaluate
 setfit
 sentence-transformers
 torch

@@ -1,5 +1,4 @@
 import json
-from pprint import pprint
 
 from bs4 import BeautifulSoup
 

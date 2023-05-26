@@ -7,6 +7,8 @@ name = "pypi"
 setfit = "*"
 sentence-transformers = "*"
 datasets = "*"
+beautifulsoup4 = "*"
+torch = "*"
 
 [dev-packages]
 

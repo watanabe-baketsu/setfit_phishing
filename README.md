@@ -16,5 +16,5 @@ src/preprocessing/dataset/dataset.json
 ### Make Dataset
 ```bash
 python3 src/preprocessing/dataset/make_dataset.py
+pyhton3 src/preprocessing/dataset/parse_dataset_text.py
 ```
-
