@@ -85,12 +85,12 @@ if __name__ == "__main__":
     # Read dataset
     dataset = read_dataset(file_path=args.training_data)
     training_data = dataset["training"].shuffle(seed=25).select(range(1000))
-    validation_data = dataset["validation"].shuffle().select(range(1000))
+    validation_data = dataset["validation"].shuffle()
 
     print(f"training dataset count : {len(training_data)}")
     print(f"validation dataset count : {len(validation_data)}")
 
-    model_name = args.model_name  # "sentence-transformers/paraphrase-MiniLM-L6-v2"
+    model_name = args.model_name  # "sentence-transformers/all-MiniLM-L6-v2"
 
     # Build trainer
     trainer = build_trainer(
