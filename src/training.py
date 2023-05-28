@@ -51,7 +51,7 @@ def build_trainer(
         Validation dataset
     """
     # Build training model
-    model = SetFitModel.from_pretrained(model_name)
+    model = SetFitModel.from_pretrained(model_name, use_differentiable_head=True)
 
     # Build training trainer
     trainer = SetFitTrainer(
@@ -60,7 +60,7 @@ def build_trainer(
         eval_dataset=validation_data,
         loss_class=CosineSimilarityLoss,
         batch_size=16,
-        num_iterations=10,
+        num_iterations=20,
         num_epochs=1,
         metric=compute_metrics,
     )
@@ -71,13 +71,13 @@ def build_trainer(
 if __name__ == "__main__":
     # Read dataset
     dataset = read_dataset(file_path="preprocessing/dataset/dataset.json")
-    training_data = dataset["training"].shuffle(seed=25).select(range(40))
+    training_data = dataset["training"].shuffle(seed=25).select(range(3000))
     validation_data = dataset["validation"].shuffle()
 
     print(f"training dataset count : {len(training_data)}")
     print(f"validation dataset count : {len(validation_data)}")
 
-    model_name = "sentence-transformers/all-MiniLM-L6-v2"  # "sentence-transformers/paraphrase-MiniLM-L6-v2"
+    model_name = "../tuned_models/all-MiniLM-L6-v2"  # "sentence-transformers/paraphrase-MiniLM-L6-v2"
 
     # Build trainer
     trainer = build_trainer(
@@ -85,12 +85,26 @@ if __name__ == "__main__":
         training_data=training_data,
         validation_data=validation_data,
     )
+
+    # Freeze model
+    trainer.freeze()
     # Train model
     trainer.train()
+
+    # Unfreeze model (keep body frozen)
+    trainer.unfreeze(keep_body_frozen=True)
+    # Train model
+    trainer.train(
+        num_epochs=25,
+        batch_size=16,
+        learning_rate=1e-5,
+        l2_weight=0.0
+    )
+
+    save_directory = f"../tuned_models/{model_name.split('/')[-1]}"
+    trainer.model.save_pretrained(save_directory=save_directory)
 
     # validate model
     metrics = trainer.evaluate()
     print(metrics)
 
-    save_directory = f"../tuned_models/{model_name.split('/')[-1]}"
-    trainer.model.save_pretrained(save_directory=save_directory)

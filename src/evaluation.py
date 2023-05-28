@@ -8,6 +8,7 @@ if __name__ == "__main__":
     # Load dataset
     dataset = read_dataset("preprocessing/dataset/dataset.json")
     validation_data = dataset["validation"].shuffle()
+    print(f"validation dataset count : {len(validation_data)}")
 
     # Build training model
     model = SetFitModel.from_pretrained("../tuned_models/all-MiniLM-L6-v2", local_files_only=True)
@@ -20,5 +21,6 @@ if __name__ == "__main__":
         loss_class=CosineSimilarityLoss,
         metric=compute_metrics
     )
+
     metrics = trainer.evaluate()
     print(metrics)
