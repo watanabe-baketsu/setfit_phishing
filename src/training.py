@@ -1,3 +1,4 @@
+import argparse
 import json
 from typing import Dict
 
@@ -41,7 +42,8 @@ def compute_metrics(y_pred, y_test) -> Dict[str, float]:
 def build_trainer(
         model_name: str,
         training_data: datasets.Dataset,
-        validation_data: datasets.Dataset) -> SetFitTrainer:
+        validation_data: datasets.Dataset,
+        mode: str) -> SetFitTrainer:
     """
     model_name: str
         Name of the model to be used for training
@@ -49,9 +51,13 @@ def build_trainer(
         Training dataset
     validation_data: dict
         Validation dataset
+    mode: str
     """
     # Build training model
-    model = SetFitModel.from_pretrained(model_name, use_differentiable_head=True)
+    if mode == "end-to-end":
+        model = SetFitModel.from_pretrained(model_name, use_differentiable_head=False)
+    else:
+        model = SetFitModel.from_pretrained(model_name, use_differentiable_head=True)
 
     # Build training trainer
     trainer = SetFitTrainer(
@@ -69,37 +75,51 @@ def build_trainer(
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--model_name", type=str, required=True)
+    parser.add_argument("--training_data", type=str, required=True)
+    parser.add_argument("--training_mode", type=str, default="end-to-end")
+
+    args = parser.parse_args()
+
     # Read dataset
-    dataset = read_dataset(file_path="preprocessing/dataset/dataset.json")
-    training_data = dataset["training"].shuffle(seed=25).select(range(3000))
-    validation_data = dataset["validation"].shuffle()
+    dataset = read_dataset(file_path=args.training_data)
+    training_data = dataset["training"].shuffle(seed=25).select(range(1000))
+    validation_data = dataset["validation"].shuffle().select(range(1000))
 
     print(f"training dataset count : {len(training_data)}")
     print(f"validation dataset count : {len(validation_data)}")
 
-    model_name = "../tuned_models/all-MiniLM-L6-v2"  # "sentence-transformers/paraphrase-MiniLM-L6-v2"
+    model_name = args.model_name  # "sentence-transformers/paraphrase-MiniLM-L6-v2"
 
     # Build trainer
     trainer = build_trainer(
         model_name=model_name,
         training_data=training_data,
         validation_data=validation_data,
+        mode=args.training_mode
     )
 
-    # Freeze model
-    trainer.freeze()
-    # Train model
-    trainer.train()
+    if args.training_mode == "end-to-end":
+        # Train model
+        trainer.train()
+    elif args.training_mode == "differentiable-head":
+        # Freeze model
+        trainer.freeze()
+        # Train model
+        trainer.train()
 
-    # Unfreeze model (keep body frozen)
-    trainer.unfreeze(keep_body_frozen=True)
-    # Train model
-    trainer.train(
-        num_epochs=25,
-        batch_size=16,
-        learning_rate=1e-5,
-        l2_weight=0.0
-    )
+        # Unfreeze model (keep body frozen)
+        trainer.unfreeze(keep_body_frozen=True)
+        # Train model
+        trainer.train(
+            num_epochs=25,
+            batch_size=16,
+            learning_rate=1e-5,
+            l2_weight=0.0
+        )
+    else:
+        raise ValueError("Invalid training mode")
 
     save_directory = f"../tuned_models/{model_name.split('/')[-1]}"
     trainer.model.save_pretrained(save_directory=save_directory)
