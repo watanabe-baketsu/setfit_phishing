@@ -77,14 +77,16 @@ def build_trainer(
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--model_name", type=str, required=True)
-    parser.add_argument("--training_data", type=str, required=True)
+    parser.add_argument("--dataset_path", type=str, required=True)
     parser.add_argument("--training_mode", type=str, default="end-to-end")
+    parser.add_argument("--training_data_size", type=int, default=1000)
+    parser.add_argument("--batch_size", type=int, default=16)
 
     args = parser.parse_args()
 
     # Read dataset
-    dataset = read_dataset(file_path=args.training_data)
-    training_data = dataset["training"].shuffle(seed=25).select(range(1000))
+    dataset = read_dataset(file_path=args.dataset_path)
+    training_data = dataset["training"].shuffle(seed=25).select(range(args.training_data_size))
     validation_data = dataset["validation"].shuffle()
 
     print(f"training dataset count : {len(training_data)}")
@@ -114,7 +116,7 @@ if __name__ == "__main__":
         # Train model
         trainer.train(
             num_epochs=25,
-            batch_size=16,
+            batch_size=args.batch_size,
             learning_rate=1e-5,
             l2_weight=0.0
         )
