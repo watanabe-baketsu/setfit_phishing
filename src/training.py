@@ -55,7 +55,7 @@ def build_trainer(
     """
     # Build training model
     if mode == "end-to-end":
-        model = SetFitModel.from_pretrained(model_name, use_differentiable_head=False)
+        model = SetFitModel.from_pretrained(model_name, use_differentiable_head=False).to(args.device)
     else:
         model = SetFitModel.from_pretrained(model_name, use_differentiable_head=True)
 
@@ -81,6 +81,7 @@ if __name__ == "__main__":
     parser.add_argument("--training_mode", type=str, default="end-to-end")
     parser.add_argument("--training_data_size", type=int, default=1000)
     parser.add_argument("--batch_size", type=int, default=16)
+    parser.add_argument("--device", type=str, default="cuda")
 
     args = parser.parse_args()
 
