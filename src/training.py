@@ -65,7 +65,7 @@ def build_trainer(
         train_dataset=training_data,
         eval_dataset=validation_data,
         loss_class=CosineSimilarityLoss,
-        batch_size=16,
+        batch_size=args.batch_size,
         num_iterations=20,
         num_epochs=1,
         metric=compute_metrics,
